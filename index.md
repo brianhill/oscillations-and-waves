@@ -8,6 +8,24 @@
 
 * [Preliminary Syllabus](./OscillationsAndWavesSyllabus.pages.pdf) containing essentially the same information as is on these web pages.
 
+## Required Resources
+
+### Computing Resources
+
+* Mathematica license: Desktop and Cloud is $75/year for a student. There is also a semester (six-month) plan for $50, and even a monthly plan, for $10/month, which would work fine and save you another $10 if you only used it for the four months from early-January to early-May (see also Computing Resources! section below)
+* You need a laptop on which you can install your own copy of Mathematica. Disk space is critical: 18 GB is required if you install the local documentation. 9 GB is tight but doable without local documentation.
+* For further details on required computing resources, see email to the entire community sent Dec. 15th, and Andy and David's Dec. 16th follow-ups.
+
+### Texts
+
+The text we will start off with is freely available on-line, so you do not need a physical copy:
+
+* Stephen Wolfram, *An Elementary Introduction to the Wolfram Language, 3rd Edition,* Wolfram Media, Inc., 2023 [Online version](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en)
+
+If you want a physical copy, get the 3rd edition ([Amazon link](https://www.amazon.com/Elementary-Introduction-Wolfram-Language/dp/1944183078)).
+
+For the physics theory, I will prepare handouts.
+
 ## Overview
 
 ### The First Course within the Course
@@ -16,7 +34,7 @@ In order to do mathematical modeling, we need to learn a serious programming lan
 
 ### The Second Course within the Course
 
-What we will do with Mathematica in this course is fundamental physics that all theoretical physicists know very well: oscillations and waves. We will begin with simple oscillations involving a single particle. The classic is a mass on an idealized spring. There is a significant increase in complexity when you next put the mass on the end of a pendulum rod.
+What we will do with Mathematica in this course is fundamental physics that all theoretical physicists know very well: oscillations and waves. After we deal with constant motion and constant acceleration, we will animate simple oscillation of a single particle. The classic physical system that exhibits simple oscillation is [a mass hanging from a spring](https://youtu.be/I_Wscia8h9I). There is a significant increase in complexity when you next put the mass on the end of a pendulum rod.
 
 The next level of complexity is to step it up to two particles. If the two particles are connected, even weakly connected, this leads to all sorts of complex behavior that was not present for either particle separately. The most common example is known as the coupled pendulum. Since Kel asked about chaos, I will see if we can code up some chaotic motion using the compound pendulum (which is not the same as the coupled pendulum).
 
