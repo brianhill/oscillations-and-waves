@@ -20,7 +20,7 @@
 
 The text we will start off with is freely available on-line, so you do not need a physical copy:
 
-* Stephen Wolfram, *An Elementary Introduction to the Wolfram Language, 3rd Edition,* Wolfram Media, Inc., 2023 [Online version](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en)
+* Stephen Wolfram, *An Elementary Introduction to the Wolfram Language, 3rd Edition,* Wolfram Media, Inc., 2023 ([Online version](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en))
 
 If you want a physical copy, get the 3rd edition ([Amazon link](https://www.amazon.com/Elementary-Introduction-Wolfram-Language/dp/1944183078)).
 
