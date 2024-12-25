@@ -6,12 +6,12 @@ Course [home page](./)
 
 ### Week 1 &mdash; Lightning Introduction to Mathematica Notebooks &mdash; Animating Motion
 
-* Monday, Jan. 13 &mdash; [Heads or Tails](./demonstrations/HeadsOrTails.nb.pdf)
-* Thursday, Jan. 16 &mdash; Animating Motion
+* Monday, Jan. 13 &mdash; Preparation for class: study Sections 1-3 of *[An Elementary Introduction to the Wolfram Language](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en)* &mdash; In class, we will work through my own introduction called *Heads or Tails*
+* Thursday, Jan. 16 &mdash; Preparation for class: study Sections 4-6 of *[An Elementary Introduction to the Wolfram Language](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en)* &mdash; Animating Motion
 
 ### Week 2
 
-* Monday, Jan. 20
+* Monday, Jan. 20 &mdash; Preparation for class: study Sections 7-9 of [An Elementary Introduction to the Wolfram Language](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en)
 * Thursday, Jan. 23
 
 ### Week 3
