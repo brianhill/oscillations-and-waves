@@ -8,6 +8,10 @@
 
 * [Preliminary Syllabus](./OscillationsAndWavesSyllabus.pages.pdf) containing essentially the same information as is on these web pages.
 
+## Daily Schedules (Kept Retrospectively)
+
+* [Daily Schedule Term 4](./daily_schedule_term_4.html)
+
 ## Required Resources
 
 ### Computing Resources
@@ -20,7 +24,7 @@
 
 The text we will start off with is freely available on-line, so you do not need a physical copy:
 
-* Stephen Wolfram, *An Elementary Introduction to the Wolfram Language, 3rd Edition,* Wolfram Media, Inc., 2023 ([Online version](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en))
+* Stephen Wolfram, *An Elementary Introduction to the Wolfram Language, 3rd Edition,* Wolfram Media, Inc., 2023 ([Online version](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en)), hereafter abbreviated *EIWL3*.
 
 If you want a physical copy, get the 3rd edition ([Amazon link](https://www.amazon.com/Elementary-Introduction-Wolfram-Language/dp/1944183078)).
 
@@ -41,7 +45,3 @@ The next level of complexity is to step it up to two particles. If the two parti
 The next level of complexity is to step it up to *N* particles. After that, we take the limit that *N* goes to infinity! Waves appear! They appear completely naturally from laws governing a finite but ever larger number of ever more closely spaced and ever smaller particles.
 
 Waves first show up in a single dimension, such as waves on a string. But then we can step up the complexity yet again and consider waves in two dimensions, such as waves on a drumhead. Finally the highest level of complexity we can hope to get to in a one-semester course, starting with no significant prerequisites, is a taste of what quantum-mechanical waves look like in three dimensions.
-
-## Daily Schedules
-
-* [Daily Schedule Term 4](./daily_schedule_term_4.html)
