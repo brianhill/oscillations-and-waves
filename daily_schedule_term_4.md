@@ -4,10 +4,10 @@ Course [home page](./)
 
 ## Daily Schedule Term 4
 
-### Week 1 &mdash; Mathematica Notebooks &mdash; Animating Motion
+### Week 1 &mdash; Lightning Introduction to Mathematica Notebooks &mdash; Animating Motion
 
-* Monday, Jan. 13 &mdash; Lightning Introduction to Mathematica Notebooks &mdash; Animating the Motion of a Single Particle
-* Thursday, Jan. 16
+* Monday, Jan. 13 &mdash; [Heads or Tails](./demonstrations/HeadsOrTails.nb.pdf)
+* Thursday, Jan. 16 &mdash; Animating Motion
 
 ### Week 2
 
