@@ -1,0 +1,524 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19279,        516]
+NotebookOptionsPosition[     15078,        438]
+NotebookOutlinePosition[     15477,        454]
+CellTagsIndexPosition[     15434,        451]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Mutability Experiments", "Section",
+ CellChangeTimes->{{3.944176612772221*^9, 
+  3.944176617525415*^9}},ExpressionUUID->"775148e9-f7a6-44ae-8812-\
+7b6eb25a4ffb"],
+
+Cell[CellGroupData[{
+
+Cell["Append and AppendTo with Variables", "Subsection",
+ CellChangeTimes->{{3.944176113187852*^9, 3.944176131230198*^9}, {
+  3.944176183719069*^9, 3.944176209671557*^9}, {3.944176255434554*^9, 
+  3.9441762596480927`*^9}, {3.944221870866741*^9, 
+  3.944221881184649*^9}},ExpressionUUID->"27c08664-030c-4d10-ac0f-\
+3ee9a6d0a4d3"],
+
+Cell["Append creates a copy:", "Text",
+ CellChangeTimes->{{3.944176879989604*^9, 3.944176891929751*^9}, {
+  3.9442220546034927`*^9, 
+  3.944222055968728*^9}},ExpressionUUID->"8f61e336-d481-40df-93b9-\
+8ca1669a9a8e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"l", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Append", "[", 
+  RowBox[{"l", ",", " ", "1"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.944176213932176*^9, 3.944176243374063*^9}, {
+  3.944177036789771*^9, 3.944177042188593*^9}},
+ CellLabel->
+  "In[121]:=",ExpressionUUID->"e32a1650-a616-4305-adb1-ab522bea3bec"],
+
+Cell[BoxData[
+ RowBox[{"{", "1", "}"}]], "Output",
+ CellChangeTimes->{3.944177042576125*^9, 3.944177110573245*^9},
+ CellLabel->
+  "Out[122]=",ExpressionUUID->"daeedb15-f046-401f-84fb-ad889ede8a8b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["l"], "Input",
+ CellChangeTimes->{3.944177045639676*^9},
+ CellLabel->
+  "In[123]:=",ExpressionUUID->"e913ff8f-4558-41d3-af65-37bf052cee9e"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.944177046634487*^9, 3.9441771106008*^9},
+ CellLabel->
+  "Out[123]=",ExpressionUUID->"46410538-4178-4ec0-b490-862d5a17d7fb"]
+}, Open  ]],
+
+Cell["AppendTo mutates:", "Text",
+ CellChangeTimes->{{3.944176879989604*^9, 3.9441769155096903`*^9}, {
+  3.944222050884651*^9, 
+  3.944222051771401*^9}},ExpressionUUID->"c274d3e2-4220-4aee-ab95-\
+486604f5b8dc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"l", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"AppendTo", "[", 
+  RowBox[{"l", ",", " ", "1"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.944176213932176*^9, 3.9441762733322287`*^9}, {
+  3.944177052029316*^9, 3.944177055838688*^9}},
+ CellLabel->
+  "In[124]:=",ExpressionUUID->"fed7c7d4-d91f-43c6-9a9d-e3b40f76907b"],
+
+Cell[BoxData[
+ RowBox[{"{", "1", "}"}]], "Output",
+ CellChangeTimes->{3.944177056319219*^9, 3.944177110603038*^9},
+ CellLabel->
+  "Out[125]=",ExpressionUUID->"54455308-6048-4472-95e9-16e876b1e1d4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["l"], "Input",
+ CellChangeTimes->{3.944177058824216*^9},
+ CellLabel->
+  "In[126]:=",ExpressionUUID->"972df2d4-01c0-43a5-a8ca-4eceba0e19db"],
+
+Cell[BoxData[
+ RowBox[{"{", "1", "}"}]], "Output",
+ CellChangeTimes->{3.944177060211102*^9, 3.944177110612019*^9},
+ CellLabel->
+  "Out[126]=",ExpressionUUID->"3927edcf-00b9-44b5-b873-c4aea691b54c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Append and AppendTo with Symbols that Are Not Variables", "Subsection",
+ CellChangeTimes->{{3.944176113187852*^9, 3.944176131230198*^9}, {
+  3.944176183719069*^9, 3.944176209671557*^9}, {3.944176255434554*^9, 
+  3.9441762596480927`*^9}, {3.944221870866741*^9, 3.944221881184649*^9}, {
+  3.944221911774822*^9, 
+  3.944221918283619*^9}},ExpressionUUID->"5a74e16f-23bf-4abf-98ec-\
+b08b4a6f3f10"],
+
+Cell["Append still successfully creates a copy:", "Text",
+ CellChangeTimes->{{3.944176879989604*^9, 3.944176891929751*^9}, {
+  3.9442219441451073`*^9, 3.9442219531459923`*^9}, {3.944222047545436*^9, 
+  3.9442220481745996`*^9}},ExpressionUUID->"32803e99-0dd3-42f0-8417-\
+b204134a7b47"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Append", "[", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", " ", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.944176213932176*^9, 3.944176243374063*^9}, {
+  3.944177036789771*^9, 3.944177042188593*^9}, {3.944221934260355*^9, 
+  3.944221939263736*^9}},
+ CellLabel->
+  "In[135]:=",ExpressionUUID->"ac7d6a27-29d9-4e48-9eb3-7d20521becd4"],
+
+Cell[BoxData[
+ RowBox[{"{", "1", "}"}]], "Output",
+ CellChangeTimes->{3.944177042576125*^9, 3.944177110573245*^9, 
+  3.944221955581861*^9},
+ CellLabel->
+  "Out[135]=",ExpressionUUID->"b30671b2-3c94-4180-a32f-f7a513a0ef6c"]
+}, Open  ]],
+
+Cell["\<\
+However, AppendTo cannot mutate a symbol that is not a variable:\
+\>", "Text",
+ CellChangeTimes->{{3.944176879989604*^9, 3.9441769155096903`*^9}, {
+  3.944221963496029*^9, 3.944221977508059*^9}, {3.944222032451688*^9, 
+  3.944222044995562*^9}},ExpressionUUID->"14326a37-dea5-4387-a433-\
+02529ac5ab60"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AppendTo", "[", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", " ", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.944176213932176*^9, 3.944176273332229*^9}, {
+  3.944177052029316*^9, 3.944177055838688*^9}, {3.9442225391875277`*^9, 
+  3.9442225451434603`*^9}},
+ CellLabel->
+  "In[136]:=",ExpressionUUID->"52437603-3882-4026-abe2-db050367bc47"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "AppendTo", "rvalue", 
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", \\\"}\\\"}]\\) is not a variable with a \
+value, so its value cannot be changed.\"", 2, 136, 22, 22192884109409296457, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9442225555371103`*^9},
+ CellLabel->
+  "During evaluation of \
+In[136]:=",ExpressionUUID->"27b8f5d8-d24b-46f3-bcfc-8928bbbc2193"],
+
+Cell[BoxData[
+ RowBox[{"AppendTo", "[", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", "1"}], "]"}]], "Output",
+ CellChangeTimes->{3.944177056319219*^9, 3.944177110603038*^9, 
+  3.9442225555425158`*^9},
+ CellLabel->
+  "Out[136]=",ExpressionUUID->"177afea0-1aa5-463a-9a26-85d0e79284d4"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Using NestList with Append and AppendTo", "Subsection",
+ CellChangeTimes->{{3.944176113187852*^9, 3.944176131230198*^9}, {
+  3.944176183719069*^9, 3.944176190646951*^9}, {3.944176464301545*^9, 
+  3.944176465004284*^9}, {3.944221657568302*^9, 3.944221657991425*^9}, {
+  3.944222396293747*^9, 3.944222397897026*^9}, {3.944222772158499*^9, 
+  3.944222774405554*^9}},ExpressionUUID->"57a2a8d5-ce3d-403d-88c4-\
+acdb3dcd0c45"],
+
+Cell["NestList works with Append:", "Text",
+ CellChangeTimes->{{3.944176879989604*^9, 3.944176891929751*^9}, {
+  3.9442219441451073`*^9, 3.9442219531459923`*^9}, {3.944222047545436*^9, 
+  3.9442220481745996`*^9}, {3.944222785732177*^9, 
+  3.944222798394162*^9}},ExpressionUUID->"ed960bdb-9ff4-457d-b795-\
+c89eb5f0d78d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"appendOne", "[", "l_", "]"}], ":=", 
+  RowBox[{"Append", "[", 
+   RowBox[{"l", ",", "1"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.9441764284386578`*^9, 3.94417644407635*^9}, 
+   3.9441769411046057`*^9},
+ CellLabel->
+  "In[127]:=",ExpressionUUID->"1b561a84-9e61-4a39-b907-af194e6858ea"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"initial", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"results", " ", "=", " ", 
+  RowBox[{"NestList", "[", 
+   RowBox[{"appendOne", ",", "initial", ",", "5"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.9441756275405912`*^9, 3.9441756660429373`*^9}, {
+  3.944175696859241*^9, 3.944175697859194*^9}, {3.944176446376217*^9, 
+  3.9441764472324333`*^9}},
+ CellLabel->
+  "In[128]:=",ExpressionUUID->"4f255088-5c7d-44dd-8943-a6231bcb15c1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "1", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "1"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.944175670306066*^9, 3.944175701713492*^9, 3.944175830165763*^9, 
+   3.944175906074051*^9, 3.9441759484248667`*^9, 3.944176074421625*^9, {
+   3.944176236224909*^9, 3.944176274923058*^9}, {3.944176435018867*^9, 
+   3.944176450668486*^9}, 3.944176490471695*^9, 3.944176974410823*^9, 
+   3.944177013147925*^9, 3.9441771106159554`*^9},
+ CellLabel->
+  "Out[129]=",ExpressionUUID->"b8058153-fbaf-4eda-834d-3cab4c8b84f3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["initial"], "Input",
+ CellChangeTimes->{{3.944175704581452*^9, 3.9441757052697573`*^9}},
+ CellLabel->
+  "In[130]:=",ExpressionUUID->"9307ed63-36b8-4d9f-9338-6cef992a1a90"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{
+  3.944175705788999*^9, 3.9441758301717052`*^9, 3.944175906076333*^9, 
+   3.944175948430533*^9, 3.944176074423295*^9, {3.944176236231317*^9, 
+   3.944176274929501*^9}, {3.94417643502131*^9, 3.9441764506708508`*^9}, 
+   3.944176490479168*^9, 3.944176974419607*^9, 3.944177013150146*^9, 
+   3.944177110617916*^9},
+ CellLabel->
+  "Out[130]=",ExpressionUUID->"562914d3-a88c-469a-83da-92685245678d"]
+}, Open  ]],
+
+Cell["NestList does not work with AppendTo:", "Text",
+ CellChangeTimes->{{3.944176879989604*^9, 3.944176891929751*^9}, {
+  3.9442219441451073`*^9, 3.9442219531459923`*^9}, {3.944222047545436*^9, 
+  3.9442220481745996`*^9}, {3.944222785732177*^9, 
+  3.94422281318087*^9}},ExpressionUUID->"24e41565-2358-4d65-9339-\
+a1717a722c97"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"appendOneUsingAppendTo", "[", "l_", "]"}], ":=", 
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"l", ",", " ", "1"}], "]"}]}]], "Input",
+ CellLabel->
+  "In[131]:=",ExpressionUUID->"6e5961a3-e069-400a-bcaa-5fba1321ed6c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"initial", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"results", " ", "=", " ", 
+  RowBox[{"NestList", "[", 
+   RowBox[{"appendOneUsingAppendTo", ",", "initial", ",", "5"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.9441764828689613`*^9, 3.9441764852081947`*^9}},
+ CellLabel->
+  "In[132]:=",ExpressionUUID->"8b1b86b5-ed03-4e0b-93d1-6ba8df3c6941"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "AppendTo", "rvalue", 
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", \\\"}\\\"}]\\) is not a variable with a \
+value, so its value cannot be changed.\"", 2, 133, 17, 22192884109409296457, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.94417649049716*^9, 3.944176974424921*^9, 
+  3.944177013160441*^9, 3.944177110629305*^9},
+ CellLabel->
+  "During evaluation of \
+In[132]:=",ExpressionUUID->"e7d94903-6f11-40eb-90cb-18fb94755708"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "AppendTo", "rvalue", 
+   "\"\\!\\(\\*RowBox[{\\\"AppendTo\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\",\\\", \\\"1\\\"}], \
+\\\"]\\\"}]\\) is not a variable with a value, so its value cannot be \
+changed.\"", 2, 133, 18, 22192884109409296457, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.94417649049716*^9, 3.944176974424921*^9, 
+  3.944177013160441*^9, 3.944177110631541*^9},
+ CellLabel->
+  "During evaluation of \
+In[132]:=",ExpressionUUID->"4873bfe0-2990-459a-b7ab-11a2f5ffabc8"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "AppendTo", "rvalue", 
+   "\"\\!\\(\\*RowBox[{\\\"AppendTo\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"AppendTo\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \\\"}\
+\\\"}], \\\",\\\", \\\"1\\\"}], \\\"]\\\"}], \\\",\\\", \\\"1\\\"}], \
+\\\"]\\\"}]\\) is not a variable with a value, so its value cannot be \
+changed.\"", 2, 133, 19, 22192884109409296457, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.94417649049716*^9, 3.944176974424921*^9, 
+  3.944177013160441*^9, 3.944177110633164*^9},
+ CellLabel->
+  "During evaluation of \
+In[132]:=",ExpressionUUID->"4ddf825b-cf1f-40b8-91db-0f36f0499f4f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"AppendTo\\\", \
+\\\"::\\\", \\\"rvalue\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"", 2, 133, 20, 22192884109409296457, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.94417649049716*^9, 3.944176974424921*^9, 
+  3.944177013160441*^9, 3.9441771106347647`*^9},
+ CellLabel->
+  "During evaluation of \
+In[132]:=",ExpressionUUID->"14cbcb55-a93d-477a-8256-59e7ce585a27"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "1"}], "]"}], ",", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{
+     RowBox[{"AppendTo", "[", 
+      RowBox[{
+       RowBox[{"{", "}"}], ",", "1"}], "]"}], ",", "1"}], "]"}], ",", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{
+     RowBox[{"AppendTo", "[", 
+      RowBox[{
+       RowBox[{"AppendTo", "[", 
+        RowBox[{
+         RowBox[{"{", "}"}], ",", "1"}], "]"}], ",", "1"}], "]"}], ",", "1"}],
+     "]"}], ",", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{
+     RowBox[{"AppendTo", "[", 
+      RowBox[{
+       RowBox[{"AppendTo", "[", 
+        RowBox[{
+         RowBox[{"AppendTo", "[", 
+          RowBox[{
+           RowBox[{"{", "}"}], ",", "1"}], "]"}], ",", "1"}], "]"}], ",", 
+       "1"}], "]"}], ",", "1"}], "]"}], ",", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{
+     RowBox[{"AppendTo", "[", 
+      RowBox[{
+       RowBox[{"AppendTo", "[", 
+        RowBox[{
+         RowBox[{"AppendTo", "[", 
+          RowBox[{
+           RowBox[{"AppendTo", "[", 
+            RowBox[{
+             RowBox[{"{", "}"}], ",", "1"}], "]"}], ",", "1"}], "]"}], ",", 
+         "1"}], "]"}], ",", "1"}], "]"}], ",", "1"}], "]"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.94417649050661*^9, 3.944176974434681*^9, 
+  3.944177013167878*^9, 3.944177110636311*^9},
+ CellLabel->
+  "Out[133]=",ExpressionUUID->"0fbc54d4-e2ab-450e-a6cf-02fa90a65398"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Next Things to Look Into", "Subsection",
+ CellChangeTimes->{{3.944176113187852*^9, 3.944176131230198*^9}, {
+  3.944176183719069*^9, 3.944176190646951*^9}, {3.944176464301545*^9, 
+  3.944176470342613*^9}, {3.944177096158501*^9, 3.94417710809715*^9}, {
+  3.944177693477684*^9, 
+  3.944177708236668*^9}},ExpressionUUID->"8afee122-997e-40ce-9b9b-\
+f09ef82cbd6d"],
+
+Cell["\<\
+Not only does AppendTo not work with NestList, but there is a warning in the \
+AppendTo documentation that it can be slow. There are two functions called \
+Reap and Sow that are suggested instead.\
+\>", "Text",
+ CellChangeTimes->{
+  3.944177685910918*^9, {3.944177727465156*^9, 3.944177744895859*^9}, {
+   3.944222450174296*^9, 3.9442224967666283`*^9}, {3.944222893450199*^9, 
+   3.944222893777934*^9}},ExpressionUUID->"3691f4ab-09ef-4e1d-bc24-\
+8e1a96844fcd"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{925, 1155},
+WindowMargins->{{Automatic, 166}, {82, Automatic}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0eb123a1-d648-4207-af8d-783ba75277ff"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 167, 3, 67, "Section",ExpressionUUID->"775148e9-f7a6-44ae-8812-7b6eb25a4ffb"],
+Cell[CellGroupData[{
+Cell[772, 29, 328, 5, 54, "Subsection",ExpressionUUID->"27c08664-030c-4d10-ac0f-3ee9a6d0a4d3"],
+Cell[1103, 36, 215, 4, 35, "Text",ExpressionUUID->"8f61e336-d481-40df-93b9-8ca1669a9a8e"],
+Cell[CellGroupData[{
+Cell[1343, 44, 374, 9, 52, "Input",ExpressionUUID->"e32a1650-a616-4305-adb1-ab522bea3bec"],
+Cell[1720, 55, 197, 4, 34, "Output",ExpressionUUID->"daeedb15-f046-401f-84fb-ad889ede8a8b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1954, 64, 152, 3, 30, "Input",ExpressionUUID->"e913ff8f-4558-41d3-af65-37bf052cee9e"],
+Cell[2109, 69, 190, 4, 34, "Output",ExpressionUUID->"46410538-4178-4ec0-b490-862d5a17d7fb"]
+}, Open  ]],
+Cell[2314, 76, 210, 4, 35, "Text",ExpressionUUID->"c274d3e2-4220-4aee-ab95-486604f5b8dc"],
+Cell[CellGroupData[{
+Cell[2549, 84, 378, 9, 52, "Input",ExpressionUUID->"fed7c7d4-d91f-43c6-9a9d-e3b40f76907b"],
+Cell[2930, 95, 197, 4, 34, "Output",ExpressionUUID->"54455308-6048-4472-95e9-16e876b1e1d4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3164, 104, 152, 3, 30, "Input",ExpressionUUID->"972df2d4-01c0-43a5-a8ca-4eceba0e19db"],
+Cell[3319, 109, 197, 4, 34, "Output",ExpressionUUID->"3927edcf-00b9-44b5-b873-c4aea691b54c"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3565, 119, 398, 6, 54, "Subsection",ExpressionUUID->"5a74e16f-23bf-4abf-98ec-b08b4a6f3f10"],
+Cell[3966, 127, 284, 4, 35, "Text",ExpressionUUID->"32803e99-0dd3-42f0-8417-b204134a7b47"],
+Cell[CellGroupData[{
+Cell[4275, 135, 353, 8, 30, "Input",ExpressionUUID->"ac7d6a27-29d9-4e48-9eb3-7d20521becd4"],
+Cell[4631, 145, 222, 5, 34, "Output",ExpressionUUID->"b30671b2-3c94-4180-a32f-f7a513a0ef6c"]
+}, Open  ]],
+Cell[4868, 153, 311, 6, 35, "Text",ExpressionUUID->"14326a37-dea5-4387-a433-02529ac5ab60"],
+Cell[CellGroupData[{
+Cell[5204, 163, 359, 8, 30, "Input",ExpressionUUID->"52437603-3882-4026-abe2-db050367bc47"],
+Cell[5566, 173, 411, 10, 28, "Message",ExpressionUUID->"27b8f5d8-d24b-46f3-bcfc-8928bbbc2193"],
+Cell[5980, 185, 278, 7, 34, "Output",ExpressionUUID->"177afea0-1aa5-463a-9a26-85d0e79284d4"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6307, 198, 426, 6, 54, "Subsection",ExpressionUUID->"57a2a8d5-ce3d-403d-88c4-acdb3dcd0c45"],
+Cell[6736, 206, 319, 5, 35, "Text",ExpressionUUID->"ed960bdb-9ff4-457d-b795-c89eb5f0d78d"],
+Cell[7058, 213, 322, 8, 30, "Input",ExpressionUUID->"1b561a84-9e61-4a39-b907-af194e6858ea"],
+Cell[CellGroupData[{
+Cell[7405, 225, 496, 11, 52, "Input",ExpressionUUID->"4f255088-5c7d-44dd-8943-a6231bcb15c1"],
+Cell[7904, 238, 853, 21, 34, "Output",ExpressionUUID->"b8058153-fbaf-4eda-834d-3cab4c8b84f3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8794, 264, 184, 3, 30, "Input",ExpressionUUID->"9307ed63-36b8-4d9f-9338-6cef992a1a90"],
+Cell[8981, 269, 460, 9, 34, "Output",ExpressionUUID->"562914d3-a88c-469a-83da-92685245678d"]
+}, Open  ]],
+Cell[9456, 281, 328, 5, 35, "Text",ExpressionUUID->"24e41565-2358-4d65-9339-a1717a722c97"],
+Cell[9787, 288, 247, 6, 30, "Input",ExpressionUUID->"6e5961a3-e069-400a-bcaa-5fba1321ed6c"],
+Cell[CellGroupData[{
+Cell[10059, 298, 413, 10, 52, "Input",ExpressionUUID->"8b1b86b5-ed03-4e0b-93d1-6ba8df3c6941"],
+Cell[10475, 310, 477, 11, 28, "Message",ExpressionUUID->"e7d94903-6f11-40eb-90cb-18fb94755708"],
+Cell[10955, 323, 559, 12, 28, "Message",ExpressionUUID->"4873bfe0-2990-459a-b7ab-11a2f5ffabc8"],
+Cell[11517, 337, 643, 13, 28, "Message",ExpressionUUID->"4ddf825b-cf1f-40b8-91db-0f36f0499f4f"],
+Cell[12163, 352, 527, 11, 28, "Message",ExpressionUUID->"14cbcb55-a93d-477a-8256-59e7ce585a27"],
+Cell[12693, 365, 1471, 46, 77, "Output",ExpressionUUID->"0fbc54d4-e2ab-450e-a6cf-02fa90a65398"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14213, 417, 364, 6, 54, "Subsection",ExpressionUUID->"8afee122-997e-40ce-9b9b-f09ef82cbd6d"],
+Cell[14580, 425, 470, 9, 58, "Text",ExpressionUUID->"3691f4ab-09ef-4e1d-bc24-8e1a96844fcd"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
