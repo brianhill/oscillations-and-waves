@@ -1,6 +1,6 @@
 # Oscillations and Waves in Mathematica
 
-*Unofficial/Short Course Title:* Waves
+*Unofficial/Short Course Title:* Oscillations and Waves
 
 *Spring 2025, Deep Springs College, [Prof. Brian Hill](https://brianhill.github.io)*
 

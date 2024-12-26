@@ -1,4 +1,4 @@
-# Oscillations and Waves in Mathematica
+# Oscillations and Waves
 
 Course [home page](./)
 
@@ -38,3 +38,5 @@ Course [home page](./)
 
 * Monday, Feb. 24
 * Thursday, Feb. 27
+
+<img src="./illustrations/1000CoinTosses.png" width="80%"/>
