@@ -56,7 +56,7 @@ Waves first show up in a single dimension, such as waves on a string. But then w
 
 There will be problem sets due at least every week, and sometimes every class, limited only by how quickly I can assign, write solutions, and grade. The more problems you do the better. In addition to the problem sets and their solutions, there will be handouts, exams, and exam solutions to file. Locate a three-ring binder and a three-ring hole punch, and file everything chronologically. Actually, reverse-chronological is the most convenient, because you then naturally open your binder to what you are currently working on.
 
-Problem sets will generally be turned by email using Mathematica notebooks. The last step in your process before you submit a notebook as your solution, is to quit the Mathematica kernel, and then re-execute your entire notebook with a fresh kernel. Assuming your notebook executes reproducibly and without error with a fresh kernel, you have something you can turn in. If it doesn't execute reproducibly and without error, find and fix the problems, and repeat this process until it does.
+Problem sets will generally be turned by email using Mathematica notebooks. The last step in your process before you submit a notebook as your solution is to quit the Mathematica kernel, and then re-execute your entire notebook with a fresh kernel. Assuming your notebook executes reproducibly and without error with a fresh kernel, you have something you can turn in. If it doesn't execute reproducibly and without error, find and fix the problems, and repeat this process until it does.
 
 ## Absences (and late work)
 
