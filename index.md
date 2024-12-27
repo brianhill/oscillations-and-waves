@@ -4,9 +4,9 @@
 
 *Spring 2025, Deep Springs College, [Prof. Brian Hill](https://brianhill.github.io)*
 
-## Syllabus
+## Preliminary Syllabus
 
-* [Preliminary Syllabus](./OscillationsAndWavesSyllabus.pdf) containing essentially the same information as is on these web pages.
+* A [Preliminary Syllabus](./OscillationsAndWavesSyllabus.pdf) containing essentially the same information as is on this web page.
 
 ## Daily Schedules (Kept Retrospectively)
 
@@ -34,7 +34,7 @@ For the physics theory, I will prepare handouts.
 
 ### The First Course within the Course
 
-In order to do mathematical modeling, we need to learn a serious programming language, and we will use Mathematica for this purpose. Mathematica is a program that you interact with using the &ldquo;Wolfram Language.&rdquo; We will learn the language by studying the first half of *An Elementary Introduction to the Wolfram Language, 3rd Edition,* by Stephen Wolfram. The printed edition is over 300 pages divided into 48 sections. If we do 2-3 sections a class we can do most of the material up to Section 40 during Term 4, at which point you will be in an extremely good position to apply Mathematica to any problem that interests you. In parallel with learning the language we will be learning oscillatory motion and then waves.
+In order to do mathematical modeling, we need to learn a serious programming language, and we will use Mathematica for this purpose. Mathematica is a program that you interact with using the &ldquo;Wolfram Language.&rdquo; We will learn the language by studying the first half of *EIWL3.* The printed edition is over 300 pages divided into 48 sections. If we do 2-3 sections a class we can do most of the material up to Section 40 during Term 4, at which point you will be in an extremely good position to apply Mathematica to any problem that interests you. In parallel with learning the language we will be learning oscillatory motion and then waves.
 
 ### The Second Course within the Course
 
