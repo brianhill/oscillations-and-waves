@@ -1,0 +1,1331 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     55634,       1323]
+NotebookOptionsPosition[     50953,       1239]
+NotebookOutlinePosition[     51405,       1257]
+CellTagsIndexPosition[     51362,       1254]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Position from Velocity", "Section",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944259504220365*^9, 
+  3.944259508854402*^9}},ExpressionUUID->"08f90a5e-ac65-4417-8844-\
+b6de9f5e59a2"],
+
+Cell[CellGroupData[{
+
+Cell["January 16, 2025", "Subtitle",
+ CellChangeTimes->{{3.944069658419606*^9, 3.944069670238837*^9}, {
+  3.9442594414575377`*^9, 
+  3.944259441514864*^9}},ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-\
+26cf2333f1d9"],
+
+Cell[TextData[{
+ "Study Sections 4-6 of ",
+ StyleBox[ButtonBox["EIWL3 ",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.wolfram.com/language/elementary-introduction/3rd-ed/\
+index.html.en"], None},
+  ButtonNote->
+   "https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.\
+html.en"],
+  FontSlant->"Italic"],
+ "before working through this notebook."
+}], "Text",
+ CellChangeTimes->{{3.944139933130417*^9, 3.944139977229712*^9}, {
+  3.94414001836478*^9, 3.944140062505911*^9}, {3.944161611377473*^9, 
+  3.944161627499713*^9}, {3.944161723251081*^9, 3.944161834907104*^9}, {
+  3.944161878819278*^9, 3.944161969242011*^9}, {3.944259456652563*^9, 
+  3.944259498143794*^9}},ExpressionUUID->"260f1f1a-e8fb-41a0-808a-\
+db36f0f0e445"],
+
+Cell[CellGroupData[{
+
+Cell["Associations", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.944259530711527*^9, 
+  3.9442595335136843`*^9}},ExpressionUUID->"8a33a1b3-882c-4d3d-a569-\
+a9721ac03c66"],
+
+Cell["\<\
+A limitation of Nest and NestList may have already caught your eye: the \
+function you are compounding can only take one argument. When we are studying \
+particle motion, we needs lots of arguments: time, position, velocity. When \
+we are studying the motion of multiple particles in three dimensions, we need \
+positions and velocities for each particle and each of these positions and \
+velocities themselves will have three components! So there is no way we are \
+going to be able to get by with functions that take and return only one \
+number (like the total number of heads in the \[OpenCurlyDoubleQuote]Heads or \
+Tails\[CloseCurlyDoubleQuote] notebook).
+
+There are lots of ways around this, but the easiest way I can think of is to \
+use Associations. Here is an association that holds the current time and the \
+current position of a particle moving in one dimension:\
+\>", "Text",
+ CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
+  3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
+  3.944068468030957*^9}, {3.944068502593445*^9, 3.944068515703483*^9}, {
+  3.944259535871234*^9, 3.944259807557398*^9}, {3.9442636183272753`*^9, 
+  3.944263647547082*^9}},ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-\
+8e446b0fbb82"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"state", " ", "=", " ", 
+  RowBox[{"<|", 
+   RowBox[{
+    RowBox[{"\"\<time\>\"", "->", "3600"}], ",", " ", 
+    RowBox[{"\"\<position\>\"", "->", "10000"}]}], "|>"}]}]], "Input",
+ CellChangeTimes->{{3.944259814219489*^9, 3.9442598508949623`*^9}, {
+  3.944260380807702*^9, 3.944260384287764*^9}, {3.9442606092847567`*^9, 
+  3.944260615449136*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"4e1a29a4-f4e2-4a89-ad7c-6f99592ae881"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"time\"\>", "\[Rule]", "3600"}], ",", 
+   RowBox[{"\<\"position\"\>", "\[Rule]", "10000"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.944259854425479*^9, 3.944260180632057*^9, 3.9442602179795523`*^9, {
+   3.9442603266593113`*^9, 3.944260385763851*^9}, {3.944260570420436*^9, 
+   3.944260578520137*^9}, 3.9442606174655437`*^9, 3.944262906657249*^9, 
+   3.944262940139974*^9, 3.944263508528698*^9, {3.944264109969542*^9, 
+   3.944264127114389*^9}, 3.944264239321055*^9},
+ CellLabel->"Out[82]=",ExpressionUUID->"cc180357-540e-42f1-8157-663810129b74"]
+}, Open  ]],
+
+Cell["\<\
+This is a single variable that holds two things! In this association, \
+\[OpenCurlyDoubleQuote]time\[CloseCurlyDoubleQuote] and \
+\[OpenCurlyDoubleQuote]position\[CloseCurlyDoubleQuote] are keys, and 3600 \
+and 10000 are their respective values.
+
+Of course I could have used a list like this:\
+\>", "Text",
+ CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
+  3.944068052614303*^9, 3.944068058794083*^9}, {3.944068093264029*^9, 
+  3.944068104044458*^9}, {3.9440685236075883`*^9, 3.9440685825027514`*^9}, {
+  3.944068755535465*^9, 3.944068796683992*^9}, {3.944139657971241*^9, 
+  3.944139660386695*^9}, {3.944259888588757*^9, 3.944259921171298*^9}, {
+  3.944260057693532*^9, 3.944260063617486*^9}, {3.944263661933309*^9, 
+  3.944263683609125*^9}, {3.9442639431706467`*^9, 
+  3.944263967755124*^9}},ExpressionUUID->"b9297c04-623a-4c1b-986f-\
+ada7eb0097d2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"stateAsAList", " ", "=", 
+  RowBox[{"{", 
+   RowBox[{"3600", ",", "10000"}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.944259814219489*^9, 3.9442598508949623`*^9}, {
+  3.944260380807702*^9, 3.944260384287764*^9}, {3.9442606092847567`*^9, 
+  3.944260615449136*^9}, {3.944263691741696*^9, 3.944263713599008*^9}},
+ CellLabel->"In[83]:=",ExpressionUUID->"6e9896ba-dc0f-4441-a212-920adc689a5a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3600", ",", "10000"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.944263714922606*^9, {3.9442641099964952`*^9, 3.944264127134807*^9}, 
+   3.9442642393424463`*^9},
+ CellLabel->"Out[83]=",ExpressionUUID->"acafb731-b538-4aa2-9a49-9f1ccba01942"]
+}, Open  ]],
+
+Cell["\<\
+But then you have to remember that the first element of the list is the time \
+and the second element is the position. The nice thing about associations is \
+that you are forced by the notation to always be specific about which \
+key-value pair of the association you are accessing.
+
+Here is a function that adds 1 to the time and 1 to the position:\
+\>", "Text",
+ CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
+  3.944068052614303*^9, 3.944068058794083*^9}, {3.944068093264029*^9, 
+  3.944068104044458*^9}, {3.9440685236075883`*^9, 3.9440685825027514`*^9}, {
+  3.944068755535465*^9, 3.944068796683992*^9}, {3.944139657971241*^9, 
+  3.944139660386695*^9}, {3.944259888588757*^9, 3.944259921171298*^9}, {
+  3.944260057693532*^9, 3.944260063617486*^9}, {3.944263661933309*^9, 
+  3.9442636845706167`*^9}, {3.944263718577465*^9, 3.94426378852678*^9}, {
+  3.9442639248997993`*^9, 
+  3.9442639356410837`*^9}},ExpressionUUID->"92a6a36d-0d7e-4953-8baa-\
+fadefb4e9076"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"addOne", "[", "a_", "]"}], ":=", 
+  RowBox[{"(", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"newTime", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"a", "[", 
+       RowBox[{"[", "\"\<time\>\"", "]"}], "]"}], "+", "1"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"newPosition", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"a", "[", 
+       RowBox[{"[", "\"\<position\>\"", "]"}], "]"}], "+", "1"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"<|", 
+     RowBox[{
+      RowBox[{"\"\<time\>\"", "->", "newTime"}], ",", " ", 
+      RowBox[{"\"\<position\>\"", "->", "newPosition"}]}], "|>"}]}], 
+   "\[IndentingNewLine]", ")"}]}]], "Input",
+ CellChangeTimes->{{3.944068594955719*^9, 3.944068600894875*^9}, {
+  3.9442599235877647`*^9, 3.944260023000444*^9}, {3.944260127192993*^9, 
+  3.944260127358655*^9}, {3.9442601938869257`*^9, 3.944260212173661*^9}, {
+  3.944260242530843*^9, 3.9442602431787558`*^9}, {3.944260303572073*^9, 
+  3.944260314106249*^9}},
+ CellLabel->"In[84]:=",ExpressionUUID->"6d0edfeb-52d1-4a02-a5c2-7292429e09c8"],
+
+Cell["Let\[CloseCurlyQuote]s see if it works:", "Text",
+ CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
+  3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
+  3.944068468030957*^9}, {3.944068502593445*^9, 3.944068515703483*^9}, {
+  3.944259535871234*^9, 3.944259807557398*^9}, {3.9442600848746557`*^9, 
+  3.944260088459257*^9}},ExpressionUUID->"db336471-6f18-42b8-9ca0-\
+c51291d39376"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"addOne", "[", 
+  RowBox[{"<|", 
+   RowBox[{
+    RowBox[{"\"\<time\>\"", "->", "3600"}], ",", " ", 
+    RowBox[{"\"\<position\>\"", "->", "10000"}]}], "|>"}], "]"}]], "Input",
+ CellChangeTimes->{{3.944068594955719*^9, 3.944068600894875*^9}, {
+  3.9442599235877647`*^9, 3.944260023000444*^9}, {3.9442601035953417`*^9, 
+  3.94426010375917*^9}, {3.944260137076537*^9, 3.944260178598207*^9}, {
+  3.9442603390369873`*^9, 3.944260374433074*^9}},
+ CellLabel->"In[85]:=",ExpressionUUID->"a0043f7b-ee67-40a9-bddf-f771b6e3e5cb"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"time\"\>", "\[Rule]", "3601"}], ",", 
+   RowBox[{"\<\"position\"\>", "\[Rule]", "10001"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.9442601736721582`*^9, 3.9442601806974373`*^9}, 
+   3.944260218031267*^9, 3.94426025005707*^9, {3.9442603266811047`*^9, 
+   3.9442603857860928`*^9}, {3.944260570436844*^9, 3.944260578542656*^9}, 
+   3.944260617491432*^9, 3.944262906680751*^9, 3.944262940163205*^9, 
+   3.944263508550988*^9, {3.944264110008338*^9, 3.944264127139098*^9}, 
+   3.944264239354879*^9},
+ CellLabel->"Out[85]=",ExpressionUUID->"6d640779-8eff-45a4-8040-5bdea1992925"]
+}, Open  ]],
+
+Cell["\<\
+So we are now able to use Nest and NestList with functions that have multiple \
+numbers in their arguments and return values, except that the numbers are \
+bundled up in an association to get around the one-argument limitation:\
+\>", "Text",
+ CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
+  3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
+  3.944068468030957*^9}, {3.944068502593445*^9, 3.944068515703483*^9}, {
+  3.944259535871234*^9, 3.944259807557398*^9}, {3.9442600848746557`*^9, 
+  3.944260088459257*^9}, {3.9442604397609053`*^9, 3.944260552760936*^9}, {
+  3.9442605920783863`*^9, 
+  3.9442605988576527`*^9}},ExpressionUUID->"0b055de4-d13f-4e75-a122-\
+283c12b8ce31"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NestList", "[", 
+  RowBox[{"addOne", ",", " ", 
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"\"\<time\>\"", "->", "3600"}], ",", " ", 
+     RowBox[{"\"\<position\>\"", "->", "10000"}]}], "|>"}], ",", " ", "5"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.944068594955719*^9, 3.944068600894875*^9}, {
+  3.9442599235877647`*^9, 3.944260023000444*^9}, {3.9442601035953417`*^9, 
+  3.94426010375917*^9}, {3.944260137076537*^9, 3.944260178598207*^9}, {
+  3.9442603390369873`*^9, 3.944260374433074*^9}, {3.9442605563793583`*^9, 
+  3.944260576792996*^9}},
+ CellLabel->"In[86]:=",ExpressionUUID->"d5948a7f-c965-47af-a196-17c66cba016b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3600"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "10000"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3601"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "10001"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3602"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "10002"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3603"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "10003"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3604"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "10004"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3605"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "10005"}]}], 
+    "\[RightAssociation]"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.944260578549217*^9, 3.9442606174937773`*^9, 3.944262906683112*^9, 
+   3.9442629401734667`*^9, 3.944263508562519*^9, {3.944264110013102*^9, 
+   3.9442641271414213`*^9}, 3.9442642393576508`*^9},
+ CellLabel->"Out[86]=",ExpressionUUID->"83579764-731c-4486-8b46-0cf130acbd7d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Velocity", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.944259530711527*^9, 3.9442595335136843`*^9}, {
+  3.9442606516006737`*^9, 
+  3.944260653597083*^9}},ExpressionUUID->"f7dd3eff-1bfd-4274-b030-\
+6988f805b767"],
+
+Cell[TextData[{
+ "To use the concept of velocity, first we have to define it. If a particle \
+is at ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "857116a0-02fc-4a31-87c4-3d26993d65c2"],
+ " at time ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "1"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "bf6c8361-9ff6-4d54-8891-d2660bb2d872"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "69b8f63b-c808-47e4-887c-824b7d99d70d"],
+ " at time ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5867a6cf-607b-4efc-b292-7ddc8eaa121c"],
+ ", then the average velocity is by definition\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["v", 
+      RowBox[{
+       RowBox[{"1", " ", "to", " ", "2"}], ",", " ", "avg"}]], "\[Congruent]", 
+     FractionBox[
+      RowBox[{"change", " ", "in", " ", "position"}], 
+      RowBox[{"change", " ", "in", " ", "time"}]]}], "=", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["x", "2"], "-", 
+      SubscriptBox["x", "1"]}], 
+     RowBox[{
+      SubscriptBox["t", "2"], "-", 
+      SubscriptBox["t", "1"]}]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b25f7227-9b72-4fc3-b8b6-641c27a3c091"]
+}], "Text",
+ CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
+  3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
+  3.944068468030957*^9}, {3.944068502593445*^9, 3.944068515703483*^9}, {
+  3.944259535871234*^9, 3.944259807557398*^9}, {3.9442606642020273`*^9, 
+  3.944261007679607*^9}},ExpressionUUID->"08bff286-a92a-4223-b8db-\
+45a3365ce824"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Position from Velocity and an Approximation", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.944259530711527*^9, 3.9442595335136843`*^9}, {
+  3.9442606516006737`*^9, 3.944260653597083*^9}, {3.9442609403769283`*^9, 
+  3.9442609462003593`*^9}, {3.9442611015068808`*^9, 
+  3.944261104266327*^9}},ExpressionUUID->"2a7e750a-3f5f-426e-b6d9-\
+6ae485487849"],
+
+Cell[TextData[{
+ "We can rearrange the definition and learn something:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", "2"], "-", 
+     SubscriptBox["x", "1"]}], "=", 
+    RowBox[{
+     SubscriptBox["v", 
+      RowBox[{
+       RowBox[{"1", " ", "to", " ", "2"}], ",", " ", "avg"}]], "*", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["t", "2"], "-", 
+       SubscriptBox["t", "1"]}], ")"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1bbc654c-81d7-4671-9e97-ecdf6497564f"],
+ "\n\nor\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "2"], "=", 
+    RowBox[{
+     SubscriptBox["x", "1"], "+", 
+     RowBox[{
+      SubscriptBox["v", 
+       RowBox[{
+        RowBox[{"1", " ", "to", " ", "2"}], ",", " ", "avg"}]], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["t", "2"], "-", 
+        SubscriptBox["t", "1"]}], ")"}]}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "53ec17ed-cd27-4266-90c5-526953ddbbaa"],
+ "\n\nThat\[CloseCurlyQuote]s just a rearrangement of the definition, but ",
+ StyleBox["now we are going to make an approximation with consequences: we \
+are going to assume that a good approximation for ",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", 
+    RowBox[{
+     RowBox[{"1", " ", "to", " ", "2"}], ",", " ", "avg"}]], TraditionalForm]],
+  FormatType->TraditionalForm,
+  FontWeight->"Bold",
+  FontSlant->"Italic",ExpressionUUID->
+  "43eacdb0-9931-466d-805d-36624eaef2cf"],
+ StyleBox[" is the value of ",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox["v", TraditionalForm]],
+  FormatType->TraditionalForm,
+  FontWeight->"Bold",
+  FontSlant->"Italic",ExpressionUUID->
+  "d3c21143-714a-48d2-9a32-a45b81ebde92"],
+ StyleBox[" at the midpoint of the time interval.",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ " Then we have:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "2"], "=", 
+    RowBox[{
+     SubscriptBox["x", "1"], "+", 
+     RowBox[{
+      RowBox[{"v", "(", 
+       FractionBox[
+        RowBox[{
+         SubscriptBox["t", "1"], "+", 
+         SubscriptBox["t", "2"]}], "2"], ")"}], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["t", "2"], "-", 
+        SubscriptBox["t", "1"]}], ")"}]}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e56890f7-44ea-44ff-b100-5cdbda68d867"],
+ "\n\nI am going to introduce another definition, which is just a convenient \
+notation:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "\[Congruent]", 
+    RowBox[{
+     SubscriptBox["t", "2"], "-", 
+     SubscriptBox["t", "1"]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "15cff404-98af-4570-8c8a-34b195fc7cc6"],
+ "\n\nNotice that\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SubscriptBox["t", "1"], "+", 
+      SubscriptBox["t", "2"]}], "2"], "=", 
+    RowBox[{
+     SubscriptBox["t", "1"], "+", 
+     FractionBox[
+      RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}]}], 
+   TraditionalForm]],ExpressionUUID->"053e934c-77e0-42a6-9b55-af7069488b7f"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "(", 
+     SubscriptBox["t", "2"], ")"}], "=", 
+    RowBox[{
+     RowBox[{"x", "(", 
+      SubscriptBox["t", "1"], ")"}], "+", 
+     RowBox[{
+      RowBox[{"v", "(", 
+       RowBox[{
+        SubscriptBox["t", "1"], "+", 
+        FractionBox[
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}], ")"}], 
+      "*", "\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d2cd68f3-3f00-4042-b3d5-bbc94b77db8a"],
+ "\n\nIn the last rearrangement, I introduced a tad more notation:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "1"], "=", 
+    RowBox[{"x", "(", 
+     SubscriptBox["t", "1"], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "eba0c298-b42f-4219-aa00-b65809d0b700"],
+ "\n\nand\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "2"], "=", 
+    RowBox[{"x", "(", 
+     SubscriptBox["t", "2"], ")"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f7b9499a-3d20-40aa-9fcb-f72613455ff1"]
+}], "Text",
+ CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
+  3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
+  3.944068468030957*^9}, {3.944068502593445*^9, 3.944068515703483*^9}, {
+  3.944259535871234*^9, 3.944259807557398*^9}, {3.9442606642020273`*^9, 
+  3.944260932751069*^9}, {3.9442610179268*^9, 3.944261620898369*^9}, {
+  3.944262538172338*^9, 3.944262551943931*^9}, {3.944262601855522*^9, 
+  3.9442626155337563`*^9}},ExpressionUUID->"ad913e59-93d4-4c49-9cf1-\
+caeba0049cb2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Numerical Integration", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.944259530711527*^9, 3.9442595335136843`*^9}, {
+  3.9442606516006737`*^9, 3.944260653597083*^9}, {3.9442609403769283`*^9, 
+  3.9442609462003593`*^9}, {3.9442611015068808`*^9, 3.944261104266327*^9}, {
+  3.944261641763151*^9, 3.944261646919606*^9}, {3.944262147514449*^9, 
+  3.944262154294177*^9}},ExpressionUUID->"69ab8a45-8c06-4012-9e03-\
+4695c5ab6d18"],
+
+Cell[TextData[{
+ "Perhaps you don\[CloseCurlyQuote]t see it yet, but this is an extremely \
+powerful equation. It is so powerful, I am just going to write it down again, \
+and then discuss it:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "(", 
+     SubscriptBox["t", "2"], ")"}], "=", 
+    RowBox[{
+     RowBox[{"x", "(", 
+      SubscriptBox["t", "1"], ")"}], "+", 
+     RowBox[{
+      RowBox[{"v", "(", 
+       RowBox[{
+        SubscriptBox["t", "1"], "+", 
+        FractionBox[
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}], ")"}], 
+      "*", "\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f272d1e8-e46f-4ab1-93d1-7a713218455d"],
+ "\n\nOn the right-hand side (RHS) of this equation is the position of the \
+particle at time ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "1"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0442d424-ca81-4c70-ab30-64882b5582bf"],
+ ". Also on the RHS is the velocity function evaluated at a particular time, \
+the midpoint. On the left-hand side (LHS) of this equation is the position of \
+the particle at some later time ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "254e2f9b-f5e8-46d3-8048-e1cb01efbf42"],
+ ".\n\nYou might complain that we used an approximation to get this equation, \
+but for any reasonable velocity function, this approximation gets better and \
+better if you make ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "431a5a0a-501a-4106-ac8f-1d941fc0c330"],
+ " smaller and smaller. Since we have computers at our disposal, we can make \
+the time steps as small as we like.\n\nFor example, suppose you made ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "=", "0.001"}], 
+   TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e4b305eb-96cd-4d58-a858-a6dfa092eb4f"],
+ " and you wanted to learn the position of the particle at time 3.5 from the \
+position of the particle at time 2.0. Well, you\[CloseCurlyQuote]d just have \
+to compound this equation 1500 times and you\[CloseCurlyQuote]d work your way \
+from 2.0 to 2.001, to 2.002, etc., etc., all the way to 3.448, to 3.449, and \
+finally to 3.5.\n\nI\[CloseCurlyQuote]m not going to prove that the \
+approximation can be made as good as you like in this write-up! You just have \
+to believe: for any reasonable velocity function, this works to any desired \
+precision required of the final position, just as long as you make ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "31d230c3-2571-4634-ba7b-f4d9f95bcef0"],
+ " sufficiently small. If you needed to make it 0.0001 to get your desired \
+precision at 3.5, well, then you\[CloseCurlyQuote]d have to compound the \
+procedure 15,000 times.\n\nThis procedure has a fancy name. It is called \
+\[OpenCurlyDoubleQuote]numerical integration,\[CloseCurlyDoubleQuote] and the \
+approximation we are using is called the Midpoint Riemann Sum. It is used \
+instead of the Left Riemann Sum or the Right Riemann Sum, because the \
+midpoint is often a better approximation to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", 
+    RowBox[{
+     RowBox[{"1", " ", "to", " ", "2"}], ",", " ", "avg"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "642ffb0a-51ab-45ab-bc37-8b2aa8971da5"],
+ " than ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"v", "(", 
+    SubscriptBox["t", "1"], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7f9741d5-90eb-41f3-bf3f-f13d3fffd614"],
+ " or ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"v", "(", 
+    SubscriptBox["t", "2"], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "109d9b6a-b48b-4b4a-b9bb-34bc636f88fb"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
+  3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
+  3.944068468030957*^9}, {3.944068502593445*^9, 3.944068515703483*^9}, {
+  3.944259535871234*^9, 3.944259807557398*^9}, {3.9442606642020273`*^9, 
+  3.944260932751069*^9}, {3.9442610179268*^9, 3.944261612704438*^9}, {
+  3.94426165722689*^9, 3.944262111091948*^9}, {3.94426215829992*^9, 
+  3.944262162946951*^9}, {3.9442621931608887`*^9, 3.944262297785261*^9}, {
+  3.944262632603356*^9, 
+  3.944262725845533*^9}},ExpressionUUID->"709de21a-96d7-4b22-afd9-\
+ecac3efa75c8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Constant Velocity", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.944259530711527*^9, 3.9442595335136843`*^9}, {
+  3.9442623622312098`*^9, 3.944262365345757*^9}, {3.944263064473351*^9, 
+  3.944263073395151*^9}},ExpressionUUID->"3074a684-cb45-4213-9dc6-\
+18fcaa14729a"],
+
+Cell["\<\
+By far the simplest example is constant velocity. Let\[CloseCurlyQuote]s just \
+have a constant velocity of 3 and a time step of 0.01. \
+\>", "Text",
+ CellChangeTimes->{{3.9442623875188932`*^9, 
+  3.9442624625384293`*^9}},ExpressionUUID->"3f6069ff-99db-4565-a2ea-\
+486710b07440"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"move", "[", "a_", "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"newTime", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"a", "[", 
+       RowBox[{"[", "\"\<time\>\"", "]"}], "]"}], "+", "0.1"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"newPosition", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"a", "[", 
+       RowBox[{"[", "\"\<position\>\"", "]"}], "]"}], "+", " ", 
+      RowBox[{"3", " ", "*", " ", "0.1"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"<|", 
+     RowBox[{
+      RowBox[{"\"\<time\>\"", "->", "newTime"}], ",", " ", 
+      RowBox[{"\"\<position\>\"", "->", "newPosition"}]}], "|>"}]}], 
+   "\[IndentingNewLine]", ")"}]}]], "Input",
+ CellChangeTimes->{{3.944262465240116*^9, 3.944262522823402*^9}, {
+  3.9442627756942387`*^9, 3.944262778977315*^9}, {3.944262898099502*^9, 
+  3.9442629001855593`*^9}},
+ CellLabel->"In[87]:=",ExpressionUUID->"338307a6-3216-4989-a273-19c4aee2cd1e"],
+
+Cell["\<\
+By far the simplest example is constant velocity. Let\[CloseCurlyQuote]s just \
+have a constant velocity of 3 and a time step of 0.1. Then we need to do 15 \
+steps to get from 2.0 to 3.5. Where should we start the particle? How about \
+at time 2.0 we say it was at position -2.0?\
+\>", "Text",
+ CellChangeTimes->{{3.9442623875188932`*^9, 3.94426244351856*^9}, {
+  3.9442628213102207`*^9, 3.944262840061694*^9}, {3.9442628908687153`*^9, 
+  3.9442629349403973`*^9}},ExpressionUUID->"0ede6e9a-0451-42b8-b1c2-\
+954e61ecb54d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NestList", "[", 
+  RowBox[{"move", ",", 
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"\"\<time\>\"", "->", "2.0"}], ",", " ", 
+     RowBox[{"\"\<position\>\"", "->", 
+      RowBox[{"-", "2.0"}]}]}], "|>"}], ",", "15"}], "]"}]], "Input",
+ CellChangeTimes->{{3.944262793921376*^9, 3.944262803203528*^9}, {
+  3.944262847868658*^9, 3.9442629387040987`*^9}},
+ CellLabel->"In[88]:=",ExpressionUUID->"3ffabf4f-47a9-400b-bad6-8f43cb1a950c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "2.`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", 
+      RowBox[{"-", "2.`"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "2.1`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", 
+      RowBox[{"-", "1.7`"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "2.2`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", 
+      RowBox[{"-", "1.4`"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "2.3000000000000003`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", 
+      RowBox[{"-", "1.0999999999999999`"}]}]}], "\[RightAssociation]"}], ",", 
+   
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "2.4000000000000004`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", 
+      RowBox[{"-", "0.7999999999999998`"}]}]}], "\[RightAssociation]"}], ",", 
+   
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "2.5000000000000004`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", 
+      RowBox[{"-", "0.4999999999999998`"}]}]}], "\[RightAssociation]"}], ",", 
+   
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "2.6000000000000005`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", 
+      RowBox[{"-", "0.19999999999999973`"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "2.7000000000000006`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "0.10000000000000031`"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "2.8000000000000007`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "0.40000000000000036`"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "2.900000000000001`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "0.7000000000000004`"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3.000000000000001`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "1.0000000000000004`"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3.100000000000001`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "1.3000000000000005`"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3.200000000000001`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "1.6000000000000005`"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3.300000000000001`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "1.9000000000000006`"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3.4000000000000012`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "2.2000000000000006`"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"time\"\>", "\[Rule]", "3.5000000000000013`"}], ",", 
+     RowBox[{"\<\"position\"\>", "\[Rule]", "2.500000000000001`"}]}], 
+    "\[RightAssociation]"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.944262863512726*^9, {3.944262906695953*^9, 3.944262940188428*^9}, 
+   3.944263508566902*^9, {3.944264110023746*^9, 3.9442641271542063`*^9}, 
+   3.944264239371097*^9},
+ CellLabel->"Out[88]=",ExpressionUUID->"418a5e19-6236-45ad-be2a-16c7871e0cac"]
+}, Open  ]],
+
+Cell["\<\
+By far the simplest example is constant velocity. Let\[CloseCurlyQuote]s just \
+have a constant velocity of 3 and a time step of 0.1. Then we need to do 15 \
+steps to get from 2.0 to 3.5. Where should we start the particle? How about \
+at time 2.0 we say it was at position -2.0?\
+\>", "Text",
+ CellChangeTimes->{{3.9442623875188932`*^9, 3.94426244351856*^9}, {
+  3.9442628213102207`*^9, 3.944262840061694*^9}, {3.9442628908687153`*^9, 
+  3.9442629349403973`*^9}},ExpressionUUID->"1bd7fc93-9ca3-45e2-9c81-\
+385a03b91754"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A Bounce", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.944259530711527*^9, 3.9442595335136843`*^9}, {
+  3.9442623622312098`*^9, 3.944262365345757*^9}, {3.944263064473351*^9, 
+  3.9442630845135717`*^9}},ExpressionUUID->"ef2dfc72-5fba-4785-8b60-\
+1a21f73d5dd0"],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s have the particle go at constant velocity of 6 until \
+the time is 3.0, and then bounce and go ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"-", "6"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "30a3bda8-66a8-43f5-84cf-7636a5d151f6"],
+ " after that:"
+}], "Text",
+ CellChangeTimes->{{3.9442623875188932`*^9, 3.9442624625384293`*^9}, {
+  3.9442631261403637`*^9, 3.94426319698608*^9}, {3.9442634606839046`*^9, 
+  3.944263463636828*^9}},ExpressionUUID->"7f573fe4-acbb-4784-a4cd-\
+be4b9b926e3f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"bounce", "[", "a_", "]"}], ":=", 
+  RowBox[{"(", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"deltaT", "=", "0.01"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"time", " ", "=", " ", 
+     RowBox[{"a", "[", 
+      RowBox[{"[", "\"\<time\>\"", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"position", " ", "=", " ", 
+     RowBox[{"a", "[", 
+      RowBox[{"[", "\"\<position\>\"", "]"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"newTime", " ", "=", " ", 
+     RowBox[{"time", "+", "deltaT"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"midpointTime", " ", "=", 
+     RowBox[{"time", " ", "+", 
+      RowBox[{"deltaT", "/", "2"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"midpointVelocity", " ", "=", " ", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"midpointTime", "<", "3.0"}], ",", "6", ",", " ", 
+       RowBox[{"-", "6"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"newPosition", " ", "=", " ", 
+     RowBox[{"position", "+", " ", 
+      RowBox[{"midpointVelocity", " ", "*", " ", "deltaT"}]}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"<|", 
+     RowBox[{
+      RowBox[{"\"\<time\>\"", "->", "newTime"}], ",", " ", 
+      RowBox[{"\"\<position\>\"", "->", "newPosition"}]}], "|>"}]}], 
+   "\[IndentingNewLine]", ")"}]}]], "Input",
+ CellChangeTimes->{{3.944263209461335*^9, 3.944263442472447*^9}, 
+   3.944264050803895*^9},
+ CellLabel->"In[89]:=",ExpressionUUID->"6c2d2a00-3cb0-4835-865b-4af84ac5699e"],
+
+Cell[TextData[{
+ "I cranked down the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d8a9888f-1664-4b8a-ae4d-fd13fbc616d8"],
+ " to 0.1, and so I am going to have to crank up the number of steps to 150, \
+and I am going to suppress the output:"
+}], "Text",
+ CellChangeTimes->{{3.9442623875188932`*^9, 3.9442624625384293`*^9}, {
+  3.9442631261403637`*^9, 3.94426319698608*^9}, {3.9442634606839046`*^9, 
+  3.944263463636828*^9}, {3.944264066823357*^9, 
+  3.9442641206756067`*^9}},ExpressionUUID->"d8a84238-a201-4bda-86d4-\
+2ccd93dc4e97"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lotsaPositions", " ", "=", " ", 
+   RowBox[{"NestList", "[", 
+    RowBox[{"bounce", ",", 
+     RowBox[{"<|", 
+      RowBox[{
+       RowBox[{"\"\<time\>\"", "->", "2.0"}], ",", " ", 
+       RowBox[{"\"\<position\>\"", "->", 
+        RowBox[{"-", "2.0"}]}]}], "|>"}], ",", "150"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.944263495959009*^9, 3.944263504625229*^9}, {
+   3.9442640313032923`*^9, 3.944264054597274*^9}, 3.944264113475418*^9},
+ CellLabel->"In[90]:=",ExpressionUUID->"5d7080fb-1e32-4888-a383-377d31cd9da8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Displaying the Bounce", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.944259530711527*^9, 3.9442595335136843`*^9}, {
+  3.9442623622312098`*^9, 3.944262365345757*^9}, {3.944263064473351*^9, 
+  3.9442630845135717`*^9}, {3.9442641307556047`*^9, 
+  3.94426413426581*^9}},ExpressionUUID->"5c44b823-0f0f-44b7-a532-\
+61b3c62db41c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"allThePositions", " ", "=", " ", 
+   RowBox[{"lotsaPositions", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "\"\<position\>\""}], "]"}], "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.944264137811645*^9, 3.944264268864908*^9}, {
+  3.9442659268407373`*^9, 
+  3.9442659319833517`*^9}},ExpressionUUID->"c2cda614-a4b6-422d-9fba-\
+6ce4006f4db8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "allThePositions", "]"}]], "Input",
+ CellChangeTimes->{{3.944265913148992*^9, 3.944265942454773*^9}},
+ CellLabel->"In[96]:=",ExpressionUUID->"5ccdc08f-b12f-4903-a858-8b9f62010ecf"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   InterpretationBox[{
+     TagBox[
+      TagBox[
+       {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+        0.009166666666666668], AbsoluteThickness[2], PointBox[CompressedData["
+
+1:eJxVlUlsVWUUx5+VSRxooCZqkFQk2BglBRSVUvsDOkCBDq9z+9re96zDAhFd
+KFEXT5JqomBdIAgLrcICUKsL1LqBC3Eh2oUDBElAWgeg4tCRoQOVe96f5Ls3
+ae795d9zvvOd6d2TeC76ZFokEtlx7S94p56+PH34ejP9xO6NudMnDqVwGhkd
+RT0vZ1wVpzOn9UJ555xxcQZZsbYjw1lj4jtYtDh4RsWzWWYOR8SZFF7z1lF0
+RTyXss7A42XxPOoDd7FL4vm0PBU8F8VZbMgNHA6L72eTBTgkfoDNQXitg+IF
+bAnctQ2Is9m+M3j6xQtp3xg47BMvotLO/0+8mGfsvH/ED/Gq+b8gfph3zF+v
+eAl7gnR1nBM/Qmdw/JE/xY/SFaT3xO/ix+g2dz3ipfROBM8ZcQ4zLb+nxMvI
+sXz9Is6lxe5/TPw4W+0+P4jzWG/xHRXDQTvvcIqTkGn2B6QvJ31WwNukLyf7
+9oD3qE9WMGT+vk5xcgV7zf4b6Suptni7pK8kLRqc96P0fE5aPo5Lz+dz83dS
+egFvWL5PSy/gM7tPt/RCdlk9f5NeyOt2/h/Si3jB+uWs9CKaLF/npa+i2Prx
+L+mrWGLx/i19NXOt3/+Vvpqp9nF9TooZt4YXJ4sZtHz2S19Db9DePQPS13DG
+6j0ofS3Hu4JnSPpavrd8DEtfx2EbsIvS1/GV9dMl6SV8avm4LL2E3Za/K9JL
+2Wn5GZFeSpv166j0MlotX2MppoxXLN/j+v8ynrf8XU2xX8bTNg8Tsi9ngeUr
+Qsq+nH0WjzhZzjzbDzek2C/nA4tPHIlyl+U3TfZR3rV4xcko6bZ/bpR9lLcs
+fnGkgin2niT7Cl6z+4iTFYxZOsV+BS/Z/SbLvpIBq5eYSp61+06RfSXnrX5i
+v5In7P5TZV/Fr1ZPMVXUWX9Nk30Vx6y+Yr+KUtt3N8m+mu+s3mKqKUgtXNlX
+41v9xX41ObZPb5Z9DV9aP4ipYaHV4xbZ1/CJ1UPs13Cf1eNW2dfykdVDTC13
+Wz1uk30t71k9xH4tsyy8GbKv422rh5g6JtlHuuzr2Orqfh0zQ/b17HD9U8/s
+0Pn1fOjG59czPxR/Ax+796OB7ND9G/jCzY/fwNJQ/mIccvNLjPxQ/mMcdevj
+xygJ1a+Rn9360khtqP6NnHb7w28kEeqfJs65/UUT60P910S/259+Ey+G+reZ
+Ube/aSYZ6v9mJtvH9f5v5s3Q/HjMcOcr02ObO3943OnOp+fxvju/SY973flu
+99jrzr/v8aC7H7o9WkL7I84Gd79kxtnk7h/ibHb3kxdni7u/knG2u/utPU67
+u//8OPvd/dgd50BofyY46O7XzATfuvuXBD+5+9lLcMrd38kEZ9393p6gz93/
+foIR9/ehO6H56Mv7H4BMv3o=
+         "]]},
+       Annotation[#, "Charting`Private`Tag#1"]& ],
+      {"WolframDynamicHighlight", <|
+       "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>}], 
+     StyleBox[
+      DynamicBox[(Charting`HighlightActionBox["DynamicHighlight", {}, 
+        Slot["HighlightElements"], 
+        Slot["LayoutOptions"], 
+        Slot["Meta"], 
+        Charting`HighlightActionFunction["DynamicHighlight", {{
+           Annotation[{
+             Directive[
+              PointSize[0.009166666666666668], 
+              RGBColor[0.368417, 0.506779, 0.709798], 
+              AbsoluteThickness[2]], 
+             Point[CompressedData["
+1:eJxVlUlsVWUUx5+VSRxooCZqkFQk2BglBRSVUvsDOkCBDq9z+9re96zDAhFd
+KFEXT5JqomBdIAgLrcICUKsL1LqBC3Eh2oUDBElAWgeg4tCRoQOVe96f5Ls3
+ae795d9zvvOd6d2TeC76ZFokEtlx7S94p56+PH34ejP9xO6NudMnDqVwGhkd
+RT0vZ1wVpzOn9UJ555xxcQZZsbYjw1lj4jtYtDh4RsWzWWYOR8SZFF7z1lF0
+RTyXss7A42XxPOoDd7FL4vm0PBU8F8VZbMgNHA6L72eTBTgkfoDNQXitg+IF
+bAnctQ2Is9m+M3j6xQtp3xg47BMvotLO/0+8mGfsvH/ED/Gq+b8gfph3zF+v
+eAl7gnR1nBM/Qmdw/JE/xY/SFaT3xO/ix+g2dz3ipfROBM8ZcQ4zLb+nxMvI
+sXz9Is6lxe5/TPw4W+0+P4jzWG/xHRXDQTvvcIqTkGn2B6QvJ31WwNukLyf7
+9oD3qE9WMGT+vk5xcgV7zf4b6Suptni7pK8kLRqc96P0fE5aPo5Lz+dz83dS
+egFvWL5PSy/gM7tPt/RCdlk9f5NeyOt2/h/Si3jB+uWs9CKaLF/npa+i2Prx
+L+mrWGLx/i19NXOt3/+Vvpqp9nF9TooZt4YXJ4sZtHz2S19Db9DePQPS13DG
+6j0ofS3Hu4JnSPpavrd8DEtfx2EbsIvS1/GV9dMl6SV8avm4LL2E3Za/K9JL
+2Wn5GZFeSpv166j0MlotX2MppoxXLN/j+v8ynrf8XU2xX8bTNg8Tsi9ngeUr
+Qsq+nH0WjzhZzjzbDzek2C/nA4tPHIlyl+U3TfZR3rV4xcko6bZ/bpR9lLcs
+fnGkgin2niT7Cl6z+4iTFYxZOsV+BS/Z/SbLvpIBq5eYSp61+06RfSXnrX5i
+v5In7P5TZV/Fr1ZPMVXUWX9Nk30Vx6y+Yr+KUtt3N8m+mu+s3mKqKUgtXNlX
+41v9xX41ObZPb5Z9DV9aP4ipYaHV4xbZ1/CJ1UPs13Cf1eNW2dfykdVDTC13
+Wz1uk30t71k9xH4tsyy8GbKv422rh5g6JtlHuuzr2Orqfh0zQ/b17HD9U8/s
+0Pn1fOjG59czPxR/Ax+796OB7ND9G/jCzY/fwNJQ/mIccvNLjPxQ/mMcdevj
+xygJ1a+Rn9360khtqP6NnHb7w28kEeqfJs65/UUT60P910S/259+Ey+G+reZ
+Ube/aSYZ6v9mJtvH9f5v5s3Q/HjMcOcr02ObO3943OnOp+fxvju/SY973flu
+99jrzr/v8aC7H7o9WkL7I84Gd79kxtnk7h/ibHb3kxdni7u/knG2u/utPU67
+u//8OPvd/dgd50BofyY46O7XzATfuvuXBD+5+9lLcMrd38kEZ9393p6gz93/
+foIR9/ehO6H56Mv7H4BMv3o=
+              "]]}, "Charting`Private`Tag#1"]}}, <|
+         "HighlightElements" -> <|
+           "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+          "LayoutOptions" -> <|
+           "PanelPlotLayout" -> <||>, 
+            "PlotRange" -> {{0., 151.}, {-2., 4.0000000000000036`}}, 
+            "Frame" -> {{False, False}, {False, False}}, 
+            "AxesOrigin" -> {0., 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
+            "Axes" -> {True, True}, "LabelStyle" -> {}, "AspectRatio" -> 
+            GoldenRatio^(-1), "DefaultStyle" -> {
+              Directive[
+               PointSize[0.009166666666666668], 
+               RGBColor[0.368417, 0.506779, 0.709798], 
+               AbsoluteThickness[2]]}, 
+            "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+                Identity[
+                 Part[#, 1]], 
+                Identity[
+                 Part[#, 2]]}& ), 
+              "ScalingFunctions" -> {{Identity, Identity}, {
+                Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+            False|>, 
+          "Meta" -> <|
+           "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+            ListPlot, "GroupHighlight" -> False|>|>]]& )[<|
+        "HighlightElements" -> <|
+          "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+         "LayoutOptions" -> <|
+          "PanelPlotLayout" -> <||>, 
+           "PlotRange" -> {{0., 151.}, {-2., 4.0000000000000036`}}, 
+           "Frame" -> {{False, False}, {False, False}}, 
+           "AxesOrigin" -> {0., 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
+           "Axes" -> {True, True}, "LabelStyle" -> {}, "AspectRatio" -> 
+           GoldenRatio^(-1), "DefaultStyle" -> {
+             Directive[
+              PointSize[0.009166666666666668], 
+              RGBColor[0.368417, 0.506779, 0.709798], 
+              AbsoluteThickness[2]]}, 
+           "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+               Identity[
+                Part[#, 1]], 
+               Identity[
+                Part[#, 2]]}& ), 
+             "ScalingFunctions" -> {{Identity, Identity}, {
+               Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+           False|>, 
+         "Meta" -> <|
+          "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+           ListPlot, "GroupHighlight" -> False|>|>],
+       ImageSizeCache->{{4.503599627370496*^15, -4.503599627370496*^15}, {
+        4.503599627370496*^15, -4.503599627370496*^15}}],
+      Selectable->False]},
+    Annotation[{{
+       Annotation[{
+         Directive[
+          PointSize[0.009166666666666668], 
+          RGBColor[0.368417, 0.506779, 0.709798], 
+          AbsoluteThickness[2]], 
+         Point[CompressedData["
+1:eJxVlUlsVWUUx5+VSRxooCZqkFQk2BglBRSVUvsDOkCBDq9z+9re96zDAhFd
+KFEXT5JqomBdIAgLrcICUKsL1LqBC3Eh2oUDBElAWgeg4tCRoQOVe96f5Ls3
+ae795d9zvvOd6d2TeC76ZFokEtlx7S94p56+PH34ejP9xO6NudMnDqVwGhkd
+RT0vZ1wVpzOn9UJ555xxcQZZsbYjw1lj4jtYtDh4RsWzWWYOR8SZFF7z1lF0
+RTyXss7A42XxPOoDd7FL4vm0PBU8F8VZbMgNHA6L72eTBTgkfoDNQXitg+IF
+bAnctQ2Is9m+M3j6xQtp3xg47BMvotLO/0+8mGfsvH/ED/Gq+b8gfph3zF+v
+eAl7gnR1nBM/Qmdw/JE/xY/SFaT3xO/ix+g2dz3ipfROBM8ZcQ4zLb+nxMvI
+sXz9Is6lxe5/TPw4W+0+P4jzWG/xHRXDQTvvcIqTkGn2B6QvJ31WwNukLyf7
+9oD3qE9WMGT+vk5xcgV7zf4b6Suptni7pK8kLRqc96P0fE5aPo5Lz+dz83dS
+egFvWL5PSy/gM7tPt/RCdlk9f5NeyOt2/h/Si3jB+uWs9CKaLF/npa+i2Prx
+L+mrWGLx/i19NXOt3/+Vvpqp9nF9TooZt4YXJ4sZtHz2S19Db9DePQPS13DG
+6j0ofS3Hu4JnSPpavrd8DEtfx2EbsIvS1/GV9dMl6SV8avm4LL2E3Za/K9JL
+2Wn5GZFeSpv166j0MlotX2MppoxXLN/j+v8ynrf8XU2xX8bTNg8Tsi9ngeUr
+Qsq+nH0WjzhZzjzbDzek2C/nA4tPHIlyl+U3TfZR3rV4xcko6bZ/bpR9lLcs
+fnGkgin2niT7Cl6z+4iTFYxZOsV+BS/Z/SbLvpIBq5eYSp61+06RfSXnrX5i
+v5In7P5TZV/Fr1ZPMVXUWX9Nk30Vx6y+Yr+KUtt3N8m+mu+s3mKqKUgtXNlX
+41v9xX41ObZPb5Z9DV9aP4ipYaHV4xbZ1/CJ1UPs13Cf1eNW2dfykdVDTC13
+Wz1uk30t71k9xH4tsyy8GbKv422rh5g6JtlHuuzr2Orqfh0zQ/b17HD9U8/s
+0Pn1fOjG59czPxR/Ax+796OB7ND9G/jCzY/fwNJQ/mIccvNLjPxQ/mMcdevj
+xygJ1a+Rn9360khtqP6NnHb7w28kEeqfJs65/UUT60P910S/259+Ey+G+reZ
+Ube/aSYZ6v9mJtvH9f5v5s3Q/HjMcOcr02ObO3943OnOp+fxvju/SY973flu
+99jrzr/v8aC7H7o9WkL7I84Gd79kxtnk7h/ibHb3kxdni7u/knG2u/utPU67
+u//8OPvd/dgd50BofyY46O7XzATfuvuXBD+5+9lLcMrd38kEZ9393p6gz93/
+foIR9/ehO6H56Mv7H4BMv3o=
+          "]]}, "Charting`Private`Tag#1"]}}, <|
+     "HighlightElements" -> <|
+       "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+      "LayoutOptions" -> <|
+       "PanelPlotLayout" -> <||>, 
+        "PlotRange" -> {{0., 151.}, {-2., 4.0000000000000036`}}, 
+        "Frame" -> {{False, False}, {False, False}}, "AxesOrigin" -> {0., 0}, 
+        "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True}, 
+        "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), "DefaultStyle" -> {
+          Directive[
+           PointSize[0.009166666666666668], 
+           RGBColor[0.368417, 0.506779, 0.709798], 
+           AbsoluteThickness[2]]}, 
+        "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+            Identity[
+             Part[#, 1]], 
+            Identity[
+             Part[#, 2]]}& ), 
+          "ScalingFunctions" -> {{Identity, Identity}, {
+            Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> False|>, 
+      "Meta" -> <|
+       "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+        ListPlot, "GroupHighlight" -> False|>|>, 
+     "DynamicHighlight"]], {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImageSize->{624.1875, Automatic},
+  Method->{
+   "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "DefaultPlotStyle" -> {
+      Directive[
+       RGBColor[0.368417, 0.506779, 0.709798], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.880722, 0.611041, 0.142051], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.560181, 0.691569, 0.194885], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.922526, 0.385626, 0.209179], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.528488, 0.470624, 0.701351], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.772079, 0.431554, 0.102387], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.363898, 0.618501, 0.782349], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[1, 0.75, 0], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.647624, 0.37816, 0.614037], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.571589, 0.586483, 0.], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.915, 0.3325, 0.2125], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], 
+       AbsoluteThickness[2]]}, "DomainPadding" -> Scaled[0.02], 
+    "PointSizeFunction" -> "SmallPointSize", "RangePadding" -> Scaled[0.05], 
+    "OptimizePlotMarkers" -> True, "IncludeHighlighting" -> "CurrentPoint", 
+    "HighlightStyle" -> Automatic, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 151.}, {-2., 4.0000000000000036`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.94426423305081*^9, 3.944264239384232*^9}, 
+   3.9442642737627783`*^9, 3.9442659432615347`*^9},
+ CellLabel->"Out[96]=",ExpressionUUID->"395ad9c8-700c-4be4-9bd6-be338d33b719"]
+}, Open  ]],
+
+Cell[TextData[{
+ "The bounce at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "=", "3.0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "051ccf28-a17b-43cb-84f1-b808c2d1976c"],
+ " occurs at the 100th time step. The plot might look a little jaggy if \
+viewed at low resolution, but it is entirely smooth when enlarged. "
+}], "Text",
+ CellChangeTimes->{{3.9442623875188932`*^9, 3.9442624625384293`*^9}, {
+  3.9442631261403637`*^9, 3.94426319698608*^9}, {3.9442634606839046`*^9, 
+  3.944263463636828*^9}, {3.944264066823357*^9, 3.9442641206756067`*^9}, {
+  3.9442659830443487`*^9, 
+  3.944266039537081*^9}},ExpressionUUID->"5b228ad7-3084-46e4-b245-\
+e2c38e8cf388"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{300, Automatic}, {Automatic, 39}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"79d99d9c-2760-41a1-b3ad-6f9f4f8469c8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 262, 4, 67, "Section",ExpressionUUID->"08f90a5e-ac65-4417-8844-b6de9f5e59a2"],
+Cell[CellGroupData[{
+Cell[845, 28, 213, 4, 53, "Subtitle",ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
+Cell[1061, 34, 756, 18, 35, "Text",ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
+Cell[CellGroupData[{
+Cell[1842, 56, 305, 5, 54, "Subsection",ExpressionUUID->"8a33a1b3-882c-4d3d-a569-a9721ac03c66"],
+Cell[2150, 63, 1266, 20, 219, "Text",ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-8e446b0fbb82"],
+Cell[CellGroupData[{
+Cell[3441, 87, 449, 9, 30, "Input",ExpressionUUID->"4e1a29a4-f4e2-4a89-ad7c-6f99592ae881"],
+Cell[3893, 98, 642, 12, 34, "Output",ExpressionUUID->"cc180357-540e-42f1-8157-663810129b74"]
+}, Open  ]],
+Cell[4550, 113, 879, 16, 104, "Text",ExpressionUUID->"b9297c04-623a-4c1b-986f-ada7eb0097d2"],
+Cell[CellGroupData[{
+Cell[5454, 133, 412, 7, 30, "Input",ExpressionUUID->"6e9896ba-dc0f-4441-a212-920adc689a5a"],
+Cell[5869, 142, 280, 6, 34, "Output",ExpressionUUID->"acafb731-b538-4aa2-9a49-9f1ccba01942"]
+}, Open  ]],
+Cell[6164, 151, 988, 17, 127, "Text",ExpressionUUID->"92a6a36d-0d7e-4953-8baa-fadefb4e9076"],
+Cell[7155, 170, 1080, 25, 115, "Input",ExpressionUUID->"6d0edfeb-52d1-4a02-a5c2-7292429e09c8"],
+Cell[8238, 197, 421, 6, 35, "Text",ExpressionUUID->"db336471-6f18-42b8-9ca0-c51291d39376"],
+Cell[CellGroupData[{
+Cell[8684, 207, 541, 10, 30, "Input",ExpressionUUID->"a0043f7b-ee67-40a9-bddf-f771b6e3e5cb"],
+Cell[9228, 219, 668, 12, 34, "Output",ExpressionUUID->"6d640779-8eff-45a4-8040-5bdea1992925"]
+}, Open  ]],
+Cell[9911, 234, 721, 12, 81, "Text",ExpressionUUID->"0b055de4-d13f-4e75-a122-283c12b8ce31"],
+Cell[CellGroupData[{
+Cell[10657, 250, 649, 13, 30, "Input",ExpressionUUID->"d5948a7f-c965-47af-a196-17c66cba016b"],
+Cell[11309, 265, 1525, 37, 77, "Output",ExpressionUUID->"83579764-731c-4486-8b46-0cf130acbd7d"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12883, 308, 352, 6, 54, "Subsection",ExpressionUUID->"f7dd3eff-1bfd-4274-b030-6988f805b767"],
+Cell[13238, 316, 1814, 52, 110, "Text",ExpressionUUID->"08bff286-a92a-4223-b8db-45a3365ce824"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15089, 373, 488, 7, 54, "Subsection",ExpressionUUID->"2a7e750a-3f5f-426e-b6d9-6ae485487849"],
+Cell[15580, 382, 4899, 148, 723, "Text",ExpressionUUID->"ad913e59-93d4-4c49-9cf1-caeba0049cb2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20516, 535, 561, 8, 54, "Subsection",ExpressionUUID->"69ab8a45-8c06-4012-9e03-4695c5ab6d18"],
+Cell[21080, 545, 4675, 105, 592, "Text",ExpressionUUID->"709de21a-96d7-4b22-afd9-ecac3efa75c8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25792, 655, 407, 6, 54, "Subsection",ExpressionUUID->"3074a684-cb45-4213-9dc6-18fcaa14729a"],
+Cell[26202, 663, 289, 6, 35, "Text",ExpressionUUID->"3f6069ff-99db-4565-a2ea-486710b07440"],
+Cell[26494, 671, 950, 23, 94, "Input",ExpressionUUID->"338307a6-3216-4989-a273-19c4aee2cd1e"],
+Cell[27447, 696, 531, 9, 81, "Text",ExpressionUUID->"0ede6e9a-0451-42b8-b1c2-954e61ecb54d"],
+Cell[CellGroupData[{
+Cell[28003, 709, 456, 10, 30, "Input",ExpressionUUID->"3ffabf4f-47a9-400b-bad6-8f43cb1a950c"],
+Cell[28462, 721, 3959, 90, 161, "Output",ExpressionUUID->"418a5e19-6236-45ad-be2a-16c7871e0cac"]
+}, Open  ]],
+Cell[32436, 814, 531, 9, 81, "Text",ExpressionUUID->"1bd7fc93-9ca3-45e2-9c81-385a03b91754"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33004, 828, 400, 6, 54, "Subsection",ExpressionUUID->"ef2dfc72-5fba-4785-8b60-1a21f73d5dd0"],
+Cell[33407, 836, 552, 13, 35, "Text",ExpressionUUID->"7f573fe4-acbb-4784-a4cd-be4b9b926e3f"],
+Cell[33962, 851, 1504, 34, 220, "Input",ExpressionUUID->"6c2d2a00-3cb0-4835-865b-4af84ac5699e"],
+Cell[35469, 887, 641, 14, 58, "Text",ExpressionUUID->"d8a84238-a201-4bda-86d4-2ccd93dc4e97"],
+Cell[36113, 903, 562, 13, 30, "Input",ExpressionUUID->"5d7080fb-1e32-4888-a383-377d31cd9da8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36712, 921, 463, 7, 54, "Subsection",ExpressionUUID->"5c44b823-0f0f-44b7-a532-61b3c62db41c"],
+Cell[37178, 930, 382, 10, 30, "Input",ExpressionUUID->"c2cda614-a4b6-422d-9fba-6ce4006f4db8"],
+Cell[CellGroupData[{
+Cell[37585, 944, 220, 3, 30, "Input",ExpressionUUID->"5ccdc08f-b12f-4903-a858-8b9f62010ecf"],
+Cell[37808, 949, 12418, 268, 402, "Output",ExpressionUUID->"395ad9c8-700c-4be4-9bd6-be338d33b719"]
+}, Open  ]],
+Cell[50241, 1220, 684, 15, 58, "Text",ExpressionUUID->"5b228ad7-3084-46e4-b245-e2c38e8cf388"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
