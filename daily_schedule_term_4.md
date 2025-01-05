@@ -10,11 +10,13 @@ Course [home page](./)
 
 #### Problem sets will generally be turned in by email using Mathematica notebooks. The last step in your process before you submit a notebook as your solution is to quit the Mathematica kernel, and then re-execute your entire notebook with a fresh kernel. Assuming your notebook executes reproducibly and without error with a fresh kernel, you have something you can turn in. If it doesn't execute reproducibly and without error, find and fix the problems, and repeat this process until it does.
 
-* Thursday, Jan. 16 &mdash; Assignment for Thursday, Jan. 16: Before Thursday's class, create and email me a notebook that solves *all* of the exercises from Sections 1-4 of *EIWL3* &mdash; Preparation for class: Look ahead to Sections 5 and 6 of *EIWL3* &mdash; In class, we will work through a little demonstration called *Position from Velocity* and we will display the resulting motion as a graph
+* Thursday, Jan. 16 &mdash; Assignment for Thursday, Jan. 16: Before Thursday's class, create and email me a notebook that solves *all* of the exercises from Sections 1-4 of *EIWL3* &mdash; Preparation for class: Look ahead to Sections 5 and 6 of *EIWL3* &mdash; In class, we will work through theory, *Position from Velocity &mdash; Theory,* and then a little demonstration called *Position from Velocity &mdash; Using Associations,* and at the end of that, we will display the resulting motion as a graph
 
 ### Week 2
 
-* Monday, Jan. 20 &mdash; Assignment for Thursday, Jan. 16: Before Monday's class, create and email me a notebook that solves all the exercises from Sections 5-8 of *EIWL3* &mdash; Preparation for class: Look ahead to Section 9 of *EIWL3*
+* Monday, Jan. 20 &mdash; Assignment for Thursday, Jan. 16: Before Monday's class, create and email me a notebook that solves all the exercises from Sections 5-8 of *EIWL3* and also convert *Position from Velocity &mdash; Using Associations* to a new notebook *Position from Velocity &mdash; Using Lists,* and email me that notebook
+
+&mdash; Preparation for class: Look ahead to Section 9 of *EIWL3*
 * Thursday, Jan. 23
 
 ### Week 3
