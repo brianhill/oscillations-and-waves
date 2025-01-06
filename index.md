@@ -6,7 +6,7 @@
 
 ## Preliminary Syllabus
 
-* A [Preliminary Syllabus](./OscillationsAndWavesSyllabus.pdf) containing essentially the same information as is on this web page.
+* A PDF of the [Preliminary Syllabus](./OscillationsAndWavesPreliminarySyllabus.pdf) which contains essentially the same information as is on this web page, but which I don't wordsmith and update quite as frequently.
 
 ## Daily Schedules (Kept Retrospectively)
 
@@ -38,15 +38,15 @@ In order to do mathematical modeling, we need to learn a serious programming lan
 
 ### The Second Course within the Course
 
-What we will do with Mathematica in this course is fundamental physics that all theoretical physicists know very well: oscillatory motion and waves. After we deal with constant motion and constant acceleration, we will animate simple oscillation of a single particle. The classic physical system that exhibits simple oscillation is [a mass hanging from a spring](https://youtu.be/I_Wscia8h9I). There is a significant increase in complexity when you graduate from an idealized spring obeying Hooke&rsquo;s Law to putting the mass on the end of a pendulum rod. The simple system becomes non-linear.
+What we will do with Mathematica in this course is fundamental physics that all theoretical physicists know very well: oscillatory motion and waves. After we deal with constant motion and constant acceleration, we will animate simple oscillation of a single particle. The classic physical system that exhibits simple oscillation is [a mass hanging from a spring](https://youtu.be/I_Wscia8h9I). There is a significant increase in complexity when you graduate from an idealized spring obeying Hooke&rsquo;s Law to putting the mass on the end of a pendulum rod: the simple system becomes non-linear.
 
-The next level of complexity is to step it up to two particles. If the two particles are connected, even weakly connected, this leads to all sorts of complex behavior that was not present for either particle separately. The most common example is known as the coupled pendulum. Since Kel asked about chaos (not something I have much familiarity with), I will see if we can code up some chaotic motion using the compound pendulum (which is not the same as the coupled pendulum).
+The next level of complexity is to step it up to two particles. If the two particles are connected, even weakly connected, this leads to surprising behavior (resonant exchange of energy) that was not present for either particle separately. The most common example is known as the coupled pendulum. Since Kel asked about chaos (not something I have much familiarity with), I will see if we can code up some chaotic motion using the compound pendulum (and note that the compound pendulum is not the same as the coupled pendulum).
 
-The next level of complexity is to step it up to *N* particles. After we get quite familiar with the behavior of *N* particles, where *N* is a modest number like 10 or 32, we will take the limit that *N* goes to infinity! Waves appear! They appear completely naturally from laws governing a finite but ever larger number of ever more closely spaced and ever smaller particles.
+Yet another level of complexity is to step it up to from two to *N* particles. After we get quite familiar with the behavior of *N* particles, where *N* is a modest number like 10 or 32, we will take the limit that *N* goes to infinity! Waves appear! They appear completely naturally from laws governing a finite but ever larger number of ever more closely spaced and ever smaller particles.
 
-Waves first show up in a single dimension, such as waves on a musical instrument string, where each element of the string has a position, but the string itself is treated as a one-dimensional object. But then we can step up the complexity yet again and consider waves in two dimensions, such as waves on a square and round drumheads.
+Waves first show up in a single dimension, such as waves on a musical instrument string, where each element of the string has a position, but the string itself is treated as a one-dimensional object (specified by a mass per unit length and a tension), that can vibrate in the two directions perpendicular to its length. Then we can step up the complexity yet again and consider waves in two dimensions, such as waves on square and round drumheads.
 
-Finally the highest level of complexity we can hope to get to in a one-semester course, starting with no significant prerequisites, is a taste of what quantum-mechanical waves look like in three dimensions. The study of three-dimensional electron waves around an atomic nucleus requires some decently advanced manipulation of differential equations, but by the end of our course, perhaps you will start having sufficient intuition about such equations and their solutions that we can make some headway. Even if we only get to round drumheads &mdash; or even just to square drumheads &mdash; your intuition for such equations will be getting strong.
+Finally the highest level of complexity we can hope to get to in a one-semester course, starting with no significant prerequisites, is a taste of what quantum-mechanical waves look like in three dimensions. The study of three-dimensional electron waves around an atomic nucleus requires some decently advanced manipulation of differential equations, but by the end of our course, perhaps you will start having sufficient intuition about such equations and their solutions that we can make some headway. Even if we only get to round drumheads &mdash; or even just to square drumheads which are a little simpler than round ones &mdash; your intuition for the solutions of partial differential equations will be getting strong.
 
 ## Grading
 
