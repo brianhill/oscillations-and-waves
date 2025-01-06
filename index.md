@@ -16,7 +16,7 @@
 
 ### Computing Resources
 
-* Mathematica license: Desktop and Cloud is $75/year for a student. There is also a semester (six-month) plan for $50, and even a monthly plan, for $10/month, which would work fine and save you another $10 if you only used it for the four months from early-January to early-May
+* Mathematica license: Desktop and Cloud is $75/year for a student. There is also a semester (six-month) plan for $50, and even a monthly plan, for $10/month, which would work fine and save you another $10 if you only used it for the four months from early-January to early-May.
 * You need a laptop on which you can install of Mathematica. Disk space is critical: 18 GB is required if you install the local documentation. 9 GB is tight but doable without local documentation.
 * For further details on required computing resources, see email to the entire community sent Dec. 15th, and Andy and David's Dec. 16th follow-ups.
 
@@ -44,7 +44,9 @@ The next level of complexity is to step it up to two particles. If the two parti
 
 The next level of complexity is to step it up to *N* particles. After we get quite familiar with the behavior of *N* particles, where *N* is a modest number like 10 or 32, we will take the limit that *N* goes to infinity! Waves appear! They appear completely naturally from laws governing a finite but ever larger number of ever more closely spaced and ever smaller particles.
 
-Waves first show up in a single dimension, such as waves on a musical instrument string, where each element of the string has a position, but the string itself is treated as a one-dimensional object. But then we can step up the complexity yet again and consider waves in two dimensions, such as waves on a drumhead. Finally the highest level of complexity we can hope to get to in a one-semester course, starting with no significant prerequisites, is a taste of what quantum-mechanical waves look like in three dimensions. Three dimenionsal waves around a nucleus requires some decently advanced manipulation of differential equations, but by the end of our course, perhaps you will start having sufficient intuition about such equations and their solutions that we can make some headway. Even if we only get to drumheads or square drumheads your intuition for such equations will be very strong.
+Waves first show up in a single dimension, such as waves on a musical instrument string, where each element of the string has a position, but the string itself is treated as a one-dimensional object. But then we can step up the complexity yet again and consider waves in two dimensions, such as waves on a square and round drumheads.
+
+Finally the highest level of complexity we can hope to get to in a one-semester course, starting with no significant prerequisites, is a taste of what quantum-mechanical waves look like in three dimensions. The study of three-dimensional electron waves around an atomic nucleus requires some decently advanced manipulation of differential equations, but by the end of our course, perhaps you will start having sufficient intuition about such equations and their solutions that we can make some headway. Even if we only get to round drumheads &mdash; or even just to square drumheads &mdash; your intuition for such equations will be getting strong.
 
 ## Grading
 
