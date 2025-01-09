@@ -8,7 +8,7 @@ Course [home page](./)
 
 #### Have Mathematica installed and ready to go for the first class, so we can all hit the ground running.
 
-* Tuesday, Jan. 14 &mdash; Preparation for class: Study Sections 1-3 of [*An Elementary Introduction to the Wolfram Language, 3rd Edition*](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en), hereafter abbreviated *EIWL3* &mdash; In class, we will work through a little demonstration called *[Heads or Tails](./demonstrations/HeadsOrTails.nb.pdf)* that builds on Sections 1-3
+* Tuesday, Jan. 14 &mdash; Preparation for class: Study Sections 1-3 of [*An Elementary Introduction to the Wolfram Language, 3rd Edition*](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en), hereafter abbreviated *EIWL3* &mdash; In class, we will work through a little demonstration called *[Heads or Tails](./demonstrations/HeadsOrTails.nb.pdf)*
 
 #### Problem sets will generally be turned in by email using Mathematica notebooks. The last step in your process before you submit a notebook as your solution is to quit the Mathematica kernel, and then re-execute your entire notebook with a fresh kernel. Assuming your notebook executes reproducibly and without error with a fresh kernel, you have something you can turn in. If it doesn't execute reproducibly and without error, find and fix the problems, and repeat this process until it does.
 
@@ -19,7 +19,7 @@ Course [home page](./)
 ### Week 2 &mdash; Acceleration &mdash; Newton's Laws of Motion
 
 * Tuesday, Jan. 21 &mdash; Assignment for Thursday, Jan. 16: Before Tuesday's class, create and email me a notebook that solves all the exercises from Sections 5-8 of *EIWL3* and also convert *Position from Velocity &mdash; Using Associations* to a new notebook *Position from Velocity &mdash; Using Lists,* and email me that notebook
-* Friday, Jan. 23
+* Friday, Jan. 24
 
 ### Week 3
 
