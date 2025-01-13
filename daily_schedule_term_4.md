@@ -44,6 +44,6 @@ Course [home page](./)
 ### Week 7
 
 * Tuesday, Feb. 25
-* Friday, Feb. 28 &mdash; No class &mdash; Drama/Theatre/Vaudeville Festival to be Announced for Feb. 26-28
+* Friday, Feb. 28 &mdash; No class &mdash; Shakespeare 2.0 Festival Feb. 26-28
 
 <img src="./illustrations/1000CoinTosses.png" width="80%"/>
