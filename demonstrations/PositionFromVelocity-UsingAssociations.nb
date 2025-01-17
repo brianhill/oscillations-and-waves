@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     44685,       1025]
-NotebookOptionsPosition[     40461,        949]
-NotebookOutlinePosition[     40914,        967]
-CellTagsIndexPosition[     40871,        964]
+NotebookDataLength[     64483,       1516]
+NotebookOptionsPosition[     59921,       1435]
+NotebookOutlinePosition[     60368,       1453]
+CellTagsIndexPosition[     60325,       1450]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -64,24 +64,30 @@ a9721ac03c66"],
 
 Cell["\<\
 A limitation of Nest and NestList may have already caught your eye: the \
-function you are compounding can only take one argument. When we are studying \
-particle motion, we needs lots of arguments: time, position, velocity. When \
-we are studying the motion of multiple particles in three dimensions, we need \
-positions and velocities for each particle and each of these positions and \
-velocities themselves will have three components! So there is no way we are \
-going to be able to get by with functions that take and return only one \
-number (like the total number of heads in the \[OpenCurlyDoubleQuote]Heads or \
-Tails\[CloseCurlyDoubleQuote] notebook).
+function you are compounding can only take one argument. Acck! When we are \
+studying particle motion, even in just one dimension, we need at least two \
+values: time and position.
 
-There are lots of ways around this, but the easiest way I can think of is to \
-use Associations. Here is an association that holds the current time and the \
-current position of a particle moving in one dimension:\
+Later, when we are studying the motion of multiple particles in three \
+dimensions, we need positions and velocities for each particle and each of \
+these positions and velocities themselves will have three components!
+
+So there is no way we are going to be able to get by with functions that take \
+and return only a single value. It is therefore essential that we learn how \
+to \[OpenCurlyDoubleQuote]hide\[CloseCurlyDoubleQuote] multiple values within \
+a single argument.
+
+There are lots of ways to do this, but the clearest, most general way I can \
+think of is to use associations. Here is an association that holds the \
+current time and the current position of a particle moving in one dimension:\
 \>", "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
   3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
   3.944068468030957*^9}, {3.944068502593445*^9, 3.944068515703483*^9}, {
   3.944259535871234*^9, 3.944259807557398*^9}, {3.9442636183272753`*^9, 
-  3.944263647547082*^9}},ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-\
+  3.944263647547082*^9}, {3.946092383331822*^9, 3.946092489804904*^9}, {
+  3.946093557316852*^9, 3.9460936002461233`*^9}, {3.946094161013678*^9, 
+  3.946094166485684*^9}},ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-\
 8e446b0fbb82"],
 
 Cell[CellGroupData[{
@@ -95,7 +101,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.944259814219489*^9, 3.9442598508949623`*^9}, {
   3.944260380807702*^9, 3.944260384287764*^9}, {3.9442606092847567`*^9, 
   3.944260615449136*^9}},
- CellLabel->"In[82]:=",ExpressionUUID->"4e1a29a4-f4e2-4a89-ad7c-6f99592ae881"],
+ CellLabel->
+  "In[145]:=",ExpressionUUID->"4e1a29a4-f4e2-4a89-ad7c-6f99592ae881"],
 
 Cell[BoxData[
  RowBox[{"\[LeftAssociation]", 
@@ -108,8 +115,13 @@ Cell[BoxData[
    3.9442603266593113`*^9, 3.944260385763851*^9}, {3.944260570420436*^9, 
    3.944260578520137*^9}, 3.9442606174655437`*^9, 3.944262906657249*^9, 
    3.944262940139974*^9, 3.944263508528698*^9, {3.944264109969542*^9, 
-   3.944264127114389*^9}, 3.944264239321055*^9},
- CellLabel->"Out[82]=",ExpressionUUID->"cc180357-540e-42f1-8157-663810129b74"]
+   3.944264127114389*^9}, 3.944264239321055*^9, 3.946092247910571*^9, 
+   3.946093008611809*^9, 3.9460930540681353`*^9, 3.946093136752442*^9, {
+   3.9460931731919813`*^9, 3.9460931956006737`*^9}, 3.946093260229207*^9, 
+   3.9460933423098183`*^9, 3.946094094598648*^9, 3.9460943780697393`*^9, 
+   3.9460944165186377`*^9},
+ CellLabel->
+  "Out[145]=",ExpressionUUID->"f5f8158a-24ee-4894-8321-3691d22e2932"]
 }, Open  ]],
 
 Cell["\<\
@@ -118,7 +130,8 @@ This is a single variable that holds two things! In this association, \
 \[OpenCurlyDoubleQuote]position\[CloseCurlyDoubleQuote] are keys, and 3600 \
 and 10000 are their respective values.
 
-Of course I could have used a list like this:\
+Of course I could have used a list like this, but it is a little less clear, \
+and the lack of clarity is going to be problematic as we get more general:\
 \>", "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
   3.944068052614303*^9, 3.944068058794083*^9}, {3.944068093264029*^9, 
@@ -126,8 +139,9 @@ Of course I could have used a list like this:\
   3.944068755535465*^9, 3.944068796683992*^9}, {3.944139657971241*^9, 
   3.944139660386695*^9}, {3.944259888588757*^9, 3.944259921171298*^9}, {
   3.944260057693532*^9, 3.944260063617486*^9}, {3.944263661933309*^9, 
-  3.944263683609125*^9}, {3.9442639431706467`*^9, 
-  3.944263967755124*^9}},ExpressionUUID->"b9297c04-623a-4c1b-986f-\
+  3.944263683609125*^9}, {3.9442639431706467`*^9, 3.944263967755124*^9}, {
+  3.946092498010222*^9, 3.946092509845256*^9}, {3.946093626784219*^9, 
+  3.946093638125957*^9}},ExpressionUUID->"b9297c04-623a-4c1b-986f-\
 ada7eb0097d2"],
 
 Cell[CellGroupData[{
@@ -139,24 +153,31 @@ Cell[BoxData[
  CellChangeTimes->{{3.944259814219489*^9, 3.9442598508949623`*^9}, {
   3.944260380807702*^9, 3.944260384287764*^9}, {3.9442606092847567`*^9, 
   3.944260615449136*^9}, {3.944263691741696*^9, 3.944263713599008*^9}},
- CellLabel->"In[83]:=",ExpressionUUID->"6e9896ba-dc0f-4441-a212-920adc689a5a"],
+ CellLabel->
+  "In[146]:=",ExpressionUUID->"6e9896ba-dc0f-4441-a212-920adc689a5a"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"3600", ",", "10000"}], "}"}]], "Output",
  CellChangeTimes->{
   3.944263714922606*^9, {3.9442641099964952`*^9, 3.944264127134807*^9}, 
-   3.9442642393424463`*^9},
- CellLabel->"Out[83]=",ExpressionUUID->"acafb731-b538-4aa2-9a49-9f1ccba01942"]
+   3.9442642393424463`*^9, 3.946092248104184*^9, 3.9460930086242723`*^9, 
+   3.946093054089847*^9, 3.9460931367652817`*^9, {3.946093173214056*^9, 
+   3.946093195622217*^9}, 3.946093260254353*^9, 3.946093342333201*^9, 
+   3.946094094623549*^9, 3.946094378087673*^9, 3.946094416534045*^9},
+ CellLabel->
+  "Out[146]=",ExpressionUUID->"89621ed6-bcf8-449d-9498-2af41c651774"]
 }, Open  ]],
 
 Cell["\<\
-But then you have to remember that the first element of the list is the time \
-and the second element is the position. The nice thing about associations is \
-that you are forced by the notation to always be specific about which \
-key-value pair of the association you are accessing.
+The lack of clarity with lists is that you have to remember that the first \
+element of the list is the time and the second element is the position (or \
+whatever choice you made). The nice thing about associations is that you are \
+forced by the notation to always be clear about which key-value pair of the \
+association you are accessing.
 
-Here is a function that adds 1 to the time and 1 to the position:\
+Here is a function that takes an association, adds 1 to the time and 1 to the \
+position and then returns a new association:\
 \>", "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
   3.944068052614303*^9, 3.944068058794083*^9}, {3.944068093264029*^9, 
@@ -165,8 +186,9 @@ Here is a function that adds 1 to the time and 1 to the position:\
   3.944139660386695*^9}, {3.944259888588757*^9, 3.944259921171298*^9}, {
   3.944260057693532*^9, 3.944260063617486*^9}, {3.944263661933309*^9, 
   3.9442636845706167`*^9}, {3.944263718577465*^9, 3.94426378852678*^9}, {
-  3.9442639248997993`*^9, 
-  3.9442639356410837`*^9}},ExpressionUUID->"92a6a36d-0d7e-4953-8baa-\
+  3.9442639248997993`*^9, 3.9442639356410837`*^9}, {3.946092531898942*^9, 
+  3.9460925845018177`*^9}, {3.9460936459839783`*^9, 
+  3.946093656271283*^9}},ExpressionUUID->"92a6a36d-0d7e-4953-8baa-\
 fadefb4e9076"],
 
 Cell[BoxData[
@@ -194,7 +216,8 @@ Cell[BoxData[
   3.944260127358655*^9}, {3.9442601938869257`*^9, 3.944260212173661*^9}, {
   3.944260242530843*^9, 3.9442602431787558`*^9}, {3.944260303572073*^9, 
   3.944260314106249*^9}},
- CellLabel->"In[84]:=",ExpressionUUID->"6d0edfeb-52d1-4a02-a5c2-7292429e09c8"],
+ CellLabel->
+  "In[147]:=",ExpressionUUID->"6d0edfeb-52d1-4a02-a5c2-7292429e09c8"],
 
 Cell["Let\[CloseCurlyQuote]s see if it works:", "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
@@ -216,7 +239,8 @@ Cell[BoxData[
   3.9442599235877647`*^9, 3.944260023000444*^9}, {3.9442601035953417`*^9, 
   3.94426010375917*^9}, {3.944260137076537*^9, 3.944260178598207*^9}, {
   3.9442603390369873`*^9, 3.944260374433074*^9}},
- CellLabel->"In[85]:=",ExpressionUUID->"a0043f7b-ee67-40a9-bddf-f771b6e3e5cb"],
+ CellLabel->
+  "In[148]:=",ExpressionUUID->"a0043f7b-ee67-40a9-bddf-f771b6e3e5cb"],
 
 Cell[BoxData[
  RowBox[{"\[LeftAssociation]", 
@@ -229,22 +253,39 @@ Cell[BoxData[
    3.9442603857860928`*^9}, {3.944260570436844*^9, 3.944260578542656*^9}, 
    3.944260617491432*^9, 3.944262906680751*^9, 3.944262940163205*^9, 
    3.944263508550988*^9, {3.944264110008338*^9, 3.944264127139098*^9}, 
-   3.944264239354879*^9},
- CellLabel->"Out[85]=",ExpressionUUID->"6d640779-8eff-45a4-8040-5bdea1992925"]
+   3.944264239354879*^9, 3.946092248112055*^9, 3.946093008633032*^9, 
+   3.946093054101028*^9, 3.946093136773241*^9, {3.946093173226718*^9, 
+   3.9460931956330643`*^9}, 3.946093260264719*^9, 3.946093342347451*^9, 
+   3.9460940946348057`*^9, 3.946094378096401*^9, 3.946094416544346*^9},
+ CellLabel->
+  "Out[148]=",ExpressionUUID->"6f019528-ef4f-4919-9222-237d1a489aaa"]
 }, Open  ]],
 
-Cell["\<\
-So we are now able to use Nest and NestList with functions that have multiple \
-numbers in their arguments and return values, except that the numbers are \
-bundled up in an association to get around the one-argument limitation:\
-\>", "Text",
+Cell[TextData[{
+ "So we are now able to use Nest and NestList with functions that have \
+multiple values despite only having one argument and one thing returned; the \
+values are hidden in associations.\n\nUsing Nest or NestList with a formula \
+(aka a function or a procedure) to apply the formula any number of times is \
+something we already learned to do in the ",
+ ButtonBox["Heads or Tails notebook",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://brianhill.github.io/oscillations-and-waves/demonstrations/\
+HeadsOrTails.nb.pdf"], None},
+  ButtonNote->
+   "https://brianhill.github.io/oscillations-and-waves/demonstrations/\
+HeadsOrTails.nb.pdf"],
+ ". Let\[CloseCurlyQuote]s apply addOne five times:"
+}], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
   3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
   3.944068468030957*^9}, {3.944068502593445*^9, 3.944068515703483*^9}, {
   3.944259535871234*^9, 3.944259807557398*^9}, {3.9442600848746557`*^9, 
   3.944260088459257*^9}, {3.9442604397609053`*^9, 3.944260552760936*^9}, {
-  3.9442605920783863`*^9, 
-  3.9442605988576527`*^9}},ExpressionUUID->"0b055de4-d13f-4e75-a122-\
+  3.9442605920783863`*^9, 3.9442605988576527`*^9}, {3.946092600327029*^9, 
+  3.946092602308436*^9}, {3.9460936753260098`*^9, 3.946093746277341*^9}, {
+  3.946093834902961*^9, 3.946093843002789*^9}, {3.94609387322753*^9, 
+  3.9460939201479816`*^9}},ExpressionUUID->"0b055de4-d13f-4e75-a122-\
 283c12b8ce31"],
 
 Cell[CellGroupData[{
@@ -262,7 +303,8 @@ Cell[BoxData[
   3.94426010375917*^9}, {3.944260137076537*^9, 3.944260178598207*^9}, {
   3.9442603390369873`*^9, 3.944260374433074*^9}, {3.9442605563793583`*^9, 
   3.944260576792996*^9}},
- CellLabel->"In[86]:=",ExpressionUUID->"d5948a7f-c965-47af-a196-17c66cba016b"],
+ CellLabel->
+  "In[149]:=",ExpressionUUID->"d5948a7f-c965-47af-a196-17c66cba016b"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -300,21 +342,27 @@ Cell[BoxData[
  CellChangeTimes->{
   3.944260578549217*^9, 3.9442606174937773`*^9, 3.944262906683112*^9, 
    3.9442629401734667`*^9, 3.944263508562519*^9, {3.944264110013102*^9, 
-   3.9442641271414213`*^9}, 3.9442642393576508`*^9},
- CellLabel->"Out[86]=",ExpressionUUID->"83579764-731c-4486-8b46-0cf130acbd7d"]
+   3.9442641271414213`*^9}, 3.9442642393576508`*^9, 3.9460922481141787`*^9, 
+   3.946093008641321*^9, 3.946093054105693*^9, 3.946093136776478*^9, {
+   3.946093173229457*^9, 3.946093195641876*^9}, 3.94609326026721*^9, 
+   3.946093342349762*^9, 3.946094094638414*^9, 3.946094378098682*^9, 
+   3.946094416546348*^9},
+ CellLabel->
+  "Out[149]=",ExpressionUUID->"b8d15338-2f8e-4b76-8d26-19cae9e7865e"]
 }, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["Numerical Integration", "Subsection",
+Cell["The Simplest Formulas", "Subsection",
  CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
   3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
   3.94413963984907*^9}, {3.944259530711527*^9, 3.9442595335136843`*^9}, {
   3.9442606516006737`*^9, 3.944260653597083*^9}, {3.9442609403769283`*^9, 
   3.9442609462003593`*^9}, {3.9442611015068808`*^9, 3.944261104266327*^9}, {
   3.944261641763151*^9, 3.944261646919606*^9}, {3.944262147514449*^9, 
-  3.944262154294177*^9}},ExpressionUUID->"69ab8a45-8c06-4012-9e03-\
+  3.944262154294177*^9}, {3.946091059121505*^9, 
+  3.946091062690538*^9}},ExpressionUUID->"69ab8a45-8c06-4012-9e03-\
 4695c5ab6d18"],
 
 Cell[TextData[{
@@ -327,9 +375,7 @@ from Velocity \[LongDash] Theory\[CloseCurlyDoubleQuote] notebook:\n\n",
     RowBox[{
      SubscriptBox["t", "1"], "+", 
      RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}]}], 
-   TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "08ddfff7-3cbb-40d6-8128-d737254dc6d3"],
+   TraditionalForm]],ExpressionUUID->"08ddfff7-3cbb-40d6-8128-d737254dc6d3"],
  "\n\n",
  Cell[BoxData[
   FormBox[
@@ -340,25 +386,188 @@ from Velocity \[LongDash] Theory\[CloseCurlyDoubleQuote] notebook:\n\n",
      RowBox[{"x", "(", 
       SubscriptBox["t", "1"], ")"}], "+", 
      RowBox[{
-      RowBox[{"v", "(", 
-       RowBox[{
-        SubscriptBox["t", "1"], "+", 
-        FractionBox[
-         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}], ")"}], 
-      "*", "\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}]}], 
-   TraditionalForm]],ExpressionUUID->"f272d1e8-e46f-4ab1-93d1-7a713218455d"]
+      RowBox[{
+       RowBox[{"v", "(", 
+        RowBox[{
+         SubscriptBox["t", "1"], "+", 
+         FractionBox[
+          RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}], ")"}],
+        "\[CenterDot]", "\[CapitalDelta]"}], "\[VeryThinSpace]", "t"}]}]}], 
+   TraditionalForm]],ExpressionUUID->"f272d1e8-e46f-4ab1-93d1-7a713218455d"],
+ "\n\nNow we are going to have to apply this procedure over and over again, \
+so perhaps I should write:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", 
+     RowBox[{"i", "+", "1"}]], "=", 
+    RowBox[{
+     SubscriptBox["t", "i"], "+", 
+     RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}]}], 
+   TraditionalForm]],ExpressionUUID->"6268aa76-fdf0-47bf-9f8b-8202839ad4ae"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "(", 
+     SubscriptBox["t", 
+      RowBox[{"i", "+", "1"}]], ")"}], "=", 
+    RowBox[{
+     RowBox[{"x", "(", 
+      SubscriptBox["t", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"v", "(", 
+        RowBox[{
+         SubscriptBox["t", "i"], "+", 
+         FractionBox[
+          RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}], ")"}],
+        "\[CenterDot]", "\[CapitalDelta]"}], "\[VeryThinSpace]", "t"}]}]}], 
+   TraditionalForm]],ExpressionUUID->"727aa84f-5a7c-4163-ab5f-7d9bf2c88415"],
+ "\n\nIf I put in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"i", "=", "10"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0e166a34-1ccb-4d9e-b3e1-fd34eaf78065"],
+ " (as a special case) into these formulas, I get:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", "11"], "=", 
+    RowBox[{
+     SubscriptBox["t", "10"], "+", 
+     RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}]}], 
+   TraditionalForm]],ExpressionUUID->"20a1755c-e7dc-40ae-820b-8022a4e21864"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "(", 
+     SubscriptBox["t", "11"], ")"}], "=", 
+    RowBox[{
+     RowBox[{"x", "(", 
+      SubscriptBox["t", "10"], ")"}], "+", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"v", "(", 
+        RowBox[{
+         SubscriptBox["t", "10"], "+", 
+         FractionBox[
+          RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}], ")"}],
+        "\[CenterDot]", "\[CapitalDelta]"}], "\[VeryThinSpace]", "t"}]}]}], 
+   TraditionalForm]],ExpressionUUID->"f3eb0ccc-fd0e-43c1-9e6c-6bd10d2a2a20"],
+ "\n\nWhatever our initial position is we will call ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "(", 
+     SubscriptBox["t", "initial"], ")"}], "=", 
+    SubscriptBox["x", "initial"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ae7988ee-51b8-4899-a81b-9873368d3b22"],
+ ". And our final position at ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "final"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "ce370799-c621-40c8-89e2-106b7eb4e638"],
+ " which is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "(", 
+    SubscriptBox["t", "final"], ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "336cc8ad-f1e1-45c9-87b6-cdf20597040d"],
+ " \[LongDash] which is what we are trying to find \[LongDash] we could call ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "final"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a81e8bca-c4dc-4a52-adf8-d9586952296a"],
+ ".\n\nIf we do ",
+ Cell[BoxData[
+  FormBox["N", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c982be3d-f08b-4dc0-8803-8a8f7edf8837"],
+ " time steps to get from ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "initial"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2d2a6122-4155-4eab-ac09-becbdedfb350"],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "final"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "e177103f-5680-4ecf-ae59-cea2016b25fd"],
+ " then,\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "=", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["t", "final"], "-", 
+      SubscriptBox["t", "initial"]}], "N"]}], TraditionalForm]],
+  ExpressionUUID->"659ed028-adec-4055-8bf6-1b827205e769"],
+ "\n\nor completely equivalently,\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"N", "=", 
+    FractionBox[
+     RowBox[{
+      SubscriptBox["t", "final"], "-", 
+      SubscriptBox["t", "initial"]}], 
+     RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]]}], 
+   TraditionalForm]],ExpressionUUID->"1e3ec322-b795-4959-9f37-66ba97733cc7"],
+ "\n\nSo the simplest formulas for getting ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", 
+     RowBox[{"i", "+", "1"}]], "from", " ", 
+    SubscriptBox["t", "i"]}], TraditionalForm]],ExpressionUUID->
+  "2c2b1013-f3ae-4a88-9707-14e2286fafb7"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "(", 
+     SubscriptBox["t", 
+      RowBox[{"i", "+", "1"}]], ")"}], "from", " ", 
+    RowBox[{"x", "(", 
+     SubscriptBox["t", "i"], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "4077d7bc-b54f-4902-894d-c3ec599dc081"],
+ " are going to have to be applied ",
+ Cell[BoxData[
+  FormBox["N", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "76ee63e5-24a0-49b6-ba23-63ccc8962ef6"],
+ " times to get from ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "iniital"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5692bf67-bec2-49e9-84fd-7cb29c4d90df"],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "final"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c3cce01a-f5db-4305-abe0-e0e500cd6495"],
+ "."
 }], "Text",
- CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
-  3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
-  3.944068468030957*^9}, {3.944068502593445*^9, 3.944068515703483*^9}, {
-  3.944259535871234*^9, 3.944259807557398*^9}, {3.9442606642020273`*^9, 
-  3.944260932751069*^9}, {3.9442610179268*^9, 3.944261612704438*^9}, {
-  3.94426165722689*^9, 3.944262111091948*^9}, {3.94426215829992*^9, 
-  3.944262162946951*^9}, {3.944262193160887*^9, 3.944262297785261*^9}, {
-  3.944262632603356*^9, 3.944262725845533*^9}, {3.945107626161254*^9, 
-  3.94510767516823*^9}, {3.9451080169632883`*^9, 
-  3.945108029350749*^9}},ExpressionUUID->"709de21a-96d7-4b22-afd9-\
-ecac3efa75c8"]
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQA2IQ3asilb4t6a3jCceoHBAdv2JyFYhWzIysBtHvI03W
+guhZfxvWgeiGv5c2gcWbyraAaLWHv38KJ791NLn2UVoESDOVs7WD6EMcM1aA
+6IgVtpvB/K5pf0H0eid1ZlEgbfvxkTWI/jTjpCOIzvGNcwLRf1RV3UD0HQXL
+YBC90U+4FkTP5tvdAaL/abiKbkp566iSlCoNop0uy7mB6DDL1e4g+jebv+ak
+tLeOHSVVYFpCdK87iH51troDRKeVT5oEoh/WQmjRE7HTQXT9hukLQfSkd4e4
+JgPpW5oZkiBaNvXJLBDtFa++AEQv+vtuCYiWUrZdCqK79D5eBKv7WnEJRKuY
+2VwH0U0ZvmAaAOAZr7U=
+  "],ExpressionUUID->"709de21a-96d7-4b22-afd9-ecac3efa75c8"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -372,11 +581,13 @@ Cell["Constant Velocity", "Subsection",
 18fcaa14729a"],
 
 Cell["\<\
-By far the simplest example is constant velocity. Let\[CloseCurlyQuote]s just \
-have a constant velocity of 3 and a time step of 0.01. \
+By far the simplest example is constant velocity. Let\[CloseCurlyQuote]s \
+first write the function that does a constant velocity of 3 and a time step \
+of 0.1, just one time:\
 \>", "Text",
- CellChangeTimes->{{3.944262387518893*^9, 
-  3.9442624625384293`*^9}},ExpressionUUID->"3f6069ff-99db-4565-a2ea-\
+ CellChangeTimes->{{3.944262387518893*^9, 3.9442624625384293`*^9}, 
+   3.946090945990171*^9, {3.94609180171782*^9, 
+   3.946091827069725*^9}},ExpressionUUID->"3f6069ff-99db-4565-a2ea-\
 486710b07440"],
 
 Cell[BoxData[
@@ -402,136 +613,373 @@ Cell[BoxData[
  CellChangeTimes->{{3.944262465240116*^9, 3.944262522823402*^9}, {
   3.9442627756942387`*^9, 3.944262778977315*^9}, {3.944262898099502*^9, 
   3.9442629001855593`*^9}},
- CellLabel->"In[87]:=",ExpressionUUID->"338307a6-3216-4989-a273-19c4aee2cd1e"],
+ CellLabel->
+  "In[150]:=",ExpressionUUID->"338307a6-3216-4989-a273-19c4aee2cd1e"],
+
+Cell[TextData[{
+ "You have to look very carefully at the theory that we derived and make sure \
+that what we just did was an application of:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", 
+     RowBox[{"i", "+", "1"}]], "=", 
+    RowBox[{
+     SubscriptBox["t", "i"], "+", 
+     RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}]}], 
+   TraditionalForm]],ExpressionUUID->"94ceed91-917a-4891-b37e-5772ff6af9d3"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "(", 
+     SubscriptBox["t", 
+      RowBox[{"i", "+", "1"}]], ")"}], "=", 
+    RowBox[{
+     RowBox[{"x", "(", 
+      SubscriptBox["t", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"v", "(", 
+        RowBox[{
+         SubscriptBox["t", "i"], "+", 
+         FractionBox[
+          RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}], ")"}],
+        "\[CenterDot]", "\[CapitalDelta]"}], "\[VeryThinSpace]", "t"}]}]}], 
+   TraditionalForm]],ExpressionUUID->"78684115-fdca-4fda-a81b-45ab93eba4d8"],
+ "\n\nThen we need to apply this function 15 times to get from 2.0 to 3.5.\n\n\
+We also need to say, where should we start the particle? E.g., what is ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "initial"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "efd9ef84-a534-4623-a2a2-743b0abf73b0"],
+ "? How about at time ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", "initial"], "=", "2.0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "93517e75-b984-4b11-92cd-b639092b28fd"],
+ " we say it was at position ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "initial"], "=", 
+    RowBox[{
+     SubscriptBox["x", "0"], "=", 
+     RowBox[{"-", "2.0"}]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "fa398c40-5a01-47a5-83e5-a5a68ece79be"],
+ "?\n\nAlright then, now we apply the function, starting with that initial \
+time and position, 15 times:"
+}], "Text",
+ CellChangeTimes->{{3.944262387518893*^9, 3.94426244351856*^9}, {
+   3.9442628213102202`*^9, 3.944262840061694*^9}, {3.944262890868715*^9, 
+   3.9442629349403973`*^9}, 3.946090905530574*^9, {3.946091856290485*^9, 
+   3.9460918857672157`*^9}, {3.9460919314896793`*^9, 
+   3.9460920681941357`*^9}, {3.9460943016143427`*^9, 
+   3.946094302058722*^9}},ExpressionUUID->"0ede6e9a-0451-42b8-b1c2-\
+954e61ecb54d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"allTheAssociations", " ", "=", " ", 
+   RowBox[{"NestList", "[", 
+    RowBox[{"move", ",", 
+     RowBox[{"<|", 
+      RowBox[{
+       RowBox[{"\"\<time\>\"", "->", "2.0"}], ",", " ", 
+       RowBox[{"\"\<position\>\"", "->", 
+        RowBox[{"-", "2.0"}]}]}], "|>"}], ",", "15"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.944262793921376*^9, 3.944262803203528*^9}, {
+  3.944262847868658*^9, 3.9442629387040987`*^9}, {3.946092808747665*^9, 
+  3.946092830691471*^9}, {3.9460929545363827`*^9, 3.946092954717093*^9}},
+ CellLabel->
+  "In[151]:=",ExpressionUUID->"3ffabf4f-47a9-400b-bad6-8f43cb1a950c"],
 
 Cell["\<\
-By far the simplest example is constant velocity. Let\[CloseCurlyQuote]s just \
-have a constant velocity of 3 and a time step of 0.1. Then we need to do 15 \
-steps to get from 2.0 to 3.5. Where should we start the particle? How about \
-at time 2.0 we say it was at position -2.0?\
+Woo hoo! That was easy. Our result isn\[CloseCurlyQuote]t very graphical, and \
+it isn\[CloseCurlyQuote]t very interesting, because it is constant velocity. \
+Let\[CloseCurlyQuote]s graph it anyway even though it isn\[CloseCurlyQuote]t \
+very interesting. First we graph all the positions:\
 \>", "Text",
  CellChangeTimes->{{3.944262387518893*^9, 3.94426244351856*^9}, {
-  3.9442628213102202`*^9, 3.944262840061694*^9}, {3.944262890868715*^9, 
-  3.9442629349403973`*^9}},ExpressionUUID->"0ede6e9a-0451-42b8-b1c2-\
-954e61ecb54d"],
+   3.9442628213102202`*^9, 3.944262840061694*^9}, {3.944262890868715*^9, 
+   3.9442629349403973`*^9}, 3.946090905530574*^9, {3.946091856290485*^9, 
+   3.9460918857672157`*^9}, {3.9460919314896793`*^9, 3.946092124309794*^9}, {
+   3.946092766626511*^9, 3.94609280496385*^9}, {3.9460928423156643`*^9, 
+   3.946092907808167*^9}},ExpressionUUID->"39bdf600-5eec-458a-93b7-\
+e898622dcd26"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"NestList", "[", 
-  RowBox[{"move", ",", 
-   RowBox[{"<|", 
-    RowBox[{
-     RowBox[{"\"\<time\>\"", "->", "2.0"}], ",", " ", 
-     RowBox[{"\"\<position\>\"", "->", 
-      RowBox[{"-", "2.0"}]}]}], "|>"}], ",", "15"}], "]"}]], "Input",
- CellChangeTimes->{{3.944262793921376*^9, 3.944262803203528*^9}, {
-  3.944262847868658*^9, 3.9442629387040987`*^9}},
- CellLabel->"In[88]:=",ExpressionUUID->"3ffabf4f-47a9-400b-bad6-8f43cb1a950c"],
+ RowBox[{"allThePositions", "=", 
+  RowBox[{"allTheAssociations", "[", 
+   RowBox[{"[", 
+    RowBox[{"All", ",", "\"\<position\>\""}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.946092910346282*^9, 3.946092947305016*^9}},
+ CellLabel->
+  "In[152]:=",ExpressionUUID->"1c67bc3e-c478-42cb-90a6-82dbb1b1ab7d"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "2.`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", 
-      RowBox[{"-", "2.`"}]}]}], "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "2.1`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", 
-      RowBox[{"-", "1.7`"}]}]}], "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "2.2`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", 
-      RowBox[{"-", "1.4`"}]}]}], "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "2.3000000000000003`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", 
-      RowBox[{"-", "1.0999999999999999`"}]}]}], "\[RightAssociation]"}], ",", 
-   
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "2.4000000000000004`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", 
-      RowBox[{"-", "0.7999999999999998`"}]}]}], "\[RightAssociation]"}], ",", 
-   
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "2.5000000000000004`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", 
-      RowBox[{"-", "0.4999999999999998`"}]}]}], "\[RightAssociation]"}], ",", 
-   
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "2.6000000000000005`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", 
-      RowBox[{"-", "0.19999999999999973`"}]}]}], "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "2.7000000000000006`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", "0.10000000000000031`"}]}], 
-    "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "2.8000000000000007`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", "0.40000000000000036`"}]}], 
-    "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "2.900000000000001`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", "0.7000000000000004`"}]}], 
-    "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "3.000000000000001`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", "1.0000000000000004`"}]}], 
-    "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "3.100000000000001`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", "1.3000000000000005`"}]}], 
-    "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "3.200000000000001`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", "1.6000000000000005`"}]}], 
-    "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "3.300000000000001`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", "1.9000000000000006`"}]}], 
-    "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "3.4000000000000012`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", "2.2000000000000006`"}]}], 
-    "\[RightAssociation]"}], ",", 
-   RowBox[{"\[LeftAssociation]", 
-    RowBox[{
-     RowBox[{"\<\"time\"\>", "\[Rule]", "3.5000000000000013`"}], ",", 
-     RowBox[{"\<\"position\"\>", "\[Rule]", "2.500000000000001`"}]}], 
-    "\[RightAssociation]"}]}], "}"}]], "Output",
+   RowBox[{"-", "2.`"}], ",", 
+   RowBox[{"-", "1.7`"}], ",", 
+   RowBox[{"-", "1.4`"}], ",", 
+   RowBox[{"-", "1.0999999999999999`"}], ",", 
+   RowBox[{"-", "0.7999999999999998`"}], ",", 
+   RowBox[{"-", "0.4999999999999998`"}], ",", 
+   RowBox[{"-", "0.19999999999999973`"}], ",", "0.10000000000000031`", ",", 
+   "0.40000000000000036`", ",", "0.7000000000000004`", ",", 
+   "1.0000000000000004`", ",", "1.3000000000000005`", ",", 
+   "1.6000000000000005`", ",", "1.9000000000000006`", ",", 
+   "2.2000000000000006`", ",", "2.500000000000001`"}], "}"}]], "Output",
  CellChangeTimes->{
-  3.944262863512726*^9, {3.944262906695953*^9, 3.944262940188428*^9}, 
-   3.944263508566902*^9, {3.944264110023746*^9, 3.9442641271542063`*^9}, 
-   3.944264239371097*^9},
- CellLabel->"Out[88]=",ExpressionUUID->"418a5e19-6236-45ad-be2a-16c7871e0cac"]
+  3.94609300865212*^9, 3.9460930541162577`*^9, 3.94609313678563*^9, {
+   3.946093173240395*^9, 3.9460931956529617`*^9}, 3.9460932602782173`*^9, 
+   3.946093342361865*^9, 3.9460940946512823`*^9, 3.946094378108527*^9, 
+   3.946094416555661*^9},
+ CellLabel->
+  "Out[152]=",ExpressionUUID->"5673e326-e1cf-41c5-aa95-66b726dd2d88"]
 }, Open  ]],
 
-Cell["\<\
-By far the simplest example is constant velocity. Let\[CloseCurlyQuote]s just \
-have a constant velocity of 3 and a time step of 0.1. Then we need to do 15 \
-steps to get from 2.0 to 3.5. Where should we start the particle? How about \
-at time 2.0 we say it was at position -2.0?\
-\>", "Text",
- CellChangeTimes->{{3.9442623875188932`*^9, 3.94426244351856*^9}, {
-  3.9442628213102207`*^9, 3.944262840061694*^9}, {3.9442628908687153`*^9, 
-  3.9442629349403973`*^9}},ExpressionUUID->"1bd7fc93-9ca3-45e2-9c81-\
-385a03b91754"]
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"allThePositions", ",", " ", 
+   RowBox[{"PlotRange", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", " ", "17"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3"}], ",", " ", "4.5"}], "}"}]}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9460930143431807`*^9, 3.946093075092863*^9}, {
+  3.946093170049041*^9, 3.946093170121255*^9}, {3.9460932144078293`*^9, 
+  3.94609323030541*^9}, {3.946093329382888*^9, 3.946093329577194*^9}},
+ CellLabel->
+  "In[153]:=",ExpressionUUID->"7e869d96-15fe-419d-a715-fe565afbfe70"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   InterpretationBox[{
+     TagBox[
+      TagBox[
+       {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+        0.012833333333333334`], AbsoluteThickness[2], 
+        PointBox[{{1., -2.}, {2., -1.7}, {3., -1.4}, {
+         4., -1.0999999999999999`}, {5., -0.7999999999999998}, {
+         6., -0.4999999999999998}, {7., -0.19999999999999973`}, {8., 
+         0.10000000000000031`}, {9., 0.40000000000000036`}, {10., 
+         0.7000000000000004}, {11., 1.0000000000000004`}, {12., 
+         1.3000000000000005`}, {13., 1.6000000000000005`}, {14., 
+         1.9000000000000006`}, {15., 2.2000000000000006`}, {16., 
+         2.500000000000001}}]},
+       Annotation[#, "Charting`Private`Tag#1"]& ],
+      {"WolframDynamicHighlight", <|
+       "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>}], 
+     StyleBox[
+      DynamicBox[(Charting`HighlightActionBox["DynamicHighlight", {}, 
+        Slot["HighlightElements"], 
+        Slot["LayoutOptions"], 
+        Slot["Meta"], 
+        Charting`HighlightActionFunction["DynamicHighlight", {{
+           Annotation[{
+             Directive[
+              PointSize[0.012833333333333334`], 
+              RGBColor[0.368417, 0.506779, 0.709798], 
+              AbsoluteThickness[2]], 
+             
+             Point[{{1., -2.}, {2., -1.7}, {3., -1.4}, {
+              4., -1.0999999999999999`}, {5., -0.7999999999999998}, {
+              6., -0.4999999999999998}, {7., -0.19999999999999973`}, {8., 
+              0.10000000000000031`}, {9., 0.40000000000000036`}, {10., 
+              0.7000000000000004}, {11., 1.0000000000000004`}, {12., 
+              1.3000000000000005`}, {13., 1.6000000000000005`}, {14., 
+              1.9000000000000006`}, {15., 2.2000000000000006`}, {16., 
+              2.500000000000001}}]}, "Charting`Private`Tag#1"]}}, <|
+         "HighlightElements" -> <|
+           "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+          "LayoutOptions" -> <|
+           "PanelPlotLayout" -> <||>, "PlotRange" -> {{0., 17.}, {-3., 4.5}}, 
+            "Frame" -> {{False, False}, {False, False}}, 
+            "AxesOrigin" -> {0, 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
+            "Axes" -> {True, True}, "LabelStyle" -> {}, "AspectRatio" -> 
+            GoldenRatio^(-1), "DefaultStyle" -> {
+              Directive[
+               PointSize[0.012833333333333334`], 
+               RGBColor[0.368417, 0.506779, 0.709798], 
+               AbsoluteThickness[2]]}, 
+            "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+                Identity[
+                 Part[#, 1]], 
+                Identity[
+                 Part[#, 2]]}& ), 
+              "ScalingFunctions" -> {{Identity, Identity}, {
+                Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+            False|>, 
+          "Meta" -> <|
+           "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+            ListPlot, "GroupHighlight" -> False|>|>]]& )[<|
+        "HighlightElements" -> <|
+          "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+         "LayoutOptions" -> <|
+          "PanelPlotLayout" -> <||>, "PlotRange" -> {{0., 17.}, {-3., 4.5}}, 
+           "Frame" -> {{False, False}, {False, False}}, 
+           "AxesOrigin" -> {0, 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
+           "Axes" -> {True, True}, "LabelStyle" -> {}, "AspectRatio" -> 
+           GoldenRatio^(-1), "DefaultStyle" -> {
+             Directive[
+              PointSize[0.012833333333333334`], 
+              RGBColor[0.368417, 0.506779, 0.709798], 
+              AbsoluteThickness[2]]}, 
+           "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+               Identity[
+                Part[#, 1]], 
+               Identity[
+                Part[#, 2]]}& ), 
+             "ScalingFunctions" -> {{Identity, Identity}, {
+               Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> 
+           False|>, 
+         "Meta" -> <|
+          "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+           ListPlot, "GroupHighlight" -> False|>|>],
+       ImageSizeCache->{{4.503599627370496*^15, -4.503599627370496*^15}, {
+        4.503599627370496*^15, -4.503599627370496*^15}}],
+      Selectable->False]},
+    Annotation[{{
+       Annotation[{
+         Directive[
+          PointSize[0.012833333333333334`], 
+          RGBColor[0.368417, 0.506779, 0.709798], 
+          AbsoluteThickness[2]], 
+         Point[{{1., -2.}, {2., -1.7}, {3., -1.4}, {
+          4., -1.0999999999999999`}, {5., -0.7999999999999998}, {
+          6., -0.4999999999999998}, {7., -0.19999999999999973`}, {8., 
+          0.10000000000000031`}, {9., 0.40000000000000036`}, {10., 
+          0.7000000000000004}, {11., 1.0000000000000004`}, {12., 
+          1.3000000000000005`}, {13., 1.6000000000000005`}, {14., 
+          1.9000000000000006`}, {15., 2.2000000000000006`}, {16., 
+          2.500000000000001}}]}, "Charting`Private`Tag#1"]}}, <|
+     "HighlightElements" -> <|
+       "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
+      "LayoutOptions" -> <|
+       "PanelPlotLayout" -> <||>, "PlotRange" -> {{0., 17.}, {-3., 4.5}}, 
+        "Frame" -> {{False, False}, {False, False}}, "AxesOrigin" -> {0, 0}, 
+        "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True}, 
+        "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), "DefaultStyle" -> {
+          Directive[
+           PointSize[0.012833333333333334`], 
+           RGBColor[0.368417, 0.506779, 0.709798], 
+           AbsoluteThickness[2]]}, 
+        "HighlightLabelingFunctions" -> <|"CoordinatesToolOptions" -> ({
+            Identity[
+             Part[#, 1]], 
+            Identity[
+             Part[#, 2]]}& ), 
+          "ScalingFunctions" -> {{Identity, Identity}, {
+            Identity, Identity}}|>, "Primitives" -> {}, "GCFlag" -> False|>, 
+      "Meta" -> <|
+       "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
+        ListPlot, "GroupHighlight" -> False|>|>, 
+     "DynamicHighlight"]], {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "DefaultPlotStyle" -> {
+      Directive[
+       RGBColor[0.368417, 0.506779, 0.709798], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.880722, 0.611041, 0.142051], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.560181, 0.691569, 0.194885], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.922526, 0.385626, 0.209179], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.528488, 0.470624, 0.701351], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.772079, 0.431554, 0.102387], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.363898, 0.618501, 0.782349], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[1, 0.75, 0], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.647624, 0.37816, 0.614037], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.571589, 0.586483, 0.], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.915, 0.3325, 0.2125], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+       AbsoluteThickness[2]], 
+      Directive[
+       RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], 
+       AbsoluteThickness[2]]}, "DomainPadding" -> Scaled[0.02], 
+    "PointSizeFunction" -> "SmallPointSize", "RangePadding" -> Scaled[0.05], 
+    "OptimizePlotMarkers" -> True, "IncludeHighlighting" -> "CurrentPoint", 
+    "HighlightStyle" -> Automatic, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 17.}, {-3., 4.5}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0, 0}, {0, 0}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.946093002287035*^9, 3.946093008657709*^9}, {
+   3.946093054130769*^9, 3.9460930771964293`*^9}, 3.946093136795545*^9, {
+   3.94609317061047*^9, 3.946093260294936*^9}, {3.94609333197211*^9, 
+   3.946093342372355*^9}, 3.946094094668703*^9, 3.946094378121601*^9, 
+   3.946094416569808*^9},
+ CellLabel->
+  "Out[153]=",ExpressionUUID->"8b2790c7-5588-4244-a99e-50bec1cf0ab6"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -545,18 +993,22 @@ Cell["A Bounce", "Subsection",
 1a21f73d5dd0"],
 
 Cell[TextData[{
- "Let\[CloseCurlyQuote]s have the particle go at constant velocity of 6 until \
-the time is 3.0, and then bounce and go ",
+ "To make things a little more interesting, how about we do a bounce? We\
+\[CloseCurlyQuote]ll have the particle go at constant velocity of 6 until the \
+time is 3.0, and then bounce and continue at a constant velocity of ",
  Cell[BoxData[
   FormBox[
-   RowBox[{"-", "6"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"-", "6"}], TraditionalForm]],ExpressionUUID->
   "30a3bda8-66a8-43f5-84cf-7636a5d151f6"],
- " after that:"
+ " after that. We\[CloseCurlyQuote]ll make the time steps smaller so that our \
+graph is more detailed:"
 }], "Text",
  CellChangeTimes->{{3.9442623875188932`*^9, 3.9442624625384293`*^9}, {
-  3.9442631261403637`*^9, 3.94426319698608*^9}, {3.9442634606839046`*^9, 
-  3.944263463636828*^9}},ExpressionUUID->"7f573fe4-acbb-4784-a4cd-\
+   3.9442631261403637`*^9, 3.94426319698608*^9}, {3.9442634606839046`*^9, 
+   3.944263463636828*^9}, {3.946092132650094*^9, 3.946092173642849*^9}, 
+   3.9460922254347763`*^9, {3.9460929676297903`*^9, 3.946092990277849*^9}, {
+   3.9460931527076683`*^9, 
+   3.946093156666883*^9}},ExpressionUUID->"7f573fe4-acbb-4784-a4cd-\
 be4b9b926e3f"],
 
 Cell[BoxData[
@@ -593,22 +1045,31 @@ Cell[BoxData[
    "\[IndentingNewLine]", ")"}]}]], "Input",
  CellChangeTimes->{{3.944263209461335*^9, 3.944263442472447*^9}, 
    3.944264050803895*^9},
- CellLabel->"In[89]:=",ExpressionUUID->"6c2d2a00-3cb0-4835-865b-4af84ac5699e"],
+ CellLabel->
+  "In[154]:=",ExpressionUUID->"6c2d2a00-3cb0-4835-865b-4af84ac5699e"],
 
 Cell[TextData[{
- "I cranked down the ",
+ "We are still going to start at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", "initial"], "=", "2.0"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c0b6e96b-20d2-4737-b681-85b02612d51c"],
+ ".\n\nNotice that because I cranked down the ",
  Cell[BoxData[
   FormBox[
    RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "d8a9888f-1664-4b8a-ae4d-fd13fbc616d8"],
- " to 0.1, and so I am going to have to crank up the number of steps to 150, \
-and I am going to suppress the output:"
+  ExpressionUUID->"d8a9888f-1664-4b8a-ae4d-fd13fbc616d8"],
+ " to 0.01, I am going to have to crank up the number of steps to 150, and I \
+am going to suppress the output:"
 }], "Text",
  CellChangeTimes->{{3.9442623875188932`*^9, 3.9442624625384293`*^9}, {
   3.9442631261403637`*^9, 3.94426319698608*^9}, {3.9442634606839046`*^9, 
-  3.944263463636828*^9}, {3.944264066823357*^9, 
-  3.9442641206756067`*^9}},ExpressionUUID->"d8a84238-a201-4bda-86d4-\
+  3.944263463636828*^9}, {3.944264066823357*^9, 3.9442641206756067`*^9}, {
+  3.946090978027849*^9, 3.946091015545146*^9}, {3.946092209358083*^9, 
+  3.9460922204215107`*^9}, {3.9460943533480988`*^9, 
+  3.94609436522535*^9}},ExpressionUUID->"d8a84238-a201-4bda-86d4-\
 2ccd93dc4e97"],
 
 Cell[BoxData[
@@ -623,8 +1084,10 @@ Cell[BoxData[
         RowBox[{"-", "2.0"}]}]}], "|>"}], ",", "150"}], "]"}]}], 
   ";"}]], "Input",
  CellChangeTimes->{{3.944263495959009*^9, 3.944263504625229*^9}, {
-   3.9442640313032923`*^9, 3.944264054597274*^9}, 3.944264113475418*^9},
- CellLabel->"In[90]:=",ExpressionUUID->"5d7080fb-1e32-4888-a383-377d31cd9da8"]
+   3.9442640313032923`*^9, 3.944264054597274*^9}, 3.944264113475418*^9, 
+   3.9460943761624804`*^9, 3.946094413544956*^9},
+ CellLabel->
+  "In[155]:=",ExpressionUUID->"5d7080fb-1e32-4888-a383-377d31cd9da8"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -640,22 +1103,37 @@ Cell["Displaying the Bounce", "Subsection",
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"allThePositions", " ", "=", " ", 
+  RowBox[{"allTheBouncePositions", " ", "=", " ", 
    RowBox[{"lotsaPositions", "[", 
     RowBox[{"[", 
      RowBox[{"All", ",", "\"\<position\>\""}], "]"}], "]"}]}], ";"}]], "Input",\
 
  CellChangeTimes->{{3.944264137811645*^9, 3.944264268864908*^9}, {
-  3.9442659268407373`*^9, 
-  3.9442659319833517`*^9}},ExpressionUUID->"c2cda614-a4b6-422d-9fba-\
-6ce4006f4db8"],
+   3.9442659268407373`*^9, 3.9442659319833517`*^9}, {3.946093184916128*^9, 
+   3.946093187567848*^9}, 3.9460932838605003`*^9, 3.946094093052005*^9},
+ CellLabel->
+  "In[156]:=",ExpressionUUID->"c2cda614-a4b6-422d-9fba-6ce4006f4db8"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"ListPlot", "[", "allThePositions", "]"}]], "Input",
- CellChangeTimes->{{3.944265913148992*^9, 3.944265942454773*^9}},
- CellLabel->"In[96]:=",ExpressionUUID->"5ccdc08f-b12f-4903-a858-8b9f62010ecf"],
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"allTheBouncePositions", ",", " ", 
+   RowBox[{"PlotRange", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", " ", "152"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3"}], ",", "4.5"}], "}"}]}], "}"}]}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.944265913148992*^9, 3.944265942454773*^9}, {
+  3.946092278242025*^9, 3.9460923168185596`*^9}, {3.946093190367568*^9, 
+  3.9460931942857647`*^9}, {3.946093257849053*^9, 3.9460932587296743`*^9}, {
+  3.9460933372143583`*^9, 3.9460933373930817`*^9}},
+ CellLabel->
+  "In[157]:=",ExpressionUUID->"5ccdc08f-b12f-4903-a858-8b9f62010ecf"],
 
 Cell[BoxData[
  GraphicsBox[{{}, 
@@ -733,10 +1211,9 @@ foIR9/ehO6H56Mv7H4BMv3o=
          "HighlightElements" -> <|
            "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
           "LayoutOptions" -> <|
-           "PanelPlotLayout" -> <||>, 
-            "PlotRange" -> {{0., 151.}, {-2., 4.0000000000000036`}}, 
-            "Frame" -> {{False, False}, {False, False}}, 
-            "AxesOrigin" -> {0., 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
+           "PanelPlotLayout" -> <||>, "PlotRange" -> {{0., 152.}, {-3., 4.5}},
+             "Frame" -> {{False, False}, {False, False}}, 
+            "AxesOrigin" -> {0, 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
             "Axes" -> {True, True}, "LabelStyle" -> {}, "AspectRatio" -> 
             GoldenRatio^(-1), "DefaultStyle" -> {
               Directive[
@@ -757,10 +1234,9 @@ foIR9/ehO6H56Mv7H4BMv3o=
         "HighlightElements" -> <|
           "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
          "LayoutOptions" -> <|
-          "PanelPlotLayout" -> <||>, 
-           "PlotRange" -> {{0., 151.}, {-2., 4.0000000000000036`}}, 
+          "PanelPlotLayout" -> <||>, "PlotRange" -> {{0., 152.}, {-3., 4.5}}, 
            "Frame" -> {{False, False}, {False, False}}, 
-           "AxesOrigin" -> {0., 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
+           "AxesOrigin" -> {0, 0}, "ImageSize" -> {360, 360/GoldenRatio}, 
            "Axes" -> {True, True}, "LabelStyle" -> {}, "AspectRatio" -> 
            GoldenRatio^(-1), "DefaultStyle" -> {
              Directive[
@@ -816,9 +1292,8 @@ foIR9/ehO6H56Mv7H4BMv3o=
      "HighlightElements" -> <|
        "Label" -> {"XYLabel"}, "Ball" -> {"IndicatedBall"}|>, 
       "LayoutOptions" -> <|
-       "PanelPlotLayout" -> <||>, 
-        "PlotRange" -> {{0., 151.}, {-2., 4.0000000000000036`}}, 
-        "Frame" -> {{False, False}, {False, False}}, "AxesOrigin" -> {0., 0}, 
+       "PanelPlotLayout" -> <||>, "PlotRange" -> {{0., 152.}, {-3., 4.5}}, 
+        "Frame" -> {{False, False}, {False, False}}, "AxesOrigin" -> {0, 0}, 
         "ImageSize" -> {360, 360/GoldenRatio}, "Axes" -> {True, True}, 
         "LabelStyle" -> {}, "AspectRatio" -> GoldenRatio^(-1), "DefaultStyle" -> {
           Directive[
@@ -839,7 +1314,7 @@ foIR9/ehO6H56Mv7H4BMv3o=
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
   AxesLabel->{None, None},
-  AxesOrigin->{0., 0},
+  AxesOrigin->{0, 0},
   DisplayFunction->Identity,
   Frame->{{False, False}, {False, False}},
   FrameLabel->{{None, None}, {None, None}},
@@ -915,43 +1390,54 @@ foIR9/ehO6H56Mv7H4BMv3o=
          Part[#, 1]], 
         Identity[
          Part[#, 2]]}& )}},
-  PlotRange->{{0., 151.}, {-2., 4.0000000000000036`}},
+  PlotRange->{{0., 152.}, {-3., 4.5}},
   PlotRangeClipping->True,
-  PlotRangePadding->{{
-     Scaled[0.02], 
-     Scaled[0.02]}, {
-     Scaled[0.05], 
-     Scaled[0.05]}},
+  PlotRangePadding->{{0, 0}, {0, 0}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{{3.94426423305081*^9, 3.944264239384232*^9}, 
-   3.9442642737627788`*^9, 3.9442659432615347`*^9},
- CellLabel->"Out[96]=",ExpressionUUID->"395ad9c8-700c-4be4-9bd6-be338d33b719"]
+   3.9442642737627788`*^9, 3.9442659432615347`*^9, 3.946092248299814*^9, 
+   3.946092317632703*^9, 3.946093008678417*^9, 3.94609305415457*^9, 
+   3.946093136816471*^9, {3.946093173280119*^9, 3.9460931956962233`*^9}, 
+   3.946093260320436*^9, 3.946093342404065*^9, 3.946094094700444*^9, 
+   3.946094378153894*^9, 3.946094416594172*^9},
+ CellLabel->
+  "Out[157]=",ExpressionUUID->"18345597-9246-4851-be30-851e8882ccbb"]
 }, Open  ]],
 
 Cell[TextData[{
  "The bounce at ",
  Cell[BoxData[
   FormBox[
-   RowBox[{"t", "=", "3.0"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"t", "=", "3.0"}], TraditionalForm]],ExpressionUUID->
   "051ccf28-a17b-43cb-84f1-b808c2d1976c"],
- " occurs at the 100th time step. The plot might look a little jaggy if \
-viewed at low resolution, but it is entirely smooth when enlarged. "
+ " occurs at 101 on this plot. The plot might look a little jaggy if viewed \
+at low resolution, but it is entirely smooth when enlarged. The final time \
+step has ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"i", "=", "150"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "6f292ba4-790c-49ec-a6cd-404691d6f1b2"],
+ ", but it is shown at 151 on this plot. We really should put time on the \
+horizontal axis, rather than letting Mathematica just use ListPlot to put the \
+steps from 1 to 151, but that will come in a later notebook."
 }], "Text",
  CellChangeTimes->{{3.9442623875188932`*^9, 3.9442624625384293`*^9}, {
   3.9442631261403637`*^9, 3.94426319698608*^9}, {3.9442634606839046`*^9, 
   3.944263463636828*^9}, {3.944264066823357*^9, 3.9442641206756067`*^9}, {
-  3.9442659830443487`*^9, 
-  3.944266039537081*^9}},ExpressionUUID->"5b228ad7-3084-46e4-b245-\
+  3.9442659830443487`*^9, 3.944266039537081*^9}, {3.946092258948091*^9, 
+  3.94609227013741*^9}, {3.946093347998427*^9, 3.9460935210448637`*^9}, {
+  3.946093977621456*^9, 3.9460940318136187`*^9}, {3.946094460072509*^9, 
+  3.9460944606110992`*^9}},ExpressionUUID->"5b228ad7-3084-46e4-b245-\
 e2c38e8cf388"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{808, 911},
-WindowMargins->{{552, Automatic}, {133, Automatic}},
+WindowSize->{1326, 911},
+WindowMargins->{{Automatic, 57}, {Automatic, 0}},
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
-FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"79d99d9c-2760-41a1-b3ad-6f9f4f8469c8"
 ]
@@ -966,65 +1452,70 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 344, 5, 67, "Section",ExpressionUUID->"08f90a5e-ac65-4417-8844-b6de9f5e59a2"],
+Cell[558, 20, 344, 5, 82, "Section",ExpressionUUID->"08f90a5e-ac65-4417-8844-b6de9f5e59a2"],
 Cell[CellGroupData[{
-Cell[927, 29, 256, 4, 53, "Subtitle",ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
-Cell[1186, 35, 756, 18, 35, "Text",ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
+Cell[927, 29, 256, 4, 65, "Subtitle",ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
+Cell[1186, 35, 756, 18, 42, "Text",ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
 Cell[CellGroupData[{
-Cell[1967, 57, 305, 5, 54, "Subsection",ExpressionUUID->"8a33a1b3-882c-4d3d-a569-a9721ac03c66"],
-Cell[2275, 64, 1266, 20, 219, "Text",ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-8e446b0fbb82"],
+Cell[1967, 57, 305, 5, 66, "Subsection",ExpressionUUID->"8a33a1b3-882c-4d3d-a569-a9721ac03c66"],
+Cell[2275, 64, 1497, 26, 315, "Text",ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-8e446b0fbb82"],
 Cell[CellGroupData[{
-Cell[3566, 88, 449, 9, 30, "Input",ExpressionUUID->"4e1a29a4-f4e2-4a89-ad7c-6f99592ae881"],
-Cell[4018, 99, 642, 12, 34, "Output",ExpressionUUID->"cc180357-540e-42f1-8157-663810129b74"]
+Cell[3797, 94, 453, 10, 36, "Input",ExpressionUUID->"4e1a29a4-f4e2-4a89-ad7c-6f99592ae881"],
+Cell[4253, 106, 918, 17, 41, "Output",ExpressionUUID->"f5f8158a-24ee-4894-8321-3691d22e2932"]
 }, Open  ]],
-Cell[4675, 114, 879, 16, 104, "Text",ExpressionUUID->"b9297c04-623a-4c1b-986f-ada7eb0097d2"],
+Cell[5186, 126, 1082, 18, 96, "Text",ExpressionUUID->"b9297c04-623a-4c1b-986f-ada7eb0097d2"],
 Cell[CellGroupData[{
-Cell[5579, 134, 412, 7, 30, "Input",ExpressionUUID->"6e9896ba-dc0f-4441-a212-920adc689a5a"],
-Cell[5994, 143, 280, 6, 34, "Output",ExpressionUUID->"acafb731-b538-4aa2-9a49-9f1ccba01942"]
+Cell[6293, 148, 416, 8, 36, "Input",ExpressionUUID->"6e9896ba-dc0f-4441-a212-920adc689a5a"],
+Cell[6712, 158, 544, 10, 41, "Output",ExpressionUUID->"89621ed6-bcf8-449d-9498-2af41c651774"]
 }, Open  ]],
-Cell[6289, 152, 988, 17, 127, "Text",ExpressionUUID->"92a6a36d-0d7e-4953-8baa-fadefb4e9076"],
-Cell[7280, 171, 1080, 25, 115, "Input",ExpressionUUID->"6d0edfeb-52d1-4a02-a5c2-7292429e09c8"],
-Cell[8363, 198, 421, 6, 35, "Text",ExpressionUUID->"db336471-6f18-42b8-9ca0-c51291d39376"],
+Cell[7271, 171, 1205, 20, 151, "Text",ExpressionUUID->"92a6a36d-0d7e-4953-8baa-fadefb4e9076"],
+Cell[8479, 193, 1084, 26, 138, "Input",ExpressionUUID->"6d0edfeb-52d1-4a02-a5c2-7292429e09c8"],
+Cell[9566, 221, 421, 6, 42, "Text",ExpressionUUID->"db336471-6f18-42b8-9ca0-c51291d39376"],
 Cell[CellGroupData[{
-Cell[8809, 208, 541, 10, 30, "Input",ExpressionUUID->"a0043f7b-ee67-40a9-bddf-f771b6e3e5cb"],
-Cell[9353, 220, 668, 12, 34, "Output",ExpressionUUID->"6d640779-8eff-45a4-8040-5bdea1992925"]
+Cell[10012, 231, 545, 11, 36, "Input",ExpressionUUID->"a0043f7b-ee67-40a9-bddf-f771b6e3e5cb"],
+Cell[10560, 244, 932, 16, 41, "Output",ExpressionUUID->"6f019528-ef4f-4919-9222-237d1a489aaa"]
 }, Open  ]],
-Cell[10036, 235, 721, 12, 81, "Text",ExpressionUUID->"0b055de4-d13f-4e75-a122-283c12b8ce31"],
+Cell[11507, 263, 1393, 25, 151, "Text",ExpressionUUID->"0b055de4-d13f-4e75-a122-283c12b8ce31"],
 Cell[CellGroupData[{
-Cell[10782, 251, 649, 13, 30, "Input",ExpressionUUID->"d5948a7f-c965-47af-a196-17c66cba016b"],
-Cell[11434, 266, 1525, 37, 77, "Output",ExpressionUUID->"83579764-731c-4486-8b46-0cf130acbd7d"]
+Cell[12925, 292, 653, 14, 36, "Input",ExpressionUUID->"d5948a7f-c965-47af-a196-17c66cba016b"],
+Cell[13581, 308, 1790, 42, 67, "Output",ExpressionUUID->"b8d15338-2f8e-4b76-8d26-19cae9e7865e"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13008, 309, 561, 8, 54, "Subsection",ExpressionUUID->"69ab8a45-8c06-4012-9e03-4695c5ab6d18"],
-Cell[13572, 319, 1699, 41, 126, "Text",ExpressionUUID->"709de21a-96d7-4b22-afd9-ecac3efa75c8"]
+Cell[15420, 356, 610, 9, 66, "Subsection",ExpressionUUID->"69ab8a45-8c06-4012-9e03-4695c5ab6d18"],
+Cell[16033, 367, 6780, 202, 825, "Text",ExpressionUUID->"709de21a-96d7-4b22-afd9-ecac3efa75c8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15308, 365, 405, 6, 54, "Subsection",ExpressionUUID->"3074a684-cb45-4213-9dc6-18fcaa14729a"],
-Cell[15716, 373, 287, 6, 35, "Text",ExpressionUUID->"3f6069ff-99db-4565-a2ea-486710b07440"],
-Cell[16006, 381, 950, 23, 94, "Input",ExpressionUUID->"338307a6-3216-4989-a273-19c4aee2cd1e"],
-Cell[16959, 406, 527, 9, 81, "Text",ExpressionUUID->"0ede6e9a-0451-42b8-b1c2-954e61ecb54d"],
+Cell[22850, 574, 405, 6, 66, "Subsection",ExpressionUUID->"3074a684-cb45-4213-9dc6-18fcaa14729a"],
+Cell[23258, 582, 399, 8, 42, "Text",ExpressionUUID->"3f6069ff-99db-4565-a2ea-486710b07440"],
+Cell[23660, 592, 954, 24, 113, "Input",ExpressionUUID->"338307a6-3216-4989-a273-19c4aee2cd1e"],
+Cell[24617, 618, 2385, 64, 312, "Text",ExpressionUUID->"0ede6e9a-0451-42b8-b1c2-954e61ecb54d"],
+Cell[27005, 684, 641, 15, 36, "Input",ExpressionUUID->"3ffabf4f-47a9-400b-bad6-8f43cb1a950c"],
+Cell[27649, 701, 762, 12, 69, "Text",ExpressionUUID->"39bdf600-5eec-458a-93b7-e898622dcd26"],
 Cell[CellGroupData[{
-Cell[17511, 419, 456, 10, 30, "Input",ExpressionUUID->"3ffabf4f-47a9-400b-bad6-8f43cb1a950c"],
-Cell[17970, 431, 3959, 90, 161, "Output",ExpressionUUID->"418a5e19-6236-45ad-be2a-16c7871e0cac"]
-}, Open  ]],
-Cell[21944, 524, 531, 9, 81, "Text",ExpressionUUID->"1bd7fc93-9ca3-45e2-9c81-385a03b91754"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[22512, 538, 400, 6, 54, "Subsection",ExpressionUUID->"ef2dfc72-5fba-4785-8b60-1a21f73d5dd0"],
-Cell[22915, 546, 552, 13, 35, "Text",ExpressionUUID->"7f573fe4-acbb-4784-a4cd-be4b9b926e3f"],
-Cell[23470, 561, 1504, 34, 220, "Input",ExpressionUUID->"6c2d2a00-3cb0-4835-865b-4af84ac5699e"],
-Cell[24977, 597, 641, 14, 58, "Text",ExpressionUUID->"d8a84238-a201-4bda-86d4-2ccd93dc4e97"],
-Cell[25621, 613, 562, 13, 30, "Input",ExpressionUUID->"5d7080fb-1e32-4888-a383-377d31cd9da8"]
+Cell[28436, 717, 323, 7, 36, "Input",ExpressionUUID->"1c67bc3e-c478-42cb-90a6-82dbb1b1ab7d"],
+Cell[28762, 726, 952, 20, 41, "Output",ExpressionUUID->"5673e326-e1cf-41c5-aa95-66b726dd2d88"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26220, 631, 463, 7, 54, "Subsection",ExpressionUUID->"5c44b823-0f0f-44b7-a532-61b3c62db41c"],
-Cell[26686, 640, 382, 10, 30, "Input",ExpressionUUID->"c2cda614-a4b6-422d-9fba-6ce4006f4db8"],
-Cell[CellGroupData[{
-Cell[27093, 654, 220, 3, 30, "Input",ExpressionUUID->"5ccdc08f-b12f-4903-a858-8b9f62010ecf"],
-Cell[27316, 659, 12418, 268, 402, "Output",ExpressionUUID->"395ad9c8-700c-4be4-9bd6-be338d33b719"]
+Cell[29751, 751, 633, 16, 36, "Input",ExpressionUUID->"7e869d96-15fe-419d-a715-fe565afbfe70"],
+Cell[30387, 769, 9488, 211, 295, "Output",ExpressionUUID->"8b2790c7-5588-4244-a99e-50bec1cf0ab6"]
+}, Open  ]]
 }, Open  ]],
-Cell[39749, 930, 684, 15, 58, "Text",ExpressionUUID->"5b228ad7-3084-46e4-b245-e2c38e8cf388"]
+Cell[CellGroupData[{
+Cell[39924, 986, 400, 6, 66, "Subsection",ExpressionUUID->"ef2dfc72-5fba-4785-8b60-1a21f73d5dd0"],
+Cell[40327, 994, 892, 17, 69, "Text",ExpressionUUID->"7f573fe4-acbb-4784-a4cd-be4b9b926e3f"],
+Cell[41222, 1013, 1508, 35, 266, "Input",ExpressionUUID->"6c2d2a00-3cb0-4835-865b-4af84ac5699e"],
+Cell[42733, 1050, 1007, 22, 96, "Text",ExpressionUUID->"d8a84238-a201-4bda-86d4-2ccd93dc4e97"],
+Cell[43743, 1074, 616, 15, 36, "Input",ExpressionUUID->"5d7080fb-1e32-4888-a383-377d31cd9da8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44396, 1094, 463, 7, 66, "Subsection",ExpressionUUID->"5c44b823-0f0f-44b7-a532-61b3c62db41c"],
+Cell[44862, 1103, 508, 11, 36, "Input",ExpressionUUID->"c2cda614-a4b6-422d-9fba-6ce4006f4db8"],
+Cell[CellGroupData[{
+Cell[45395, 1118, 690, 17, 36, "Input",ExpressionUUID->"5ccdc08f-b12f-4903-a858-8b9f62010ecf"],
+Cell[46088, 1137, 12535, 266, 499, "Output",ExpressionUUID->"18345597-9246-4851-be30-851e8882ccbb"]
+}, Open  ]],
+Cell[58638, 1406, 1255, 25, 96, "Text",ExpressionUUID->"5b228ad7-3084-46e4-b245-e2c38e8cf388"]
 }, Open  ]]
 }, Open  ]]
 }
