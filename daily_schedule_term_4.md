@@ -13,6 +13,8 @@ Course [home page](./)
 
 * Tuesday, Jan. 21 &mdash; Assignment for Tuesday, Jan. 21: Before Tuesday's class, create and email me a notebook that solves *all* of the exercises from Sections 5-8 of *EIWL3* &mdash; Look ahead to Section 9 of *EIWL3* &mdash; In class: We will work through *[Position from Velocity &mdash; Using Associations](./demonstrations/PositionFromVelocity-UsingAssociations.nb.pdf)* &mdash; If there is time in class, we can start on both of Friday's assignments
 
+<img src="./illustrations/DisplayingABounce.png" width="95%"/>
+
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
 * Friday, Jan. 24 &mdash; Before Friday's class, create and email me a notebook that solves all the exercises from Sections 9-12 of *EIWL3* &mdash; Also as part of Friday's assignment, in a second notebook, convert my *Position from Velocity &mdash; Using Associations* to a new notebook *Position from Velocity &mdash; Using Lists,* and email me that notebook before class on Friday
