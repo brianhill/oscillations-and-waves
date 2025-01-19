@@ -11,7 +11,7 @@ Course [home page](./)
 
 ### Week 2 &mdash; Acceleration &mdash; Newton's Laws of Motion
 
-* Tuesday, Jan. 21 &mdash; Assignment for Tuesday, Jan. 21: Before Tuesday's class, create and email me a notebook that solves *all* of the exercises from Sections 5-8 of *EIWL3* &mdash; Look ahead to Section 9 of *EIWL3* &mdash; In class: We will work through [Position from Velocity &mdash; Using Associations](./demonstrations/PositionFromVelocity-UsingAssociations.nb.pdf)* &mdash; If there is time, we can start on Friday's assignments
+* Tuesday, Jan. 21 &mdash; Assignment for Tuesday, Jan. 21: Before Tuesday's class, create and email me a notebook that solves *all* of the exercises from Sections 5-8 of *EIWL3* &mdash; Look ahead to Section 9 of *EIWL3* &mdash; In class: We will work through *[Position from Velocity &mdash; Using Associations](./demonstrations/PositionFromVelocity-UsingAssociations.nb.pdf)* &mdash; If there is time in class, we can start on both of Friday's assignments
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
