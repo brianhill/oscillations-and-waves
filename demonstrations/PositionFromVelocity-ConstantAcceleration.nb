@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     30082,        714]
-NotebookOptionsPosition[     28045,        671]
-NotebookOutlinePosition[     28494,        689]
-CellTagsIndexPosition[     28451,        686]
+NotebookDataLength[     30850,        728]
+NotebookOptionsPosition[     28813,        685]
+NotebookOutlinePosition[     29262,        703]
+CellTagsIndexPosition[     29219,        700]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -66,37 +66,34 @@ Cell["The Constant Acceleration Worksheet", "Subsection",
 a9721ac03c66"],
 
 Cell[TextData[{
- "In the last class, we manually applied the theory to the problem with \
-constant acceleration.\n\nWe used the midpoint approximation, we chose ",
+ "In the last class, we manually applied the theory to one-dimensional motion \
+with constant acceleration.\n\nWe used the midpoint approximation, we chose \
+",
  Cell[BoxData[
   FormBox[
    RowBox[{
     RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]\[VeryThinSpace]", "t"}], "=",
-     "0.4"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     "0.4"}], TraditionalForm]],ExpressionUUID->
   "465b75cd-5b67-4917-8993-10a9bfbf2597"],
  ", we chose ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     RowBox[{"v", "(", "t", ")"}], "=", 
-    RowBox[{"6", "\[CenterDot]", "t"}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"6", "\[CenterDot]", "t"}]}], TraditionalForm]],ExpressionUUID->
   "b49e5a4a-ddb1-4baa-9bb1-f55397036a68"],
  ", and we iterated from ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["t", "initial"], "=", "0.0"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "de416984-5088-4649-8adb-094ce498ae3b"],
+  ExpressionUUID->"de416984-5088-4649-8adb-094ce498ae3b"],
  " to ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["t", "final"], "=", "6.0"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "ccf2c3a4-1226-41da-ab35-6ab12dbacf4f"],
+  ExpressionUUID->"ccf2c3a4-1226-41da-ab35-6ab12dbacf4f"],
  " by applying these formulas 15 times: \n\n",
  Cell[BoxData[
   FormBox[
@@ -128,24 +125,21 @@ constant acceleration.\n\nWe used the midpoint approximation, we chose ",
    TraditionalForm]],ExpressionUUID->"0791e185-1433-4163-afa5-8c8328e9c312"],
  "\n\nThe index ",
  Cell[BoxData[
-  FormBox["i", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["i", TraditionalForm]],ExpressionUUID->
   "62522dd6-fc24-43ff-939a-219e4d402906"],
  " in our example ranged from 0 to 15 with ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["t", "0"], "=", 
-    SubscriptBox["t", "initial"]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    SubscriptBox["t", "initial"]}], TraditionalForm]],ExpressionUUID->
   "f4729cb2-2ce3-4512-b64e-cbfe100b55e7"],
  " and ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["t", "15"], "=", 
-    SubscriptBox["t", "final"]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    SubscriptBox["t", "final"]}], TraditionalForm]],ExpressionUUID->
   "1dc1fd47-7aa3-4339-be59-103d55a0bd08"],
  ". This gave us 15 times steps and 16 points (counting both the initial and \
 final ones).\n\nHere is a function and some variables that capture everything \
@@ -160,8 +154,8 @@ about the specific problem we are trying to solve."
   3.946094166485684*^9}, {3.946308858155657*^9, 3.9463088915643883`*^9}, {
   3.9463089941705093`*^9, 3.946308994546791*^9}, {3.946309032843549*^9, 
   3.94630903306844*^9}, {3.946309872274667*^9, 3.946309904752212*^9}, {
-  3.946311618793141*^9, 
-  3.9463116205485687`*^9}},ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-\
+  3.946311618793141*^9, 3.9463116205485687`*^9}, {3.94632595628863*^9, 
+  3.946325964474908*^9}},ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-\
 8e446b0fbb82"],
 
 Cell[BoxData[{
@@ -205,8 +199,9 @@ Cell["An Inelegant Solution", "Subsection",
 Cell["\<\
 The following works, but it is lousy programming (the kind of inelegant, \
 inefficient programming most people do most of the time). I put it here so \
-that you know what you are trying to get to. Don\[CloseCurlyQuote]t even \
-bother reading this lousy code.\
+that you know what final result you are trying to get to. Don\
+\[CloseCurlyQuote]t even bother reading the lousy code at the top of the next \
+page.\
 \>", "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
   3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
@@ -215,8 +210,8 @@ bother reading this lousy code.\
   3.944260088459257*^9}, {3.9463090954237022`*^9, 3.946309125260433*^9}, {
   3.946309752042207*^9, 3.94630976142064*^9}, {3.9463099539244633`*^9, 
   3.946309954701346*^9}, {3.946310690941297*^9, 3.946310694721092*^9}, {
-  3.946310763066959*^9, 
-  3.946310764958448*^9}},ExpressionUUID->"db336471-6f18-42b8-9ca0-\
+  3.946310763066959*^9, 3.946310764958448*^9}, {3.9463262505553627`*^9, 
+  3.946326263152996*^9}},ExpressionUUID->"db336471-6f18-42b8-9ca0-\
 c51291d39376"],
 
 Cell[CellGroupData[{
@@ -236,8 +231,8 @@ Cell[BoxData[{
        RowBox[{"-", "1"}]}], "]"}], "+", "0.2"}]}], ";"}], " ", 
   RowBox[{"(*", " ", 
    RowBox[{
-   "drop", " ", "the", " ", "last", " ", "element", " ", "which", " ", "is", 
-    " ", "6.2"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+   "drop", " ", "the", " ", "last", " ", "element", " ", "which", " ", 
+    "would", " ", "be", " ", "6.2"}], " ", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"midpointVelocities", "=", 
@@ -260,8 +255,13 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"positions", " ", "=", " ", 
-    RowBox[{"Accumulate", "[", "displacements", "]"}]}], ";"}], 
-  " "}], "\[IndentingNewLine]", 
+    RowBox[{"Accumulate", "[", "displacements", "]"}]}], ";"}], "  ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "it", " ", "happens", " ", "that", " ", "Mathematica", " ", "has", " ", 
+    "a", " ", "function", " ", "that", " ", "does", " ", "most", " ", "of", 
+    " ", "what", " ", "we", " ", "need"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"positions", " ", "=", " ", 
@@ -270,8 +270,8 @@ Cell[BoxData[{
   RowBox[{"(*", " ", 
    RowBox[{
     RowBox[{"Accumulate", " ", 
-     RowBox[{"didn", "'"}], "t", " ", "give", " ", "us", " ", "the", " ", 
-     "initial", " ", "position", " ", "of", " ", "0.0"}], ",", " ", 
+     RowBox[{"didn", "'"}], "t", " ", "include", " ", "the", " ", "initial", 
+     " ", "position", " ", "of", " ", "0.0"}], ",", " ", 
     RowBox[{
     "so", " ", "we", " ", "need", " ", "to", " ", "explicitly", " ", 
      "prepend", " ", "it"}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
@@ -283,20 +283,25 @@ Cell[BoxData[{
       RowBox[{"times", ",", "positions"}], "}"}], "]"}]}], ";"}], " ", 
   RowBox[{"(*", " ", 
    RowBox[{
-   "we", " ", "have", " ", "a", " ", "list", " ", "of", " ", "times", " ", 
-    "and", " ", "a", " ", "list", " ", "of", " ", "positions", " ", "and", 
-    " ", "we", " ", "need", " ", "ordered", " ", "pairs", " ", "to", " ", 
-    "feed", " ", "to", " ", "ListPlot"}], " ", 
-   "*)"}]}], "\[IndentingNewLine]", 
+    RowBox[{
+    "we", " ", "have", " ", "a", " ", "list", " ", "of", " ", "times", " ", 
+     "and", " ", "a", " ", "list", " ", "of", " ", "positions"}], ",", " ", 
+    RowBox[{
+    "but", " ", "we", " ", "need", " ", "ordered", " ", "pairs", " ", "to", 
+     " ", "feed", " ", "to", " ", "ListPlot"}], ",", " ", 
+    RowBox[{
+    "so", " ", "we", " ", "have", " ", "to", " ", "transpose", " ", "the", 
+     " ", "two", " ", "lists"}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{"ListPlot", "[", "orderedPairs", "]"}]}], "Input",
  CellChangeTimes->{{3.9463091297316093`*^9, 3.94630915190049*^9}, {
    3.9463091870760107`*^9, 3.9463093202189302`*^9}, {3.9463093781805058`*^9, 
    3.946309485301366*^9}, {3.946309532729738*^9, 3.9463097307388067`*^9}, {
    3.94630978045532*^9, 3.9463098573442593`*^9}, {3.9463103676254797`*^9, 
    3.946310607996079*^9}, {3.9463107329922113`*^9, 3.946310734193336*^9}, 
-   3.946310836774169*^9, {3.9463114724201317`*^9, 3.9463115445092583`*^9}},
- CellLabel->
-  "In[377]:=",ExpressionUUID->"1f59a7f2-3c31-4665-b9b6-9dce7fcbe1cd"],
+   3.946310836774169*^9, {3.9463114724201317`*^9, 3.9463115445092583`*^9}, {
+   3.946326016953947*^9, 
+   3.946326105782711*^9}},ExpressionUUID->"1f59a7f2-3c31-4665-b9b6-\
+9dce7fcbe1cd"],
 
 Cell[BoxData[
  GraphicsBox[{{}, 
@@ -385,8 +390,8 @@ Cell[BoxData[
          "Meta" -> <|
           "DefaultHighlight" -> {"Dynamic", None}, "Index" -> {}, "Function" -> 
            ListPlot, "GroupHighlight" -> False|>|>],
-       ImageSizeCache->{{4.503599627370496*^15, -4.503599627370496*^15}, {
-        4.503599627370496*^15, -4.503599627370496*^15}}],
+       ImageSizeCache->{{146.02588463608097`, 
+        318.3064754563935}, {-22.96270488311517, 3.052920116884831}}],
       Selectable->False]},
     Annotation[{{
        Annotation[{
@@ -539,14 +544,23 @@ Cell["The Form of an Elegant Solution", "Subsection",
   3.946310320311558*^9}},ExpressionUUID->"ddfd2f1e-940c-4f1e-95b3-\
 d36649c753fb"],
 
-Cell["\<\
-I want you to do a much more elegant solution that uses the ideas I showed \
-you in the Heads or Tails notebook. Specifically, I want you define a \
-function that takes the current time and the current position, and then uses \
-the theory to compute the next time and the next position. Then I want you to \
-use NestList to get all 15 positions. You\[CloseCurlyQuote]ll be building out \
-something like this:\
-\>", "Text",
+Cell[TextData[{
+ "I want you to do a much more elegant solution that uses the ideas I showed \
+you in the ",
+ ButtonBox["Heads or Tails notebook",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://brianhill.github.io/oscillations-and-waves/demonstrations/\
+HeadsOrTails.nb.pdf"], None},
+  ButtonNote->
+   "https://brianhill.github.io/oscillations-and-waves/demonstrations/\
+HeadsOrTails.nb.pdf"],
+ ". Specifically, I want you define a function that takes the current time \
+and the current position, and then uses the theory to compute the next time \
+and the next position. Then I want you to use NestList to get all 15 \
+subsequent positions. You\[CloseCurlyQuote]ll be building out something like \
+this:"
+}], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
   3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
   3.944068468030957*^9}, {3.944068502593445*^9, 3.944068515703483*^9}, {
@@ -556,8 +570,8 @@ something like this:\
   3.946309954701346*^9}, {3.9463100172282047`*^9, 3.946310118661046*^9}, {
   3.9463103090318813`*^9, 3.94631031059494*^9}, {3.94631085736067*^9, 
   3.9463108735802603`*^9}, {3.946311126234233*^9, 3.946311144980304*^9}, {
-  3.946311674895335*^9, 
-  3.946311683533692*^9}},ExpressionUUID->"c79efa44-85ae-4d14-a28d-\
+  3.946311674895335*^9, 3.946311683533692*^9}, {3.946326191561818*^9, 
+  3.9463262044115257`*^9}},ExpressionUUID->"c79efa44-85ae-4d14-a28d-\
 c100d5fbb93a"],
 
 Cell[BoxData[{
@@ -640,14 +654,14 @@ the only kind of function that ",
 
 Cell[CellGroupData[{
 
-Cell["Your Elegant Solution", "Subsection",
+Cell["Your Elegant Solution Goes Here", "Subsection",
  CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
   3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
   3.94413963984907*^9}, {3.944259530711527*^9, 3.9442595335136843`*^9}, {
   3.946308843711494*^9, 3.946308852743926*^9}, {3.946309069488864*^9, 
   3.946309072199438*^9}, {3.946309969913121*^9, 3.9463099713660917`*^9}, {
-  3.946310292652801*^9, 
-  3.946310333195314*^9}},ExpressionUUID->"97dfd7d8-5ff2-4418-8d9c-\
+  3.946310292652801*^9, 3.946310333195314*^9}, {3.9463262277212343`*^9, 
+  3.9463262293985863`*^9}},ExpressionUUID->"97dfd7d8-5ff2-4418-8d9c-\
 639a9994008c"],
 
 Cell["\<\
@@ -670,7 +684,7 @@ a4690ec30ad1"]
 }, Open  ]]
 },
 WindowSize->{1326, 911},
-WindowMargins->{{347, Automatic}, {Automatic, 14}},
+WindowMargins->{{Automatic, 51}, {Automatic, 117}},
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
 FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
@@ -694,26 +708,26 @@ Cell[979, 30, 542, 10, 114, "Subtitle",ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-
 Cell[1524, 42, 800, 13, 69, "Text",ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
 Cell[CellGroupData[{
 Cell[2349, 59, 377, 6, 66, "Subsection",ExpressionUUID->"8a33a1b3-882c-4d3d-a569-a9721ac03c66"],
-Cell[2729, 67, 3635, 97, 366, "Text",ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-8e446b0fbb82"],
-Cell[6367, 166, 926, 23, 138, "Input",ExpressionUUID->"0c84f509-e99b-4c8a-97b0-ee60b27fed38"]
+Cell[2729, 67, 3476, 91, 366, "Text",ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-8e446b0fbb82"],
+Cell[6208, 160, 926, 23, 138, "Input",ExpressionUUID->"0c84f509-e99b-4c8a-97b0-ee60b27fed38"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7330, 194, 511, 8, 66, "Subsection",ExpressionUUID->"8c6d74eb-1a9b-468a-a30a-3453d23e02d9"],
-Cell[7844, 204, 893, 15, 69, "Text",ExpressionUUID->"db336471-6f18-42b8-9ca0-c51291d39376"],
+Cell[7171, 188, 511, 8, 66, "Subsection",ExpressionUUID->"8c6d74eb-1a9b-468a-a30a-3453d23e02d9"],
+Cell[7685, 198, 983, 16, 69, "Text",ExpressionUUID->"db336471-6f18-42b8-9ca0-c51291d39376"],
 Cell[CellGroupData[{
-Cell[8762, 223, 2980, 75, 266, "Input",ExpressionUUID->"1f59a7f2-3c31-4665-b9b6-9dce7fcbe1cd"],
-Cell[11745, 300, 10212, 225, 302, "Output",ExpressionUUID->"a20a4760-3da6-49d5-9600-a2acaeb368af"]
+Cell[8693, 218, 3427, 85, 266, "Input",ExpressionUUID->"1f59a7f2-3c31-4665-b9b6-9dce7fcbe1cd"],
+Cell[12123, 305, 10197, 225, 302, "Output",ExpressionUUID->"a20a4760-3da6-49d5-9600-a2acaeb368af"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22006, 531, 519, 8, 66, "Subsection",ExpressionUUID->"ddfd2f1e-940c-4f1e-95b3-d36649c753fb"],
-Cell[22528, 541, 1191, 19, 96, "Text",ExpressionUUID->"c79efa44-85ae-4d14-a28d-c100d5fbb93a"],
-Cell[23722, 562, 609, 15, 87, "Input",ExpressionUUID->"6008d505-ae40-4976-aa9f-1472a83b5b70"],
-Cell[24334, 579, 2242, 58, 96, "Text",ExpressionUUID->"2585d706-c790-4381-bc08-1addd2f3c75a"]
+Cell[22369, 536, 519, 8, 66, "Subsection",ExpressionUUID->"ddfd2f1e-940c-4f1e-95b3-d36649c753fb"],
+Cell[22891, 546, 1536, 28, 96, "Text",ExpressionUUID->"c79efa44-85ae-4d14-a28d-c100d5fbb93a"],
+Cell[24430, 576, 609, 15, 87, "Input",ExpressionUUID->"6008d505-ae40-4976-aa9f-1472a83b5b70"],
+Cell[25042, 593, 2242, 58, 96, "Text",ExpressionUUID->"2585d706-c790-4381-bc08-1addd2f3c75a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26613, 642, 509, 8, 66, "Subsection",ExpressionUUID->"97dfd7d8-5ff2-4418-8d9c-639a9994008c"],
-Cell[27125, 652, 892, 15, 42, "Text",ExpressionUUID->"971cfceb-b088-4f04-b6f1-a4690ec30ad1"]
+Cell[27321, 656, 569, 8, 66, "Subsection",ExpressionUUID->"97dfd7d8-5ff2-4418-8d9c-639a9994008c"],
+Cell[27893, 666, 892, 15, 42, "Text",ExpressionUUID->"971cfceb-b088-4f04-b6f1-a4690ec30ad1"]
 }, Open  ]]
 }, Open  ]]
 }
