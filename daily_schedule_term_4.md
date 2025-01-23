@@ -20,7 +20,7 @@ Course [home page](./)
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
-* Tuesday, Jan. 28
+* Wednesday, Jan. 29 &mdash; Class moved to Wednesday so that ranch work can occur on Tuesday
 * Friday, Jan. 31
 
 ### Week 4
