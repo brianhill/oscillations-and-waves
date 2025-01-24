@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     60438,       1223]
-NotebookOptionsPosition[     57744,       1171]
-NotebookOutlinePosition[     58224,       1190]
-CellTagsIndexPosition[     58181,       1187]
+NotebookDataLength[     60180,       1212]
+NotebookOptionsPosition[     57581,       1161]
+NotebookOutlinePosition[     58061,       1180]
+CellTagsIndexPosition[     58018,       1177]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -40,7 +40,7 @@ Cell["Done in class, January 24, 2025", "Subtitle",
  FontSize->18,ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
 
 Cell["\<\
-This is another notebook for you to finish in-class. I have tried to gather \
+This is a second notebook for you to finish in-class. I have tried to gather \
 the essentials of all the numerical analysis you have done so far into this \
 one place, so you don\[CloseCurlyQuote]t have to jump around opening other \
 documents.\
@@ -53,7 +53,8 @@ documents.\
   3.946308957102322*^9, 3.946308968277079*^9}, {3.94631108124636*^9, 
   3.946311106046884*^9}, {3.94631134418966*^9, 3.9463113485273237`*^9}, {
   3.946552503318612*^9, 3.946552567471616*^9}, {3.946553808591125*^9, 
-  3.946553947161599*^9}},ExpressionUUID->"260f1f1a-e8fb-41a0-808a-\
+  3.946553947161599*^9}, {3.9467273673295383`*^9, 
+  3.94672736877951*^9}},ExpressionUUID->"260f1f1a-e8fb-41a0-808a-\
 db36f0f0e445"],
 
 Cell[CellGroupData[{
@@ -155,8 +156,9 @@ implementation of the solution to this problem: with ",
    RowBox[{
     SubscriptBox["t", "final"], "=", "6.0"}], TraditionalForm]],
   ExpressionUUID->"ccf2c3a4-1226-41da-ab35-6ab12dbacf4f"],
- " \twe wanted to apply the above formulas 15 times.\n\nThe code that \
-described the problem looked like:\n\n",
+ " \twe wanted to apply the above formulas 15 times. The code that described \
+this specific problem looked like (note that I styled this to look like a \
+Mathematica cell, but it is actually just text):\n\n",
  StyleBox["v[t_] := 6t\nsteps = 15;\ntInitial = 0.0;\ntFinal = 6.0;\ndeltaT = \
 (tFinal - tInitial)/steps;",
   FontFamily->"Source Code Pro",
@@ -177,8 +179,9 @@ described the problem looked like:\n\n",
    3.946553397200018*^9}, {3.9465534629727173`*^9, 3.9465535148098183`*^9}, {
    3.946553565194797*^9, 3.946553565525051*^9}, {3.946554073319295*^9, 
    3.9465541085094023`*^9}, 3.946554190367847*^9, {3.946573575541895*^9, 
-   3.946573609591525*^9}, {3.946578633978467*^9, 
-   3.9465786341857147`*^9}},ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-\
+   3.946573609591525*^9}, {3.946578633978467*^9, 3.9465786341857147`*^9}, {
+   3.946727389062634*^9, 3.946727410932089*^9}, {3.946727537958528*^9, 
+   3.9467275495050983`*^9}},ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-\
 8e446b0fbb82"]
 }, Open  ]],
 
@@ -205,7 +208,8 @@ Cell[TextData[{
   FontWeight->"SemiBold"],
  " only takes functions that have one argument, we needed to hide two \
 variables (time and velocity) in a list. Using that idea, a reasonably \
-elegant solution to this problem was simply:\n\n",
+elegant solution to this problem was simply (again, I styled this to look \
+like a Mathematica cell, but it is actually just text):\n\n",
  StyleBox["procedure[timeAndPosition_] := {\n    timeAndPosition[[1]] + \
 deltaT,\n    timeAndPosition[[2]] + v[timeAndPosition[[1]] + deltaT/2]deltaT\n\
 }\nresults = NestList[procedure, {0.0, 0.0}, steps];\n",
@@ -737,8 +741,8 @@ fq9e33of9TcBLmj/ALmyhTM=
    3.946573628090865*^9, 3.9465737368444*^9}, 3.946576831340365*^9, {
    3.946577587007661*^9, 3.946577587188542*^9}, {3.9465778418425703`*^9, 
    3.9465778477854357`*^9}, {3.946577974148205*^9, 3.946577976608336*^9}, {
-   3.946578008757172*^9, 
-   3.946578028278224*^9}},ExpressionUUID->"9b149be0-8fe9-4bea-8781-\
+   3.946578008757172*^9, 3.946578028278224*^9}, {3.946727428682901*^9, 
+   3.946727441053014*^9}},ExpressionUUID->"9b149be0-8fe9-4bea-8781-\
 f0c4247b92fa"]
 }, Open  ]],
 
@@ -1140,32 +1144,18 @@ Cell[TextData[{
  StyleBox["ListPlot",
   FontFamily->"Source Code Pro",
   FontWeight->"SemiBold"],
- " will accept, and the last couple of lines in this notebook do that and \
-make the plot:"
+ " will accept, and a few more lines are going to be needed in your notebook \
+do that and make plots of velocity and plots of position. In fact, it might \
+be nice to make a column of three plots: position, velocity, and acceleration."
 }], "Text",
  CellChangeTimes->{{3.946574133281501*^9, 3.946574170769391*^9}, {
   3.946574671133552*^9, 3.9465748173410063`*^9}, {3.946577392075982*^9, 
   3.946577442177746*^9}, {3.946577480861157*^9, 3.9465775288226547`*^9}, {
   3.946577664516883*^9, 3.946577665252006*^9}, {3.9465783356688757`*^9, 
-  3.946578344397066*^9}, {3.946578748537746*^9, 
-  3.946578751102048*^9}},ExpressionUUID->"7fe1286e-7736-470d-b6da-\
-d14914ffa286"],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"lotsaPoints", " ", "=", " ", 
-   RowBox[{"Transpose", "[", 
-    RowBox[{"Take", "[", 
-     RowBox[{
-      RowBox[{"Transpose", "[", "lotsaConditions", "]"}], ",", "2"}], "]"}], 
-    "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"ListPlot", "[", "lotsaPoints", "]"}]}], "Input",
- CellChangeTimes->{{3.946554585788775*^9, 3.946554600985629*^9}, {
-   3.9465742551984777`*^9, 3.9465744345679827`*^9}, {3.946574467872939*^9, 
-   3.946574648077251*^9}, 3.946574784174457*^9, {3.946574820416194*^9, 
-   3.946574826235804*^9}, {3.946574871857038*^9, 3.946574872080508*^9}, {
-   3.9465773800921783`*^9, 3.946577382176111*^9}},
- CellLabel->"In[27]:=",ExpressionUUID->"58010e1e-f7fb-420a-8410-3a6a036d51e1"]
+  3.946578344397066*^9}, {3.946578748537746*^9, 3.946578751102048*^9}, {
+  3.946727595830083*^9, 
+  3.9467276635225058`*^9}},ExpressionUUID->"7fe1286e-7736-470d-b6da-\
+d14914ffa286"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -1192,37 +1182,36 @@ Notebook[{
 Cell[558, 20, 545, 8, 124, "Section",ExpressionUUID->"08f90a5e-ac65-4417-8844-b6de9f5e59a2"],
 Cell[CellGroupData[{
 Cell[1128, 32, 525, 7, 83, "Subtitle",ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
-Cell[1656, 41, 919, 15, 104, "Text",ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
+Cell[1656, 41, 970, 16, 104, "Text",ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
 Cell[CellGroupData[{
-Cell[2600, 60, 594, 9, 99, "Subsection",ExpressionUUID->"6f78337b-e569-4641-bad1-a534a36f90c5"],
-Cell[3197, 71, 1486, 40, 221, "Text",ExpressionUUID->"40fc8ea0-c351-42c8-bc5f-38fca2d2798a"]
+Cell[2651, 61, 594, 9, 99, "Subsection",ExpressionUUID->"6f78337b-e569-4641-bad1-a534a36f90c5"],
+Cell[3248, 72, 1486, 40, 221, "Text",ExpressionUUID->"40fc8ea0-c351-42c8-bc5f-38fca2d2798a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4720, 116, 754, 11, 99, "Subsection",ExpressionUUID->"7306bafd-95f3-4575-8723-9af1f0ff36a5"],
-Cell[5477, 129, 2426, 52, 432, "Text",ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-8e446b0fbb82"]
+Cell[4771, 117, 754, 11, 99, "Subsection",ExpressionUUID->"7306bafd-95f3-4575-8723-9af1f0ff36a5"],
+Cell[5528, 130, 2621, 54, 432, "Text",ExpressionUUID->"a8aaaeba-5f5d-4b04-a63e-8e446b0fbb82"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7940, 186, 790, 12, 99, "Subsection",ExpressionUUID->"ee97b6cd-90f0-460b-97ff-d076cfabe97c"],
-Cell[8733, 200, 32569, 541, 827, "Text",ExpressionUUID->"9b149be0-8fe9-4bea-8781-f0c4247b92fa"]
+Cell[8186, 189, 790, 12, 99, "Subsection",ExpressionUUID->"ee97b6cd-90f0-460b-97ff-d076cfabe97c"],
+Cell[8979, 203, 32702, 542, 868, "Text",ExpressionUUID->"9b149be0-8fe9-4bea-8781-f0c4247b92fa"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[41339, 746, 687, 10, 99, "Subsection",ExpressionUUID->"64e3e339-dbd0-46c6-85ed-1a2062b9a3ca"],
-Cell[42029, 758, 1311, 34, 104, "Text",ExpressionUUID->"f1c22690-6890-4901-8d7a-052d09dcfbcf"],
-Cell[43343, 794, 2011, 56, 284, "Input",ExpressionUUID->"d38df294-f572-483c-b668-12216c9bc2fd"],
-Cell[45357, 852, 1176, 33, 63, "Text",ExpressionUUID->"c716fa99-3153-47e8-a293-301cb3ca0f53"],
-Cell[46536, 887, 1240, 28, 131, "Input",ExpressionUUID->"e0358d73-d567-4207-8976-7eb7b6835429"],
-Cell[47779, 917, 393, 7, 104, "Text",ExpressionUUID->"c5013a05-b83f-4625-b080-835fee5ada1c"]
+Cell[41718, 750, 687, 10, 99, "Subsection",ExpressionUUID->"64e3e339-dbd0-46c6-85ed-1a2062b9a3ca"],
+Cell[42408, 762, 1311, 34, 104, "Text",ExpressionUUID->"f1c22690-6890-4901-8d7a-052d09dcfbcf"],
+Cell[43722, 798, 2011, 56, 284, "Input",ExpressionUUID->"d38df294-f572-483c-b668-12216c9bc2fd"],
+Cell[45736, 856, 1176, 33, 63, "Text",ExpressionUUID->"c716fa99-3153-47e8-a293-301cb3ca0f53"],
+Cell[46915, 891, 1240, 28, 131, "Input",ExpressionUUID->"e0358d73-d567-4207-8976-7eb7b6835429"],
+Cell[48158, 921, 393, 7, 104, "Text",ExpressionUUID->"c5013a05-b83f-4625-b080-835fee5ada1c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[48209, 929, 600, 9, 99, "Subsection",ExpressionUUID->"39c62499-ba2d-4bbd-98d3-d4fa13152392"],
-Cell[48812, 940, 4770, 135, 612, "Text",ExpressionUUID->"b844b9f9-7721-45fe-a8f3-1c7f84a61915"]
+Cell[48588, 933, 600, 9, 99, "Subsection",ExpressionUUID->"39c62499-ba2d-4bbd-98d3-d4fa13152392"],
+Cell[49191, 944, 4770, 135, 612, "Text",ExpressionUUID->"b844b9f9-7721-45fe-a8f3-1c7f84a61915"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[53619, 1080, 772, 11, 99, "Subsection",ExpressionUUID->"35df66a3-c7c8-4dd1-a907-361f9748f23d"],
-Cell[54394, 1093, 384, 7, 104, "Text",ExpressionUUID->"4973edda-c2ba-409f-bcb6-f4fc6496d0a3"],
-Cell[54781, 1102, 1270, 25, 246, "Input",ExpressionUUID->"77d07f91-0af9-415e-96e7-c5e2732bb11f"],
-Cell[56054, 1129, 924, 22, 145, "Text",ExpressionUUID->"7fe1286e-7736-470d-b6da-d14914ffa286"],
-Cell[56981, 1153, 735, 14, 93, "Input",ExpressionUUID->"58010e1e-f7fb-420a-8410-3a6a036d51e1"]
+Cell[53998, 1084, 772, 11, 99, "Subsection",ExpressionUUID->"35df66a3-c7c8-4dd1-a907-361f9748f23d"],
+Cell[54773, 1097, 384, 7, 104, "Text",ExpressionUUID->"4973edda-c2ba-409f-bcb6-f4fc6496d0a3"],
+Cell[55160, 1106, 1270, 25, 246, "Input",ExpressionUUID->"77d07f91-0af9-415e-96e7-c5e2732bb11f"],
+Cell[56433, 1133, 1120, 24, 186, "Text",ExpressionUUID->"7fe1286e-7736-470d-b6da-d14914ffa286"]
 }, Open  ]]
 }, Open  ]]
 }

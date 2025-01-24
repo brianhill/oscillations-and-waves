@@ -11,10 +11,8 @@ Course [home page](./)
 
 ### Week 2 &mdash; Acceleration &mdash; Newton's 2nd Law &mdash; Interesting Complications
 
-* Tuesday, Jan. 21 &mdash; Before class: Create and email me a notebook that solves all of the exercises from Sections 5-8 of *EIWL3* &mdash; [PS02 Solution](./solutions/2025-01-21/Brian-PS02.nb.pdf) &mdash; Look ahead to Section 9 of *EIWL3* &mdash; In class: We completed the *[Position from Velocity &mdash; Constant Acceleration notebook](./worksheets/PositionFromVelocity-ConstantAcceleration.nb.pdf)*
-* Friday, Jan. 24 &mdash; Before class: Create and email me a notebook that solves the exercises from Sections 9, 10, and the first half of Section 11 (Exs. 11.1 to 11.15) &mdash; In-class: We will develop *[Velocity from Acceleration - Theory](./demonstrations/VelocityFromAcceleration-Theory.nb.pdf)* and combine this with the theory we already developed for obtaining position from velocity &mdash; In other words, we will transitively obtain velocity from acceleration and then position from velocity &mdash; We will start to see how interesting complications can arise
-
-<img src="./illustrations/IsaacNewton.png" width="100%"/>
+* Tuesday, Jan. 21 &mdash; Before class: Create and email me a notebook that solves all of the exercises from Sections 5-8 of *EIWL3* &mdash; [PS02 Solution](./solutions/2025-01-21/Brian-PS02.nb.pdf) &mdash; Look ahead to Section 9 of *EIWL3* &mdash; In class: We completed the *[Position from Velocity - Constant Acceleration notebook](./worksheets/PositionFromVelocity-ConstantAcceleration.nb.pdf)*
+* Friday, Jan. 24 &mdash; Before class: Create and email me a notebook that solves the exercises from Sections 9, 10, and the first half of Section 11 (Exs. 11.1 to 11.15) &mdash; In-class: We will develop *[Velocity from Acceleration - Theory](./demonstrations/VelocityFromAcceleration-Theory.nb.pdf)* and combine this with the theory we already developed for obtaining position from velocity &mdash; In other words, we will transitively obtain velocity from acceleration and then position from velocity &mdash; We will start to see how interesting complications can arise &mdash; Finally, in class, we will complete the *[Velocity from Acceleration - Sinusoidal Force notebook](./worksheets/VelocityFromAcceleration-SinusoidalForce.nb.pdf)*
 
 ### Week 3
 
@@ -42,4 +40,6 @@ Course [home page](./)
 
 * Tuesday, Feb. 25
 * Friday, Feb. 28 &mdash; No class &mdash; Shakespeare 2.0 Festival Feb. 26-28
+
+<img src="./illustrations/IsaacNewton.png" width="100%"/>
 
