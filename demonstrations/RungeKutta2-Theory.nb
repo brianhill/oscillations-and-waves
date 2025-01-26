@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     39358,        989]
-NotebookOptionsPosition[     37004,        938]
-NotebookOutlinePosition[     37455,        956]
-CellTagsIndexPosition[     37412,        953]
+NotebookDataLength[     40111,        999]
+NotebookOptionsPosition[     37757,        948]
+NotebookOutlinePosition[     38208,        966]
+CellTagsIndexPosition[     38165,        963]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -723,7 +723,7 @@ Cell["Summary \[LongDash] Second-Order Runge-Kutta", "Subsection",
 e41aab85e598"],
 
 Cell[TextData[{
- "We were motivated to try this system of equations for doing updates when ",
+ "We were motivated to try this update procedure when ",
  Cell[BoxData[
   FormBox["F", TraditionalForm]],ExpressionUUID->
   "2a5d4111-2586-4120-a600-3529e815e17e"],
@@ -792,7 +792,7 @@ Cell[TextData[{
  "\n\n",
  StyleBox["We realized that this system suffered a chicken-and-egg problem.",
   FontSlant->"Italic"],
- "\n\nWe decided to try this system of equations instead:\n\n",
+ "\n\nWe decided to try this update procedure instead:\n\n",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -863,8 +863,8 @@ Cell[TextData[{
       FractionBox[
        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}]}]}], 
    TraditionalForm]],ExpressionUUID->"25e92c4d-1498-448b-969b-0ddcbb6d8925"],
- "\n\nThis system of equations is known as Second-Order Runge-Kutta, and it \
-is what we are going to use next in our Mathematica notebooks."
+ "\n\nThis update procedure is known as Second-Order Runge-Kutta, and it is \
+what we are going to use next in our Mathematica notebooks."
 }], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
    3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
@@ -883,13 +883,15 @@ is what we are going to use next in our Mathematica notebooks."
    3.9468474969285803`*^9, 3.946847587617312*^9}, {3.946847998226288*^9, 
    3.9468480222863407`*^9}, {3.946848336324904*^9, 3.946848353925365*^9}, {
    3.9468485597608013`*^9, 3.946848604366638*^9}, {3.946854230207199*^9, 
-   3.946854301728656*^9}},ExpressionUUID->"64d66df0-5c3e-47f9-8008-\
+   3.946854301728656*^9}, {3.946870741536283*^9, 3.9468707444700623`*^9}, {
+   3.946870779843686*^9, 
+   3.9468707909407063`*^9}},ExpressionUUID->"64d66df0-5c3e-47f9-8008-\
 704cf170e92a"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["Sources", "Subsection",
+Cell["A Note on Sources", "Subsection",
  CellChangeTimes->{{3.946303212807067*^9, 3.946303252599153*^9}, {
   3.9463048409943247`*^9, 3.946304865918548*^9}, {3.946305086397365*^9, 
   3.9463051030179577`*^9}, {3.9464699163741407`*^9, 3.9464699192655373`*^9}, {
@@ -899,19 +901,25 @@ Cell["Sources", "Subsection",
   3.946838715027295*^9}, {3.946839114519416*^9, 3.9468391205765676`*^9}, {
   3.946839426104555*^9, 3.946839431232436*^9}, {3.94684551631082*^9, 
   3.946845517294861*^9}, {3.946848571591035*^9, 3.946848574577693*^9}, {
-  3.946854307399315*^9, 
-  3.9468543081754637`*^9}},ExpressionUUID->"80e56b42-8413-4d27-ae9e-\
+  3.946854307399315*^9, 3.9468543081754637`*^9}, {3.946870799584413*^9, 
+  3.946870801410013*^9}},ExpressionUUID->"80e56b42-8413-4d27-ae9e-\
 36810f42ecc9"],
 
 Cell[TextData[{
- "To make sure I was presenting Second-Order Runge-Kutta correctly, I used \
-Section 3.1 of Gregory Fasshauer\[CloseCurlyQuote]s course notes for IIT Math \
-472, https://www.math.iit.edu/~fass/472Notes.pdf. In general, my \
-understanding of such methods has been boosted by Alejandro L. Garcia, ",
+ "At some point in the future, you may want a more sophisticated reference. I \
+am deliberately building up a sophisticated procedure one step at a time, but \
+some references cut straight to the chase. For example, what I used to make \
+sure I was actually presenting Second-Order Runge-Kutta (and not some similar \
+but not quite identical procedure) was Section 3.1 of Gregory Fasshauer\
+\[CloseCurlyQuote]s course notes for IIT Math 472, \
+https://www.math.iit.edu/~fass/472Notes.pdf.\n\nFasshauer\[CloseCurlyQuote]s \
+course notes are too sophisticated to be useful as an introduction. A more \
+pedantic book that served as my introduction was Alejandro L. Garcia, ",
  StyleBox["Numerical Methods for Physics,",
   FontSlant->"Italic"],
- " Prentice-Hall, 1994, which has both theoretical and pragmatic derivations, \
-and comparison of the efficacy of various procedures."
+ " Prentice-Hall, 1994. It has both theoretical and pragmatic explanations, \
+and it has comparisons of the efficacy of various procedures. The code in \
+that book, like in many other numerical methods books, is written in MATLAB."
 }], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
    3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
@@ -930,8 +938,10 @@ and comparison of the efficacy of various procedures."
    3.9468474969285803`*^9, 3.946847587617312*^9}, {3.946847998226288*^9, 
    3.9468480222863407`*^9}, {3.946848336324904*^9, 3.946848353925365*^9}, {
    3.9468485597608013`*^9, 3.946848604366638*^9}, {3.946854230207199*^9, 
-   3.9468543960386133`*^9}, {3.946854432760538*^9, 
-   3.946854487605891*^9}},ExpressionUUID->"9bc15090-8d5d-4488-801f-\
+   3.9468543960386133`*^9}, {3.946854432760538*^9, 3.946854487605891*^9}, {
+   3.946870803257635*^9, 3.946870881396696*^9}, {3.946870996979336*^9, 
+   3.946871210194111*^9}, {3.9468712617707863`*^9, 
+   3.946871353062723*^9}},ExpressionUUID->"9bc15090-8d5d-4488-801f-\
 61d63334c4ce"]
 }, Open  ]]
 }, Open  ]]
@@ -984,11 +994,11 @@ Cell[21044, 543, 6482, 163, 645, "Text",ExpressionUUID->"caa40e3f-5f7e-4335-a09f
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[27563, 711, 778, 11, 66, "Subsection",ExpressionUUID->"0a978a95-8e38-4e6e-92ae-e41aab85e598"],
-Cell[28344, 724, 5885, 162, 633, "Text",ExpressionUUID->"64d66df0-5c3e-47f9-8008-704cf170e92a"]
+Cell[28344, 724, 5962, 164, 633, "Text",ExpressionUUID->"64d66df0-5c3e-47f9-8008-704cf170e92a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34266, 891, 792, 12, 66, "Subsection",ExpressionUUID->"80e56b42-8413-4d27-ae9e-36810f42ecc9"],
-Cell[35061, 905, 1915, 29, 124, "Text",ExpressionUUID->"9bc15090-8d5d-4488-801f-61d63334c4ce"]
+Cell[34343, 893, 848, 12, 66, "Subsection",ExpressionUUID->"80e56b42-8413-4d27-ae9e-36810f42ecc9"],
+Cell[35194, 907, 2535, 37, 288, "Text",ExpressionUUID->"9bc15090-8d5d-4488-801f-61d63334c4ce"]
 }, Open  ]]
 }, Open  ]]
 }
