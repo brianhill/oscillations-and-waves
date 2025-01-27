@@ -11,6 +11,7 @@
 ## Daily Schedules (Kept Retrospectively)
 
 * [Daily Schedule Term 4](./daily_schedule_term_4.html)
+* [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 ## Required Resources
 

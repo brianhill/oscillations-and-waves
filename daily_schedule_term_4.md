@@ -4,6 +4,8 @@ Course [home page](./)
 
 ## Daily Schedule Term 4
 
+See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
+
 ### Week 1 &mdash; Lightning Introduction to Mathematica Notebooks &mdash; Velocity
 
 * Tuesday, Jan. 14 &mdash; Preparation for class: Study Sections 1-3 of [*An Elementary Introduction to the Wolfram Language, 3rd Edition*](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en), hereafter abbreviated *EIWL3* &mdash; Expressions, operator precedence, symbolic manipulation, built-in functions, and user-defined functions in Mathematica &mdash; We will work through a little demonstration called *[Heads or Tails](./demonstrations/HeadsOrTails.nb.pdf)* which demonstrates user-defined functions and nested functions
