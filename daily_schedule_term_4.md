@@ -14,13 +14,13 @@ Course [home page](./)
 * Tuesday, Jan. 21 &mdash; Before class: Create and email me a notebook that solves all of the exercises from Sections 5-8 of *EIWL3* &mdash; [PS02 Solution](./solutions/2025-01-21/Brian-PS02.nb.pdf) &mdash; Look ahead to Section 9 of *EIWL3* &mdash; In class: We completed the *[Position from Velocity - Constant Acceleration notebook](./worksheets/PositionFromVelocity-ConstantAcceleration.nb.pdf)*
 * Friday, Jan. 24 &mdash; Before class: Create and email me a notebook that solves the exercises from Sections 9, 10, and the first half of Section 11 (Exs. 11.1 to 11.15) &mdash; In-class: We will develop *[Velocity from Acceleration - Theory](./demonstrations/VelocityFromAcceleration-Theory.nb.pdf)* and combine this with the theory we already developed for obtaining position from velocity &mdash; In other words, we will transitively obtain velocity from acceleration and then position from velocity &mdash; We will start to see how interesting complications can arise &mdash; Finally, in class, we will complete the *[Velocity from Acceleration - Sinusoidal Force notebook](./worksheets/VelocityFromAcceleration-SinusoidalForce.nb.pdf)*
 
-### Week 3 &mdash; Second-Order Runge-Kutta &mdash; Mass on an Idealized Spring &mdash; Simple Pendulum
+### Week 3 &mdash; Second-Order Runge-Kutta &mdash; Mass on an Idealized Spring &mdash; Pendula
 
-* Wednesday, Jan. 29 &mdash; Class moved to Wednesday so that ranch work can occur on Tuesday &mdash; Before class: Create and email me a notebook that solves the exercises from the rest of Section 11 (Exs. 11.16 to 11.31), Sections 12 and 13 &mdash; In-class: We will develop *[Second Order Runge-Kutta - Theory](./demonstrations/RungeKutta2-Theory.nb.pdf)*
+* Wednesday, Jan. 29 &mdash; Class moved to Wednesday so that ranch work can occur on Tuesday &mdash; Before class: Create and email me a notebook that solves the exercises from the rest of Section 11 (Exs. 11.16 to 11.31), Sections 12 and 13 &mdash; In-class: Develop *[Second Order Runge-Kutta - Theory](./demonstrations/RungeKutta2-Theory.nb.pdf)* &mdash; Also, in-class: We will complete the *[Second-Order Runge-Kutta - Masss on a Spring notebook](./worksheets/RungeKutta2-MassOnASpring.nb.pdf)*
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
-* Friday, Jan. 31
+* Friday, Jan. 31 &mdash; The simple pendulum &mdash; The compound pendulum
 
 ### Week 4
 
@@ -42,5 +42,6 @@ Course [home page](./)
 * Tuesday, Feb. 25
 * Friday, Feb. 28 &mdash; No class &mdash; Shakespeare 2.0 Festival Feb. 26-28
 
-<img src="./illustrations/IsaacNewton.png" width="100%"/>
+<img src="./illustrations/SinusoidalOscillation.png" width="95%"/>
+
 
