@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     96609,       2130]
-NotebookOptionsPosition[     91421,       2038]
-NotebookOutlinePosition[     91905,       2057]
-CellTagsIndexPosition[     91862,       2054]
+NotebookDataLength[     96693,       2131]
+NotebookOptionsPosition[     91505,       2039]
+NotebookOutlinePosition[     91989,       2058]
+CellTagsIndexPosition[     91946,       2055]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1688,8 +1688,10 @@ daa030466046"],
 
 Cell[TextData[{
  "Because the force now depends on the position instead of the time, we had \
-to revisit our procedure, and the procedure we ended up with is called \
-Second-Order Runge-Kutta:\n\n",
+to revisit our procedure, and the procedure we ended up with is an example of \
+Second-Order Runge-Kutta (maybe we will contemplate all the other \
+Second-Order Runge-Kutta possibilities if implementing this one goes \
+quickly):\n\n",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -1760,20 +1762,19 @@ Second-Order Runge-Kutta:\n\n",
       FractionBox[
        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}]}]}], 
    TraditionalForm]],ExpressionUUID->"048609ce-f378-4aa2-a78f-05a7c494584d"],
- "\n\nThe above four equations are a self-contained summary of what was in \
-our last theory handout, and they are what you will be implementing in the \
-next section."
+ "\n\nThe above four equations are a self-contained summary of what you are \
+about to implement."
 }], "Text",
  CellChangeTimes->CompressedData["
-1:eJwdyFsoQ3EAx/GljeXe2NKW27bwhDRFLnXKHgghHo4Hd3NJriOXYpMSEduk
-eKCobRTNMuVxL2gZouQNEWUdOg9jazb+v/Pw7VPf9LaBus4wHo+XTILLSmnX
-SRtDXVCNfbDZapqE6T30FPyiVQdwM6g7hLrgrZ37s2PHMOM54E9oZyjVPStL
-JEZOVPjERLueDcDyrQ+PUcNQZ85CP7Qo9qdNxNKniDkYM5jmgqeL15zKQNn2
-L3E8bngX3mjVNlgzU8vZGJI64F6unFPkEqYEiamiJDnsaaV98GnZwDlavODj
-dzHUcN6KH7q/o3ZGiPS84Qi+9/d6obVhnaclGrcPBHBJYw6HurTHWCj8oMXw
-vMgsgwVuG+eLpakaStWKenh1w37HdjPUItvih5/ikso4ou3OWwXjJdmSDGLo
-RZACo+VMRybxL0epgZ6hPmMWcS2/xgTPnK+XeuKVg72G/J+HIFzNU4VgvfVN
-NkvcuDckw3+8d/J1
+1:eJwdyFsoQ3EAx/GlueTemLTlNgtPaE2RS53igdw7Ho4HdzOS6wgrZim5xTYp
+HhA1o2iE8ugFyS1K3tBEbR06D2ZrNv6/8/DtU9+kpu7qVj+BQJBAgnNySdtx
+E0tdULWdsN5iGoFJ7YwWfjHKXbji1e1Bnff+gP/6wUOY8upxRzWzlPKRk0YT
+g4dLXGLiwTjngcWrdodRxVJnpzluuJW8M2oiFrwETsCwnsRLeDJ9yyv3FK79
+Eoci+jbhnabICivHqnhrfZIjuJ0p4xVdBsV7iQmiWBlsb2Rc8GXOwDuQN+US
+trFUn2LeDa+dIRv9RGbSsA8/ujq+oaVmSaAhGtd2/eGsyhwAdYnP4TDIzojh
+ea5ZCrOvrby2rbpyKClKpuHNHecMV7PUNNfghp/i/NIIovXhuwxGxqTHpBB9
+Nv94GCpjW1KJfxlyFXT0dhrTiItZlSZ4dvp2NU68OeJuofDnyQsXFEofpC3v
+Uj1x+dEQB529FfQMUX+o5VWLHWpIr7cOwX8frQK6
   "],ExpressionUUID->"40fc8ea0-c351-42c8-bc5f-38fca2d2798a"]
 }, Open  ]],
 
@@ -2075,7 +2076,7 @@ Cell[9672, 230, 1762, 46, 169, "Input",ExpressionUUID->"e0358d73-d567-4207-8976-
 Cell[CellGroupData[{
 Cell[11471, 281, 916, 17, 82, "Subsubsection",ExpressionUUID->"39c62499-ba2d-4bbd-98d3-d4fa13152392"],
 Cell[12390, 300, 2386, 65, 345, "Text",ExpressionUUID->"b844b9f9-7721-45fe-a8f3-1c7f84a61915"],
-Cell[14779, 367, 99, 1, 1, "PageBreak",ExpressionUUID->"258155a7-4a3b-42ea-a665-2506e8af24c7",
+Cell[14779, 367, 99, 1, 5, "PageBreak",ExpressionUUID->"258155a7-4a3b-42ea-a665-2506e8af24c7",
  PageBreakBelow->True]
 }, Open  ]],
 Cell[CellGroupData[{
@@ -2097,7 +2098,7 @@ Cell[CellGroupData[{
 Cell[28953, 654, 309, 7, 55, "Input",ExpressionUUID->"74ee4dd1-abbe-4855-b28a-a5a5a5b5f920"],
 Cell[29265, 663, 36603, 787, 132, "Output",ExpressionUUID->"27ea9207-995b-4389-9b02-2520198d8381"]
 }, Open  ]],
-Cell[65883, 1453, 99, 1, 1, "PageBreak",ExpressionUUID->"996dc3ed-10fa-43af-a8e7-2a712fff7887",
+Cell[65883, 1453, 99, 1, 5, "PageBreak",ExpressionUUID->"996dc3ed-10fa-43af-a8e7-2a712fff7887",
  PageBreakBelow->True]
 }, Open  ]]
 }, Open  ]],
@@ -2115,20 +2116,20 @@ Cell[72540, 1617, 1985, 49, 169, "Input",ExpressionUUID->"934a65e3-4c3a-4f36-b7d
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[74562, 1671, 885, 15, 82, "Subsubsection",ExpressionUUID->"5fb478aa-7ac4-408c-bc1b-daa030466046"],
-Cell[75450, 1688, 3107, 88, 544, "Text",ExpressionUUID->"40fc8ea0-c351-42c8-bc5f-38fca2d2798a"]
+Cell[75450, 1688, 3191, 89, 544, "Text",ExpressionUUID->"40fc8ea0-c351-42c8-bc5f-38fca2d2798a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[78594, 1781, 998, 19, 82, "Subsubsection",ExpressionUUID->"c4537ea2-5b06-4997-b1a3-8bc1dd0cd281"],
-Cell[79595, 1802, 3387, 62, 323, "Input",ExpressionUUID->"d982b5b2-2ab9-4b66-aeeb-17550f008e08"]
+Cell[78678, 1782, 998, 19, 82, "Subsubsection",ExpressionUUID->"c4537ea2-5b06-4997-b1a3-8bc1dd0cd281"],
+Cell[79679, 1803, 3387, 62, 323, "Input",ExpressionUUID->"d982b5b2-2ab9-4b66-aeeb-17550f008e08"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[83019, 1869, 1058, 15, 82, "Subsubsection",ExpressionUUID->"f253c7e9-5513-445b-b9e9-492b2664d8c6"],
-Cell[84080, 1886, 561, 10, 63, "Text",ExpressionUUID->"4b816d78-09f6-4b86-9bc1-6fa63c9fbb53"],
-Cell[84644, 1898, 2570, 52, 246, "Input",ExpressionUUID->"8f940360-37a6-43c1-adbf-9876770cadfe"]
+Cell[83103, 1870, 1058, 15, 82, "Subsubsection",ExpressionUUID->"f253c7e9-5513-445b-b9e9-492b2664d8c6"],
+Cell[84164, 1887, 561, 10, 63, "Text",ExpressionUUID->"4b816d78-09f6-4b86-9bc1-6fa63c9fbb53"],
+Cell[84728, 1899, 2570, 52, 246, "Input",ExpressionUUID->"8f940360-37a6-43c1-adbf-9876770cadfe"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[87251, 1955, 1086, 15, 82, "Subsubsection",ExpressionUUID->"ced5fee0-4e5f-40a8-9fe5-7c394792a652"],
-Cell[88340, 1972, 3041, 61, 743, "Text",ExpressionUUID->"d8e50758-de11-42f6-9213-318ab828a859"]
+Cell[87335, 1956, 1086, 15, 82, "Subsubsection",ExpressionUUID->"ced5fee0-4e5f-40a8-9fe5-7c394792a652"],
+Cell[88424, 1973, 3041, 61, 743, "Text",ExpressionUUID->"d8e50758-de11-42f6-9213-318ab828a859"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

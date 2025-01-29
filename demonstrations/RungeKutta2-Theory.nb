@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     40666,       1001]
-NotebookOptionsPosition[     38310,        950]
-NotebookOutlinePosition[     38763,        968]
-CellTagsIndexPosition[     38720,        965]
+NotebookDataLength[     41293,       1011]
+NotebookOptionsPosition[     38936,        960]
+NotebookOutlinePosition[     39390,        978]
+CellTagsIndexPosition[     39347,        975]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -663,9 +663,9 @@ approximation again to get a more sophisticated approximation to ",
   FontSlant->"Italic"],
  " but at least the chicken-and-egg problem has been evaded.\n\nThis \
 procedure and generalizations of it have stood the test of time. They were \
-studied by Carl Runge and Martin Wilhelm Kutta around 1900 and this version \
-and other Runge-Kutta procedures that we will soon get to are still widely \
-used."
+studied by Carl Runge in 1895, Heun in 1900, and Martin Wilhelm Kutta in 1901 \
+and this version and other Runge-Kutta procedures that we will soon get to \
+are still widely used."
 }], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
    3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
@@ -692,7 +692,8 @@ used."
    3.9468539849905157`*^9, 3.946854020794016*^9}, {3.946854075956127*^9, 
    3.946854089765658*^9}, {3.946854126296074*^9, 3.9468541406931763`*^9}, {
    3.9471184792515707`*^9, 3.947118481901943*^9}, {3.947118520970695*^9, 
-   3.947118523620273*^9}},ExpressionUUID->"caa40e3f-5f7e-4335-a09f-\
+   3.947118523620273*^9}, {3.947124098896695*^9, 
+   3.9471241336037197`*^9}},ExpressionUUID->"caa40e3f-5f7e-4335-a09f-\
 bd0a4971accf"]
 }, Open  ]],
 
@@ -852,9 +853,10 @@ Cell[TextData[{
       FractionBox[
        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}]}]}], 
    TraditionalForm]],ExpressionUUID->"25e92c4d-1498-448b-969b-0ddcbb6d8925"],
- "\n\nThis update procedure is known as Second-Order Runge-Kutta \[LongDash] \
-although I have seen variations of this procedure given the same name. It is \
-what we are going to use shortly to get the motion of a mass on a spring."
+ "\n\nThis update procedure is an example of Second-Order Runge-Kutta. There \
+is a one-parameter family of such procedures. This particular member of the \
+family is what we are going to use shortly to get the motion of a mass on a \
+spring."
 }], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
    3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
@@ -875,8 +877,9 @@ what we are going to use shortly to get the motion of a mass on a spring."
    3.9468485597608013`*^9, 3.946848604366638*^9}, {3.946854230207199*^9, 
    3.946854301728656*^9}, {3.946870741536283*^9, 3.9468707444700623`*^9}, {
    3.946870779843686*^9, 3.9468707909407063`*^9}, {3.947118568024702*^9, 
-   3.947118569581957*^9}, {3.947119220131166*^9, 
-   3.947119314527556*^9}},ExpressionUUID->"64d66df0-5c3e-47f9-8008-\
+   3.947118569581957*^9}, {3.947119220131166*^9, 3.947119314527556*^9}, {
+   3.947124306773952*^9, 
+   3.9471243713315153`*^9}},ExpressionUUID->"64d66df0-5c3e-47f9-8008-\
 704cf170e92a"]
 }, Open  ]],
 
@@ -900,22 +903,23 @@ Cell[TextData[{
  "At some point in the future, you may want a reference that gets to a \
 sophisticated punch-line much more quickly. I am deliberately building up a \
 sophisticated procedure one modest step at a time. More advanced references \
-cut straight to the chase. For example, what I used to double-check that I \
-was actually presenting Second-Order Runge-Kutta \[LongDash] and not some \
-similar but not identical procedure \[LongDash] was Section 3.1 of Gregory \
-Fasshauer\[CloseCurlyQuote]s course notes for IIT Math 472, which are \
-freely-available on-line at https://www.math.iit.edu/~fass/472Notes.pdf.\n\nA \
-more introductory book that I first learned Runge-Kutta from was Alejandro L. \
-Garcia, ",
+cut straight to the chase. When preparing these notes, I referred to Section \
+3.1 of Gregory Fasshauer\[CloseCurlyQuote]s notes for IIT Math 472, online at \
+https://www.math.iit.edu/~fass/472Notes.pdf. The ultimate reference, by a \
+person who advanced the theory in the 1960s, seems to be J.C. Butcher, ",
+ StyleBox["Numerical Methods for Ordinary Differential Equations,",
+  FontSlant->"Italic"],
+ " Wiley, 2003.\n\nA more introductory and physics-focused book is Alejandro \
+L. Garcia, ",
  StyleBox["Numerical Methods for Physics,",
   FontSlant->"Italic"],
- " Prentice-Hall, 1994. The code in it \[LongDash] as in many other numerical \
-methods books \[LongDash] is written in MATLAB, which is still popular among \
-engineers. Nicholas J. Giordano, ",
+ " Prentice-Hall, 1994. The code listings in it are in MATLAB. Another \
+introductory and physics-focused book is Nicholas J. Giordano, ",
  StyleBox["Computational Physics,",
   FontSlant->"Italic"],
- " Prentice-Hall, 1997, is another popular textbook. The code listings in it \
-are in BASIC."
+ " Prentice-Hall, 1997. The code listings in it are in BASIC. As \
+computational methods have gotten more popular, there have followed an \
+endless number of other textbooks."
 }], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
    3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
@@ -942,14 +946,20 @@ are in BASIC."
    3.94711932477608*^9, 3.947119371242817*^9}, {3.947119409212768*^9, 
    3.947119435522173*^9}, {3.947119537500023*^9, 3.947119545730485*^9}, {
    3.947119584543569*^9, 3.947119603033884*^9}, {3.947119693896414*^9, 
-   3.947119696248657*^9}, {3.9471197516933117`*^9, 
-   3.947119753729477*^9}},ExpressionUUID->"9bc15090-8d5d-4488-801f-\
+   3.947119696248657*^9}, {3.9471197516933117`*^9, 3.947119753729477*^9}, {
+   3.947124429773924*^9, 3.947124522940185*^9}, {3.947124556990901*^9, 
+   3.947124570461727*^9}, {3.947124607308766*^9, 3.9471246077375174`*^9}, {
+   3.947124643141059*^9, 3.9471246625021067`*^9}, {3.94712470674009*^9, 
+   3.9471247141806192`*^9}, {3.9471248210506153`*^9, 3.947124825842503*^9}, {
+   3.947124860602792*^9, 3.947124939397978*^9}, {3.947124975281013*^9, 
+   3.947125014969592*^9}, {3.947125069665235*^9, 
+   3.947125125391486*^9}},ExpressionUUID->"9bc15090-8d5d-4488-801f-\
 61d63334c4ce"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1042, 911},
-WindowMargins->{{Automatic, 437}, {Automatic, 65}},
+WindowMargins->{{Automatic, 277}, {Automatic, 190}},
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
 FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
@@ -992,15 +1002,15 @@ Cell[16859, 433, 3081, 80, 285, "Text",ExpressionUUID->"a6d9cb60-e7ef-4230-8891-
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[19977, 518, 748, 11, 66, "Subsection",ExpressionUUID->"649ea213-6187-4a4c-96c7-777a36b53583"],
-Cell[20728, 531, 6568, 164, 672, "Text",ExpressionUUID->"caa40e3f-5f7e-4335-a09f-bd0a4971accf"]
+Cell[20728, 531, 6639, 165, 672, "Text",ExpressionUUID->"caa40e3f-5f7e-4335-a09f-bd0a4971accf"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27333, 700, 778, 11, 66, "Subsection",ExpressionUUID->"0a978a95-8e38-4e6e-92ae-e41aab85e598"],
-Cell[28114, 713, 6152, 166, 633, "Text",ExpressionUUID->"64d66df0-5c3e-47f9-8008-704cf170e92a"]
+Cell[27404, 701, 778, 11, 66, "Subsection",ExpressionUUID->"0a978a95-8e38-4e6e-92ae-e41aab85e598"],
+Cell[28185, 714, 6215, 168, 660, "Text",ExpressionUUID->"64d66df0-5c3e-47f9-8008-704cf170e92a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34303, 884, 848, 12, 66, "Subsection",ExpressionUUID->"80e56b42-8413-4d27-ae9e-36810f42ecc9"],
-Cell[35154, 898, 3128, 48, 288, "Text",ExpressionUUID->"9bc15090-8d5d-4488-801f-61d63334c4ce"]
+Cell[34437, 887, 848, 12, 66, "Subsection",ExpressionUUID->"80e56b42-8413-4d27-ae9e-36810f42ecc9"],
+Cell[35288, 901, 3620, 55, 288, "Text",ExpressionUUID->"9bc15090-8d5d-4488-801f-61d63334c4ce"]
 }, Open  ]]
 }, Open  ]]
 }
