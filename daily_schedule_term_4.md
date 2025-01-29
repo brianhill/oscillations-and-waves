@@ -18,7 +18,7 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 ### Week 3 &mdash; Second-Order Runge-Kutta &mdash; Mass on an Idealized Spring &mdash; Pendula
 
-* Wednesday, Jan. 29 &mdash; Class moved to Wednesday so that ranch work can occur on Tuesday &mdash; Before class: Create and email me a notebook that solves the exercises from the rest of Section 11 (Exs. 11.16 to 11.31), Sections 12 and 13 &mdash; In-class: Develop *[Second Order Runge-Kutta - Theory](./demonstrations/RungeKutta2-Theory.nb.pdf)* &mdash; Then, in-class: We will complete the *[Second-Order Runge-Kutta - Masss on a Spring notebook](./worksheets/RungeKutta2-MassOnASpring.nb.pdf)*
+* Wednesday, Jan. 29 &mdash; Class moved to Wednesday so that ranch work can occur on Tuesday &mdash; Before class: Create and email me a notebook that solves the exercises from the rest of Section 11 (Exs. 11.16 to 11.31), Sections 12 and 13 &mdash; In-class: Develop *[Second Order Runge-Kutta - Theory](./demonstrations/RungeKutta2-Theory.nb.pdf)* &mdash; Then, in-class: We will complete the *[Second-Order Runge-Kutta - Mass on a Spring notebook](./worksheets/RungeKutta2-MassOnASpring.nb.pdf)*
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
