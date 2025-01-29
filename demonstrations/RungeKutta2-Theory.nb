@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     40111,        999]
-NotebookOptionsPosition[     37757,        948]
-NotebookOutlinePosition[     38208,        966]
-CellTagsIndexPosition[     38165,        963]
+NotebookDataLength[     40666,       1001]
+NotebookOptionsPosition[     38310,        950]
+NotebookOutlinePosition[     38763,        968]
+CellTagsIndexPosition[     38720,        965]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -283,19 +283,16 @@ Cell[TextData[{
  "Here are our three update equations, but rewritten to emphasize that the \
 only way that the acceleration ",
  Cell[BoxData[
-  FormBox["a", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["a", TraditionalForm]],ExpressionUUID->
   "d7d7937b-d3c1-4a0f-8e4a-11e3b6ac506e"],
  " depends on ",
  Cell[BoxData[
-  FormBox["t", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["t", TraditionalForm]],ExpressionUUID->
   "8ecf65d1-ee67-4965-9b5d-bfc986536aa0"],
  " is via ",
  Cell[BoxData[
   FormBox[
-   RowBox[{"x", "(", "t", ")"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"x", "(", "t", ")"}], TraditionalForm]],ExpressionUUID->
   "00ed0217-ef06-4d28-af84-a888ecdec768"],
  ":\n\n",
  Cell[BoxData[
@@ -346,25 +343,22 @@ only way that the acceleration ",
           SubscriptBox["t", "i"], "+", 
           FractionBox[
            RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}], 
-         ")"}], ")"}], "\[CenterDot]", "\[CapitalDelta]"}], 
-      "\[VeryThinSpace]", "t"}]}]}], TraditionalForm]],ExpressionUUID->
+         ")"}], ")"}], "\[CenterDot]", "\[CapitalDelta]"}], "\[VeryThinSpace]",
+       "t"}]}]}], TraditionalForm]],ExpressionUUID->
   "6155059e-b0b1-4e3a-b5dc-e0b191dc355c"],
  "\n\nNotice that I am still using the trapezoid approximation to update ",
  Cell[BoxData[
-  FormBox["x", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["x", TraditionalForm]],ExpressionUUID->
   "dc6d4e19-02a4-4c8a-9afb-b28e039c5f71"],
  " and I am still using the midpoint time in ",
  Cell[BoxData[
   FormBox[
    RowBox[{"a", "(", 
-    RowBox[{"x", "(", "t", ")"}], ")"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+    RowBox[{"x", "(", "t", ")"}], ")"}], TraditionalForm]],ExpressionUUID->
   "15012d55-3843-4fa7-9b38-0a3e1594cb72"],
  " to update ",
  Cell[BoxData[
-  FormBox["v", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["v", TraditionalForm]],ExpressionUUID->
   "93f0fbfe-712e-4ea2-9cde-fd533af09b20"],
  ", exactly as we did above.\n\nDo you see the chicken-and-egg problem!?\n\n\
 We can\[CloseCurlyQuote]t compute the updated ",
@@ -372,34 +366,29 @@ We can\[CloseCurlyQuote]t compute the updated ",
   FormBox[
    RowBox[{"x", "(", 
     SubscriptBox["t", 
-     RowBox[{"i", "+", "1"}]], ")"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     RowBox[{"i", "+", "1"}]], ")"}], TraditionalForm]],ExpressionUUID->
   "fc40a6df-8f73-4279-a4e5-dc2440cf7209"],
  " without knowing ",
  Cell[BoxData[
   FormBox[
    RowBox[{"v", "(", 
     SubscriptBox["t", 
-     RowBox[{"i", "+", "1"}]], ")"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     RowBox[{"i", "+", "1"}]], ")"}], TraditionalForm]],ExpressionUUID->
   "516f8573-ea04-49c4-af3c-2b38c90e400b"],
  "\n\nWe can\[CloseCurlyQuote]t compute the updated ",
  Cell[BoxData[
   FormBox[
    RowBox[{"v", "(", 
     SubscriptBox["t", 
-     RowBox[{"i", "+", "1"}]], ")"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+     RowBox[{"i", "+", "1"}]], ")"}], TraditionalForm]],ExpressionUUID->
   "42c8fbb4-67a7-42c7-8505-3df9c1f3432d"],
  " without knowing ",
  Cell[BoxData[
-  FormBox["a", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["a", TraditionalForm]],ExpressionUUID->
   "d3a807d6-632c-433c-9028-66b602e13032"],
- " at the midpoint time, which now depends on ",
+ " at the midpoint time, which in turn requires knowing ",
  Cell[BoxData[
-  FormBox["x", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["x", TraditionalForm]],ExpressionUUID->
   "962f4390-9d1d-4953-bfd9-1f983317fd2c"],
  " at the midpoint time, ",
  Cell[BoxData[
@@ -408,8 +397,7 @@ We can\[CloseCurlyQuote]t compute the updated ",
     RowBox[{
      SubscriptBox["t", "i"], "+", 
      FractionBox["\[CapitalDelta]t", "2"]}], ")"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "8c5a81b8-044c-4143-b539-7b277de0baf9"],
+  ExpressionUUID->"8c5a81b8-044c-4143-b539-7b277de0baf9"],
  "."
 }], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
@@ -424,8 +412,8 @@ We can\[CloseCurlyQuote]t compute the updated ",
    3.946839364742894*^9}, {3.94683944716611*^9, 3.946839560013794*^9}, {
    3.9468425957980347`*^9, 3.9468426523649054`*^9}, {3.9468446160013237`*^9, 
    3.9468450692121553`*^9}, {3.946848083506757*^9, 3.946848165672748*^9}, {
-   3.9468484257114*^9, 
-   3.94684843532656*^9}},ExpressionUUID->"08bff286-a92a-4223-b8db-\
+   3.9468484257114*^9, 3.94684843532656*^9}, {3.947118140286147*^9, 
+   3.947118145138034*^9}},ExpressionUUID->"08bff286-a92a-4223-b8db-\
 45a3365ce824"]
 }, Open  ]],
 
@@ -673,11 +661,11 @@ approximation again to get a more sophisticated approximation to ",
  "\n\nYou might have a feeling that this is ",
  StyleBox["ad hoc,",
   FontSlant->"Italic"],
- " but at least the chicken-and-egg problem has been evaded. Actually this \
+ " but at least the chicken-and-egg problem has been evaded.\n\nThis \
 procedure and generalizations of it have stood the test of time. They were \
 studied by Carl Runge and Martin Wilhelm Kutta around 1900 and this version \
-and other versions of these procedures that we will soon get to are still \
-widely used."
+and other Runge-Kutta procedures that we will soon get to are still widely \
+used."
 }], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
    3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
@@ -702,8 +690,9 @@ widely used."
    3.946847983134776*^9, 3.946847990664036*^9}, {3.946848182400436*^9, 
    3.946848257085341*^9}, {3.946848294755002*^9, 3.946848317812087*^9}, {
    3.9468539849905157`*^9, 3.946854020794016*^9}, {3.946854075956127*^9, 
-   3.946854089765658*^9}, {3.946854126296074*^9, 
-   3.9468541406931763`*^9}},ExpressionUUID->"caa40e3f-5f7e-4335-a09f-\
+   3.946854089765658*^9}, {3.946854126296074*^9, 3.9468541406931763`*^9}, {
+   3.9471184792515707`*^9, 3.947118481901943*^9}, {3.947118520970695*^9, 
+   3.947118523620273*^9}},ExpressionUUID->"caa40e3f-5f7e-4335-a09f-\
 bd0a4971accf"]
 }, Open  ]],
 
@@ -863,8 +852,9 @@ Cell[TextData[{
       FractionBox[
        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}]}]}], 
    TraditionalForm]],ExpressionUUID->"25e92c4d-1498-448b-969b-0ddcbb6d8925"],
- "\n\nThis update procedure is known as Second-Order Runge-Kutta, and it is \
-what we are going to use next in our Mathematica notebooks."
+ "\n\nThis update procedure is known as Second-Order Runge-Kutta \[LongDash] \
+although I have seen variations of this procedure given the same name. It is \
+what we are going to use shortly to get the motion of a mass on a spring."
 }], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
    3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
@@ -884,8 +874,9 @@ what we are going to use next in our Mathematica notebooks."
    3.9468480222863407`*^9}, {3.946848336324904*^9, 3.946848353925365*^9}, {
    3.9468485597608013`*^9, 3.946848604366638*^9}, {3.946854230207199*^9, 
    3.946854301728656*^9}, {3.946870741536283*^9, 3.9468707444700623`*^9}, {
-   3.946870779843686*^9, 
-   3.9468707909407063`*^9}},ExpressionUUID->"64d66df0-5c3e-47f9-8008-\
+   3.946870779843686*^9, 3.9468707909407063`*^9}, {3.947118568024702*^9, 
+   3.947118569581957*^9}, {3.947119220131166*^9, 
+   3.947119314527556*^9}},ExpressionUUID->"64d66df0-5c3e-47f9-8008-\
 704cf170e92a"]
 }, Open  ]],
 
@@ -906,20 +897,25 @@ Cell["A Note on Sources", "Subsection",
 36810f42ecc9"],
 
 Cell[TextData[{
- "At some point in the future, you may want a more sophisticated reference. I \
-am deliberately building up a sophisticated procedure one step at a time, but \
-some references cut straight to the chase. For example, what I used to make \
-sure I was actually presenting Second-Order Runge-Kutta (and not some similar \
-but not quite identical procedure) was Section 3.1 of Gregory Fasshauer\
-\[CloseCurlyQuote]s course notes for IIT Math 472, \
-https://www.math.iit.edu/~fass/472Notes.pdf.\n\nFasshauer\[CloseCurlyQuote]s \
-course notes are too sophisticated to be useful as an introduction. A more \
-pedantic book that served as my introduction was Alejandro L. Garcia, ",
+ "At some point in the future, you may want a reference that gets to a \
+sophisticated punch-line much more quickly. I am deliberately building up a \
+sophisticated procedure one modest step at a time. More advanced references \
+cut straight to the chase. For example, what I used to double-check that I \
+was actually presenting Second-Order Runge-Kutta \[LongDash] and not some \
+similar but not identical procedure \[LongDash] was Section 3.1 of Gregory \
+Fasshauer\[CloseCurlyQuote]s course notes for IIT Math 472, which are \
+freely-available on-line at https://www.math.iit.edu/~fass/472Notes.pdf.\n\nA \
+more introductory book that I first learned Runge-Kutta from was Alejandro L. \
+Garcia, ",
  StyleBox["Numerical Methods for Physics,",
   FontSlant->"Italic"],
- " Prentice-Hall, 1994. It has both theoretical and pragmatic explanations, \
-and it has comparisons of the efficacy of various procedures. The code in \
-that book, like in many other numerical methods books, is written in MATLAB."
+ " Prentice-Hall, 1994. The code in it \[LongDash] as in many other numerical \
+methods books \[LongDash] is written in MATLAB, which is still popular among \
+engineers. Nicholas J. Giordano, ",
+ StyleBox["Computational Physics,",
+  FontSlant->"Italic"],
+ " Prentice-Hall, 1997, is another popular textbook. The code listings in it \
+are in BASIC."
 }], "Text",
  CellChangeTimes->{{3.944067896816962*^9, 3.94406793882053*^9}, {
    3.944068052614303*^9, 3.944068058794083*^9}, {3.944068457635978*^9, 
@@ -940,17 +936,23 @@ that book, like in many other numerical methods books, is written in MATLAB."
    3.9468485597608013`*^9, 3.946848604366638*^9}, {3.946854230207199*^9, 
    3.9468543960386133`*^9}, {3.946854432760538*^9, 3.946854487605891*^9}, {
    3.946870803257635*^9, 3.946870881396696*^9}, {3.946870996979336*^9, 
-   3.946871210194111*^9}, {3.9468712617707863`*^9, 
-   3.946871353062723*^9}},ExpressionUUID->"9bc15090-8d5d-4488-801f-\
+   3.946871210194111*^9}, {3.9468712617707863`*^9, 3.946871353062723*^9}, {
+   3.9471182836128397`*^9, 3.9471184205790367`*^9}, {3.9471187619199333`*^9, 
+   3.9471187758420343`*^9}, {3.947119088337731*^9, 3.947119204035679*^9}, {
+   3.94711932477608*^9, 3.947119371242817*^9}, {3.947119409212768*^9, 
+   3.947119435522173*^9}, {3.947119537500023*^9, 3.947119545730485*^9}, {
+   3.947119584543569*^9, 3.947119603033884*^9}, {3.947119693896414*^9, 
+   3.947119696248657*^9}, {3.9471197516933117`*^9, 
+   3.947119753729477*^9}},ExpressionUUID->"9bc15090-8d5d-4488-801f-\
 61d63334c4ce"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1042, 911},
-WindowMargins->{{102, Automatic}, {Automatic, -674}},
+WindowMargins->{{Automatic, 437}, {Automatic, 65}},
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
-FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
+FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"79d99d9c-2760-41a1-b3ad-6f9f4f8469c8"
 ]
@@ -982,23 +984,23 @@ Cell[8372, 223, 2168, 42, 425, "Text",ExpressionUUID->"75c176ac-f328-4590-b6d5-2
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[10577, 270, 616, 9, 66, "Subsection",ExpressionUUID->"6bafcf9d-654d-4d3c-9a35-96fde67d904f"],
-Cell[11196, 281, 5266, 147, 507, "Text",ExpressionUUID->"08bff286-a92a-4223-b8db-45a3365ce824"]
+Cell[11196, 281, 4950, 135, 507, "Text",ExpressionUUID->"08bff286-a92a-4223-b8db-45a3365ce824"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16499, 433, 673, 10, 66, "Subsection",ExpressionUUID->"b418464b-40c0-40cc-a90a-1bab19171299"],
-Cell[17175, 445, 3081, 80, 285, "Text",ExpressionUUID->"a6d9cb60-e7ef-4230-8891-c8984a86fed7"]
+Cell[16183, 421, 673, 10, 66, "Subsection",ExpressionUUID->"b418464b-40c0-40cc-a90a-1bab19171299"],
+Cell[16859, 433, 3081, 80, 285, "Text",ExpressionUUID->"a6d9cb60-e7ef-4230-8891-c8984a86fed7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20293, 530, 748, 11, 66, "Subsection",ExpressionUUID->"649ea213-6187-4a4c-96c7-777a36b53583"],
-Cell[21044, 543, 6482, 163, 645, "Text",ExpressionUUID->"caa40e3f-5f7e-4335-a09f-bd0a4971accf"]
+Cell[19977, 518, 748, 11, 66, "Subsection",ExpressionUUID->"649ea213-6187-4a4c-96c7-777a36b53583"],
+Cell[20728, 531, 6568, 164, 672, "Text",ExpressionUUID->"caa40e3f-5f7e-4335-a09f-bd0a4971accf"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27563, 711, 778, 11, 66, "Subsection",ExpressionUUID->"0a978a95-8e38-4e6e-92ae-e41aab85e598"],
-Cell[28344, 724, 5962, 164, 633, "Text",ExpressionUUID->"64d66df0-5c3e-47f9-8008-704cf170e92a"]
+Cell[27333, 700, 778, 11, 66, "Subsection",ExpressionUUID->"0a978a95-8e38-4e6e-92ae-e41aab85e598"],
+Cell[28114, 713, 6152, 166, 633, "Text",ExpressionUUID->"64d66df0-5c3e-47f9-8008-704cf170e92a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34343, 893, 848, 12, 66, "Subsection",ExpressionUUID->"80e56b42-8413-4d27-ae9e-36810f42ecc9"],
-Cell[35194, 907, 2535, 37, 288, "Text",ExpressionUUID->"9bc15090-8d5d-4488-801f-61d63334c4ce"]
+Cell[34303, 884, 848, 12, 66, "Subsection",ExpressionUUID->"80e56b42-8413-4d27-ae9e-36810f42ecc9"],
+Cell[35154, 898, 3128, 48, 288, "Text",ExpressionUUID->"9bc15090-8d5d-4488-801f-61d63334c4ce"]
 }, Open  ]]
 }, Open  ]]
 }
