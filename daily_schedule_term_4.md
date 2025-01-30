@@ -16,15 +16,15 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 * Tuesday, Jan. 21 &mdash; Problem Set 2: Solve all of the exercises from Sections 5-8 of *EIWL3* &mdash; [PS02 Solution](./solutions/2025-01-21/Brian-PS02.nb.pdf) &mdash; Look ahead to Section 9 of *EIWL3* &mdash; In class: We completed the *[Position from Velocity - Constant Acceleration notebook](./worksheets/PositionFromVelocity-ConstantAcceleration.nb.pdf)*
 * Friday, Jan. 24 &mdash; Problem Set 3: Solve all the exercises from Sections 9, 10, and the first half of Section 11 (Exs. 11.1 to 11.15) &mdash; In-class: We will develop *[Velocity from Acceleration - Theory](./demonstrations/VelocityFromAcceleration-Theory.nb.pdf)* and combine this with the theory we already developed for obtaining position from velocity &mdash; In other words, we will transitively obtain velocity from acceleration and then position from velocity &mdash; We will start to see how interesting complications can arise &mdash; Finally, in class, we will complete the *[Velocity from Acceleration - Sinusoidal Force notebook](./worksheets/VelocityFromAcceleration-SinusoidalForce.nb.pdf)*
 
-### Week 3 &mdash; Second-Order Runge-Kutta &mdash; Mass on an Idealized Spring &mdash; Pendula
+### Week 3 &mdash; Second-Order Runge-Kutta &mdash; Mass on an Idealized Spring
 
 * Wednesday, Jan. 29 &mdash; Problem Set 4: Solve the rest of the exercises from Section 11 (Exs. 11.16 to 11.31), Section 12, and Section 13 &mdash; In-class: Develop *[Second-Order Runge-Kutta - Theory](./demonstrations/RungeKutta2-Theory.nb.pdf)* and then complete the *[Second-Order Runge-Kutta - Mass on a Spring notebook](./worksheets/RungeKutta2-MassOnASpring.nb.pdf)*
+* Friday, Jan. 31 &mdash; No new assignment in *EIWL3* &mdash; In-class: There are three directions we can now go, having done the mass on a spring: (1) Two masses on two springs, but also coupled to each other, (2) Stick with one mass, but add in some realistic resistance (aka friction), so that the oscillation slowly dies down (most real systems have some resistance), (3) Add in an external driving force, so that as the oscillation dies down, the external driving force keeps it going &mdash; I will choose between these three directions before tomorrow's class &mdash; I have decided I simply do not have time to create a new homework for Friday because of the Wed/Thu/Fri back-to-back classes this week, and I assume you will appreciate a breather for the same reason
+
+### Week 4
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
-* Friday, Jan. 31 &mdash; The simple pendulum &mdash; The compound pendulum
-
-### Week 4
 
 * Tuesday, Feb. 4
 * Friday, Feb. 7
