@@ -19,7 +19,7 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 ### Week 3 &mdash; Second-Order Runge-Kutta &mdash; Mass on an Idealized Spring
 
 * Wednesday, Jan. 29 &mdash; Problem Set 4: Solve the rest of the exercises from Section 11 (Exs. 11.16 to 11.31), Section 12, and Section 13 &mdash; In-class: Develop *[Second-Order Runge-Kutta - Theory](./theory/RungeKutta2-Theory.nb.pdf)* and then complete the *[Second-Order Runge-Kutta - Mass on a Spring](./worksheets/RungeKutta2-MassOnASpring.nb.pdf)* notebook &mdash; Period *(T)*, frequency *(f=1/T)*, and angular frequency *(&omega;=2&pi; f)*
-* Friday, Jan. 31 &mdash; No new assignment in *EIWL3* &mdash; In-class: Develop *[General Second-Order Runge-Kutta - Theory](./theory/GeneralRungeKutta2-Theory.nb.pdf)* &mdash; Then, in class, we will complete the *[General Second-Order Runge-Kutta - Damped Oscillation](./worksheets/GeneralRungeKutta2-DampedOscillation.nb.pdf)* and *[General Second-Order Runge-Kutta - Forced Oscillation](./worksheets/GeneralRungeKutta2-DampedOscillation.nb.pdf)* notebooks
+* Friday, Jan. 31 &mdash; No new assignment in *EIWL3* &mdash; In-class: Develop *[General Second-Order Runge-Kutta - Theory](./theory/GeneralRungeKutta2-Theory.nb.pdf)* &mdash; Then, in class, we will complete the *[General Second-Order Runge-Kutta - Damped Oscillation](./worksheets/GeneralRungeKutta2-DampedOscillation.nb.pdf)* and *[General Second-Order Runge-Kutta - Forced Oscillation](./worksheets/GeneralRungeKutta2-ForcedOscillation.nb.pdf)* notebooks
 
 ### Week 4
 
