@@ -23,10 +23,13 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 ### Week 4 &mdash; Forced Oscillation &mdash; Pendulum &mdash; Phase Space
 
+* Tuesday, Feb. 4 &mdash; EIWL3 Assignment: Stay tuned, but probably Sections 14-16? &mdash; In-class: Complete the *[General Second-Order Runge-Kutta - Forced Oscillation](./worksheets/GeneralRungeKutta2-ForcedOscillation.nb.pdf)* notebook &mdash; Explore Resonance
+
+<img src="./illustrations/OscillationAtResonance.png" width="60%">
+
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
-* Tuesday, Feb. 4
-* Friday, Feb. 7
+* Friday, Feb. 7 &mdash; Pendulum - Theory (Angle, Angular Velocity, Angular Acceleration)
 
 ### Week 5 &mdash; Forced Pendulum &mdash; Chaos
 
