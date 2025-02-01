@@ -9,7 +9,7 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 ### Week 1 &mdash; Lightning Introduction to Mathematica Notebooks &mdash; Velocity
 
 * Tuesday, Jan. 14 &mdash; Preparation for class: Study Sections 1-3 of [*An Elementary Introduction to the Wolfram Language, 3rd Edition*](https://www.wolfram.com/language/elementary-introduction/3rd-ed/index.html.en), hereafter abbreviated *EIWL3* &mdash; Expressions, operator precedence, symbolic manipulation, built-in functions, and user-defined functions in Mathematica &mdash; We will work through a little demonstration called *[Heads or Tails](./demonstrations/HeadsOrTails.nb.pdf)* which demonstrates user-defined functions and nested functions
-* Friday, Jan. 17 &mdash; Problem Set 1: Solve all Sections 1-4 of *EIWL3* &mdash; [PS01 Solution](./solutions/2025-01-17/Brian-PS01.nb.pdf) &mdash; We learned four more notebook features that greatly enhance readability: plain text cells, section cells, subsection cells, and comments in code &mdash; In class, we worked through a small but critical bit of physics, *[Position from Velocity &mdash; Theory](./theory/PositionFromVelocity-Theory.nb.pdf)* &mdash; We manually filled out a *[Position from Velocity - Constant Acceleration](./worksheets/PositionFromVelocity-ConstantAccelerationWorksheet.pdf)* worksheet that demonstrates the theory we have developed so far for the case of linearly increasing velocity (aka constant acceleration or uniform acceleration)
+* Friday, Jan. 17 &mdash; Problem Set 1: Solve all Sections 1-4 of *EIWL3* &mdash; [PS01 Solution](./solutions/2025-01-17/Brian-PS01.nb.pdf) &mdash; We learned four more notebook features that greatly enhance readability: plain text cells, section cells, subsection cells, and comments in code &mdash; In class, we worked through a small but critical bit of physics, *[Position from Velocity &mdash; Theory](./theory/PositionFromVelocity-Theory.nb.pdf)* &mdash; We manually filled out a *[Position from Velocity - Constant Acceleration](./worksheets/00-PositionFromVelocity-ConstantAccelerationWorksheet.pdf)* worksheet that demonstrates the theory we have developed so far for the case of linearly increasing velocity (aka constant acceleration or uniform acceleration)
 
 ### Week 2 &mdash; Acceleration &mdash; Newton's 2nd Law &mdash; Interesting Complications
 
@@ -33,7 +33,7 @@ Walker: the finance data is very rich
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
-* Friday, Feb. 7 &mdash; Pendulum - Theory (Angle, Angular Velocity, Angular Acceleration, Approximate Theoretical Solution) &mdash; In-class: Complete [Damped Pendulum - Phase Space](./worksheets/DampedPendulum-PhaseSpace.nb.pdf) notebook
+* Friday, Feb. 7 &mdash; Pendulum - Theory (Angle, Angular Velocity, Angular Acceleration, Approximate Theoretical Solution) &mdash; In-class: Complete [Damped Pendulum - Phase Space](./worksheets/06-DampedPendulum-PhaseSpace.nb.pdf) notebook
 
 ### Week 5 &mdash; Forced Pendulum &mdash; Chaos &mdash; Exam 1
 
