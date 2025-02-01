@@ -21,7 +21,7 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 * Wednesday, Jan. 29 &mdash; Problem Set 4: Solve the rest of the exercises from Section 11 (Exs. 11.16 to 11.31), Section 12, and Section 13 &mdash; In-class: Develop *[Second-Order Runge-Kutta - Theory](./theory/RungeKutta2-Theory.nb.pdf)* and then complete the *[Second-Order Runge-Kutta - Mass on a Spring](./worksheets/RungeKutta2-MassOnASpring.nb.pdf)* notebook &mdash; Period *(T)*, frequency *(f=1/T)*, and angular frequency *(&omega;=2&pi; f)*
 * Friday, Jan. 31 &mdash; No new assignment in *EIWL3* &mdash; In-class: Develop *[General Second-Order Runge-Kutta - Theory](./theory/GeneralRungeKutta2-Theory.nb.pdf)* and then complete the *[General Second-Order Runge-Kutta - Damped Oscillation](./worksheets/GeneralRungeKutta2-DampedOscillation.nb.pdf)* notebook
 
-### Week 4 &mdash; Forced Oscillation &mdash; Pendulum &mdash; Phase Space
+### Week 4 &mdash; Forced Oscillation &mdash; Resonance &mdash; Pendulum &mdash; Phase Space
 
 * Tuesday, Feb. 4 &mdash; EIWL3 Assignment: Stay tuned, but probably Sections 14-16? &mdash; In-class: Complete the *[General Second-Order Runge-Kutta - Forced Oscillation](./worksheets/GeneralRungeKutta2-ForcedOscillation.nb.pdf)* notebook &mdash; Explore Resonance
 
@@ -31,9 +31,9 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 * Friday, Feb. 7 &mdash; Pendulum - Theory (Angle, Angular Velocity, Angular Acceleration)
 
-### Week 5 &mdash; Forced Pendulum &mdash; Chaos
+### Week 5 &mdash; Forced Pendulum &mdash; Chaos &mdash; Exam 1
 
-* Tuesday, Feb. 11
+* Tuesday, Feb. 11 &mdash; Forced Pendulum &mdash; Chaos
 * Friday, Feb. 14 &mdash; Exam 1
 
 ### Week 6
