@@ -23,7 +23,7 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 ### Week 4 &mdash; Forced Oscillation &mdash; Resonance &mdash; Pendulum &mdash; Phase Space
 
-* Tuesday, Feb. 4 &mdash; EIWL3 Assignment: Do the Exercises from Sections 14 and 17 &mdash; Additionally, INSTEAD of turning in the excercises from Sections 15 and 16, explore Mathematica (as outlined in those two sections), and choose any topic that genuinely interests you to give a punchy, short (3 or 4 minutes) presentation on Tuesday &mdash; In-class: We will complete the *[General Second-Order Runge-Kutta - Forced Oscillation](./worksheets/GeneralRungeKutta2-ForcedOscillation.nb.pdf)* notebook and then use it to explore resonance
+* Tuesday, Feb. 4 &mdash; EIWL3 Assignment: Do the Exercises from Sections 14 and 17 &mdash; Additionally, INSTEAD of turning in the exercises from Sections 15 and 16, explore Mathematica (as outlined in those two sections), and choose any topic that genuinely interests you to give a punchy, short (3 or 4 minutes) presentation on Tuesday &mdash; In-class: We will complete the *[General Second-Order Runge-Kutta - Forced Oscillation](./worksheets/GeneralRungeKutta2-ForcedOscillation.nb.pdf)* notebook and then use it to explore resonance
 
 Eli: since you can't project from your laptop, do a 1 or 2-page handout
 
@@ -33,7 +33,7 @@ Walker: the finance data is very rich
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
-* Friday, Feb. 7 &mdash; Pendulum - Theory (Angle, Angular Velocity, Angular Acceleration) &mdash; Phase Space
+* Friday, Feb. 7 &mdash; Pendulum - Theory (Angle, Angular Velocity, Angular Acceleration) &mdash; In-class: Complete pendulum notebook, with phase space plots
 
 ### Week 5 &mdash; Forced Pendulum &mdash; Chaos &mdash; Exam 1
 
