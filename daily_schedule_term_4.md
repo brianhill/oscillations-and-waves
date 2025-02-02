@@ -21,7 +21,7 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 * Wednesday, Jan. 29 &mdash; Problem Set 4: Solve the rest of the exercises from Section 11 (Exs. 11.16 to 11.31), Section 12, and Section 13 &mdash; In-class: Develop *[Second-Order Runge-Kutta - Theory](./theory/RungeKutta2-Theory.nb.pdf)* and then complete the *[Second-Order Runge-Kutta - Mass on a Spring](./worksheets/03-RungeKutta2-MassOnASpring.nb.pdf)* notebook &mdash; Period *(T)*, frequency *(f=1/T)*, and angular frequency *(&omega;=2&pi; f)*
 * Friday, Jan. 31 &mdash; No new assignment in *EIWL3* &mdash; In-class: Develop *[General Second-Order Runge-Kutta - Theory](./theory/GeneralRungeKutta2-Theory.nb.pdf)* and then complete the *[General Second-Order Runge-Kutta - Damped Oscillation](./worksheets/04-GeneralRungeKutta2-DampedOscillation.nb.pdf)* notebook
 
-### Week 4 &mdash; Forced Oscillation &mdash; Resonance &mdash; Pendulum &mdash; Phase Space
+### Week 4 &mdash; Forced Oscillation &mdash; Resonance &mdash; Damped Pendulum &mdash; Phase Space
 
 * Tuesday, Feb. 4 &mdash; EIWL3 Assignment: Do the Exercises from Sections 14 and 17 &mdash; Additionally, INSTEAD of turning in the exercises from Sections 15 and 16, explore Mathematica (as outlined in those two sections), and choose any topic that genuinely interests you to give a punchy, short (3 or 4 minutes) presentation on Tuesday &mdash; In-class: We will flesh out a little more of the [General Second-Order Runge-Kutta - Best Estimate of Average](./theory/GeneralRungeKutta2-BestEstimateOfAverage.nb.pdf) and then complete the *[General Second-Order Runge-Kutta - Forced Oscillation](./worksheets/05-GeneralRungeKutta2-ForcedOscillation.nb.pdf)* notebook which we will use to explore resonance
 
@@ -33,7 +33,7 @@ Walker: the finance data is very rich
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
-* Friday, Feb. 7 &mdash; Pendulum - Theory (Angle, Angular Velocity, Angular Acceleration, Approximate Theoretical Solution) &mdash; In-class: Complete [Damped Pendulum - Phase Space](./worksheets/06-DampedPendulum-PhaseSpace.nb.pdf) notebook
+* Friday, Feb. 7 &mdash; [Damped Pendulum - Theory](./theory/DampedPendulum-Theory.nb.pdf) (Angle, Angular Velocity, Angular Acceleration, Approximate Theoretical Solution) &mdash; In-class: Complete [Damped Pendulum - Phase Space](./worksheets/06-DampedPendulum-PhaseSpace.nb.pdf) notebook
 
 ### Week 5 &mdash; Forced Pendulum &mdash; Chaos &mdash; Exam 1
 
