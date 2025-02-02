@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8902,        202]
-NotebookOptionsPosition[      8107,        178]
-NotebookOutlinePosition[      8593,        197]
-CellTagsIndexPosition[      8550,        194]
+NotebookDataLength[      9017,        204]
+NotebookOptionsPosition[      8222,        180]
+NotebookOutlinePosition[      8708,        199]
+CellTagsIndexPosition[      8665,        196]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -37,10 +37,11 @@ SOLVED\
 b6de9f5e59a2"],
 
 Cell["\<\
-The code below is what needs to be filled in to get this notebook working.\
+The code below is what needs to be filled in to get the notebook working.\
 \>", "Text",
- CellChangeTimes->{{3.9473511970240107`*^9, 
-  3.947351210237726*^9}},ExpressionUUID->"ab6d8ea3-6dde-4847-a41e-\
+ CellChangeTimes->{{3.9473511970240107`*^9, 3.947351210237726*^9}, {
+  3.94744296706691*^9, 
+  3.947442967278132*^9}},ExpressionUUID->"ab6d8ea3-6dde-4847-a41e-\
 e13a457f70b2"],
 
 Cell[CellGroupData[{
@@ -65,7 +66,7 @@ Cell[TextData[StyleBox["General Second-Order Runge-Kutta", "Subsubsection"]], \
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"alpha", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"\[Alpha]", "=", "1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"rungeKutta2", "[", "cc_", "]"}], ":=", 
   RowBox[{"(", "\[IndentingNewLine]", 
@@ -90,16 +91,16 @@ Cell[BoxData[{
       "vStar"}], " ", "*)"}], "\[IndentingNewLine]", 
     RowBox[{"tStar", " ", "=", " ", 
      RowBox[{"curTime", " ", "+", " ", 
-      RowBox[{"alpha", " ", "deltaT"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"\[Alpha]", " ", "deltaT"}]}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"xStar", "=", 
      RowBox[{"curPosition", "+", 
-      RowBox[{"curVelocity", " ", "alpha", " ", "deltaT"}]}]}], ";", 
+      RowBox[{"curVelocity", " ", "\[Alpha]", " ", "deltaT"}]}]}], ";", 
     "\[IndentingNewLine]", 
     RowBox[{"vStar", " ", "=", " ", 
      RowBox[{"curVelocity", "+", 
       RowBox[{
        RowBox[{"a", "[", 
-        RowBox[{"curPosition", ",", "curVelocity"}], "]"}], "alpha", " ", 
+        RowBox[{"curPosition", ",", "curVelocity"}], "]"}], "\[Alpha]", " ", 
        "deltaT"}]}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"(*", " ", 
      RowBox[{
@@ -117,12 +118,12 @@ Cell[BoxData[{
           RowBox[{"(", 
            RowBox[{"1", "-", 
             FractionBox["1", 
-             RowBox[{"2", "alpha"}]]}], ")"}], 
+             RowBox[{"2", "\[Alpha]"}]]}], ")"}], 
           RowBox[{"a", "[", 
            RowBox[{"curPosition", ",", "curVelocity"}], "]"}]}], "+", 
          RowBox[{
           FractionBox["1", 
-           RowBox[{"2", "alpha"}]], 
+           RowBox[{"2", "\[Alpha]"}]], 
           RowBox[{"a", "[", 
            RowBox[{"xStar", ",", "vStar"}], "]"}]}]}], ")"}], "deltaT"}]}]}], 
     ";", "\[IndentingNewLine]", 
@@ -171,7 +172,8 @@ Cell[BoxData[{
    3.947295654068747*^9}, {3.947337825917873*^9, 3.947338024689966*^9}, {
    3.947338396689517*^9, 3.9473386539298067`*^9}, {3.947338846760882*^9, 
    3.947338857612657*^9}, {3.947351130858276*^9, 3.9473511312040586`*^9}, 
-   3.947351360067164*^9},ExpressionUUID->"c0ea111d-ba45-4b4c-827b-\
+   3.947351360067164*^9, {3.947442938575736*^9, 
+   3.947442951381938*^9}},ExpressionUUID->"c0ea111d-ba45-4b4c-827b-\
 28d35d3b25d0"]
 }, Open  ]]
 }, Open  ]]
@@ -198,10 +200,10 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 827, 14, 124, "Section",ExpressionUUID->"08f90a5e-ac65-4417-8844-b6de9f5e59a2"],
-Cell[1410, 38, 226, 5, 63, "Text",ExpressionUUID->"ab6d8ea3-6dde-4847-a41e-e13a457f70b2"],
+Cell[1410, 38, 273, 6, 63, "Text",ExpressionUUID->"ab6d8ea3-6dde-4847-a41e-e13a457f70b2"],
 Cell[CellGroupData[{
-Cell[1661, 47, 1083, 16, 82, "Subsubsection",ExpressionUUID->"c4537ea2-5b06-4997-b1a3-8bc1dd0cd281"],
-Cell[2747, 65, 5332, 109, 758, "Input",ExpressionUUID->"c0ea111d-ba45-4b4c-827b-28d35d3b25d0"]
+Cell[1708, 48, 1083, 16, 82, "Subsubsection",ExpressionUUID->"c4537ea2-5b06-4997-b1a3-8bc1dd0cd281"],
+Cell[2794, 66, 5400, 110, 710, "Input",ExpressionUUID->"c0ea111d-ba45-4b4c-827b-28d35d3b25d0"]
 }, Open  ]]
 }, Open  ]]
 }

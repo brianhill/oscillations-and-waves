@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38397,        800]
-NotebookOptionsPosition[     35550,        745]
-NotebookOutlinePosition[     36036,        764]
-CellTagsIndexPosition[     35993,        761]
+NotebookDataLength[     39571,        824]
+NotebookOptionsPosition[     36723,        769]
+NotebookOutlinePosition[     37209,        788]
+CellTagsIndexPosition[     37166,        785]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -296,9 +296,9 @@ Cell["\<\
 The implementation will be almost the same as in the damped oscillation \
 notebook you completed on Friday.
 
-There are two small things have to be changed. Figure out what they are and \
-then if you still have that code handy, you can almost completely re-use what \
-you did in that notebook. Or just write it out again. The more times you \
+There are two small things that have to be changed. Figure out what they are \
+and then if you still have that code handy, you can almost completely re-use \
+what you did in that notebook. Or just write it out again. The more times you \
 write it out, the better you will remember it.\
 \>", "Text",
  CellChangeTimes->{{3.946577216735734*^9, 3.946577255763145*^9}, {
@@ -312,13 +312,31 @@ write it out, the better you will remember it.\
   3.946921146985736*^9}, {3.947293728354549*^9, 3.947293755073989*^9}, {
   3.9472937881898003`*^9, 3.947293816257216*^9}, {3.947357710858076*^9, 
   3.947357774488488*^9}, {3.947358039310894*^9, 3.9473580404317627`*^9}, {
-  3.947359636728589*^9, 
-  3.9473596826557627`*^9}},ExpressionUUID->"b6bd8aec-6404-45c7-afcb-\
+  3.947359636728589*^9, 3.9473596826557627`*^9}, {3.9474428377526703`*^9, 
+  3.947442838048912*^9}},ExpressionUUID->"b6bd8aec-6404-45c7-afcb-\
 a05810000b0d"],
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"alpha", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\[Alpha]", "=", "1"}], ";"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "I", " ", "am", " ", "going", " ", "to", " ", "switch", " ", "to", " ", 
+     "nicer", " ", "typography", " ", "for", " ", "the", " ", "Greek", " ", 
+     "lettter", " ", "alpha"}], ",", " ", 
+    RowBox[{
+     RowBox[{"here", " ", "and", " ", "you", " ", "should", " ", 
+      RowBox[{"too", ".", " ", "You"}], " ", "will", " ", "see", " ", "my", " ",
+       "reason", " ", "in", " ", "the", " ", "next", " ", "class"}], ";", " ", 
+     RowBox[{
+      RowBox[{
+      "we", " ", "are", " ", "running", " ", "out", " ", "of", " ", "common", 
+       " ", "letters", " ", "and", " ", "I", " ", "will", " ", "want", " ", 
+       "to", " ", "re"}], "-", 
+      RowBox[{"use", " ", 
+       RowBox[{"some", "."}]}]}]}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"rungeKutta2", "[", "cc_", "]"}], ":=", 
   RowBox[{"(", "\[IndentingNewLine]", 
@@ -397,7 +415,11 @@ Cell[BoxData[{
    3.947295784105982*^9, 3.947295785564559*^9}, {3.9473576350276413`*^9, 
    3.947357675078019*^9}, {3.947357804476639*^9, 3.947357824547636*^9}, {
    3.9473579388368187`*^9, 3.9473579456143017`*^9}, {3.9473596071046124`*^9, 
-   3.947359615504252*^9}},ExpressionUUID->"d982b5b2-2ab9-4b66-aeeb-\
+   3.947359615504252*^9}, {3.947442425055962*^9, 3.947442495620247*^9}, {
+   3.9474425348941402`*^9, 3.94744254363664*^9}, {3.947442575214226*^9, 
+   3.9474426285978603`*^9}, {3.947443048302022*^9, 3.947443052165049*^9}, {
+   3.9474430847943172`*^9, 
+   3.947443099266864*^9}},ExpressionUUID->"d982b5b2-2ab9-4b66-aeeb-\
 17550f008e08"]
 }, Open  ]],
 
@@ -626,9 +648,13 @@ Cell["Epilog \[LongDash] Resonance", "Subsubsection",
    3.9473600519060507`*^9}},ExpressionUUID->"2299c7e7-02eb-49c7-8e48-\
 4804c6da6a8e"],
 
-Cell["Let\[CloseCurlyQuote]s display all three for easy comparison:", "Text",
- CellChangeTimes->{{3.947360161142317*^9, 
-  3.9473601634976683`*^9}},ExpressionUUID->"73a758c8-f578-4844-90d0-\
+Cell["\<\
+Let\[CloseCurlyQuote]s display all three of the important frequencies for \
+easy comparison:\
+\>", "Text",
+ CellChangeTimes->{{3.947360161142317*^9, 3.9473601634976683`*^9}, {
+  3.947442705990159*^9, 
+  3.947442710964991*^9}},ExpressionUUID->"73a758c8-f578-4844-90d0-\
 ccac5f16c0c8"],
 
 Cell[BoxData[{
@@ -660,34 +686,34 @@ Cell[BoxData[{
 b0a0f3f31280"],
 
 Cell[TextData[{
- "At minimum, one of the things we should do is just to jack up ",
+ "At minimum, one of the things we should do as part of playing around with \
+this system is just to jack up ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["\[Omega]", "1"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["\[Omega]", "1"], TraditionalForm]],ExpressionUUID->
   "a4899fe5-d3fe-4f6b-93aa-93078a7dabf4"],
  " so that it is almost as large as ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["\[Omega]", "0"], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   SubscriptBox["\[Omega]", "0"], TraditionalForm]],ExpressionUUID->
   "90482b94-ef8a-4578-a8e5-97fa188ae9f9"],
  ". For example ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["\[Omega]", "1"], "=", "1.8"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "f897bca9-fb66-4994-9c8d-c4860c6335e9"],
+  ExpressionUUID->"f897bca9-fb66-4994-9c8d-c4860c6335e9"],
  " is good to try. That is \[OpenCurlyDoubleQuote]just below resonance.\
-\[CloseCurlyDoubleQuote]\n\nOnce you see what that is doing, try ",
+\[CloseCurlyDoubleQuote]\n\nOnce we have all seen what that is doing, we\
+\[CloseCurlyQuote]ll try ",
  Cell[BoxData[
   FormBox[
    RowBox[{
     SubscriptBox["\[Omega]", "1"], "=", "2.2"}], TraditionalForm]],
   ExpressionUUID->"2d29ed80-131f-4d38-b756-7b78a48cce14"],
  ". That is \[OpenCurlyDoubleQuote]just above resonance.\
-\[CloseCurlyDoubleQuote]\n\nLet\[CloseCurlyQuote]s go right on resonance, ",
+\[CloseCurlyDoubleQuote]\n\nThen let\[CloseCurlyQuote]s go right on \
+resonance, ",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -697,15 +723,13 @@ Cell[TextData[{
 help to make a smoother and easier-to-contemplate animation to jack up the \
 number of steps to ",
  Cell[BoxData[
-  FormBox["50000", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+  FormBox["50000", TraditionalForm]],ExpressionUUID->
   "b140a10c-ab85-4871-9207-ef6d3f3cc421"],
  " and also to slow the animation duration down by doubling the animation \
 duration: ",
  Cell[BoxData[
   FormBox[
    RowBox[{"DefaultDuration", "->", "40"}], TraditionalForm]],
-  FormatType->TraditionalForm,
   FontFamily->"Source Code Pro",
   FontWeight->"SemiBold",ExpressionUUID->
   "6e71505c-241e-4ffb-bd11-0bd510a6f364"],
@@ -736,8 +760,8 @@ duration: ",
    3.94735937200144*^9, 3.947359420033004*^9}, {3.947359477262027*^9, 
    3.9473594871913652`*^9}, {3.947359892007517*^9, 3.9473598931556273`*^9}, 
    3.9473599793349752`*^9, {3.9473600791350183`*^9, 3.947360080017996*^9}, {
-   3.9473601264627733`*^9, 
-   3.947360145029784*^9}},ExpressionUUID->"cd6d735e-8b9b-4da3-91ec-\
+   3.9473601264627733`*^9, 3.947360145029784*^9}, {3.947442747720302*^9, 
+   3.9474427808673277`*^9}},ExpressionUUID->"cd6d735e-8b9b-4da3-91ec-\
 6f58405db06b"]
 }, Open  ]]
 }, Open  ]]
@@ -780,25 +804,25 @@ Cell[9991, 219, 2389, 49, 208, "Input",ExpressionUUID->"934a65e3-4c3a-4f36-b7d2-
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[12417, 273, 1052, 19, 82, "Subsubsection",ExpressionUUID->"c4537ea2-5b06-4997-b1a3-8bc1dd0cd281"],
-Cell[13472, 294, 1323, 22, 227, "Text",ExpressionUUID->"b6bd8aec-6404-45c7-afcb-a05810000b0d"],
-Cell[14798, 318, 4500, 82, 438, "Input",ExpressionUUID->"d982b5b2-2ab9-4b66-aeeb-17550f008e08"]
+Cell[13472, 294, 1376, 22, 227, "Text",ExpressionUUID->"b6bd8aec-6404-45c7-afcb-a05810000b0d"],
+Cell[14851, 318, 5553, 104, 514, "Input",ExpressionUUID->"d982b5b2-2ab9-4b66-aeeb-17550f008e08"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19335, 405, 1150, 16, 82, "Subsubsection",ExpressionUUID->"f253c7e9-5513-445b-b9e9-492b2664d8c6"],
-Cell[20488, 423, 669, 12, 63, "Text",ExpressionUUID->"4b816d78-09f6-4b86-9bc1-6fa63c9fbb53"],
-Cell[21160, 437, 1975, 35, 131, "Input",ExpressionUUID->"8f940360-37a6-43c1-adbf-9876770cadfe"],
-Cell[23138, 474, 496, 12, 93, "Input",ExpressionUUID->"4e2d7edb-498f-4c2b-9920-4d24cc1c800c"],
-Cell[23637, 488, 1020, 25, 93, "Input",ExpressionUUID->"76ce6cdc-ba31-4424-82f0-466a19201f72"]
+Cell[20441, 427, 1150, 16, 82, "Subsubsection",ExpressionUUID->"f253c7e9-5513-445b-b9e9-492b2664d8c6"],
+Cell[21594, 445, 669, 12, 63, "Text",ExpressionUUID->"4b816d78-09f6-4b86-9bc1-6fa63c9fbb53"],
+Cell[22266, 459, 1975, 35, 131, "Input",ExpressionUUID->"8f940360-37a6-43c1-adbf-9876770cadfe"],
+Cell[24244, 496, 496, 12, 93, "Input",ExpressionUUID->"4e2d7edb-498f-4c2b-9920-4d24cc1c800c"],
+Cell[24743, 510, 1020, 25, 93, "Input",ExpressionUUID->"76ce6cdc-ba31-4424-82f0-466a19201f72"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[24694, 518, 1188, 17, 82, "Subsubsection",ExpressionUUID->"ced5fee0-4e5f-40a8-9fe5-7c394792a652"],
-Cell[25885, 537, 3407, 67, 514, "Text",ExpressionUUID->"d8e50758-de11-42f6-9213-318ab828a859"]
+Cell[25800, 540, 1188, 17, 82, "Subsubsection",ExpressionUUID->"ced5fee0-4e5f-40a8-9fe5-7c394792a652"],
+Cell[26991, 559, 3407, 67, 514, "Text",ExpressionUUID->"d8e50758-de11-42f6-9213-318ab828a859"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[29329, 609, 1241, 17, 82, "Subsubsection",ExpressionUUID->"2299c7e7-02eb-49c7-8e48-4804c6da6a8e"],
-Cell[30573, 628, 205, 3, 63, "Text",ExpressionUUID->"73a758c8-f578-4844-90d0-ccac5f16c0c8"],
-Cell[30781, 633, 833, 26, 197, "Input",ExpressionUUID->"e6ddad7d-d1bb-4d3b-8df3-b0a0f3f31280"],
-Cell[31617, 661, 3893, 79, 350, "Text",ExpressionUUID->"cd6d735e-8b9b-4da3-91ec-6f58405db06b"]
+Cell[30435, 631, 1241, 17, 82, "Subsubsection",ExpressionUUID->"2299c7e7-02eb-49c7-8e48-4804c6da6a8e"],
+Cell[31679, 650, 293, 7, 63, "Text",ExpressionUUID->"73a758c8-f578-4844-90d0-ccac5f16c0c8"],
+Cell[31975, 659, 833, 26, 197, "Input",ExpressionUUID->"e6ddad7d-d1bb-4d3b-8df3-b0a0f3f31280"],
+Cell[32811, 687, 3872, 77, 350, "Text",ExpressionUUID->"cd6d735e-8b9b-4da3-91ec-6f58405db06b"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
