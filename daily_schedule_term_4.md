@@ -33,7 +33,7 @@ Walker: the finance data is very rich
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
-* Friday, Feb. 7 &mdash; [Damped Pendulum - Theory](./theory/DampedPendulum-Theory.nb.pdf) (Angle, Angular Velocity, Angular Acceleration, Approximate Theoretical Solution) &mdash; In-class: Complete [Damped Pendulum - Phase Space](./worksheets/06-DampedPendulum-PhaseSpace.nb.pdf) notebook
+* Friday, Feb. 7 &mdash; [Damped Oscillator and Damped Pendulum - Theory](./theory/DampedOscillatorAndDampedPendulum-Theory.nb.pdf) (Angle, Angular Velocity, Angular Acceleration, Approximate Theoretical Solution) &mdash; In-class: Complete [Damped Pendulum - Phase Space](./worksheets/06-DampedPendulum-PhaseSpace.nb.pdf) notebook
 
 ### Week 5 &mdash; Forced Pendulum &mdash; Chaos &mdash; Exam 1
 
