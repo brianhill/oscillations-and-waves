@@ -23,7 +23,7 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 ### Week 4 &mdash; Forced Oscillation &mdash; Resonance &mdash; Damped Pendulum &mdash; Phase Space
 
-* Tuesday, Feb. 4 &mdash; EIWL3 Assignment: Do the Exercises from Sections 14 and 17 &mdash; Additionally, INSTEAD of turning in the exercises from Sections 15 and 16, explore Mathematica (as outlined in those two sections), and choose any topic that genuinely interests you to give a punchy, short (3 or 4 minutes) presentation on Tuesday &mdash; In-class: We will flesh out a little more of the [General Second-Order Runge-Kutta - Best Estimate of Average](./theory/GeneralRungeKutta2-BestEstimateOfAverage.nb.pdf) and then complete the *[General Second-Order Runge-Kutta - Forced Oscillation](./worksheets/05-GeneralRungeKutta2-ForcedOscillation.nb.pdf)* notebook which we will use to explore resonance
+* Tuesday, Feb. 4 &mdash; Problem Set 5: Do the Exercises from Sections 14 and 17 &mdash; Additionally, INSTEAD of turning in the exercises from Sections 15 and 16, explore Mathematica (as outlined in those two sections), and choose any topic that genuinely interests you to give a punchy, short (3 or 4 minutes) presentation on Tuesday &mdash; In-class: We will flesh out a little more of the [General Second-Order Runge-Kutta - Best Estimate of Average](./theory/GeneralRungeKutta2-BestEstimateOfAverage.nb.pdf) and then complete the *[General Second-Order Runge-Kutta - Forced Oscillation](./worksheets/05-GeneralRungeKutta2-ForcedOscillation.nb.pdf)* notebook which we will use to explore resonance
 
 Eli: since you can't project from your laptop, do a 1 or 2-page handout
 
