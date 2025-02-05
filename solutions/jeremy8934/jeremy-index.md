@@ -10,7 +10,7 @@
 
 * [Brian's solution](../brian54321/Brian-PS04.nb.pdf)
 
-### 2025-01-24 &mdash; PS3 &mdash; *EIWL3* Sections 9 and 10, and First Half of 11
+### 2025-01-24 &mdash; PS3 &mdash; *EIWL3* Sections 9 and 10, and First Half of Section 11
 
 * [Brian's solution](../brian54321/Brian-PS03.nb.pdf)
 
