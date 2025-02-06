@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18889,        465]
-NotebookOptionsPosition[     17530,        432]
-NotebookOutlinePosition[     18015,        451]
-CellTagsIndexPosition[     17972,        448]
+NotebookDataLength[     18933,        457]
+NotebookOptionsPosition[     17574,        424]
+NotebookOutlinePosition[     18059,        443]
+CellTagsIndexPosition[     18016,        440]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -64,9 +64,10 @@ Cell["Damped Oscillator", "Subsection",
 3e96650e189a"],
 
 Cell[TextData[{
- "We have contemplated an oscillator with the force law, and in the last \
-notebook, we even included an external sinusoidal driving force. Without the \
-external sinusoidal driving force, the force law is:\n\n",
+ "We have contemplated an oscillator with the force law given by Hooke\
+\[CloseCurlyQuote]s Law for springs and a simple model of damping, and in the \
+last notebook, we even included an external sinusoidal driving force. Without \
+the external sinusoidal driving force, the force law is:\n\n",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -77,7 +78,7 @@ external sinusoidal driving force, the force law is:\n\n",
       RowBox[{"-", "k"}], "\[VeryThinSpace]", "x"}], "-", 
      RowBox[{"b", "\[VeryThinSpace]", "v"}]}]}], TraditionalForm]],
   ExpressionUUID->"976207ca-6e91-4e1a-ba39-50d7b4a9e1fb"],
- "\n\nDivide through by the mass and the acceleration is:\n\n",
+ "\n\nDivide through by the mass to find the acceleration. It is:\n\n",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -118,8 +119,9 @@ external sinusoidal driving force, the force law is:\n\n",
         SubscriptBox["\[Omega]", "0"], "2"]}], "\[VeryThinSpace]", "x"}], "-", 
      RowBox[{"2", "\[Gamma]", "\[VeryThinSpace]", "v"}]}]}], 
    TraditionalForm]],ExpressionUUID->"ec3dfc3c-e390-4721-bbcd-6f2d2ff9d97a"],
- "\n\nWe are still in the realm of problems that have exact solutions, and a \
-solution of this equation I will just tell you is\n\n",
+ "\n\nUp until this point, we are still in the realm of problems that have \
+exact solutions, and a solution of this equation I will just tell you is\n\n\
+",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -135,28 +137,16 @@ solution of this equation I will just tell you is\n\n",
        RowBox[{
         RowBox[{"-", "\[Gamma]"}], "\[VeryThinSpace]", "t"}]]}]}]}], 
    TraditionalForm]],ExpressionUUID->"b2eec991-cac5-468c-aadb-ac59d29aa6c2"],
- "\n\nwhere ",
+ "\n\nand the oddball frequency that shows up in the cosine is the somewhat \
+slowed down oscillation rate due to the damping. It is necessary that \
+\[Gamma] (the decay rate due to damping) is less than ",
  Cell[BoxData[
   FormBox[
-   RowBox[{
-    SuperscriptBox[
-     SubscriptBox["\[Omega]", "0"], "2"], "=", 
-    FractionBox["k", "m"]}], TraditionalForm]],ExpressionUUID->
-  "968830fa-a0a9-4c5b-8f5f-83f91c90c404"],
- ",  ",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[Gamma]", "=", 
-    FractionBox["b", 
-     RowBox[{"2", "m"}]]}], TraditionalForm]],ExpressionUUID->
-  "b4baeee6-d926-47a8-901d-f805e10d93c5"],
- ", and the oddball frequency that shows up in the cosine is a slightly \
-slowed down oscillation rate relative to ",
- Cell[BoxData[
-  FormBox[
-   SubscriptBox["\[Omega]", "0"], TraditionalForm]],ExpressionUUID->
-  "f4b76a34-8e53-4309-964c-a00766d7500b"],
- ", provided \[Gamma], the decay rate due to damping is small.\n\n",
+   SubscriptBox["\[Omega]", "0"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "570a57b3-74dd-485f-b152-b83e1299d2bd"],
+ ", otherwise the oscillator is overdamped and does not oscillate. To \
+summarize, there are these three important frequencies in the problem:\n\n",
  Cell[BoxData[
   FormBox[
    SubscriptBox["\[Omega]", "0"], TraditionalForm]],ExpressionUUID->
@@ -173,13 +163,15 @@ controls the rate of decay of the exponential\n",
      SuperscriptBox["\[Gamma]", "2"]}]], TraditionalForm]],ExpressionUUID->
   "632fd9bc-dcdf-4817-88dd-71f6344171cd"],
  "     the frequency of the oscillator including damping (which slows \
-oscillation down a little)"
+oscillation down somewhat)"
 }], "Text",
  CellChangeTimes->{{3.947552895265729*^9, 3.947553147347288*^9}, {
   3.9475531796957607`*^9, 3.947553382338029*^9}, {3.94755418914651*^9, 
   3.947554278536395*^9}, {3.947619278300992*^9, 3.947619305690157*^9}, {
-  3.947619433253952*^9, 
-  3.947619512756649*^9}},ExpressionUUID->"e6c94e7f-85de-4a9b-88f1-\
+  3.947619433253952*^9, 3.947619512756649*^9}, {3.947873832591807*^9, 
+  3.947874056895705*^9}, {3.9478740976042852`*^9, 3.9478741031998158`*^9}, {
+  3.947874147635303*^9, 
+  3.9478741516961718`*^9}},ExpressionUUID->"e6c94e7f-85de-4a9b-88f1-\
 17b490173fd6"]
 }, Open  ]],
 
@@ -455,17 +447,17 @@ Cell[CellGroupData[{
 Cell[1473, 36, 751, 10, 54, "Title",ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
 Cell[CellGroupData[{
 Cell[2249, 50, 899, 13, 83, "Subsection",ExpressionUUID->"21835f4c-5361-4bc1-ab08-3e96650e189a"],
-Cell[3151, 65, 4239, 117, 810, "Text",ExpressionUUID->"e6c94e7f-85de-4a9b-88f1-17b490173fd6"]
+Cell[3151, 65, 4283, 109, 840, "Text",ExpressionUUID->"e6c94e7f-85de-4a9b-88f1-17b490173fd6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7427, 187, 895, 13, 83, "Subsection",ExpressionUUID->"a503e5ee-f4c6-47ef-98f9-01c5ea9ad05d"],
-Cell[8325, 202, 883, 12, 68, "Subsubsection",ExpressionUUID->"6f78337b-e569-4641-bad1-a534a36f90c5"],
+Cell[7471, 179, 895, 13, 83, "Subsection",ExpressionUUID->"a503e5ee-f4c6-47ef-98f9-01c5ea9ad05d"],
+Cell[8369, 194, 883, 12, 68, "Subsubsection",ExpressionUUID->"6f78337b-e569-4641-bad1-a534a36f90c5"],
 Cell[CellGroupData[{
-Cell[9233, 218, 1000, 15, 53, "Subsubsection",ExpressionUUID->"353f77da-fd5b-40e4-b2b4-bc7f1b011064"],
-Cell[10236, 235, 6360, 177, 1138, "Text",ExpressionUUID->"f7276b5e-eb83-40bc-891a-8554c0daca9d"]
+Cell[9277, 210, 1000, 15, 53, "Subsubsection",ExpressionUUID->"353f77da-fd5b-40e4-b2b4-bc7f1b011064"],
+Cell[10280, 227, 6360, 177, 1138, "Text",ExpressionUUID->"f7276b5e-eb83-40bc-891a-8554c0daca9d"]
 }, Open  ]]
 }, Open  ]],
-Cell[16623, 416, 891, 13, 83, "Subsection",ExpressionUUID->"18a5baaa-0267-45f8-9a70-009938a8af42"]
+Cell[16667, 408, 891, 13, 83, "Subsection",ExpressionUUID->"18a5baaa-0267-45f8-9a70-009938a8af42"]
 }, Open  ]]
 }
 ]
