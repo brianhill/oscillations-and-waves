@@ -28,12 +28,12 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 ### Week 5 &mdash; Forced Pendulum &mdash; Phase Space &mdash; Chaos &mdash; Exam 1
 
-* Tuesday, Feb. 11 &mdash; Problem Sets 6 and 7: As Problem Set 6, re-download my slightly tweaked version of the *[Damped Pendulum - With Animated Graphics](./worksheets/06-DampedPendulum-WithAnimatedGraphics.nb.pdf)* notebook that we started in the last class, finish it, and email it, and then as Problem Set 7, do the exercises from Sections 18 and 19 and email them as well &mdash; In-class: Complete *[Forced Pendulum - With Phase Space Plots](./worksheets/07-ForcedPendulum-WithPhaseSpacePlots.nb.pdf)* notebook
+* Tuesday, Feb. 11 &mdash; Problem Sets 6 and 7: As Problem Set 6, re-download my slightly tweaked version of the *[Damped Pendulum - With Animated Graphics](./worksheets/06-DampedPendulum-WithAnimatedGraphics.nb.pdf)* notebook that we started in the last class, finish it, and email it, and then as Problem Set 7, do the exercises from Sections 18 and 19 and email them as well &mdash; In-class: Examine *[Forced Pendulum - Phase Space - Chaos](./worksheets/07-ForcedPendulum-PhaseSpace-Chaos.nb.pdf)* notebook
 * Friday, Feb. 14 &mdash; Exam 1
 
-<img src="./illustrations/OscillationAtResonance.png" width="80%">
+<img src="./illustrations/ForcedPendulumPhaseSpacePlot.png" width="100%">
 
-### Week 6 &mdash; Two-Particle Systems
+### Week 6 &mdash; Systems with Two Masses
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
@@ -43,3 +43,15 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 ### Week 7
 
 * Tuesday, Feb. 25
+
+## Daily Schedule Term 5
+
+### Week 8
+
+* Tuesday, March 18
+* Friday, March 21
+
+### Week 9
+
+* Tuesday, March 25
+* Friday, March 28
