@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     41951,       1021]
-NotebookOptionsPosition[     39413,        966]
-NotebookOutlinePosition[     39899,        985]
-CellTagsIndexPosition[     39856,        982]
+NotebookDataLength[     41937,       1015]
+NotebookOptionsPosition[     39401,        960]
+NotebookOutlinePosition[     39885,        979]
+CellTagsIndexPosition[     39842,        976]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -689,32 +689,31 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    RowBox[{"sin", "\[VeryThinSpace]", "\[Theta]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "73cf6e81-7493-422a-99d3-09a77029669d"],
+  ExpressionUUID->"73cf6e81-7493-422a-99d3-09a77029669d"],
  " in the problem that makes the damped pendulum our first problem that we ",
  StyleBox["must",
   FontWeight->"Bold",
   FontSlant->"Italic"],
  " do on the computer if we want to do large oscillations. There is only an \
 approximate analytical solution, and it gets worse and worse as the angle of \
-oscillation gets larger and larger.\n\nI have seen claims on various websites \
-that the damped pendulum is solved, but looking for references, like this \
-paper by Kim Johannessen (2014), \[OpenCurlyDoubleQuote]An analytical \
-solution to the equation of motion for the damped nonlinear pendulum,\
-\[CloseCurlyDoubleQuote] I see that the abstract begins with \
-\[OpenCurlyDoubleQuote]an analytical ",
+oscillation gets larger and larger.\n\nI have seen claims that the damped \
+pendulum is solved, but looking for references, like this paper by Kim \
+Johannessen (2014), \[OpenCurlyDoubleQuote]An analytical solution to the \
+equation of motion for the damped nonlinear pendulum,\[CloseCurlyDoubleQuote] \
+I see that the abstract begins with \[OpenCurlyDoubleQuote]an analytical ",
  StyleBox["approximation",
   FontWeight->"Bold",
   FontSlant->"Italic"],
  ".\[CloseCurlyDoubleQuote] [The bold italics are mine, of course.] This is a \
 great problem to study with numerical analysis. And that is what we are going \
-to do next!"
+to do next in our damped pendulum and forced pendulum notebooks!"
 }], "Text",
  CellChangeTimes->{{3.947892938109736*^9, 3.947893195202668*^9}, {
   3.947893504300789*^9, 3.947893518267132*^9}, {3.947893807117693*^9, 
   3.947893905266326*^9}, {3.947894189747128*^9, 3.947894204794561*^9}, {
   3.947894247762032*^9, 3.947894301989441*^9}, {3.9478943419835176`*^9, 
-  3.947894345022719*^9}},ExpressionUUID->"f77416d0-522a-4b53-abdb-\
+  3.947894345022719*^9}, {3.9482131118048973`*^9, 
+  3.9482131367048597`*^9}},ExpressionUUID->"f77416d0-522a-4b53-abdb-\
 4ea3d1eb7476"]
 }, Open  ]],
 
@@ -793,27 +792,24 @@ BdF+n6QE7wHpGZPLwLTfnUNJ6plvHV9US6WA6IS05kwQPW95RS6IvvxSI5kp
   "],ExpressionUUID->"802b034c-8700-458e-8430-a632c7f2754b"],
 
 Cell[TextData[{
- "Mindlessly making the substitutions\n\n",
+ "Instead of re-deriving everything we did to get general second-order \
+Runge-Kutta, we can mindlessly make the substitutions:\n\n",
  Cell[BoxData[
   FormBox[
-   RowBox[{"x", "->", " ", "\[Theta]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"x", "->", " ", "\[Theta]"}], TraditionalForm]],ExpressionUUID->
   "de32d915-84b9-4877-9543-3c5bce6c7a25"],
  "\n",
  Cell[BoxData[
   FormBox[
-   RowBox[{"v", "->", " ", "\[Omega]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"v", "->", " ", "\[Omega]"}], TraditionalForm]],ExpressionUUID->
   "a6d86201-45ae-4b3e-b920-339517049634"],
  "\n",
  Cell[BoxData[
   FormBox[
-   RowBox[{"a", "->", "\[Alpha]"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"a", "->", "\[Alpha]"}], TraditionalForm]],ExpressionUUID->
   "4bb65082-95ae-4e45-a87a-9bfe52e94c91"],
- "\n\ninstead of re-deriving everything we did to get general second-order \
-Runge-Kutta, we get that the general second-order Runge-Kutta procedure for \
-angular problems must be:\n\n",
+ "\n\nThe result is the general second-order Runge-Kutta procedure for \
+angular problems:\n\n",
  Cell[BoxData[
   FormBox[
    RowBox[{
@@ -829,11 +825,11 @@ angular problems must be:\n\n",
    RowBox[{
     SuperscriptBox["\[Theta]", "*"], "=", 
     RowBox[{
-     RowBox[{"x", "(", 
+     RowBox[{"\[Theta]", "(", 
       SubscriptBox["t", "i"], ")"}], "+", 
      RowBox[{
       RowBox[{
-       RowBox[{"v", "(", 
+       RowBox[{"\[Omega]", "(", 
         SubscriptBox["t", "i"], ")"}], "\[CenterDot]", "\[Lambda]"}], "\[VeryThinSpace]",
        "\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}]}], TraditionalForm]],
   ExpressionUUID->"06782156-095c-4337-89a0-3cda1aafdea2"],
@@ -850,9 +846,9 @@ angular problems must be:\n\n",
        RowBox[{"\[Alpha]", "(", 
         RowBox[{
          SubscriptBox["t", "i"], ",", 
-         RowBox[{"x", "(", 
+         RowBox[{"\[Theta]", "(", 
           SubscriptBox["t", "i"], ")"}], ",", 
-         RowBox[{"v", "(", 
+         RowBox[{"\[Omega]", "(", 
           SubscriptBox["t", "i"], ")"}]}], ")"}], "\[CenterDot]", 
        "\[Lambda]"}], "\[VeryThinSpace]", "\[CapitalDelta]", "\[VeryThinSpace]",
        "t"}]}]}], TraditionalForm]],ExpressionUUID->
@@ -889,7 +885,7 @@ angular problems must be:\n\n",
           RowBox[{"\[Alpha]", "(", 
            RowBox[{
             SubscriptBox["t", "i"], ",", 
-            RowBox[{"x", "(", 
+            RowBox[{"\[Theta]", "(", 
              SubscriptBox["t", "i"], ")"}], ",", 
             RowBox[{"\[Omega]", "(", 
              SubscriptBox["t", "i"], ")"}]}], ")"}]}], "+", 
@@ -899,7 +895,7 @@ angular problems must be:\n\n",
           RowBox[{"\[Alpha]", "(", 
            RowBox[{
             SuperscriptBox["t", "*"], ",", 
-            SuperscriptBox["x", "*"], ",", 
+            SuperscriptBox["\[Theta]", "*"], ",", 
             SuperscriptBox["\[Omega]", "*"]}], ")"}]}]}], ")"}], "\[CenterDot]",
         "\[CapitalDelta]"}], "\[VeryThinSpace]", "t"}]}]}], TraditionalForm]],
   ExpressionUUID->"03d2dfc6-e652-4156-8272-1956e6d09c88"],
@@ -931,41 +927,39 @@ I had to change what we used to call \[Alpha] in ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["t", "*"], TraditionalForm]],
-  InitializationCell->True,
-  FormatType->TraditionalForm,ExpressionUUID->
+  InitializationCell->True,ExpressionUUID->
   "33d4f6eb-e677-4ef8-81dd-1517db8c467a"],
  ",  ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["x", "*"], TraditionalForm]],
-  InitializationCell->True,
-  FormatType->TraditionalForm,ExpressionUUID->
+  InitializationCell->True,ExpressionUUID->
   "3c179e9c-7d1e-49b5-9944-6e0db7ab39ec"],
  ", and ",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["v", "*"], TraditionalForm]],
-  InitializationCell->True,
-  FormatType->TraditionalForm,ExpressionUUID->
+  InitializationCell->True,ExpressionUUID->
   "8231cc35-b9bb-4362-8a45-7e2008228642"],
- " to another letter, and I chose \[Lambda].\n"
+ " to another letter, and I chose \[Lambda]."
 }], "Text",
  CellChangeTimes->{{3.947552895265729*^9, 3.947553147347288*^9}, {
-  3.9475531796957607`*^9, 3.947553674601576*^9}, {3.947553712862401*^9, 
-  3.947554132012322*^9}, {3.947554171496763*^9, 3.9475541789489803`*^9}, {
-  3.947892477103806*^9, 3.9478927306079082`*^9}, {3.947892912189818*^9, 
-  3.947892928993009*^9}, {3.947893215993937*^9, 3.9478932212306757`*^9}, {
-  3.947893450450912*^9, 3.947893500221483*^9}, {3.947893707227044*^9, 
-  3.9478937226790133`*^9}, {3.9478940002807198`*^9, 3.947894036910285*^9}, {
-  3.9478944336239862`*^9, 3.947894457578127*^9}, {3.9478945302419024`*^9, 
-  3.947894730333243*^9}, {3.947894771586402*^9, 
-  3.947894933843649*^9}},ExpressionUUID->"fc20806c-e7ef-4ca4-8304-\
+   3.9475531796957607`*^9, 3.947553674601576*^9}, {3.947553712862401*^9, 
+   3.947554132012322*^9}, {3.947554171496763*^9, 3.9475541789489803`*^9}, {
+   3.947892477103806*^9, 3.9478927306079082`*^9}, {3.947892912189818*^9, 
+   3.947892928993009*^9}, {3.947893215993937*^9, 3.9478932212306757`*^9}, {
+   3.947893450450912*^9, 3.947893500221483*^9}, {3.947893707227044*^9, 
+   3.9478937226790133`*^9}, {3.9478940002807198`*^9, 3.947894036910285*^9}, {
+   3.9478944336239862`*^9, 3.947894457578127*^9}, {3.9478945302419024`*^9, 
+   3.947894730333243*^9}, {3.947894771586402*^9, 3.947894933843649*^9}, {
+   3.948212962957172*^9, 3.948213072968793*^9}, 
+   3.948213497761907*^9},ExpressionUUID->"fc20806c-e7ef-4ca4-8304-\
 544bee3691d0"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1649, 1198},
-WindowMargins->{{Automatic, 61}, {-354, Automatic}},
+WindowMargins->{{Automatic, 187}, {Automatic, 8}},
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
 Magnification:>1.25 Inherited,
@@ -1012,15 +1006,15 @@ Cell[24233, 578, 3502, 87, 400, "Text",ExpressionUUID->"fcd616f1-e82d-4b8b-a3b5-
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[27772, 670, 967, 14, 83, "Subsection",ExpressionUUID->"18a5baaa-0267-45f8-9a70-009938a8af42"],
-Cell[28742, 686, 1564, 31, 223, "Text",ExpressionUUID->"f77416d0-522a-4b53-abdb-4ea3d1eb7476"]
+Cell[28742, 686, 1617, 30, 257, "Text",ExpressionUUID->"f77416d0-522a-4b53-abdb-4ea3d1eb7476"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[30343, 722, 1004, 14, 83, "Subsection",ExpressionUUID->"93e9aa9d-8c4b-45f1-9433-f81cbf3d03ee"],
-Cell[31350, 738, 1624, 41, 121, "Text",ExpressionUUID->"cbc84e0f-78be-4ff3-818d-9f7523155f10"]
+Cell[30396, 721, 1004, 14, 83, "Subsection",ExpressionUUID->"93e9aa9d-8c4b-45f1-9433-f81cbf3d03ee"],
+Cell[31403, 737, 1624, 41, 121, "Text",ExpressionUUID->"cbc84e0f-78be-4ff3-818d-9f7523155f10"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33011, 784, 527, 8, 83, "Subsection",ExpressionUUID->"802b034c-8700-458e-8430-a632c7f2754b"],
-Cell[33541, 794, 5844, 168, 771, "Text",ExpressionUUID->"fc20806c-e7ef-4ca4-8304-544bee3691d0"]
+Cell[33064, 783, 527, 8, 83, "Subsection",ExpressionUUID->"802b034c-8700-458e-8430-a632c7f2754b"],
+Cell[33594, 793, 5779, 163, 703, "Text",ExpressionUUID->"fc20806c-e7ef-4ca4-8304-544bee3691d0"]
 }, Open  ]]
 }, Open  ]]
 }
