@@ -16,11 +16,12 @@
 
 ### 2025-01-29 &mdash; PS4 &mdash; *EIWL3* Second Half of Section 11, and Sections 12 and 13
 
+* [Walker's solution](./Walker-PS04.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS04.nb.pdf)
 
 ### 2025-01-24 &mdash; PS3 &mdash; *EIWL3* Sections 9 and 10, and First Half of Section 11
 
-* [Walker's solution](./Walker-PS03.nb.pdf) &mdash; *The revised PS3 was corrupt (I tried multiple times to open it, so I used the original)*
+* [Walker's solution](./Walker-PS03.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS03.nb.pdf)
 
 ### 2025-01-21 &mdash; PS2 &mdash; *EIWL3* Sections 5-8

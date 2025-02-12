@@ -16,6 +16,7 @@
 
 ### 2025-01-29 &mdash; PS4 &mdash; *EIWL3* Second Half of Section 11, and Sections 12 and 13
 
+* [Hexi's solution](./Hexi-PS04.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS04.nb.pdf)
 
 ### 2025-01-24 &mdash; PS3 &mdash; *EIWL3* Sections 9 and 10, and First Half of Section 11
