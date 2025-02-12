@@ -1,0 +1,880 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     40776,        872]
+NotebookOptionsPosition[     37736,        824]
+NotebookOutlinePosition[     38169,        841]
+CellTagsIndexPosition[     38126,        838]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Homework 5", "Title",
+ CellChangeTimes->{{3.9476113729408703`*^9, 
+  3.9476113747412977`*^9}},ExpressionUUID->"fe2cd790-a235-44a4-ba44-\
+295160997632"],
+
+Cell[CellGroupData[{
+
+Cell["Section 14", "Section",
+ CellChangeTimes->{{3.947611393481591*^9, 
+  3.947611421390768*^9}},ExpressionUUID->"f19855c8-aa95-4981-96b9-\
+4d1b4e31c5c9"],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Circle", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}], ",", "r"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "5"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.947611449855816*^9, 3.947611458845518*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"781ad963-7bd3-4517-b6e2-d50fcd96532c"],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Style", "[", 
+     RowBox[{
+      RowBox[{"Circle", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", "r"}], "]"}], ",", 
+      RowBox[{"RandomColor", "[", "]"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "10"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.94761148970577*^9, 
+  3.947611524969223*^9}},ExpressionUUID->"576b2b7a-a43d-40f8-826b-\
+da10c5385611"],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Circle", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}], ",", "1"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "10"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "10"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.94761154844482*^9, {3.947611636316503*^9, 3.947611656744689*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"a43344cf-d7df-4b03-94c1-475b2efd24f4"],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Point", "[", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], "}"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "10"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "10"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9476116861421137`*^9, 3.9476116907960453`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"e84338b6-79b1-4ea7-b232-ea2e14517d69"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Circle", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", "r"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", "m"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"m", ",", "1", ",", "20", ",", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.947611708385511*^9, 3.947611727646402*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"9987c2d2-1c37-4d0b-aabb-3030463c6149"],
+
+Cell[BoxData[
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Style", "[", 
+     RowBox[{
+      RowBox[{"Sphere", "[", 
+       RowBox[{"RandomInteger", "[", 
+        RowBox[{"10", ",", "3"}], "]"}], "]"}], ",", 
+      RowBox[{"RandomColor", "[", "]"}]}], "]"}], ",", "50"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.94761183746241*^9, 3.94761192508681*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"2ad1a860-ee1c-449e-b082-f4af4baed070"],
+
+Cell[BoxData[
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Style", "[", 
+     RowBox[{
+      RowBox[{"Sphere", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y", ",", "z"}], "}"}], ",", "0.5"}], "]"}], ",", 
+      RowBox[{"RGBColor", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "/", "10"}], ",", 
+         RowBox[{"y", "/", "10"}], ",", 
+         RowBox[{"z", "/", "10"}]}], "}"}], "]"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "10", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "0", ",", "10", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", "0", ",", "10", ",", "1"}], "}"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.947611961785119*^9, 3.947612064830988*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"5fe154b8-1d0b-460a-b523-e91807de0f76"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Circle", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"t", "*", "x"}], ",", "0"}], "}"}], ",", "x"}], "]"}], ",", 
+      
+      RowBox[{"{", 
+       RowBox[{"x", ",", "10"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.9476123668031397`*^9, {3.947612774229603*^9, 3.947612822373254*^9}, {
+   3.947612866293208*^9, 3.947612950729794*^9}, {3.947613208909872*^9, 
+   3.947613228198951*^9}},ExpressionUUID->"9a80b034-7661-4b91-bd81-\
+7f002a4e8765"],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"RegularPolygon", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}], ",", "0.5", ",", "6"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "1", ",", "5", ",", "1"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "1", ",", "5", ",", "1"}], "}"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.9476123668031397`*^9, {3.947612774229603*^9, 3.947612822373254*^9}, {
+   3.947612866293208*^9, 3.947612950729794*^9}, {3.947613208909872*^9, 
+   3.9476132763747597`*^9}, {3.94761335483902*^9, 3.9476133694302*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"cad8c0e0-14af-4a55-a652-f3c3bc00c6b0"],
+
+Cell[BoxData[
+ RowBox[{"Graphics3D", "[", 
+  RowBox[{"Line", "[", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{"50", ",", "3"}], "]"}], ",", "50"}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9476134451084127`*^9, 3.947613516964492*^9}, {
+  3.947613551852456*^9, 3.947613576751691*^9}, {3.9476136582946444`*^9, 
+  3.947613774046877*^9}, {3.9476138072857122`*^9, 3.947613878251383*^9}, {
+  3.9476141286982317`*^9, 3.947614139431226*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"78161fe2-c33f-4ce4-bf47-35f99a8624b9"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Graphics3D", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Icosahedron", "[", "p", "]"}], ",", 
+        RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Dodecahedron", "[", "1", "]"}], ",", 
+        RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}]}], "}"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"p", ",", "1", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.947614186903446*^9, 3.947614319651265*^9}, {
+  3.9476146829981947`*^9, 3.947614684748331*^9}, {3.947614801686262*^9, 
+  3.947614807701325*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"bea8d044-0573-4280-9283-fcc288597ac6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Section17", "Section",
+ CellChangeTimes->{{3.947611414561393*^9, 
+  3.947611417678752*^9}},ExpressionUUID->"4cc28068-e3c0-469f-a05e-\
+970307da6050"],
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   TemplateBox[<|
+    "query" -> "4.5 pounds", "boxes" -> 
+     TemplateBox[{"4.5", "\"lb\"", "pounds", "\"Pounds\""}, "Quantity", 
+       SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Unit", "word" -> "pounds", "template" -> 
+        "Assuming pounds\[Hyphen]mass for \"pounds\"${separator}Use ${desc} \
+or ${pulldown} instead", "count" -> "7", "pulldown" -> "true", 
+        "pulldownlabel" -> "more >>", "pulldownlength" -> "5", "default" -> 
+        "\"UnitClash\" -> {\"pounds\", {\"Pounds\", \"dflt\"}}", 
+        "Values" -> {{
+          "name" -> "Pounds", "desc" -> "pounds\[Hyphen]mass", "input" -> 
+           "\"UnitClash\" -> {\"pounds\", {\"Pounds\"}}"}, {
+          "name" -> "TroyPounds", "desc" -> "troy pounds", "input" -> 
+           "\"UnitClash\" -> {\"pounds\", {\"TroyPounds\"}}"}, {
+          "name" -> "BritishPounds", "desc" -> "British pounds", "input" -> 
+           "\"UnitClash\" -> {\"pounds\", {\"BritishPounds\"}}"}, {
+          "name" -> "ApothecariesPounds", "desc" -> "apothecaries' pounds", 
+           "input" -> 
+           "\"UnitClash\" -> {\"pounds\", {\"ApothecariesPounds\"}}"}, {
+          "name" -> "PoundsForce", "desc" -> "pounds\[Hyphen]force", "input" -> 
+           "\"UnitClash\" -> {\"pounds\", {\"PoundsForce\"}}"}, {
+          "name" -> "EgyptianPounds", "desc" -> "Egyptian pounds", "input" -> 
+           "\"UnitClash\" -> {\"pounds\", {\"EgyptianPounds\"}}"}, {
+          "name" -> "PoundsForcePerSquareInch", "desc" -> 
+           "pounds\[Hyphen]force per square inch", "input" -> 
+           "\"UnitClash\" -> {\"pounds\", \
+{\"PoundsForcePerSquareInch\"}}"}}}}, "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.595186`6.226197700653663, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"], ",", 
+   TemplateBox[<|"query" -> "kg", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], "\"kg\"", "kilograms", 
+        "\"Kilograms\""}, "Quantity", SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "kg", "template" -> 
+        "Assuming \"kg\" is a unit${separator}Use as ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"kg\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"kg\"} -> {\"Unit\"}"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "{\"C\", \"kg\"} -> {\"Word\"}"}}}, {
+       "type" -> "Unit", "word" -> "kg", "template" -> 
+        "Assuming kilograms for \"kg\"${separator}Use ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "default" -> 
+        "\"UnitClash\" -> {\"kg\", {\"Kilograms\", \"dflt\"}}", 
+        "Values" -> {{
+          "name" -> "Kilograms", "desc" -> "kilograms", "input" -> 
+           "\"UnitClash\" -> {\"kg\", {\"Kilograms\"}}"}, {
+          "name" -> "KilogramsForce", "desc" -> "kilograms\[Hyphen]force", 
+           "input" -> "\"UnitClash\" -> {\"kg\", {\"KilogramsForce\"}}"}}}}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.493285`6.14464290296526, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.947614874891109*^9, 3.947614877750638*^9}, {
+  3.947615463352962*^9, 3.947615567500999*^9}, {3.947615626668672*^9, 
+  3.947615629058819*^9}},ExpressionUUID->"0c389c79-1e88-4d20-b39f-\
+b1eb3bb6fcda"],
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   TemplateBox[{"60.25", 
+     RowBox[{
+      "\"mi\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", "\"h\""}], 
+     "miles per hour", 
+     FractionBox["\"Miles\"", "\"Hours\""]},
+    "Quantity"], ",", 
+   TemplateBox[<|"query" -> "kph", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], 
+        RowBox[{
+         "\"km\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+          "\"h\""}], "kilometers per hour", 
+        FractionBox["\"Kilometers\"", "\"Hours\""]}, "Quantity", SyntaxForm -> 
+       Mod], "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "kph", "template" -> 
+        "Assuming \"kph\" is a unit${separator}Use as ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"kph\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"kph\"} -> {\"Unit\"}"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "{\"C\", \"kph\"} -> {\"Word\"}"}}}}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.448118`6.102937382496428, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.947614874891109*^9, 3.947614877750638*^9}, {
+  3.947615463352962*^9, 3.947615567500999*^9}, {3.947615626668672*^9, 
+  3.9476156348279552`*^9}},ExpressionUUID->"18461fe2-0107-42ce-b368-\
+11068d195a26"],
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{
+    TemplateBox[<|
+     "query" -> "Eiffel Tower", "boxes" -> TemplateBox[{"\"Eiffel Tower\"", 
+         RowBox[{"Entity", "[", 
+           RowBox[{"\"Building\"", ",", "\"EiffelTower::5h9w8\""}], "]"}], 
+         "\"Entity[\\\"Building\\\", \\\"EiffelTower::5h9w8\\\"]\"", 
+         "\"building\""}, "Entity"], 
+      "allassumptions" -> {{
+        "type" -> "Clash", "word" -> "Eiffel Tower", "template" -> 
+         "Assuming \"Eiffel Tower\" is a structure${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+         "{\"C\", \"Eiffel Tower\"} -> {\"Building\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "Building", "desc" -> "a structure", "input" -> 
+            "{\"C\", \"Eiffel Tower\"} -> {\"Building\"}"}, {
+           "name" -> "Word", "desc" -> "a word", "input" -> 
+            "{\"C\", \"Eiffel Tower\"} -> {\"Word\"}"}}}, {
+        "type" -> "SubCategory", "word" -> "Eiffel Tower", "template" -> 
+         "Assuming Eiffel Tower${separator}Use ${desc} instead", "count" -> 
+         "2", "pulldown" -> "false", "default" -> 
+         "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelTower::5h9w8\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "EiffelTower::5h9w8", "desc" -> "Eiffel Tower", "input" -> 
+            "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelTower::5h9w8\"}"}, {
+           "name" -> "EiffelBuilding::q6v42", "desc" -> "Eiffel Building", 
+            "input" -> 
+            "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelBuilding::q6v42\"}"}}}}, "assumptions" -> {}, "open" -> {1, 2}, 
+      "querystate" -> {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.595935`6.226743886322155, "Messages" -> {}}, "contextinfo" -> 
+      Automatic, "version" -> 5|>,
+     "LinguisticAssistantTemplate"], "[", "\"\<Height\>\"", "]"}], ",", 
+   TemplateBox[<|"query" -> "miles", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], "\"mi\"", "miles", 
+        "\"Miles\""}, "Quantity", SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "miles", "template" -> 
+        "Assuming \"miles\" is a unit${separator}Use as ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"miles\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"miles\"} -> {\"Unit\"}"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "{\"C\", \"miles\"} -> {\"Word\"}"}}}}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.673618`6.279958677088857, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.947615659198496*^9, 3.947615753905027*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"c947d9ee-1473-4145-92fa-b19a99f3b22e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"\"Mount Everest\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Mountain\"", ",", "\"MountEverest\""}], "]"}], 
+     "\"Entity[\\\"Mountain\\\", \\\"MountEverest\\\"]\"", "\"mountain\""},
+    "Entity"], "[", "\"\<Elevation\>\"", "]"}], "/", 
+  RowBox[{
+   TemplateBox[<|
+    "query" -> "Eiffel Tower", "boxes" -> TemplateBox[{"\"Eiffel Tower\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Building\"", ",", "\"EiffelTower::5h9w8\""}], "]"}], 
+        "\"Entity[\\\"Building\\\", \\\"EiffelTower::5h9w8\\\"]\"", 
+        "\"building\""}, "Entity"], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "Eiffel Tower", "template" -> 
+        "Assuming \"Eiffel Tower\" is a structure${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"Eiffel Tower\"} -> {\"Building\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Building", "desc" -> "a structure", "input" -> 
+           "{\"C\", \"Eiffel Tower\"} -> {\"Building\"}"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "{\"C\", \"Eiffel Tower\"} -> {\"Word\"}"}}}, {
+       "type" -> "SubCategory", "word" -> "Eiffel Tower", "template" -> 
+        "Assuming Eiffel Tower${separator}Use ${desc} instead", "count" -> 
+        "2", "pulldown" -> "false", "default" -> 
+        "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelTower::5h9w8\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "EiffelTower::5h9w8", "desc" -> "Eiffel Tower", "input" -> 
+           "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelTower::5h9w8\"}"}, {
+          "name" -> "EiffelBuilding::q6v42", "desc" -> "Eiffel Building", 
+           "input" -> 
+           "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelBuilding::q6v42\"}"}}}}, "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.595935`6.226743886322155, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"], "[", "\"\<Height\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.94761577412508*^9, 3.94761586127214*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"fc8d3f07-435d-4383-ac1f-b430a5c1b7ff"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   TemplateBox[<|"query" -> "Earth", "boxes" -> TemplateBox[{"\"Earth\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Planet\"", ",", "\"Earth\""}], "]"}], 
+        "\"Entity[\\\"Planet\\\", \\\"Earth\\\"]\"", "\"planet\""}, "Entity"],
+      "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "Earth", "template" -> 
+        "Assuming \"Earth\" is a planet${separator}Use as ${desc} or ${desc} \
+instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"Earth\"} -> {\"Planet\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Planet", "desc" -> "a planet", "input" -> 
+           "{\"C\", \"Earth\"} -> {{\"Planet\", \"a planet\"}}"}, {
+          "name" -> "CommonMaterial", "desc" -> "a general material", "input" -> 
+           "{\"C\", \"Earth\"} -> {\"CommonMaterial\"}"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "{\"C\", \"Earth\"} -> {\"Word\"}"}}}}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.552071`6.193539927973982, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"], "[", "\"\<Mass\>\"", "]"}], "/", 
+  RowBox[{
+   TemplateBox[<|"query" -> "Moon", "boxes" -> TemplateBox[{"\"Moon\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"PlanetaryMoon\"", ",", "\"Moon\""}], "]"}], 
+        "\"Entity[\\\"PlanetaryMoon\\\", \\\"Moon\\\"]\"", 
+        "\"planetary moon\""}, "Entity"], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "Moon", "template" -> 
+        "Assuming \"Moon\" is referring to planetary moons${separator}Use as \
+${desc} or ${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"Moon\"} -> {\"PlanetaryMoon\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "PlanetaryMoon", "desc" -> 
+           " referring to planetary moons", "input" -> 
+           "{\"C\", \"Moon\"} -> {\"PlanetaryMoon\"}"}, {
+          "name" -> "Surname", "desc" -> "a surname", "input" -> 
+           "{\"C\", \"Moon\"} -> {\"Surname\"}"}, {
+          "name" -> "CourseAppsWord", "desc" -> " referring to a course app", 
+           "input" -> "{\"C\", \"Moon\"} -> {\"CourseAppsWord\"}"}}}}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.554275`6.195270284127224, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"], "[", "\"\<Mass\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.947615882552371*^9, 3.94761591408962*^9}, {
+   3.947616730781135*^9, 3.9476167550992813`*^9}, 
+   3.947616791223152*^9},ExpressionUUID->"f2e9e0c5-1a91-4bda-ba94-\
+814db748d2e0"],
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   TemplateBox[<|
+    "query" -> "2500 Japanese Yen", "boxes" -> TemplateBox[{"2500.", 
+        RowBox[{
+          FormBox["\"\[Yen]\"", TraditionalForm], "\[VeryThinSpace]"}], 
+        "Japanese yen", "\"Yen\""}, "QuantityPrefix", SyntaxForm -> Mod], 
+     "allassumptions" -> {}, "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.885964`6.398961068747597, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"], ",", 
+   TemplateBox[<|"query" -> "USD", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], 
+        RowBox[{
+          FormBox["\"$\"", TraditionalForm], "\[VeryThinSpace]"}], 
+        "US dollars", "\"USDollars\""}, "QuantityPrefix", SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "USD", "template" -> 
+        "Assuming \"USD\" is a unit${separator}Use as ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"USD\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"USD\"} -> {\"Unit\"}"}, {
+          "name" -> "University", "desc" -> "a university", "input" -> 
+           "{\"C\", \"USD\"} -> {\"University\"}"}}}}, "assumptions" -> {}, 
+     "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.586463`6.219785611136417, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.947615882552371*^9, 3.94761591408962*^9}, {
+   3.947616730781135*^9, 3.9476167550992813`*^9}, 
+   3.947616791223152*^9},ExpressionUUID->"0d082ac9-023c-4637-9df6-\
+aa08e9c575e6"],
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[<|
+      "query" -> "35 ounces", "boxes" -> 
+       TemplateBox[{"35", "\"oz\"", "ounces", "\"Ounces\""}, "Quantity", 
+         SyntaxForm -> Mod], 
+       "allassumptions" -> {{
+         "type" -> "Unit", "word" -> "ounces", "template" -> 
+          "Assuming avoirdupois ounces for \"ounces\"${separator}Use ${desc} \
+or ${pulldown} instead", "count" -> "8", "pulldown" -> "true", 
+          "pulldownlabel" -> "more >>", "pulldownlength" -> "6", "default" -> 
+          "\"UnitClash\" -> {\"ounces\", {\"Ounces\", \"dflt\"}}", 
+          "Values" -> {{
+            "name" -> "Ounces", "desc" -> "avoirdupois ounces", "input" -> 
+             "\"UnitClash\" -> {\"ounces\", {\"Ounces\"}}"}, {
+            "name" -> "FluidOunces", "desc" -> "US fluid ounces", "input" -> 
+             "\"UnitClash\" -> {\"ounces\", {\"FluidOunces\"}}"}, {
+            "name" -> "FluidOuncesUK", "desc" -> "UK fluid ounces", "input" -> 
+             "\"UnitClash\" -> {\"ounces\", {\"FluidOuncesUK\"}}"}, {
+            "name" -> "OuncesForce", "desc" -> "ounces\[Hyphen]force", 
+             "input" -> "\"UnitClash\" -> {\"ounces\", {\"OuncesForce\"}}"}, {
+            "name" -> "TroyOunces", "desc" -> "troy ounces", "input" -> 
+             "\"UnitClash\" -> {\"ounces\", {\"TroyOunces\"}}"}, {
+            "name" -> "OuncesForcePerSquareInch", "desc" -> 
+             "ounces of force per square inch", "input" -> 
+             "\"UnitClash\" -> {\"ounces\", \
+{\"OuncesForcePerSquareInch\"}}"}, {
+            "name" -> "ApothecariesOunces", "desc" -> "apothecaries' ounces", 
+             "input" -> 
+             "\"UnitClash\" -> {\"ounces\", {\"ApothecariesOunces\"}}"}, {
+            "name" -> "TowerOunces", "desc" -> "tower ounces", "input" -> 
+             "\"UnitClash\" -> {\"ounces\", {\"TowerOunces\"}}"}}}}, 
+       "assumptions" -> {}, "open" -> {1, 2}, 
+       "querystate" -> {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         0.599974`6.229677424044301, "Messages" -> {}}, "contextinfo" -> 
+       Automatic, "version" -> 5|>,
+      "LinguisticAssistantTemplate"], ",", 
+     TemplateBox[<|
+      "query" -> "1/4 ton", "boxes" -> 
+       TemplateBox[{"0.25", "\"sh tn\"", "short tons", "\"ShortTons\""}, 
+         "Quantity", SyntaxForm -> Mod], 
+       "allassumptions" -> {{
+         "type" -> "Unit", "word" -> "ton", "template" -> 
+          "Assuming short tons for \"ton\"${separator}Use ${desc} or \
+${pulldown} instead", "count" -> "13", "pulldown" -> "true", "pulldownlabel" -> 
+          "more >>", "pulldownlength" -> "11", "default" -> 
+          "\"UnitClash\" -> {\"ton\", {\"ShortTons\", \"dflt\"}}", 
+          "Values" -> {{
+            "name" -> "ShortTons", "desc" -> "short tons", "input" -> 
+             "\"UnitClash\" -> {\"ton\", {\"ShortTons\"}}"}, {
+            "name" -> "LongTons", "desc" -> "long tons", "input" -> 
+             "\"UnitClash\" -> {\"ton\", {\"LongTons\"}}"}, {
+            "name" -> "MetricTons", "desc" -> "metric tons", "input" -> 
+             "\"UnitClash\" -> {\"ton\", {\"MetricTons\"}}"}, {
+            "name" -> "ShortTonsForce", "desc" -> "short tons\[Hyphen]force", 
+             "input" -> "\"UnitClash\" -> {\"ton\", {\"ShortTonsForce\"}}"}, {
+            "name" -> "TonsOfTNT", "desc" -> "tons of TNT", "input" -> 
+             "\"UnitClash\" -> {\"ton\", {\"TonsOfTNT\"}}"}, {
+            "name" -> "DisplacementTons", "desc" -> "displacement tons", 
+             "input" -> 
+             "\"UnitClash\" -> {\"ton\", {\"DisplacementTons\"}}"}, {
+            "name" -> "LongTonsForce", "desc" -> "long tons\[Hyphen]force", 
+             "input" -> "\"UnitClash\" -> {\"ton\", {\"LongTonsForce\"}}"}, {
+            "name" -> "MetricTonsForce", "desc" -> 
+             "metric tons\[Hyphen]force", "input" -> 
+             "\"UnitClash\" -> {\"ton\", {\"MetricTonsForce\"}}"}, {
+            "name" -> "ShortTonsForcePerSquareInch", "desc" -> 
+             "short tons\[Hyphen]force per square inch", "input" -> 
+             "\"UnitClash\" -> {\"ton\", \
+{\"ShortTonsForcePerSquareInch\"}}"}, {
+            "name" -> "LongTonsForcePerSquareInch", "desc" -> 
+             "long tons\[Hyphen]force per square inch", "input" -> 
+             "\"UnitClash\" -> {\"ton\", {\"LongTonsForcePerSquareInch\"}}"}, \
+{"name" -> "TonsOfRefrigeration", "desc" -> 
+             "US commercial tons of refrigeration", "input" -> 
+             "\"UnitClash\" -> {\"ton\", {\"TonsOfRefrigeration\"}}"}, {
+            "name" -> "TonsOfRefrigerationUK", "desc" -> 
+             "UK commercial tons of refrigeration (power)", "input" -> 
+             "\"UnitClash\" -> {\"ton\", {\"TonsOfRefrigerationUK\"}}"}, {
+            "name" -> "JapaneseTonsOfRefrigeration", "desc" -> 
+             "Japanese tons of refrigeration", "input" -> 
+             "\"UnitClash\" -> {\"ton\", \
+{\"JapaneseTonsOfRefrigeration\"}}"}}}}, "assumptions" -> {}, 
+       "open" -> {1, 2}, 
+       "querystate" -> {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         0.751096`6.327240442624959, "Messages" -> {}}, "contextinfo" -> 
+       Automatic, "version" -> 5|>,
+      "LinguisticAssistantTemplate"], ",", 
+     TemplateBox[<|
+      "query" -> "45 pounds", "boxes" -> 
+       TemplateBox[{"45", "\"lb\"", "pounds", "\"Pounds\""}, "Quantity", 
+         SyntaxForm -> Mod], 
+       "allassumptions" -> {{
+         "type" -> "Unit", "word" -> "pounds", "template" -> 
+          "Assuming pounds\[Hyphen]mass for \"pounds\"${separator}Use ${desc} \
+or ${pulldown} instead", "count" -> "7", "pulldown" -> "true", 
+          "pulldownlabel" -> "more >>", "pulldownlength" -> "5", "default" -> 
+          "\"UnitClash\" -> {\"pounds\", {\"Pounds\", \"dflt\"}}", 
+          "Values" -> {{
+            "name" -> "Pounds", "desc" -> "pounds\[Hyphen]mass", "input" -> 
+             "\"UnitClash\" -> {\"pounds\", {\"Pounds\"}}"}, {
+            "name" -> "TroyPounds", "desc" -> "troy pounds", "input" -> 
+             "\"UnitClash\" -> {\"pounds\", {\"TroyPounds\"}}"}, {
+            "name" -> "BritishPounds", "desc" -> "British pounds", "input" -> 
+             "\"UnitClash\" -> {\"pounds\", {\"BritishPounds\"}}"}, {
+            "name" -> "ApothecariesPounds", "desc" -> "apothecaries' pounds", 
+             "input" -> 
+             "\"UnitClash\" -> {\"pounds\", {\"ApothecariesPounds\"}}"}, {
+            "name" -> "PoundsForce", "desc" -> "pounds\[Hyphen]force", 
+             "input" -> "\"UnitClash\" -> {\"pounds\", {\"PoundsForce\"}}"}, {
+            "name" -> "EgyptianPounds", "desc" -> "Egyptian pounds", "input" -> 
+             "\"UnitClash\" -> {\"pounds\", {\"EgyptianPounds\"}}"}, {
+            "name" -> "PoundsForcePerSquareInch", "desc" -> 
+             "pounds\[Hyphen]force per square inch", "input" -> 
+             "\"UnitClash\" -> {\"pounds\", \
+{\"PoundsForcePerSquareInch\"}}"}}}}, "assumptions" -> {}, "open" -> {1, 2}, 
+       "querystate" -> {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         0.822296`6.366573171165871, "Messages" -> {}}, "contextinfo" -> 
+       Automatic, "version" -> 5|>,
+      "LinguisticAssistantTemplate"]}], "}"}], ",", 
+   TemplateBox[<|"query" -> "kilograms", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], "\"kg\"", "kilograms", 
+        "\"Kilograms\""}, "Quantity", SyntaxForm -> Mod], 
+     "allassumptions" -> {{
+       "type" -> "Clash", "word" -> "kilograms", "template" -> 
+        "Assuming \"kilograms\" is a unit${separator}Use as ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"kilograms\"} -> {\"Unit\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "{\"C\", \"kilograms\"} -> {\"Unit\"}"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "{\"C\", \"kilograms\"} -> {\"Word\"}"}}}, {
+       "type" -> "Unit", "word" -> "kilograms", "template" -> 
+        "Assuming kilograms for \"kilograms\"${separator}Use ${desc} instead",
+         "count" -> "2", "pulldown" -> "false", "default" -> 
+        "\"UnitClash\" -> {\"kilograms\", {\"Kilograms\", \"dflt\"}}", 
+        "Values" -> {{
+          "name" -> "Kilograms", "desc" -> "kilograms", "input" -> 
+           "\"UnitClash\" -> {\"kilograms\", {\"Kilograms\"}}"}, {
+          "name" -> "KilogramsForce", "desc" -> "kilograms\[Hyphen]force", 
+           "input" -> 
+           "\"UnitClash\" -> {\"kilograms\", {\"KilogramsForce\"}}"}}}}, 
+     "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.610143`6.236976626593027, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9476168073186502`*^9, 3.947616867855665*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"222ceed5-4383-4791-bd02-0538f3c0039c"],
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"EntityValue", "[", 
+    RowBox[{
+     RowBox[{"EntityList", "[", "\"\<Planet\>\"", "]"}], ",", 
+     "\"\<DistanceFromEarth\>\""}], "]"}], ",", 
+   TemplateBox[<|"query" -> "light minutes", "boxes" -> TemplateBox[{
+        InterpretationBox["\[InvisibleSpace]", 1], "\"light minutes\"", 
+        "light minutes", "\"LightMinutes\""}, "Quantity", SyntaxForm -> Mod], 
+     "allassumptions" -> {}, "assumptions" -> {}, "open" -> {1, 2}, 
+     "querystate" -> {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.674638`6.280615793327988, "Messages" -> {}}, "contextinfo" -> 
+     Automatic, "version" -> 5|>,
+    "LinguisticAssistantTemplate"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.947617151226963*^9, 3.947617214864614*^9}, {
+  3.9476172712066193`*^9, 3.947617365013186*^9}, {3.947617438778034*^9, 
+  3.9476174531361713`*^9}, {3.947617509196527*^9, 3.9476175437722807`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"67813f47-062d-460f-b591-d6d1be406f8e"],
+
+Cell[BoxData[
+ RowBox[{"Rotate", "[", 
+  RowBox[{"\"\<hello\>\"", ",", 
+   RowBox[{"180", "Degree"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.947617681346746*^9, 3.947617704999835*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"e0bdb36d-a432-4535-a435-8027fcf02b74"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Rotate", "[", 
+    RowBox[{
+     RowBox[{"Style", "[", 
+      RowBox[{"\"\<A\>\"", ",", "100"}], "]"}], ",", 
+     RowBox[{"r", " ", "Degree"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "360", ",", "30"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9476177338867903`*^9, 3.947617791297264*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"226c2acd-4ec1-4084-b23b-ac686f7b7794"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Rotate", "[", 
+    RowBox[{
+     RowBox[{
+      TemplateBox[<|
+       "query" -> "cat", "boxes" -> TemplateBox[{"\"domestic cat\"", 
+           RowBox[{"Entity", "[", 
+             RowBox[{"\"TaxonomicSpecies\"", ",", "\"FelisCatus::ddvt3\""}], 
+             "]"}], "\"Entity[\\\"TaxonomicSpecies\\\", \\\"FelisCatus::ddvt3\
+\\\"]\"", "\"species specification\""}, "Entity"], 
+        "allassumptions" -> {{
+          "type" -> "Clash", "word" -> "cat", "template" -> 
+           "Assuming \"cat\" is a species specification${separator}Use as \
+${desc} or ${desc} or ${desc} or ${desc} instead", "count" -> "5", "pulldown" -> 
+           "false", "default" -> 
+           "{\"C\", \"cat\"} -> {\"TaxonomicSpecies\", \"dflt\"}", 
+           "Values" -> {{
+             "name" -> "TaxonomicSpecies", "desc" -> 
+              "a species specification", "input" -> 
+              "{\"C\", \"cat\"} -> {\"TaxonomicSpecies\"}"}, {
+             "name" -> "CatBreedClass", "desc" -> " referring to cat breeds", 
+              "input" -> "{\"C\", \"cat\"} -> {\"CatBreedClass\"}"}, {
+             "name" -> "Financial", "desc" -> "a financial entity", "input" -> 
+              "{\"C\", \"cat\"} -> {\"Financial\"}"}, {
+             "name" -> "Sound", "desc" -> " referring to sound data", "input" -> 
+              "{\"C\", \"cat\"} -> {\"Sound\"}"}, {
+             "name" -> "Word", "desc" -> "a word", "input" -> 
+              "{\"C\", \"cat\"} -> {\"Word\"}"}}}}, "assumptions" -> {}, 
+        "open" -> {1}, 
+        "querystate" -> {
+         "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+          0.6282`6.249642925558459, "Messages" -> {}}, "contextinfo" -> 
+        Automatic, "version" -> 5|>,
+       "LinguisticAssistantTemplate"], "[", "\"\<Image\>\"", "]"}], ",", 
+     RowBox[{"r", " ", "Degree"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "180"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.947617808998386*^9, 3.947617889492094*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"51d4c023-77cd-4c36-8927-2b68c3b35ad3"],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Line", "[", 
+   RowBox[{"AnglePath", "[", 
+    RowBox[{
+     RowBox[{"Range", "[", "180", "]"}], "Degree"}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9476179323656*^9, 3.94761799469877*^9}, {
+  3.9476180388524027`*^9, 3.9476180471264763`*^9}, {3.947618087206126*^9, 
+  3.94761810052988*^9}, {3.947618164720435*^9, 3.947618251937471*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"e92cd9df-b8dd-4dfd-a2c3-a83ed284cd92"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"Line", "[", 
+     RowBox[{"AnglePath", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"n", " ", "Degree"}], ",", "100"}], "]"}], "]"}], "]"}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "0", ",", "360"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.947618272114403*^9, 3.947618315554179*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"96024995-3f8f-42e6-b247-33226f458d55"],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Line", "[", 
+   RowBox[{"AnglePath", "[", 
+    RowBox[{
+     RowBox[{"IntegerDigits", "[", 
+      RowBox[{"2", "^", "10000"}], "]"}], "*", "30", " ", "Degree"}], "]"}], 
+   "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.94761833743522*^9, 
+  3.947618398688079*^9}},ExpressionUUID->"209e89d9-24c2-4b35-8e1c-\
+637232525771"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{578, 828},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"af31eb41-4c36-4a8e-94c1-75796f251cab"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 157, 3, 96, "Title",ExpressionUUID->"fe2cd790-a235-44a4-ba44-295160997632"],
+Cell[CellGroupData[{
+Cell[758, 29, 155, 3, 66, "Section",ExpressionUUID->"f19855c8-aa95-4981-96b9-4d1b4e31c5c9"],
+Cell[916, 34, 428, 11, 29, "Input",ExpressionUUID->"781ad963-7bd3-4517-b6e2-d50fcd96532c"],
+Cell[1347, 47, 515, 15, 49, "Input",ExpressionUUID->"576b2b7a-a43d-40f8-826b-da10c5385611"],
+Cell[1865, 64, 515, 14, 29, "Input",ExpressionUUID->"a43344cf-d7df-4b03-94c1-475b2efd24f4"],
+Cell[2383, 80, 466, 12, 29, "Input",ExpressionUUID->"e84338b6-79b1-4ea7-b232-ea2e14517d69"],
+Cell[2852, 94, 575, 15, 49, "Input",ExpressionUUID->"9987c2d2-1c37-4d0b-aabb-3030463c6149"],
+Cell[3430, 111, 474, 12, 70, "Input",ExpressionUUID->"2ad1a860-ee1c-449e-b082-f4af4baed070"],
+Cell[3907, 125, 897, 24, 90, "Input",ExpressionUUID->"5fe154b8-1d0b-460a-b523-e91807de0f76"],
+Cell[4807, 151, 730, 21, 49, "Input",ExpressionUUID->"9a80b034-7661-4b91-bd81-7f002a4e8765"],
+Cell[5540, 174, 724, 17, 49, "Input",ExpressionUUID->"cad8c0e0-14af-4a55-a652-f3c3bc00c6b0"],
+Cell[6267, 193, 573, 12, 29, "Input",ExpressionUUID->"78161fe2-c33f-4ce4-bf47-35f99a8624b9"],
+Cell[6843, 207, 780, 19, 70, "Input",ExpressionUUID->"bea8d044-0573-4280-9283-fcc288597ac6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7660, 231, 154, 3, 66, "Section",ExpressionUUID->"4cc28068-e3c0-469f-a05e-970307da6050"],
+Cell[7817, 236, 3741, 67, 39, "Input",ExpressionUUID->"0c389c79-1e88-4d20-b39f-b1eb3bb6fcda"],
+Cell[11561, 305, 1624, 34, 37, "Input",ExpressionUUID->"18461fe2-0107-42ce-b368-11068d195a26"],
+Cell[13188, 341, 3114, 58, 37, "Input",ExpressionUUID->"c947d9ee-1473-4145-92fa-b19a99f3b22e"],
+Cell[16305, 401, 2330, 44, 64, "Input",ExpressionUUID->"fc8d3f07-435d-4383-ac1f-b430a5c1b7ff"],
+Cell[18638, 447, 2841, 53, 36, "Input",ExpressionUUID->"f2e9e0c5-1a91-4bda-ba94-814db748d2e0"],
+Cell[21482, 502, 1904, 38, 37, "Input",ExpressionUUID->"0d082ac9-023c-4637-9df6-aa08e9c575e6"],
+Cell[23389, 542, 9046, 156, 69, "Input",ExpressionUUID->"222ceed5-4383-4791-bd02-0538f3c0039c"],
+Cell[32438, 700, 1041, 19, 67, "Input",ExpressionUUID->"67813f47-062d-460f-b591-d6d1be406f8e"],
+Cell[33482, 721, 265, 5, 29, "Input",ExpressionUUID->"e0bdb36d-a432-4535-a435-8027fcf02b74"],
+Cell[33750, 728, 462, 11, 29, "Input",ExpressionUUID->"226c2acd-4ec1-4084-b23b-ac686f7b7794"],
+Cell[34215, 741, 2123, 40, 35, "Input",ExpressionUUID->"51d4c023-77cd-4c36-8927-2b68c3b35ad3"],
+Cell[36341, 783, 483, 10, 29, "Input",ExpressionUUID->"e92cd9df-b8dd-4dfd-a2c3-a83ed284cd92"],
+Cell[36827, 795, 505, 13, 49, "Input",ExpressionUUID->"96024995-3f8f-42e6-b247-33226f458d55"],
+Cell[37335, 810, 373, 10, 49, "Input",ExpressionUUID->"209e89d9-24c2-4b35-8e1c-637232525771"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

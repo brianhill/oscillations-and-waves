@@ -1,0 +1,2710 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    134805,       2702]
+NotebookOptionsPosition[    131460,       2653]
+NotebookOutlinePosition[    131947,       2671]
+CellTagsIndexPosition[    131904,       2668]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"GeoDistance", "[", 
+  RowBox[{
+   NamespaceBox["LinguisticAssistant",
+    DynamicModuleBox[{Typeset`query$$ = "New York City", Typeset`boxes$$ = 
+     TemplateBox[{"\"New York City\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"City\"", ",", 
+           RowBox[{"{", 
+             
+             RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+               "\"UnitedStates\""}], "}"}]}], "]"}], 
+       "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+     Typeset`allassumptions$$ = {{
+      "type" -> "Clash", "word" -> "New York City", "template" -> 
+       "Assuming \"New York City\" is a city${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+       "{\"C\", \"New York City\"} -> {\"City\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "City", "desc" -> "a city", "input" -> 
+          "{\"C\", \"New York City\"} -> {\"City\"}"}, {
+         "name" -> "VisualArts", "desc" -> "an artwork", "input" -> 
+          "{\"C\", \"New York City\"} -> {\"VisualArts\"}"}}}}, 
+     Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+     Typeset`querystate$$ = {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      1.576807`6.649323532757355, "Messages" -> {}}}, 
+     DynamicBox[ToBoxes[
+       AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+        Dynamic[Typeset`query$$], 
+        Dynamic[Typeset`boxes$$], 
+        Dynamic[Typeset`allassumptions$$], 
+        Dynamic[Typeset`assumptions$$], 
+        Dynamic[Typeset`open$$], 
+        Dynamic[Typeset`querystate$$]], StandardForm],
+      ImageSizeCache->{171., {7., 15.}},
+      TrackedSymbols:>{
+       Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+        Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+     DynamicModuleValues:>{},
+     UndoTrackedVariables:>{Typeset`open$$}],
+    BaseStyle->{"Deploy"},
+    DeleteWithContents->True,
+    Editable->False,
+    SelectWithContents->True], ",", 
+   NamespaceBox["LinguisticAssistant",
+    DynamicModuleBox[{Typeset`query$$ = "London", Typeset`boxes$$ = 
+     TemplateBox[{"\"London\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"City\"", ",", 
+           RowBox[{"{", 
+             
+             RowBox[{"\"London\"", ",", "\"GreaterLondon\"", ",", 
+               "\"UnitedKingdom\""}], "}"}]}], "]"}], 
+       "\"Entity[\\\"City\\\", {\\\"London\\\", \\\"GreaterLondon\\\", \
+\\\"UnitedKingdom\\\"}]\"", "\"city\""}, "Entity"], 
+     Typeset`allassumptions$$ = {{
+      "type" -> "Clash", "word" -> "London", "template" -> 
+       "Assuming \"London\" is a city${separator}Use as ${desc} or ${desc} or \
+${desc} instead", "count" -> "4", "pulldown" -> "false", "default" -> 
+       "{\"C\", \"London\"} -> {\"City\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "City", "desc" -> "a city", "input" -> 
+          "{\"C\", \"London\"} -> {\"City\"}"}, {
+         "name" -> "AdministrativeDivision", "desc" -> 
+          "an administrative division", "input" -> 
+          "{\"C\", \"London\"} -> {\"AdministrativeDivision\"}"}, {
+         "name" -> "GivenName", "desc" -> "a given name", "input" -> 
+          "{\"C\", \"London\"} -> {\"GivenName\"}"}, {
+         "name" -> "Surname", "desc" -> "a surname", "input" -> 
+          "{\"C\", \"London\"} -> {\"Surname\"}"}}}, {
+      "type" -> "SubCategory", "word" -> "London", "template" -> 
+       "Assuming London (United Kingdom)${separator}Use ${desc} or \
+${pulldown} instead", "count" -> "7", "pulldown" -> "true", "pulldownlabel" -> 
+       "more >>", "pulldownlength" -> "5", "default" -> 
+       "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \"GreaterLondon\
+\", \"UnitedKingdom\"}, \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "{London, GreaterLondon, UnitedKingdom}", "desc" -> 
+          "London (United Kingdom)", "input" -> 
+          "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"GreaterLondon\", \"UnitedKingdom\"}}"}, {
+         "name" -> "{London, Ontario, Canada}", "desc" -> "London (Canada)", 
+          "input" -> 
+          "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \"Ontario\", \
+\"Canada\"}}"}, {
+         "name" -> "{London, California, UnitedStates}", "desc" -> 
+          "London (California, USA)", "input" -> 
+          "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \"California\
+\", \"UnitedStates\"}}"}, {
+         "name" -> "{London, Ohio, UnitedStates}", "desc" -> 
+          "London (Ohio, USA)", "input" -> 
+          "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \"Ohio\", \
+\"UnitedStates\"}}"}, {
+         "name" -> "{London, Kentucky, UnitedStates}", "desc" -> 
+          "London (Kentucky, USA)", "input" -> 
+          "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"Kentucky\", \"UnitedStates\"}}"}, {
+         "name" -> "{London, Arkansas, UnitedStates}", "desc" -> 
+          "London (Arkansas, USA)", "input" -> 
+          "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"Arkansas\", \"UnitedStates\"}}"}, {
+         "name" -> "{London, Kiritimati, Kiribati}", "desc" -> 
+          "London (Kiribati)", "input" -> 
+          "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \"Kiritimati\
+\", \"Kiribati\"}}"}}}}, Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+     Typeset`querystate$$ = {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.605871`6.233925158995657, "Messages" -> {}}}, 
+     DynamicBox[ToBoxes[
+       AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+        Dynamic[Typeset`query$$], 
+        Dynamic[Typeset`boxes$$], 
+        Dynamic[Typeset`allassumptions$$], 
+        Dynamic[Typeset`assumptions$$], 
+        Dynamic[Typeset`open$$], 
+        Dynamic[Typeset`querystate$$]], StandardForm],
+      ImageSizeCache->{130., {7., 15.}},
+      TrackedSymbols:>{
+       Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+        Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+     DynamicModuleValues:>{},
+     UndoTrackedVariables:>{Typeset`open$$}],
+    BaseStyle->{"Deploy"},
+    DeleteWithContents->True,
+    Editable->False,
+    SelectWithContents->True]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9482343765485373`*^9, 3.9482344028082647`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"8f10402d-da7b-4b79-8cdd-ad97244610ff"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GeoDistance", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "New York City", Typeset`boxes$$ = 
+      TemplateBox[{"\"New York City\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"City\"", ",", 
+            RowBox[{"{", 
+              
+              RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+                "\"UnitedStates\""}], "}"}]}], "]"}], 
+        "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "New York City", "template" -> 
+        "Assuming \"New York City\" is a city${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"New York City\"} -> {\"City\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"New York City\"} -> {\"City\"}"}, {
+          "name" -> "VisualArts", "desc" -> "an artwork", "input" -> 
+           "{\"C\", \"New York City\"} -> {\"VisualArts\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.576807`6.649323532757355, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{171., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "London", Typeset`boxes$$ = 
+      TemplateBox[{"\"London\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"City\"", ",", 
+            RowBox[{"{", 
+              
+              RowBox[{"\"London\"", ",", "\"GreaterLondon\"", ",", 
+                "\"UnitedKingdom\""}], "}"}]}], "]"}], 
+        "\"Entity[\\\"City\\\", {\\\"London\\\", \\\"GreaterLondon\\\", \
+\\\"UnitedKingdom\\\"}]\"", "\"city\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "London", "template" -> 
+        "Assuming \"London\" is a city${separator}Use as ${desc} or ${desc} \
+or ${desc} instead", "count" -> "4", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"London\"} -> {\"City\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"London\"} -> {\"City\"}"}, {
+          "name" -> "AdministrativeDivision", "desc" -> 
+           "an administrative division", "input" -> 
+           "{\"C\", \"London\"} -> {\"AdministrativeDivision\"}"}, {
+          "name" -> "GivenName", "desc" -> "a given name", "input" -> 
+           "{\"C\", \"London\"} -> {\"GivenName\"}"}, {
+          "name" -> "Surname", "desc" -> "a surname", "input" -> 
+           "{\"C\", \"London\"} -> {\"Surname\"}"}}}, {
+       "type" -> "SubCategory", "word" -> "London", "template" -> 
+        "Assuming London (United Kingdom)${separator}Use ${desc} or \
+${pulldown} instead", "count" -> "7", "pulldown" -> "true", "pulldownlabel" -> 
+        "more >>", "pulldownlength" -> "5", "default" -> 
+        "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"GreaterLondon\", \"UnitedKingdom\"}, \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "{London, GreaterLondon, UnitedKingdom}", "desc" -> 
+           "London (United Kingdom)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"GreaterLondon\", \"UnitedKingdom\"}}"}, {
+          "name" -> "{London, Ontario, Canada}", "desc" -> "London (Canada)", 
+           "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"Ontario\", \"Canada\"}}"}, {
+          "name" -> "{London, California, UnitedStates}", "desc" -> 
+           "London (California, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"California\", \"UnitedStates\"}}"}, {
+          "name" -> "{London, Ohio, UnitedStates}", "desc" -> 
+           "London (Ohio, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \"Ohio\", \
+\"UnitedStates\"}}"}, {
+          "name" -> "{London, Kentucky, UnitedStates}", "desc" -> 
+           "London (Kentucky, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"Kentucky\", \"UnitedStates\"}}"}, {
+          "name" -> "{London, Arkansas, UnitedStates}", "desc" -> 
+           "London (Arkansas, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"Arkansas\", \"UnitedStates\"}}"}, {
+          "name" -> "{London, Kiritimati, Kiribati}", "desc" -> 
+           "London (Kiribati)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"Kiritimati\", \"Kiribati\"}}"}}}}, Typeset`assumptions$$ = {}, 
+      Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.605871`6.233925158995657, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{130., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True]}], "]"}], "/", 
+  RowBox[{"GeoDistance", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "New York City", Typeset`boxes$$ = 
+      TemplateBox[{"\"New York City\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"City\"", ",", 
+            RowBox[{"{", 
+              
+              RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+                "\"UnitedStates\""}], "}"}]}], "]"}], 
+        "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "New York City", "template" -> 
+        "Assuming \"New York City\" is a city${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"New York City\"} -> {\"City\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"New York City\"} -> {\"City\"}"}, {
+          "name" -> "VisualArts", "desc" -> "an artwork", "input" -> 
+           "{\"C\", \"New York City\"} -> {\"VisualArts\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.576807`6.649323532757355, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{171., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "San Francisco", Typeset`boxes$$ = 
+      TemplateBox[{"\"San Francisco\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"City\"", ",", 
+            RowBox[{"{", 
+              
+              RowBox[{"\"SanFrancisco\"", ",", "\"California\"", ",", 
+                "\"UnitedStates\""}], "}"}]}], "]"}], 
+        "\"Entity[\\\"City\\\", {\\\"SanFrancisco\\\", \\\"California\\\", \\\
+\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "San Francisco", "template" -> 
+        "Assuming \"San Francisco\" is a city${separator}Use as ${desc} or \
+${desc} or ${desc} or ${desc} or ${desc} or ${desc} instead", "count" -> "7", 
+        "pulldown" -> "false", "default" -> 
+        "{\"C\", \"San Francisco\"} -> {\"City\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"San Francisco\"} -> {\"City\"}"}, {
+          "name" -> "AdministrativeDivision", "desc" -> 
+           "an administrative division", "input" -> 
+           "{\"C\", \"San Francisco\"} -> {\"AdministrativeDivision\"}"}, {
+          "name" -> "NFLTeam", "desc" -> "an NFL team", "input" -> 
+           "{\"C\", \"San Francisco\"} -> {\"NFLTeam\"}"}, {
+          "name" -> "MLBTeam", "desc" -> "an MLB team", "input" -> 
+           "{\"C\", \"San Francisco\"} -> {\"MLBTeam\"}"}, {
+          "name" -> "VisualArts", "desc" -> "an artwork", "input" -> 
+           "{\"C\", \"San Francisco\"} -> {\"VisualArts\"}"}, {
+          "name" -> "Periodical", "desc" -> "a periodical", "input" -> 
+           "{\"C\", \"San Francisco\"} -> {\"Periodical\"}"}, {
+          "name" -> "MusicAlbum", "desc" -> "a music album", "input" -> 
+           "{\"C\", \"San Francisco\"} -> {\"MusicAlbum\"}"}}}, {
+       "type" -> "SubCategory", "word" -> "San Francisco", "template" -> 
+        "Assuming San Francisco (United States)${separator}Use ${desc} or \
+${pulldown} instead", "count" -> "34", "pulldown" -> "true", "pulldownlabel" -> 
+        "more >>", "pulldownlength" -> "32", "default" -> 
+        "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\", \
+\"California\", \"UnitedStates\"}, \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "{SanFrancisco, California, UnitedStates}", "desc" -> 
+           "San Francisco (United States)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"California\", \"UnitedStates\"}}"}, {
+          "name" -> "{SanFrancisco, Peten, Guatemala}", "desc" -> 
+           "San Francisco (Guatemala)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Peten\", \"Guatemala\"}}"}, {
+          "name" -> "{SanFrancisco, Heredia, CostaRica}", "desc" -> 
+           "San Francisco (Heredia, Costa Rica)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Heredia\", \"CostaRica\"}}"}, {
+          "name" -> "{SanFrancisco, AgusanDelSur, Philippines}", "desc" -> 
+           "San Francisco (Agusan del Sur, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"AgusanDelSur\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Cordoba, Argentina}", "desc" -> 
+           "San Francisco (Argentina)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Cordoba\", \"Argentina\"}}"}, {
+          "name" -> "{SanFrancisco2, Quezon, Philippines}", "desc" -> 
+           "San Francisco (Quezon, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco2\", \"Quezon\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Quezon, Philippines}", "desc" -> 
+           "San Francisco (Quezon, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Quezon\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Cebu, Philippines}", "desc" -> 
+           "San Francisco (Cebu, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Cebu\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Atlantida, Honduras}", "desc" -> 
+           "San Francisco (Atl\[AAcute]ntida, Honduras)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Atlantida\", \"Honduras\"}}"}, {
+          "name" -> "{SanFrancisco, NuevaEcija, Philippines}", "desc" -> 
+           "San Francisco (Nueva Ecija, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"NuevaEcija\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, SurigaoDelNorte, Philippines}", "desc" -> 
+           "San Francisco (Surigao del Norte, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"SurigaoDelNorte\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, SouthernLeyte, Philippines}", "desc" -> 
+           "San Francisco (Southern Leyte, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"SouthernLeyte\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Antioquia, Colombia}", "desc" -> 
+           "San Francisco (Antioquia, Colombia)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Antioquia\", \"Colombia\"}}"}, {
+          "name" -> "{SanFrancisco, Putumayo, Colombia}", "desc" -> 
+           "San Francisco (Putumayo, Colombia)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Putumayo\", \"Colombia\"}}"}, {
+          "name" -> "{SanFrancisco, Managua, Nicaragua}", "desc" -> 
+           "San Francisco (Managua, Nicaragua)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Managua\", \"Nicaragua\"}}"}, {
+          "name" -> "{SanFrancisco, Cundinamarca, Colombia}", "desc" -> 
+           "San Francisco (Cundinamarca, Colombia)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Cundinamarca\", \"Colombia\"}}"}, {
+          "name" -> "{SanFrancisco, Bohol, Philippines}", "desc" -> 
+           "San Francisco (Bohol, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Bohol\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Veraguas, Panama}", "desc" -> 
+           "San Francisco (Panama)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Veraguas\", \"Panama\"}}"}, {
+          "name" -> "{SanFrancisco, Pampanga, Philippines}", "desc" -> 
+           "San Francisco (Pampanga, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Pampanga\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, FranciscoMorazan, Honduras}", "desc" -> 
+           "San Francisco (Francisco Moraz\[AAcute]n, Honduras)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"FranciscoMorazan\", \"Honduras\"}}"}, {
+          "name" -> "{SanFrancisco, Legaspi, Philippines}", "desc" -> 
+           "San Francisco (Legaspi, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Legaspi\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Antique, Philippines}", "desc" -> 
+           "San Francisco (Antique, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Antique\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Chinandega, Nicaragua}", "desc" -> 
+           "San Francisco (Chinandega, Nicaragua)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Chinandega\", \"Nicaragua\"}}"}, {
+          "name" -> "{SanFrancisco, Choluteca, Honduras}", "desc" -> 
+           "San Francisco (Choluteca, Honduras)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Choluteca\", \"Honduras\"}}"}, {
+          "name" -> "{SanFrancisco, Sorsogon, Philippines}", "desc" -> 
+           "San Francisco (Sorsogon, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Sorsogon\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Lipa, Philippines}", "desc" -> 
+           "San Francisco (Lipa, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Lipa\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Tarlac, Philippines}", "desc" -> 
+           "San Francisco (Tarlac, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Tarlac\", \"Philippines\"}}"}, {
+          "name" -> "{SanFrancisco, Albay, Philippines}", "desc" -> 
+           "San Francisco (Albay, Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco\", \"Albay\", \"Philippines\"}}"}, {
+          "name" -> "{Aguacaliente, Cartago, CostaRica}", "desc" -> 
+           "Aguacaliente (Cartago, Costa Rica)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"Aguacaliente\", \"Cartago\", \"CostaRica\"}}"}, {
+          "name" -> "{Xonacatlan, Mexico, Mexico}", "desc" -> 
+           "Xonacatlan (State of Mexico, Mexico)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"Xonacatlan\", \
+\"Mexico\", \"Mexico\"}}"}, {
+          "name" -> "{Telixtlahuaca, Oaxaca, Mexico}", "desc" -> 
+           "Telixtlahuaca (Oaxaca, Mexico)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"Telixtlahuaca\", \"Oaxaca\", \"Mexico\"}}"}, {
+          "name" -> "{Zacacalco, Mexico, Mexico}", "desc" -> 
+           "Zacacalco (State of Mexico, Mexico)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"Zacacalco\", \
+\"Mexico\", \"Mexico\"}}"}, {
+          "name" -> "{Cuetzalan, Puebla, Mexico}", "desc" -> 
+           "Cuetzalan (Puebla, Mexico)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"Cuetzalan\", \
+\"Puebla\", \"Mexico\"}}"}, {
+          "name" -> "{Atexcatzingo, Tlaxcala, Mexico}", "desc" -> 
+           "Atexcatzingo (Tlaxcala, Mexico)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"Atexcatzingo\", \"Tlaxcala\", \"Mexico\"}}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.890807`6.4013286145762365, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{171., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.948234405409132*^9, 3.948234423289263*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"1239a825-b461-4b67-8ef7-79ef0f405ea1"],
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"GeoDistance", "[", 
+    RowBox[{
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "Sydney", Typeset`boxes$$ = 
+       TemplateBox[{"\"Sydney\"", 
+         RowBox[{"Entity", "[", 
+           RowBox[{"\"City\"", ",", 
+             RowBox[{"{", 
+               
+               RowBox[{
+                "\"Sydney\"", ",", "\"NewSouthWales\"", ",", 
+                 "\"Australia\""}], "}"}]}], "]"}], 
+         "\"Entity[\\\"City\\\", {\\\"Sydney\\\", \\\"NewSouthWales\\\", \
+\\\"Australia\\\"}]\"", "\"city\""}, "Entity"], 
+       Typeset`allassumptions$$ = {{
+        "type" -> "Clash", "word" -> "Sydney", "template" -> 
+         "Assuming \"Sydney\" is a city${separator}Use as ${desc} or ${desc} \
+or ${desc} instead", "count" -> "4", "pulldown" -> "false", "default" -> 
+         "{\"C\", \"Sydney\"} -> {\"City\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "City", "desc" -> "a city", "input" -> 
+            "{\"C\", \"Sydney\"} -> {\"City\"}"}, {
+           "name" -> "GivenName", "desc" -> "a given name", "input" -> 
+            "{\"C\", \"Sydney\"} -> {\"GivenName\"}"}, {
+           "name" -> "AdministrativeDivision", "desc" -> 
+            "an administrative division", "input" -> 
+            "{\"C\", \"Sydney\"} -> {\"AdministrativeDivision\"}"}, {
+           "name" -> "TelevisionProgram", "desc" -> "a television series", 
+            "input" -> "{\"C\", \"Sydney\"} -> {\"TelevisionProgram\"}"}}}, {
+        "type" -> "SubCategory", "word" -> "Sydney", "template" -> 
+         "Assuming Sydney (Australia)${separator}Use ${desc} instead", 
+         "count" -> "2", "pulldown" -> "false", "default" -> 
+         "{\"DPClash\", \"CityE\", \"Sydney\"} -> {{\"Sydney\", \
+\"NewSouthWales\", \"Australia\"}, \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "{Sydney, NewSouthWales, Australia}", "desc" -> 
+            "Sydney (Australia)", "input" -> 
+            "{\"DPClash\", \"CityE\", \"Sydney\"} -> {{\"Sydney\", \
+\"NewSouthWales\", \"Australia\"}}"}, {
+           "name" -> "{Sydney, NovaScotia, Canada}", "desc" -> 
+            "Sydney (Canada)", "input" -> 
+            "{\"DPClash\", \"CityE\", \"Sydney\"} -> {{\"Sydney\", \
+\"NovaScotia\", \"Canada\"}}"}}}}, Typeset`assumptions$$ = {}, 
+       Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.604381`6.232855796408398, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{128., {7., 15.}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True], ",", 
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "Moscow", Typeset`boxes$$ = 
+       TemplateBox[{"\"Moscow\"", 
+         RowBox[{"Entity", "[", 
+           RowBox[{"\"City\"", ",", 
+             RowBox[{"{", 
+               RowBox[{"\"Moscow\"", ",", "\"Moscow\"", ",", "\"Russia\""}], 
+               "}"}]}], "]"}], 
+         "\"Entity[\\\"City\\\", {\\\"Moscow\\\", \\\"Moscow\\\", \
+\\\"Russia\\\"}]\"", "\"city\""}, "Entity"], 
+       Typeset`allassumptions$$ = {{
+        "type" -> "Clash", "word" -> "Moscow", "template" -> 
+         "Assuming \"Moscow\" is a city${separator}Use as ${desc} instead", 
+         "count" -> "2", "pulldown" -> "false", "default" -> 
+         "{\"C\", \"Moscow\"} -> {\"City\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "City", "desc" -> "a city", "input" -> 
+            "{\"C\", \"Moscow\"} -> {\"City\"}"}, {
+           "name" -> "AdministrativeDivision", "desc" -> 
+            "an administrative division", "input" -> 
+            "{\"C\", \"Moscow\"} -> {\"AdministrativeDivision\"}"}}}, {
+        "type" -> "SubCategory", "word" -> "Moscow", "template" -> 
+         "Assuming Moscow (Russia)${separator}Use ${desc} or ${pulldown} \
+instead", "count" -> "9", "pulldown" -> "true", "pulldownlabel" -> "more >>", 
+         "pulldownlength" -> "7", "default" -> 
+         "{\"DPClash\", \"CityE\", \"Moscow\"} -> {{\"Moscow\", \"Moscow\", \
+\"Russia\"}, \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "{Moscow, Moscow, Russia}", "desc" -> "Moscow (Russia)", 
+            "input" -> 
+            "{\"DPClash\", \"CityE\", \"Moscow\"} -> {{\"Moscow\", \
+\"Moscow\", \"Russia\"}}"}, {
+           "name" -> "{Moscow, Idaho, UnitedStates}", "desc" -> 
+            "Moscow (Idaho, USA)", "input" -> 
+            "{\"DPClash\", \"CityE\", \"Moscow\"} -> {{\"Moscow\", \"Idaho\", \
+\"UnitedStates\"}}"}, {
+           "name" -> "{Moscow, Pennsylvania, UnitedStates}", "desc" -> 
+            "Moscow (Pennsylvania, USA)", "input" -> 
+            "{\"DPClash\", \"CityE\", \"Moscow\"} -> {{\"Moscow\", \
+\"Pennsylvania\", \"UnitedStates\"}}"}, {
+           "name" -> "{Moscow, Wisconsin, UnitedStates}", "desc" -> 
+            "Moscow (Wisconsin, USA)", "input" -> 
+            "{\"DPClash\", \"CityE\", \"Moscow\"} -> {{\"Moscow\", \
+\"Wisconsin\", \"UnitedStates\"}}"}, {
+           "name" -> "{Moscow, Tennessee, UnitedStates}", "desc" -> 
+            "Moscow (Tennessee, USA)", "input" -> 
+            "{\"DPClash\", \"CityE\", \"Moscow\"} -> {{\"Moscow\", \
+\"Tennessee\", \"UnitedStates\"}}"}, {
+           "name" -> "{Moscow, Kansas, UnitedStates}", "desc" -> 
+            "Moscow (Kansas, USA)", "input" -> 
+            "{\"DPClash\", \"CityE\", \"Moscow\"} -> {{\"Moscow\", \
+\"Kansas\", \"UnitedStates\"}}"}, {
+           "name" -> "{Moscow, Maine, UnitedStates}", "desc" -> 
+            "Moscow (Maine, USA)", "input" -> 
+            "{\"DPClash\", \"CityE\", \"Moscow\"} -> {{\"Moscow\", \"Maine\", \
+\"UnitedStates\"}}"}, {
+           "name" -> "{Moscow, Maryland, UnitedStates}", "desc" -> 
+            "Moscow (Maryland, USA)", "input" -> 
+            "{\"DPClash\", \"CityE\", \"Moscow\"} -> {{\"Moscow\", \"Maryland\
+\", \"UnitedStates\"}}"}, {
+           "name" -> "{Moscow, Ohio, UnitedStates}", "desc" -> 
+            "Moscow (Ohio, USA)", "input" -> 
+            
+            "{\"DPClash\", \"CityE\", \"Moscow\"} -> {{\"Moscow\", \"Ohio\", \
+\"UnitedStates\"}}"}}}}, Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+       Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.59279`6.224445862250221, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{133., {7., 15.}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True]}], "]"}], ",", "\"\<Kilometers\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.948234434275012*^9, 3.948234458548882*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"751915d5-a408-4c16-a349-b8e6c058da90"],
+
+Cell[BoxData[
+ RowBox[{"GeoGraphics", "[", 
+  NamespaceBox["LinguisticAssistant",
+   DynamicModuleBox[{Typeset`query$$ = "United States", Typeset`boxes$$ = 
+    TemplateBox[{"\"United States\"", 
+      RowBox[{"Entity", "[", 
+        RowBox[{"\"Country\"", ",", "\"UnitedStates\""}], "]"}], 
+      "\"Entity[\\\"Country\\\", \\\"UnitedStates\\\"]\"", "\"country\""}, 
+     "Entity"], Typeset`allassumptions$$ = {}, Typeset`assumptions$$ = {}, 
+    Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+    "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+     0.695836`6.294051887290847, "Messages" -> {}}}, 
+    DynamicBox[ToBoxes[
+      AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+       Dynamic[Typeset`query$$], 
+       Dynamic[Typeset`boxes$$], 
+       Dynamic[Typeset`allassumptions$$], 
+       Dynamic[Typeset`assumptions$$], 
+       Dynamic[Typeset`open$$], 
+       Dynamic[Typeset`querystate$$]], StandardForm],
+     ImageSizeCache->{164., {7., 15.}},
+     TrackedSymbols:>{
+      Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+       Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+    DynamicModuleValues:>{},
+    UndoTrackedVariables:>{Typeset`open$$}],
+   BaseStyle->{"Deploy"},
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True], "]"}]], "Input",
+ CellChangeTimes->{{3.948234460701008*^9, 3.948234492229154*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"d1975c82-3c4b-4082-a6d4-a3ddffe473f7"],
+
+Cell[BoxData[
+ RowBox[{"GeoListPlot", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "Brazil", Typeset`boxes$$ = 
+      TemplateBox[{"\"Brazil\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Country\"", ",", "\"Brazil\""}], "]"}], 
+        "\"Entity[\\\"Country\\\", \\\"Brazil\\\"]\"", "\"country\""}, 
+       "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "Brazil", "template" -> 
+        "Assuming \"Brazil\" is a country${separator}Use as ${desc} instead", 
+        "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"Brazil\"} -> {\"Country\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Country", "desc" -> "a country", "input" -> 
+           "{\"C\", \"Brazil\"} -> {\"Country\"}"}, {
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"Brazil\"} -> {\"City\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.594595`6.2257662463609575, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{140., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "Russia", Typeset`boxes$$ = 
+      TemplateBox[{"\"Russia\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Country\"", ",", "\"Russia\""}], "]"}], 
+        "\"Entity[\\\"Country\\\", \\\"Russia\\\"]\"", "\"country\""}, 
+       "Entity"], Typeset`allassumptions$$ = {}, Typeset`assumptions$$ = {}, 
+      Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.497264`6.148132012617043, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{124., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "India", Typeset`boxes$$ = 
+      TemplateBox[{"\"India\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Country\"", ",", "\"India\""}], "]"}], 
+        "\"Entity[\\\"Country\\\", \\\"India\\\"]\"", "\"country\""}, 
+       "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "India", "template" -> 
+        "Assuming \"India\" is a country${separator}Use as ${desc} or ${desc} \
+instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"India\"} -> {\"Country\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Country", "desc" -> "a country", "input" -> 
+           "{\"C\", \"India\"} -> {\"Country\"}"}, {
+          "name" -> "GivenName", "desc" -> "a given name", "input" -> 
+           "{\"C\", \"India\"} -> {\"GivenName\"}"}, {
+          "name" -> "Movie", "desc" -> "a movie", "input" -> 
+           "{\"C\", \"India\"} -> {\"Movie\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.59531`6.226288171375027, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{135., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "China", Typeset`boxes$$ = 
+      TemplateBox[{"\"China\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Country\"", ",", "\"China\""}], "]"}], 
+        "\"Entity[\\\"Country\\\", \\\"China\\\"]\"", "\"country\""}, 
+       "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "China", "template" -> 
+        "Assuming \"China\" is a country${separator}Use as ${desc} or ${desc} \
+or ${desc} instead", "count" -> "4", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"China\"} -> {\"Country\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Country", "desc" -> "a country", "input" -> 
+           "{\"C\", \"China\"} -> {\"Country\"}"}, {
+          "name" -> "Species", "desc" -> "a species specification", "input" -> 
+           "{\"C\", \"China\"} -> {\"Species\"}"}, {
+          "name" -> "GivenName", "desc" -> "a given name", "input" -> 
+           "{\"C\", \"China\"} -> {\"GivenName\"}"}, {
+          "name" -> "AdministrativeDivision", "desc" -> 
+           "an administrative division", "input" -> 
+           "{\"C\", \"China\"} -> {\"AdministrativeDivision\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.545535`6.188367612433627, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{141., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.948234506380241*^9, 3.94823453441294*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"b2f3d816-0d8c-4093-8d2d-74a4949937b1"],
+
+Cell[BoxData[
+ RowBox[{"GeoGraphics", "[", 
+  RowBox[{"GeoPath", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "New York", Typeset`boxes$$ = 
+       TemplateBox[{"\"New York City\"", 
+         RowBox[{"Entity", "[", 
+           RowBox[{"\"City\"", ",", 
+             RowBox[{"{", 
+               
+               RowBox[{
+                "\"NewYork\"", ",", "\"NewYork\"", ",", "\"UnitedStates\""}], 
+               "}"}]}], "]"}], 
+         "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+       Typeset`allassumptions$$ = {{
+        "type" -> "Clash", "word" -> "New York", "template" -> 
+         "Assuming \"New York\" is a city${separator}Use as ${desc} or \
+${desc} or ${desc} or ${desc} or ${desc} instead", "count" -> "6", "pulldown" -> 
+         "false", "default" -> 
+         "{\"C\", \"New York\"} -> {\"City\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "City", "desc" -> "a city", "input" -> 
+            "{\"C\", \"New York\"} -> {\"City\"}"}, {
+           "name" -> "USState", "desc" -> "a US state", "input" -> 
+            "{\"C\", \"New York\"} -> {\"USState\"}"}, {
+           "name" -> "NFLTeam", "desc" -> "an NFL team", "input" -> 
+            "{\"C\", \"New York\"} -> {\"NFLTeam\"}"}, {
+           "name" -> "NBATeam", "desc" -> "an NBA team", "input" -> 
+            "{\"C\", \"New York\"} -> {\"NBATeam\"}"}, {
+           "name" -> "MLBTeam", "desc" -> "an MLB team", "input" -> 
+            "{\"C\", \"New York\"} -> {\"MLBTeam\"}"}, {
+           "name" -> "Periodical", "desc" -> "a periodical", "input" -> 
+            "{\"C\", \"New York\"} -> {\"Periodical\"}"}}}}, 
+       Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+       Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.783905`6.345808428022671, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{171., {7., 15.}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True], ",", 
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "Beijing", Typeset`boxes$$ = 
+       TemplateBox[{"\"Beijing\"", 
+         RowBox[{"Entity", "[", 
+           RowBox[{"\"City\"", ",", 
+             RowBox[{"{", 
+               RowBox[{"\"Beijing\"", ",", "\"Beijing\"", ",", "\"China\""}], 
+               "}"}]}], "]"}], 
+         "\"Entity[\\\"City\\\", {\\\"Beijing\\\", \\\"Beijing\\\", \\\"China\
+\\\"}]\"", "\"city\""}, "Entity"], 
+       Typeset`allassumptions$$ = {{
+        "type" -> "Clash", "word" -> "Beijing", "template" -> 
+         "Assuming \"Beijing\" is a city${separator}Use as ${desc} instead", 
+         "count" -> "2", "pulldown" -> "false", "default" -> 
+         "{\"C\", \"Beijing\"} -> {\"City\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "City", "desc" -> "a city", "input" -> 
+            "{\"C\", \"Beijing\"} -> {\"City\"}"}, {
+           "name" -> "AdministrativeDivision", "desc" -> 
+            "an administrative division", "input" -> 
+            "{\"C\", \"Beijing\"} -> {\"AdministrativeDivision\"}"}}}}, 
+       Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+       Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.560382`6.200029170384115, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{125., {7., 15.}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True]}], "}"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.948234538986974*^9, 3.9482345783160067`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"def00828-9db5-4d7d-9686-d6b4601033d0"],
+
+Cell[BoxData[
+ RowBox[{"GeoGraphics", "[", 
+  RowBox[{"GeoDisk", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "Great Pyramid of Giza", 
+      Typeset`boxes$$ = TemplateBox[{"\"Great Pyramid of Giza\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Building\"", ",", "\"GreatPyramidOfGiza::jbm66\""}], 
+          "]"}], "\"Entity[\\\"Building\\\", \
+\\\"GreatPyramidOfGiza::jbm66\\\"]\"", "\"building\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "Great Pyramid of Giza", "template" -> 
+        "Assuming \"Great Pyramid of Giza\" is a structure${separator}Use as \
+${desc} or ${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"Great Pyramid of Giza\"} -> {\"Building\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Building", "desc" -> "a structure", "input" -> 
+           "{\"C\", \"Great Pyramid of Giza\"} -> {\"Building\"}"}, {
+          "name" -> "HistoricalSite", "desc" -> "a historic site", "input" -> 
+           "{\"C\", \"Great Pyramid of Giza\"} -> {\"HistoricalSite\"}"}, {
+          "name" -> "BuildingClass", "desc" -> "a class of structures", 
+           "input" -> 
+           "{\"C\", \"Great Pyramid of Giza\"} -> {\"BuildingClass\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.701183`6.297376371688279, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{240., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "10 miles", Typeset`boxes$$ = 
+      TemplateBox[{"10", "\"mi\"", "miles", "\"Miles\""}, "Quantity", 
+       SyntaxForm -> Mod], Typeset`allassumptions$$ = {}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.532177`6.177601094472462, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{78., {9.5, 14.5}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.948234587853971*^9, 3.948234621251048*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"64a131c2-3a88-4787-9629-2c153f5cc721"],
+
+Cell[BoxData[
+ RowBox[{"GeoGraphics", "[", 
+  RowBox[{"GeoDisk", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "New York City", Typeset`boxes$$ = 
+      TemplateBox[{"\"New York City\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"City\"", ",", 
+            RowBox[{"{", 
+              
+              RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+                "\"UnitedStates\""}], "}"}]}], "]"}], 
+        "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "New York City", "template" -> 
+        "Assuming \"New York City\" is a city${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"New York City\"} -> {\"City\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"New York City\"} -> {\"City\"}"}, {
+          "name" -> "VisualArts", "desc" -> "an artwork", "input" -> 
+           "{\"C\", \"New York City\"} -> {\"VisualArts\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.805937`6.357846087879576, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{171., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", 
+    RowBox[{"GeoDistance", "[", 
+     RowBox[{
+      NamespaceBox["LinguisticAssistant",
+       DynamicModuleBox[{Typeset`query$$ = "New York City", Typeset`boxes$$ = 
+        TemplateBox[{"\"New York City\"", 
+          RowBox[{"Entity", "[", 
+            RowBox[{"\"City\"", ",", 
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"NewYork\"", ",", "\"NewYork\"", ",", "\"UnitedStates\""}],
+                 "}"}]}], "]"}], 
+          "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+        Typeset`allassumptions$$ = {{
+         "type" -> "Clash", "word" -> "New York City", "template" -> 
+          "Assuming \"New York City\" is a city${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+          "{\"C\", \"New York City\"} -> {\"City\", \"dflt\"}", 
+          "Values" -> {{
+            "name" -> "City", "desc" -> "a city", "input" -> 
+             "{\"C\", \"New York City\"} -> {\"City\"}"}, {
+            "name" -> "VisualArts", "desc" -> "an artwork", "input" -> 
+             "{\"C\", \"New York City\"} -> {\"VisualArts\"}"}}}}, 
+        Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+        Typeset`querystate$$ = {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         1.576807`6.649323532757355, "Messages" -> {}}}, 
+        DynamicBox[ToBoxes[
+          AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+           Dynamic[Typeset`query$$], 
+           Dynamic[Typeset`boxes$$], 
+           Dynamic[Typeset`allassumptions$$], 
+           Dynamic[Typeset`assumptions$$], 
+           Dynamic[Typeset`open$$], 
+           Dynamic[Typeset`querystate$$]], StandardForm],
+         ImageSizeCache->{171., {7., 15.}},
+         TrackedSymbols:>{
+          Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+           Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+        DynamicModuleValues:>{},
+        UndoTrackedVariables:>{Typeset`open$$}],
+       BaseStyle->{"Deploy"},
+       DeleteWithContents->True,
+       Editable->False,
+       SelectWithContents->True], ",", 
+      NamespaceBox["LinguisticAssistant",
+       DynamicModuleBox[{Typeset`query$$ = "San Francisco", Typeset`boxes$$ = 
+        TemplateBox[{"\"San Francisco\"", 
+          RowBox[{"Entity", "[", 
+            RowBox[{"\"City\"", ",", 
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"SanFrancisco\"", ",", "\"California\"", ",", 
+                  "\"UnitedStates\""}], "}"}]}], "]"}], 
+          "\"Entity[\\\"City\\\", {\\\"SanFrancisco\\\", \\\"California\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+        Typeset`allassumptions$$ = {{
+         "type" -> "Clash", "word" -> "San Francisco", "template" -> 
+          "Assuming \"San Francisco\" is a city${separator}Use as ${desc} or \
+${desc} or ${desc} or ${desc} or ${desc} or ${desc} instead", "count" -> "7", 
+          "pulldown" -> "false", "default" -> 
+          "{\"C\", \"San Francisco\"} -> {\"City\", \"dflt\"}", 
+          "Values" -> {{
+            "name" -> "City", "desc" -> "a city", "input" -> 
+             "{\"C\", \"San Francisco\"} -> {\"City\"}"}, {
+            "name" -> "AdministrativeDivision", "desc" -> 
+             "an administrative division", "input" -> 
+             "{\"C\", \"San Francisco\"} -> {\"AdministrativeDivision\"}"}, {
+            "name" -> "NFLTeam", "desc" -> "an NFL team", "input" -> 
+             "{\"C\", \"San Francisco\"} -> {\"NFLTeam\"}"}, {
+            "name" -> "MLBTeam", "desc" -> "an MLB team", "input" -> 
+             "{\"C\", \"San Francisco\"} -> {\"MLBTeam\"}"}, {
+            "name" -> "VisualArts", "desc" -> "an artwork", "input" -> 
+             "{\"C\", \"San Francisco\"} -> {\"VisualArts\"}"}, {
+            "name" -> "Periodical", "desc" -> "a periodical", "input" -> 
+             "{\"C\", \"San Francisco\"} -> {\"Periodical\"}"}, {
+            "name" -> "MusicAlbum", "desc" -> "a music album", "input" -> 
+             "{\"C\", \"San Francisco\"} -> {\"MusicAlbum\"}"}}}, {
+         "type" -> "SubCategory", "word" -> "San Francisco", "template" -> 
+          
+          "Assuming San Francisco (United States)${separator}Use ${desc} or \
+${pulldown} instead", "count" -> "34", "pulldown" -> "true", "pulldownlabel" -> 
+          "more >>", "pulldownlength" -> "32", "default" -> 
+          "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\", \
+\"California\", \"UnitedStates\"}, \"dflt\"}", 
+          "Values" -> {{
+            "name" -> "{SanFrancisco, California, UnitedStates}", "desc" -> 
+             "San Francisco (United States)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"California\", \"UnitedStates\"}}"}, {
+            "name" -> "{SanFrancisco, Peten, Guatemala}", "desc" -> 
+             "San Francisco (Guatemala)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Peten\", \"Guatemala\"}}"}, {
+            "name" -> "{SanFrancisco, Heredia, CostaRica}", "desc" -> 
+             "San Francisco (Heredia, Costa Rica)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Heredia\", \"CostaRica\"}}"}, {
+            "name" -> "{SanFrancisco, AgusanDelSur, Philippines}", "desc" -> 
+             "San Francisco (Agusan del Sur, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"AgusanDelSur\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Cordoba, Argentina}", "desc" -> 
+             "San Francisco (Argentina)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Cordoba\", \"Argentina\"}}"}, {
+            "name" -> "{SanFrancisco2, Quezon, Philippines}", "desc" -> 
+             "San Francisco (Quezon, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"SanFrancisco2\", \"Quezon\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Quezon, Philippines}", "desc" -> 
+             "San Francisco (Quezon, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Quezon\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Cebu, Philippines}", "desc" -> 
+             "San Francisco (Cebu, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Cebu\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Atlantida, Honduras}", "desc" -> 
+             "San Francisco (Atl\[AAcute]ntida, Honduras)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Atlantida\", \"Honduras\"}}"}, {
+            "name" -> "{SanFrancisco, NuevaEcija, Philippines}", "desc" -> 
+             "San Francisco (Nueva Ecija, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"NuevaEcija\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, SurigaoDelNorte, Philippines}", "desc" -> 
+             "San Francisco (Surigao del Norte, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"SurigaoDelNorte\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, SouthernLeyte, Philippines}", "desc" -> 
+             "San Francisco (Southern Leyte, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"SouthernLeyte\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Antioquia, Colombia}", "desc" -> 
+             "San Francisco (Antioquia, Colombia)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Antioquia\", \"Colombia\"}}"}, {
+            "name" -> "{SanFrancisco, Putumayo, Colombia}", "desc" -> 
+             "San Francisco (Putumayo, Colombia)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Putumayo\", \"Colombia\"}}"}, {
+            "name" -> "{SanFrancisco, Managua, Nicaragua}", "desc" -> 
+             "San Francisco (Managua, Nicaragua)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Managua\", \"Nicaragua\"}}"}, {
+            "name" -> "{SanFrancisco, Cundinamarca, Colombia}", "desc" -> 
+             "San Francisco (Cundinamarca, Colombia)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Cundinamarca\", \"Colombia\"}}"}, {
+            "name" -> "{SanFrancisco, Bohol, Philippines}", "desc" -> 
+             "San Francisco (Bohol, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Bohol\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Veraguas, Panama}", "desc" -> 
+             "San Francisco (Panama)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Veraguas\", \"Panama\"}}"}, {
+            "name" -> "{SanFrancisco, Pampanga, Philippines}", "desc" -> 
+             "San Francisco (Pampanga, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Pampanga\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, FranciscoMorazan, Honduras}", "desc" -> 
+             "San Francisco (Francisco Moraz\[AAcute]n, Honduras)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"FranciscoMorazan\", \"Honduras\"}}"}, {
+            "name" -> "{SanFrancisco, Legaspi, Philippines}", "desc" -> 
+             "San Francisco (Legaspi, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Legaspi\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Antique, Philippines}", "desc" -> 
+             "San Francisco (Antique, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Antique\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Chinandega, Nicaragua}", "desc" -> 
+             "San Francisco (Chinandega, Nicaragua)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Chinandega\", \"Nicaragua\"}}"}, {
+            "name" -> "{SanFrancisco, Choluteca, Honduras}", "desc" -> 
+             "San Francisco (Choluteca, Honduras)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Choluteca\", \"Honduras\"}}"}, {
+            "name" -> "{SanFrancisco, Sorsogon, Philippines}", "desc" -> 
+             "San Francisco (Sorsogon, Philippines)", "input" -> 
+             
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Sorsogon\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Lipa, Philippines}", "desc" -> 
+             "San Francisco (Lipa, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Lipa\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Tarlac, Philippines}", "desc" -> 
+             "San Francisco (Tarlac, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Tarlac\", \"Philippines\"}}"}, {
+            "name" -> "{SanFrancisco, Albay, Philippines}", "desc" -> 
+             "San Francisco (Albay, Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"SanFrancisco\
+\", \"Albay\", \"Philippines\"}}"}, {
+            "name" -> "{Aguacaliente, Cartago, CostaRica}", "desc" -> 
+             "Aguacaliente (Cartago, Costa Rica)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"Aguacaliente\
+\", \"Cartago\", \"CostaRica\"}}"}, {
+            "name" -> "{Xonacatlan, Mexico, Mexico}", "desc" -> 
+             "Xonacatlan (State of Mexico, Mexico)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"Xonacatlan\", \"Mexico\", \"Mexico\"}}"}, {
+            "name" -> "{Telixtlahuaca, Oaxaca, Mexico}", "desc" -> 
+             "Telixtlahuaca (Oaxaca, Mexico)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> \
+{{\"Telixtlahuaca\", \"Oaxaca\", \"Mexico\"}}"}, {
+            "name" -> "{Zacacalco, Mexico, Mexico}", "desc" -> 
+             "Zacacalco (State of Mexico, Mexico)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"Zacacalco\", \
+\"Mexico\", \"Mexico\"}}"}, {
+            "name" -> "{Cuetzalan, Puebla, Mexico}", "desc" -> 
+             "Cuetzalan (Puebla, Mexico)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"Cuetzalan\", \
+\"Puebla\", \"Mexico\"}}"}, {
+            "name" -> "{Atexcatzingo, Tlaxcala, Mexico}", "desc" -> 
+             "Atexcatzingo (Tlaxcala, Mexico)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"San Francisco\"} -> {{\"Atexcatzingo\
+\", \"Tlaxcala\", \"Mexico\"}}"}}}}, Typeset`assumptions$$ = {}, 
+        Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         0.890807`6.4013286145762365, "Messages" -> {}}}, 
+        DynamicBox[ToBoxes[
+          AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+           Dynamic[Typeset`query$$], 
+           Dynamic[Typeset`boxes$$], 
+           Dynamic[Typeset`allassumptions$$], 
+           Dynamic[Typeset`assumptions$$], 
+           Dynamic[Typeset`open$$], 
+           Dynamic[Typeset`querystate$$]], StandardForm],
+         ImageSizeCache->{171., {7., 15.}},
+         TrackedSymbols:>{
+          Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+           Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+        DynamicModuleValues:>{},
+        UndoTrackedVariables:>{Typeset`open$$}],
+       BaseStyle->{"Deploy"},
+       DeleteWithContents->True,
+       Editable->False,
+       SelectWithContents->True]}], "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.948234626319459*^9, 3.948234654643907*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"4a7f5bf5-0441-4ee1-98f5-83f5999d0572"],
+
+Cell[BoxData[
+ RowBox[{"GeoImage", "[", 
+  RowBox[{"GeoDisk", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "The Pentagon", Typeset`boxes$$ = 
+      TemplateBox[{"\"The Pentagon\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Building\"", ",", "\"ThePentagon::qzh8d\""}], "]"}], 
+        "\"Entity[\\\"Building\\\", \\\"ThePentagon::qzh8d\\\"]\"", 
+        "\"building\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "word" -> "", "template" -> 
+        "Assuming the input is a structure${separator}Use as ${desc} \
+instead${separator}Use \"Pentagon\" as ${desc} or ${desc} or ${desc} or \
+${desc} or ${desc} or ${desc}", "count" -> "8", "pulldown" -> "false", "type" -> 
+        "MultiClash", "default" -> 
+        "{\"MC\", \"\"} -> {\"Building\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Building", "desc" -> "a structure", "input" -> 
+           "{\"MC\", \"\"} -> {\"Building\"}", "word" -> "the input"}, {
+          "name" -> "MilitaryBase", "desc" -> "a military facility", "input" -> 
+           "{\"MC\", \"\"} -> {\"MilitaryBase\"}", "word" -> "the input"}, {
+          "name" -> "Geometry", "desc" -> "a geometric object", "input" -> 
+           "{\"MC\", \"\"} -> {\"Geometry\"}", "word" -> "Pentagon"}, {
+          "name" -> "LaminaClass", "desc" -> "a class of laminae", "input" -> 
+           "{\"MC\", \"\"} -> {\"LaminaClass\"}", "word" -> "Pentagon"}, {
+          "name" -> "Lamina", "desc" -> "a lamina", "input" -> 
+           "{\"MC\", \"\"} -> {\"Lamina\"}", "word" -> "Pentagon"}, {
+          "name" -> "MusicAct", "desc" -> "a music act", "input" -> 
+           "{\"MC\", \"\"} -> {\"MusicAct\"}", "word" -> "Pentagon"}, {
+          "name" -> "MathWorld", "desc" -> 
+           " referring to a mathematical definition", "input" -> 
+           "{\"MC\", \"\"} -> {\"MathWorld\"}", "word" -> "Pentagon"}, {
+          "name" -> "FigWeakCenteredType", "desc" -> 
+           " referring to a type of number", "input" -> 
+           "{\"MC\", \"\"} -> {\"FigWeakCenteredType\"}", "word" -> 
+           "Pentagon"}}}}, Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 
+      2}, Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.6926`6.292027480709417, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{190., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "0.4 miles", Typeset`boxes$$ = 
+      TemplateBox[{"0.4", "\"mi\"", "miles", "\"Miles\""}, "Quantity", 
+       SyntaxForm -> Mod], Typeset`allassumptions$$ = {}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.564513`6.203218941109052, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{85., {9.5, 14.5}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.948234664400597*^9, 3.948234694023275*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"bd0a5a58-7709-4e91-81cd-143912253893"],
+
+Cell[BoxData[
+ RowBox[{"GeoNearest", "[", 
+  RowBox[{"\"\<Country\>\"", ",", 
+   RowBox[{"GeoPosition", "[", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "North Pole", Typeset`boxes$$ = 
+      RowBox[{"GeoPosition", "[", "\"NorthPole\"", "]"}], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "North Pole", "template" -> 
+        "Assuming \"North Pole\" is a geographic object${separator}Use as \
+${desc} or ${desc} or ${desc} instead", "count" -> "4", "pulldown" -> "false",
+         "default" -> 
+        "{\"C\", \"North Pole\"} -> {\"Cartographic\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Cartographic", "desc" -> "a geographic object", "input" -> 
+           "{\"C\", \"North Pole\"} -> {\"Cartographic\"}"}, {
+          "name" -> "MathWorld", "desc" -> 
+           " referring to a mathematical definition", "input" -> 
+           "{\"C\", \"North Pole\"} -> {\"MathWorld\"}"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "{\"C\", \"North Pole\"} -> {\"Word\"}"}, {
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"North Pole\"} -> {\"City\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.647251`6.262617723586498, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{253., {9.5, 14.5}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], "]"}], ",", "5"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9482347157552633`*^9, 3.9482347362865057`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"fc97bb7e-7263-4b46-bc4d-522e86d17bbf"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Part", "[", 
+     RowBox[{
+      RowBox[{"GeoNearest", "[", 
+       RowBox[{"\"\<Country\>\"", ",", 
+        RowBox[{"GeoPosition", "[", 
+         RowBox[{"{", 
+          RowBox[{"45", ",", "0"}], "}"}], "]"}], ",", "3"}], "]"}], ",", 
+      "n"}], "]"}], "[", "\"\<Flag\>\"", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.948234742824572*^9, 3.948234799405582*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"5ce7a223-ab5e-48c9-819d-82b710f7f3dd"],
+
+Cell[BoxData[
+ RowBox[{"GeoListPlot", "[", 
+  RowBox[{"GeoNearest", "[", 
+   RowBox[{"\"\<Volcano\>\"", ",", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "Rome", Typeset`boxes$$ = 
+      TemplateBox[{"\"Rome\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"City\"", ",", 
+            RowBox[{"{", 
+              RowBox[{"\"Rome\"", ",", "\"Lazio\"", ",", "\"Italy\""}], 
+              "}"}]}], "]"}], 
+        "\"Entity[\\\"City\\\", {\\\"Rome\\\", \\\"Lazio\\\", \\\"Italy\\\"}]\
+\"", "\"city\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "Rome", "template" -> 
+        "Assuming \"Rome\" is a city${separator}Use as ${desc} or ${desc} or \
+${desc} or ${desc} instead", "count" -> "5", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"Rome\"} -> {\"City\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"Rome\"} -> {\"City\"}"}, {
+          "name" -> "HistoricalCountry", "desc" -> "a historical country", 
+           "input" -> "{\"C\", \"Rome\"} -> {\"HistoricalCountry\"}"}, {
+          "name" -> "AdministrativeDivision", "desc" -> 
+           "an administrative division", "input" -> 
+           "{\"C\", \"Rome\"} -> {\"AdministrativeDivision\"}"}, {
+          "name" -> "TelevisionProgram", "desc" -> "a television series", 
+           "input" -> "{\"C\", \"Rome\"} -> {\"TelevisionProgram\"}"}, {
+          "name" -> "GivenName", "desc" -> "a given name", "input" -> 
+           "{\"C\", \"Rome\"} -> {\"GivenName\"}"}}}, {
+       "type" -> "SubCategory", "word" -> "Rome", "template" -> 
+        "Assuming Rome (Italy)${separator}Use ${desc} or ${pulldown} instead",
+         "count" -> "9", "pulldown" -> "true", "pulldownlabel" -> "more >>", 
+        "pulldownlength" -> "7", "default" -> 
+        "{\"DPClash\", \"CityE\", \"Rome\"} -> {{\"Rome\", \"Lazio\", \"Italy\
+\"}, \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "{Rome, Lazio, Italy}", "desc" -> "Rome (Italy)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Rome\"} -> {{\"Rome\", \"Lazio\", \
+\"Italy\"}}"}, {
+          "name" -> "{Rome, Georgia, UnitedStates}", "desc" -> 
+           "Rome (Georgia, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Rome\"} -> {{\"Rome\", \"Georgia\", \
+\"UnitedStates\"}}"}, {
+          "name" -> "{Rome, NewYork, UnitedStates}", "desc" -> 
+           "Rome (New York, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Rome\"} -> {{\"Rome\", \"NewYork\", \
+\"UnitedStates\"}}"}, {
+          "name" -> "{Rome, Wisconsin, UnitedStates}", "desc" -> 
+           "Rome (Wisconsin, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Rome\"} -> {{\"Rome\", \"Wisconsin\", \
+\"UnitedStates\"}}"}, {
+          "name" -> "{Rome, Illinois, UnitedStates}", "desc" -> 
+           "Rome (Illinois, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Rome\"} -> {{\"Rome\", \"Illinois\", \
+\"UnitedStates\"}}"}, {
+          "name" -> "{Rome, Maine, UnitedStates}", "desc" -> 
+           "Rome (Maine, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Rome\"} -> {{\"Rome\", \"Maine\", \
+\"UnitedStates\"}}"}, {
+          "name" -> "{Rome, Pennsylvania, UnitedStates}", "desc" -> 
+           "Rome (Pennsylvania, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Rome\"} -> {{\"Rome\", \
+\"Pennsylvania\", \"UnitedStates\"}}"}, {
+          "name" -> "{Rome, Iowa, UnitedStates}", "desc" -> 
+           "Rome (Iowa, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Rome\"} -> {{\"Rome\", \"Iowa\", \
+\"UnitedStates\"}}"}, {
+          "name" -> "{Rome, Ohio, UnitedStates}", "desc" -> 
+           "Rome (Ohio, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Rome\"} -> {{\"Rome\", \"Ohio\", \
+\"UnitedStates\"}}"}}}}, Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.980431`6.442962028140571, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{118., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", "25"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.94823480702635*^9, 3.948234838907892*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"12ae1a44-6be7-411e-a324-fdbf4f64871b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GeoPosition", "[", 
+      NamespaceBox["LinguisticAssistant",
+       DynamicModuleBox[{Typeset`query$$ = "New York City", Typeset`boxes$$ = 
+        TemplateBox[{"\"New York City\"", 
+          RowBox[{"Entity", "[", 
+            RowBox[{"\"City\"", ",", 
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"NewYork\"", ",", "\"NewYork\"", ",", "\"UnitedStates\""}],
+                 "}"}]}], "]"}], 
+          "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+        Typeset`allassumptions$$ = {{
+         "type" -> "Clash", "word" -> "New York City", "template" -> 
+          "Assuming \"New York City\" is a city${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+          "{\"C\", \"New York City\"} -> {\"City\", \"dflt\"}", 
+          "Values" -> {{
+            "name" -> "City", "desc" -> "a city", "input" -> 
+             "{\"C\", \"New York City\"} -> {\"City\"}"}, {
+            "name" -> "VisualArts", "desc" -> "an artwork", "input" -> 
+             "{\"C\", \"New York City\"} -> {\"VisualArts\"}"}}}}, 
+        Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+        Typeset`querystate$$ = {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         0.900368`6.4059650448284735, "Messages" -> {}}}, 
+        DynamicBox[ToBoxes[
+          AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+           Dynamic[Typeset`query$$], 
+           Dynamic[Typeset`boxes$$], 
+           Dynamic[Typeset`allassumptions$$], 
+           Dynamic[Typeset`assumptions$$], 
+           Dynamic[Typeset`open$$], 
+           Dynamic[Typeset`querystate$$]], StandardForm],
+         ImageSizeCache->{171., {7., 15.}},
+         TrackedSymbols:>{
+          Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+           Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+        DynamicModuleValues:>{},
+        UndoTrackedVariables:>{Typeset`open$$}],
+       BaseStyle->{"Deploy"},
+       DeleteWithContents->True,
+       Editable->False,
+       SelectWithContents->True], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "-", 
+    RowBox[{
+     RowBox[{"GeoPosition", "[", 
+      NamespaceBox["LinguisticAssistant",
+       DynamicModuleBox[{Typeset`query$$ = "Los Angeles", Typeset`boxes$$ = 
+        TemplateBox[{"\"Los Angeles\"", 
+          RowBox[{"Entity", "[", 
+            RowBox[{"\"City\"", ",", 
+              RowBox[{"{", 
+                
+                RowBox[{
+                 "\"LosAngeles\"", ",", "\"California\"", ",", 
+                  "\"UnitedStates\""}], "}"}]}], "]"}], 
+          "\"Entity[\\\"City\\\", {\\\"LosAngeles\\\", \\\"California\\\", \\\
+\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+        Typeset`allassumptions$$ = {{
+         "type" -> "Clash", "word" -> "Los Angeles", "template" -> 
+          "Assuming \"Los Angeles\" is a city${separator}Use as ${desc} or \
+${desc} or ${desc} or ${desc} or ${desc} or ${desc} or ${desc} instead", 
+          "count" -> "8", "pulldown" -> "false", "default" -> 
+          "{\"C\", \"Los Angeles\"} -> {\"City\", \"dflt\"}", 
+          "Values" -> {{
+            "name" -> "City", "desc" -> "a city", "input" -> 
+             "{\"C\", \"Los Angeles\"} -> {\"City\"}"}, {
+            "name" -> "AdministrativeDivision", "desc" -> 
+             "an administrative division", "input" -> 
+             "{\"C\", \"Los Angeles\"} -> {\"AdministrativeDivision\"}"}, {
+            "name" -> "NBATeam", "desc" -> "an NBA team", "input" -> 
+             "{\"C\", \"Los Angeles\"} -> {\"NBATeam\"}"}, {
+            "name" -> "MLBTeam", "desc" -> "an MLB team", "input" -> 
+             "{\"C\", \"Los Angeles\"} -> {\"MLBTeam\"}"}, {
+            "name" -> "NFLTeam", "desc" -> "an NFL team", "input" -> 
+             "{\"C\", \"Los Angeles\"} -> {\"NFLTeam\"}"}, {
+            "name" -> "MusicWorkRendition", "desc" -> 
+             "a music work rendition", "input" -> 
+             "{\"C\", \"Los Angeles\"} -> {\"MusicWorkRendition\"}"}, {
+            "name" -> "MusicAlbum", "desc" -> "a music album", "input" -> 
+             "{\"C\", \"Los Angeles\"} -> {\"MusicAlbum\"}"}, {
+            "name" -> "MusicWork", "desc" -> "a music work", "input" -> 
+             "{\"C\", \"Los Angeles\"} -> {\"MusicWork\"}"}}}, {
+         "type" -> "SubCategory", "word" -> "Los Angeles", "template" -> 
+          "Assuming Los Angeles (United States)${separator}Use ${desc} or \
+${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+          "{\"DPClash\", \"CityE\", \"Los Angeles\"} -> {{\"LosAngeles\", \
+\"California\", \"UnitedStates\"}, \"dflt\"}", 
+          "Values" -> {{
+            "name" -> "{LosAngeles, California, UnitedStates}", "desc" -> 
+             "Los Angeles (United States)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"Los Angeles\"} -> {{\"LosAngeles\", \
+\"California\", \"UnitedStates\"}}"}, {
+            "name" -> "{LosAngeles, BioBio, Chile}", "desc" -> 
+             "Los Angeles (Chile)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"Los Angeles\"} -> {{\"LosAngeles\", \
+\"BioBio\", \"Chile\"}}"}, {
+            "name" -> "{LosAngeles, Butuan, Philippines}", "desc" -> 
+             "Los Angeles (Philippines)", "input" -> 
+             "{\"DPClash\", \"CityE\", \"Los Angeles\"} -> {{\"LosAngeles\", \
+\"Butuan\", \"Philippines\"}}"}}}}, Typeset`assumptions$$ = {}, 
+        Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         0.842691`6.377213349145929, "Messages" -> {}}}, 
+        DynamicBox[ToBoxes[
+          AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+           Dynamic[Typeset`query$$], 
+           Dynamic[Typeset`boxes$$], 
+           Dynamic[Typeset`allassumptions$$], 
+           Dynamic[Typeset`assumptions$$], 
+           Dynamic[Typeset`open$$], 
+           Dynamic[Typeset`querystate$$]], StandardForm],
+         ImageSizeCache->{160., {7., 15.}},
+         TrackedSymbols:>{
+          Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+           Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+        DynamicModuleValues:>{},
+        UndoTrackedVariables:>{Typeset`open$$}],
+       BaseStyle->{"Deploy"},
+       DeleteWithContents->True,
+       Editable->False,
+       SelectWithContents->True], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}]}], ")"}], "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.948234851860238*^9, 3.948234895177681*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"442620ea-02db-4c2a-91de-6cd1048bd4e1"],
+
+Cell[CellGroupData[{
+
+Cell["Chapter 19", "Subsection",
+ CellChangeTimes->{{3.948234920717914*^9, 
+  3.9482349219258204`*^9}},ExpressionUUID->"d2071656-a4d8-456d-82ad-\
+f84a4705ba6f"],
+
+Cell[BoxData[
+ RowBox[{"Now", "-", 
+  NamespaceBox["LinguisticAssistant",
+   DynamicModuleBox[{Typeset`query$$ = "January 1st 1900", Typeset`boxes$$ = 
+    RowBox[{"DateObject", "[", 
+      RowBox[{"{", 
+        RowBox[{"1900", ",", " ", "1", ",", " ", "1"}], "}"}], "]"}], 
+    Typeset`allassumptions$$ = {}, Typeset`assumptions$$ = {}, 
+    Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+    "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+     0.748799`6.3259102492383485, "Messages" -> {}}}, 
+    DynamicBox[ToBoxes[
+      AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+       Dynamic[Typeset`query$$], 
+       Dynamic[Typeset`boxes$$], 
+       Dynamic[Typeset`allassumptions$$], 
+       Dynamic[Typeset`assumptions$$], 
+       Dynamic[Typeset`open$$], 
+       Dynamic[Typeset`querystate$$]], StandardForm],
+     ImageSizeCache->{230., {9.5, 14.5}},
+     TrackedSymbols:>{
+      Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+       Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+    DynamicModuleValues:>{},
+    UndoTrackedVariables:>{Typeset`open$$}],
+   BaseStyle->{"Deploy"},
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True]}]], "Input",
+ CellChangeTimes->{{3.9482349355753317`*^9, 3.948234939688677*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"65cad2ec-b8d2-4958-8984-edba61b6f75e"],
+
+Cell[BoxData[
+ RowBox[{"DayName", "[", 
+  NamespaceBox["LinguisticAssistant",
+   DynamicModuleBox[{Typeset`query$$ = "January 1 2000", Typeset`boxes$$ = 
+    RowBox[{"DateObject", "[", 
+      RowBox[{"{", 
+        RowBox[{"2000", ",", " ", "1", ",", " ", "1"}], "}"}], "]"}], 
+    Typeset`allassumptions$$ = {{
+     "word" -> "", "template" -> 
+      "Assuming the input is a date${separator}Use \"January\" as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "type" -> "MultiClash", 
+      "default" -> "{\"MC\", \"\"} -> {\"DateObject\", \"dflt\"}", 
+      "Values" -> {{
+        "name" -> "DateObject", "desc" -> "a date", "input" -> 
+         "{\"MC\", \"\"} -> {\"DateObject\"}", "word" -> "the input"}, {
+        "name" -> "GivenName", "desc" -> "a given name", "input" -> 
+         "{\"MC\", \"\"} -> {\"GivenName\"}", "word" -> "January"}}}}, 
+    Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+    Typeset`querystate$$ = {
+    "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+     0.591229`6.223300721709344, "Messages" -> {}}}, 
+    DynamicBox[ToBoxes[
+      AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+       Dynamic[Typeset`query$$], 
+       Dynamic[Typeset`boxes$$], 
+       Dynamic[Typeset`allassumptions$$], 
+       Dynamic[Typeset`assumptions$$], 
+       Dynamic[Typeset`open$$], 
+       Dynamic[Typeset`querystate$$]], StandardForm],
+     ImageSizeCache->{254., {9.5, 14.5}},
+     TrackedSymbols:>{
+      Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+       Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+    DynamicModuleValues:>{},
+    UndoTrackedVariables:>{Typeset`open$$}],
+   BaseStyle->{"Deploy"},
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True], "]"}]], "Input",
+ CellChangeTimes->{{3.948234945810104*^9, 3.948234965374187*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"c8b7314c-8e7b-47f4-9648-7b6661c37b98"],
+
+Cell[BoxData[
+ RowBox[{"Now", "-", 
+  NamespaceBox["LinguisticAssistant",
+   DynamicModuleBox[{Typeset`query$$ = "100,000 days", Typeset`boxes$$ = 
+    TemplateBox[{"100000", "\"days\"", "days", "\"Days\""}, "Quantity", 
+     SyntaxForm -> Mod], Typeset`allassumptions$$ = {}, 
+    Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+    Typeset`querystate$$ = {
+    "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+     0.532879`6.178173599149109, "Messages" -> {}}}, 
+    DynamicBox[ToBoxes[
+      AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+       Dynamic[Typeset`query$$], 
+       Dynamic[Typeset`boxes$$], 
+       Dynamic[Typeset`allassumptions$$], 
+       Dynamic[Typeset`assumptions$$], 
+       Dynamic[Typeset`open$$], 
+       Dynamic[Typeset`querystate$$]], StandardForm],
+     ImageSizeCache->{126., {11.5, 14.5}},
+     TrackedSymbols:>{
+      Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+       Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+    DynamicModuleValues:>{},
+    UndoTrackedVariables:>{Typeset`open$$}],
+   BaseStyle->{"Deploy"},
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True]}]], "Input",
+ CellChangeTimes->{{3.948234975455842*^9, 3.9482349821844597`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"15c292f2-e434-4586-a291-00b90807ab0f"],
+
+Cell[BoxData[
+ RowBox[{"LocalTime", "[", 
+  NamespaceBox["LinguisticAssistant",
+   DynamicModuleBox[{Typeset`query$$ = "Delhi", Typeset`boxes$$ = 
+    TemplateBox[{"\"Delhi\"", 
+      RowBox[{"Entity", "[", 
+        RowBox[{"\"City\"", ",", 
+          RowBox[{"{", 
+            RowBox[{"\"Delhi\"", ",", "\"Delhi\"", ",", "\"India\""}], 
+            "}"}]}], "]"}], 
+      "\"Entity[\\\"City\\\", {\\\"Delhi\\\", \\\"Delhi\\\", \
+\\\"India\\\"}]\"", "\"city\""}, "Entity"], 
+    Typeset`allassumptions$$ = {{
+     "type" -> "Clash", "word" -> "Delhi", "template" -> 
+      "Assuming \"Delhi\" is a city${separator}Use as ${desc} instead", 
+      "count" -> "2", "pulldown" -> "false", "default" -> 
+      "{\"C\", \"Delhi\"} -> {\"City\", \"dflt\"}", 
+      "Values" -> {{
+        "name" -> "City", "desc" -> "a city", "input" -> 
+         "{\"C\", \"Delhi\"} -> {\"City\"}"}, {
+        "name" -> "AdministrativeDivision", "desc" -> 
+         "an administrative division", "input" -> 
+         "{\"C\", \"Delhi\"} -> {\"AdministrativeDivision\"}"}}}, {
+     "type" -> "SubCategory", "word" -> "Delhi", "template" -> 
+      "Assuming Delhi (India)${separator}Use ${desc} or ${pulldown} instead", 
+      "count" -> "7", "pulldown" -> "true", "pulldownlabel" -> "more >>", 
+      "pulldownlength" -> "5", "default" -> 
+      "{\"DPClash\", \"CityE\", \"Delhi\"} -> {{\"Delhi\", \"Delhi\", \"India\
+\"}, \"dflt\"}", 
+      "Values" -> {{
+        "name" -> "{Delhi, Delhi, India}", "desc" -> "Delhi (India)", "input" -> 
+         "{\"DPClash\", \"CityE\", \"Delhi\"} -> {{\"Delhi\", \"Delhi\", \
+\"India\"}}"}, {
+        "name" -> "{Delhi, California, UnitedStates}", "desc" -> 
+         "Delhi (California, USA)", "input" -> 
+         "{\"DPClash\", \"CityE\", \"Delhi\"} -> {{\"Delhi\", \"California\", \
+\"UnitedStates\"}}"}, {
+        "name" -> "{Delhi, Louisiana, UnitedStates}", "desc" -> 
+         "Delhi (Louisiana, USA)", "input" -> 
+         "{\"DPClash\", \"CityE\", \"Delhi\"} -> {{\"Delhi\", \"Louisiana\", \
+\"UnitedStates\"}}"}, {
+        "name" -> "{Delhi, NewYork, UnitedStates}", "desc" -> 
+         "Delhi (New York, USA)", "input" -> 
+         "{\"DPClash\", \"CityE\", \"Delhi\"} -> {{\"Delhi\", \"NewYork\", \
+\"UnitedStates\"}}"}, {
+        "name" -> "{Delhi, Ontario, Canada}", "desc" -> "Delhi (Canada)", 
+         "input" -> 
+         "{\"DPClash\", \"CityE\", \"Delhi\"} -> {{\"Delhi\", \"Ontario\", \
+\"Canada\"}}"}, {
+        "name" -> "{Delhi, Iowa, UnitedStates}", "desc" -> 
+         "Delhi (Iowa, USA)", "input" -> 
+         "{\"DPClash\", \"CityE\", \"Delhi\"} -> {{\"Delhi\", \"Iowa\", \
+\"UnitedStates\"}}"}, {
+        "name" -> "{Delhi, Minnesota, UnitedStates}", "desc" -> 
+         "Delhi (Minnesota, USA)", "input" -> 
+         "{\"DPClash\", \"CityE\", \"Delhi\"} -> {{\"Delhi\", \"Minnesota\", \
+\"UnitedStates\"}}"}}}}, Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+    Typeset`querystate$$ = {
+    "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+     0.641042`6.258431478195268, "Messages" -> {
+       HoldForm[
+        MessageName[MoonPhase, "dtspec"]], 
+       HoldForm[
+        MessageName[MoonPhase, "dtspec"]], 
+       HoldForm[
+        MessageName[MoonPhase, "dtspec"]], 
+       HoldForm[
+        MessageName[General, "stop"]]}}}, 
+    DynamicBox[ToBoxes[
+      AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+       Dynamic[Typeset`query$$], 
+       Dynamic[Typeset`boxes$$], 
+       Dynamic[Typeset`allassumptions$$], 
+       Dynamic[Typeset`assumptions$$], 
+       Dynamic[Typeset`open$$], 
+       Dynamic[Typeset`querystate$$]], StandardForm],
+     ImageSizeCache->{114., {7., 15.}},
+     TrackedSymbols:>{
+      Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+       Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+    DynamicModuleValues:>{},
+    UndoTrackedVariables:>{Typeset`open$$}],
+   BaseStyle->{"Deploy"},
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True], "]"}]], "Input",
+ CellChangeTimes->{{3.948234988925825*^9, 3.948234999149479*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"bb95a887-97cb-49fb-8c42-4bb4fe3e0213"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Sunset", "[", 
+   RowBox[{"Here", ",", "Now"}], "]"}], "-", 
+  RowBox[{"Sunrise", "[", 
+   RowBox[{"Here", ",", "Now"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.948235004953951*^9, 3.948235052552453*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"c3d63477-5283-4fdd-ae5c-db31a9020a05"],
+
+Cell[BoxData[
+ RowBox[{"MoonPhase", "[", 
+  RowBox[{"Now", ",", "\"\<Icon\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.9482350563515778`*^9, 3.948235093320149*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"d24b0a72-f227-4d66-b373-04a0686d5953"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"MoonPhase", "[", 
+    RowBox[{"Now", "+", 
+     RowBox[{"n", " ", 
+      NamespaceBox["LinguisticAssistant",
+       DynamicModuleBox[{Typeset`query$$ = "days", Typeset`boxes$$ = 
+        TemplateBox[{
+          InterpretationBox["\[InvisibleSpace]", 1], "\"days\"", "days", 
+          "\"Days\""}, "Quantity", SyntaxForm -> Mod], 
+        Typeset`allassumptions$$ = {{
+         "type" -> "Clash", "word" -> "days", "template" -> 
+          "Assuming \"days\" is a unit${separator}Use as ${desc} instead", 
+          "count" -> "2", "pulldown" -> "false", "default" -> 
+          "{\"C\", \"days\"} -> {\"Unit\", \"dflt\"}", 
+          "Values" -> {{
+            "name" -> "Unit", "desc" -> "a unit", "input" -> 
+             "{\"C\", \"days\"} -> {\"Unit\"}"}, {
+            "name" -> "Word", "desc" -> "a word", "input" -> 
+             "{\"C\", \"days\"} -> {\"Word\"}"}}}}, 
+        Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+        Typeset`querystate$$ = {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         0.585903`6.219370715227863, "Messages" -> {}}}, 
+        DynamicBox[ToBoxes[
+          AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+           Dynamic[Typeset`query$$], 
+           Dynamic[Typeset`boxes$$], 
+           Dynamic[Typeset`allassumptions$$], 
+           Dynamic[Typeset`assumptions$$], 
+           Dynamic[Typeset`open$$], 
+           Dynamic[Typeset`querystate$$]], StandardForm],
+         ImageSizeCache->{98., {11.5, 14.5}},
+         TrackedSymbols:>{
+          Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+           Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+        DynamicModuleValues:>{},
+        UndoTrackedVariables:>{Typeset`open$$}],
+       BaseStyle->{"Deploy"},
+       DeleteWithContents->True,
+       Editable->False,
+       SelectWithContents->True]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.948235098946042*^9, 3.948235198609421*^9}, {
+  3.948235264466996*^9, 3.948235266379539*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"23b31ee0-f89a-498e-ba28-05296ac79d2b"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"MoonPhase", "[", 
+    RowBox[{
+     RowBox[{"Now", "+", 
+      RowBox[{"n", " ", 
+       NamespaceBox["LinguisticAssistant",
+        DynamicModuleBox[{Typeset`query$$ = "days", Typeset`boxes$$ = 
+         TemplateBox[{
+           InterpretationBox["\[InvisibleSpace]", 1], "\"days\"", "days", 
+           "\"Days\""}, "Quantity", SyntaxForm -> Mod], 
+         Typeset`allassumptions$$ = {{
+          "type" -> "Clash", "word" -> "days", "template" -> 
+           "Assuming \"days\" is a unit${separator}Use as ${desc} instead", 
+           "count" -> "2", "pulldown" -> "false", "default" -> 
+           "{\"C\", \"days\"} -> {\"Unit\", \"dflt\"}", 
+           "Values" -> {{
+             "name" -> "Unit", "desc" -> "a unit", "input" -> 
+              "{\"C\", \"days\"} -> {\"Unit\"}"}, {
+             "name" -> "Word", "desc" -> "a word", "input" -> 
+              "{\"C\", \"days\"} -> {\"Word\"}"}}}}, 
+         Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+         Typeset`querystate$$ = {
+         "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+          0.585903`6.219370715227863, "Messages" -> {}}}, 
+         DynamicBox[ToBoxes[
+           AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+            Dynamic[Typeset`query$$], 
+            Dynamic[Typeset`boxes$$], 
+            Dynamic[Typeset`allassumptions$$], 
+            Dynamic[Typeset`assumptions$$], 
+            Dynamic[Typeset`open$$], 
+            Dynamic[Typeset`querystate$$]], StandardForm],
+          ImageSizeCache->{98., {11.5, 14.5}},
+          
+          TrackedSymbols:>{
+           Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+            Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+         DynamicModuleValues:>{},
+         UndoTrackedVariables:>{Typeset`open$$}],
+        BaseStyle->{"Deploy"},
+        DeleteWithContents->True,
+        Editable->False,
+        SelectWithContents->True]}]}], ",", "\"\<Icon\>\""}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9482352802662992`*^9, 3.94823529637018*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"b0d4897c-9cfb-4c7b-90f9-73e61a995df4"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Sunrise", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "New York City", Typeset`boxes$$ = 
+      TemplateBox[{"\"New York City\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"City\"", ",", 
+            RowBox[{"{", 
+              
+              RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+                "\"UnitedStates\""}], "}"}]}], "]"}], 
+        "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "New York City", "template" -> 
+        "Assuming \"New York City\" is a city${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"New York City\"} -> {\"City\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"New York City\"} -> {\"City\"}"}, {
+          "name" -> "VisualArts", "desc" -> "an artwork", "input" -> 
+           "{\"C\", \"New York City\"} -> {\"VisualArts\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.955862`6.431940190202405, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{171., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", "Today"}], "]"}], "-", 
+  RowBox[{"Sunrise", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "London", Typeset`boxes$$ = 
+      TemplateBox[{"\"London\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"City\"", ",", 
+            RowBox[{"{", 
+              
+              RowBox[{"\"London\"", ",", "\"GreaterLondon\"", ",", 
+                "\"UnitedKingdom\""}], "}"}]}], "]"}], 
+        "\"Entity[\\\"City\\\", {\\\"London\\\", \\\"GreaterLondon\\\", \
+\\\"UnitedKingdom\\\"}]\"", "\"city\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "London", "template" -> 
+        "Assuming \"London\" is a city${separator}Use as ${desc} or ${desc} \
+or ${desc} instead", "count" -> "4", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"London\"} -> {\"City\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"London\"} -> {\"City\"}"}, {
+          "name" -> "AdministrativeDivision", "desc" -> 
+           "an administrative division", "input" -> 
+           "{\"C\", \"London\"} -> {\"AdministrativeDivision\"}"}, {
+          "name" -> "GivenName", "desc" -> "a given name", "input" -> 
+           "{\"C\", \"London\"} -> {\"GivenName\"}"}, {
+          "name" -> "Surname", "desc" -> "a surname", "input" -> 
+           "{\"C\", \"London\"} -> {\"Surname\"}"}}}, {
+       "type" -> "SubCategory", "word" -> "London", "template" -> 
+        "Assuming London (United Kingdom)${separator}Use ${desc} or \
+${pulldown} instead", "count" -> "7", "pulldown" -> "true", "pulldownlabel" -> 
+        "more >>", "pulldownlength" -> "5", "default" -> 
+        "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"GreaterLondon\", \"UnitedKingdom\"}, \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "{London, GreaterLondon, UnitedKingdom}", "desc" -> 
+           "London (United Kingdom)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"GreaterLondon\", \"UnitedKingdom\"}}"}, {
+          "name" -> "{London, Ontario, Canada}", "desc" -> "London (Canada)", 
+           "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"Ontario\", \"Canada\"}}"}, {
+          "name" -> "{London, California, UnitedStates}", "desc" -> 
+           "London (California, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"California\", \"UnitedStates\"}}"}, {
+          "name" -> "{London, Ohio, UnitedStates}", "desc" -> 
+           "London (Ohio, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \"Ohio\", \
+\"UnitedStates\"}}"}, {
+          "name" -> "{London, Kentucky, UnitedStates}", "desc" -> 
+           "London (Kentucky, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"Kentucky\", \"UnitedStates\"}}"}, {
+          "name" -> "{London, Arkansas, UnitedStates}", "desc" -> 
+           "London (Arkansas, USA)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"Arkansas\", \"UnitedStates\"}}"}, {
+          "name" -> "{London, Kiritimati, Kiribati}", "desc" -> 
+           "London (Kiribati)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"London\"} -> {{\"London\", \
+\"Kiritimati\", \"Kiribati\"}}"}}}}, Typeset`assumptions$$ = {}, 
+      Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.782086`6.344799505215487, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{130., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", "Today"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.948235304686932*^9, 3.9482353770831747`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"b0c28153-bced-4f32-9350-5ad29b0f4be3"],
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Now", "-", 
+    RowBox[{"DateObject", "[", 
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "Apollo 11 landing", 
+       Typeset`boxes$$ = RowBox[{
+         TemplateBox[{"\"Apollo 11\"", 
+           RowBox[{"Entity", "[", 
+             RowBox[{"\"MannedSpaceMission\"", ",", "\"Apollo11\""}], "]"}], 
+           "\"Entity[\\\"MannedSpaceMission\\\", \\\"Apollo11\\\"]\"", 
+           "\"manned space mission\""}, "Entity"], "[", 
+         TemplateBox[{"\"lunar landing date\"", 
+           RowBox[{"EntityProperty", "[", 
+             RowBox[{"\"MannedSpaceMission\"", ",", "\"LunarLandingDate\""}], 
+             "]"}], "\"EntityProperty[\\\"MannedSpaceMission\\\", \
+\\\"LunarLandingDate\\\"]\""}, "EntityProperty"], "]"}], 
+       Typeset`allassumptions$$ = {{
+        "type" -> "SubCategory", "word" -> "landing", "template" -> 
+         "Assuming lunar landing date${separator}Use ${desc} instead", 
+         "count" -> "2", "pulldown" -> "false", "default" -> 
+         "{\"DPClash\", \"MannedSpaceMissionP\", \"landing\"} -> \
+{\"ComputedLunarLandingDate\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "ComputedLunarLandingDate", "desc" -> 
+            "lunar landing date", "input" -> 
+            "{\"DPClash\", \"MannedSpaceMissionP\", \"landing\"} -> \
+{\"ComputedLunarLandingDate\"}"}, {
+           "name" -> "ComputedEarthLandingDate", "desc" -> 
+            "Earth landing date", "input" -> 
+            "{\"DPClash\", \"MannedSpaceMissionP\", \"landing\"} -> \
+{\"ComputedEarthLandingDate\"}"}}}}, Typeset`assumptions$$ = {}, 
+       Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.852138`6.382054926038879, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{398., {14.5, 17.5}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True], "]"}]}], ",", "\"\<Years\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9482353795313053`*^9, 3.9482353795326233`*^9}, {
+  3.948235412331564*^9, 3.948235447260738*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"707c1299-581a-4344-a41d-7f99f878aa84"],
+
+Cell[BoxData[
+ RowBox[{"AirTemperatureData", "[", 
+  RowBox[{
+   NamespaceBox["LinguisticAssistant",
+    DynamicModuleBox[{Typeset`query$$ = "Eiffel Tower", Typeset`boxes$$ = 
+     TemplateBox[{"\"Eiffel Tower\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Building\"", ",", "\"EiffelTower::5h9w8\""}], "]"}], 
+       "\"Entity[\\\"Building\\\", \\\"EiffelTower::5h9w8\\\"]\"", 
+       "\"building\""}, "Entity"], 
+     Typeset`allassumptions$$ = {{
+      "type" -> "Clash", "word" -> "Eiffel Tower", "template" -> 
+       "Assuming \"Eiffel Tower\" is a structure${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+       "{\"C\", \"Eiffel Tower\"} -> {\"Building\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "Building", "desc" -> "a structure", "input" -> 
+          "{\"C\", \"Eiffel Tower\"} -> {\"Building\"}"}, {
+         "name" -> "Word", "desc" -> "a word", "input" -> 
+          "{\"C\", \"Eiffel Tower\"} -> {\"Word\"}"}}}, {
+      "type" -> "SubCategory", "word" -> "Eiffel Tower", "template" -> 
+       "Assuming Eiffel Tower${separator}Use ${desc} instead", "count" -> "2",
+        "pulldown" -> "false", "default" -> 
+       "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelTower::5h9w8\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "EiffelTower::5h9w8", "desc" -> "Eiffel Tower", "input" -> 
+          "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelTower::5h9w8\"}"}, {
+         "name" -> "EiffelBuilding::q6v42", "desc" -> "Eiffel Building", 
+          "input" -> 
+          "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelBuilding::q6v42\"}"}}}}, Typeset`assumptions$$ = {}, 
+     Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.890533`6.401195011009282, "Messages" -> {}}}, 
+     DynamicBox[ToBoxes[
+       AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+        Dynamic[Typeset`query$$], 
+        Dynamic[Typeset`boxes$$], 
+        Dynamic[Typeset`allassumptions$$], 
+        Dynamic[Typeset`assumptions$$], 
+        Dynamic[Typeset`open$$], 
+        Dynamic[Typeset`querystate$$]], StandardForm],
+      ImageSizeCache->{178., {7., 15.}},
+      TrackedSymbols:>{
+       Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+        Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+     DynamicModuleValues:>{},
+     UndoTrackedVariables:>{Typeset`open$$}],
+    BaseStyle->{"Deploy"},
+    DeleteWithContents->True,
+    Editable->False,
+    SelectWithContents->True], ",", 
+   NamespaceBox["LinguisticAssistant",
+    DynamicModuleBox[{Typeset`query$$ = "Noon Yesterday", Typeset`boxes$$ = 
+     RowBox[{"DateObject", "[", 
+       RowBox[{"Yesterday", ",", " ", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{"{", 
+             RowBox[{"12", ",", " ", "0", ",", " ", "0"}], "}"}], "]"}]}], 
+       "]"}], Typeset`allassumptions$$ = {}, Typeset`assumptions$$ = {}, 
+     Typeset`open$$ = {1}, Typeset`querystate$$ = {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.624693`6.247211632980642, "Messages" -> {}}}, 
+     DynamicBox[ToBoxes[
+       AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+        Dynamic[Typeset`query$$], 
+        Dynamic[Typeset`boxes$$], 
+        Dynamic[Typeset`allassumptions$$], 
+        Dynamic[Typeset`assumptions$$], 
+        Dynamic[Typeset`open$$], 
+        Dynamic[Typeset`querystate$$]], StandardForm],
+      ImageSizeCache->{115., {8.5, 14.5}},
+      TrackedSymbols:>{
+       Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+        Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+     DynamicModuleValues:>{},
+     UndoTrackedVariables:>{Typeset`open$$}],
+    BaseStyle->{"Deploy"},
+    DeleteWithContents->True,
+    Editable->False,
+    SelectWithContents->True]}], "]"}]], "Input",
+ CellChangeTimes->{{3.948235452534175*^9, 3.948235489294945*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"5386af3d-df11-4e1d-83f4-d6c289bd7184"],
+
+Cell[BoxData[
+ RowBox[{"DateListPlot", "[", 
+  RowBox[{"AirTemperatureData", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "Eiffel Tower", Typeset`boxes$$ = 
+      TemplateBox[{"\"Eiffel Tower\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"Building\"", ",", "\"EiffelTower::5h9w8\""}], "]"}], 
+        "\"Entity[\\\"Building\\\", \\\"EiffelTower::5h9w8\\\"]\"", 
+        "\"building\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "Eiffel Tower", "template" -> 
+        "Assuming \"Eiffel Tower\" is a structure${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"Eiffel Tower\"} -> {\"Building\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "Building", "desc" -> "a structure", "input" -> 
+           "{\"C\", \"Eiffel Tower\"} -> {\"Building\"}"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "{\"C\", \"Eiffel Tower\"} -> {\"Word\"}"}}}, {
+       "type" -> "SubCategory", "word" -> "Eiffel Tower", "template" -> 
+        "Assuming Eiffel Tower${separator}Use ${desc} instead", "count" -> 
+        "2", "pulldown" -> "false", "default" -> 
+        "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelTower::5h9w8\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "EiffelTower::5h9w8", "desc" -> "Eiffel Tower", "input" -> 
+           "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelTower::5h9w8\"}"}, {
+          "name" -> "EiffelBuilding::q6v42", "desc" -> "Eiffel Building", 
+           "input" -> 
+           "{\"DPClash\", \"BuildingE\", \"Eiffel Tower\"} -> \
+{\"EiffelBuilding::q6v42\"}"}}}}, Typeset`assumptions$$ = {}, 
+      Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.620785`6.244486208034873, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{178., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Today", "-", 
+       NamespaceBox["LinguisticAssistant",
+        DynamicModuleBox[{Typeset`query$$ = "1 week", Typeset`boxes$$ = 
+         TemplateBox[{"1", "\"wk\"", "week", "\"Weeks\""}, "Quantity", 
+          SyntaxForm -> Mod], Typeset`allassumptions$$ = {}, 
+         Typeset`assumptions$$ = {}, Typeset`open$$ = {1}, 
+         Typeset`querystate$$ = {
+         "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+          0.537321`6.181778807833322, "Messages" -> {}}}, 
+         DynamicBox[ToBoxes[
+           AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+            Dynamic[Typeset`query$$], 
+            Dynamic[Typeset`boxes$$], 
+            Dynamic[Typeset`allassumptions$$], 
+            Dynamic[Typeset`assumptions$$], 
+            Dynamic[Typeset`open$$], 
+            Dynamic[Typeset`querystate$$]], StandardForm],
+          ImageSizeCache->{62., {8.5, 14.5}},
+          
+          TrackedSymbols:>{
+           Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+            Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+         DynamicModuleValues:>{},
+         UndoTrackedVariables:>{Typeset`open$$}],
+        BaseStyle->{"Deploy"},
+        DeleteWithContents->True,
+        Editable->False,
+        SelectWithContents->True]}], ",", "Today"}], "}"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.948235512634783*^9, 3.948235581340345*^9}, {
+  3.94823564714048*^9, 3.948235648156612*^9}, {3.948235851132154*^9, 
+  3.948235853839239*^9}},ExpressionUUID->"fbe927a8-45dd-464c-a4ee-\
+8ae347e6d07d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AirTemperatureData", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "Los Angeles", Typeset`boxes$$ = 
+      TemplateBox[{"\"Los Angeles\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"City\"", ",", 
+            RowBox[{"{", 
+              
+              RowBox[{"\"LosAngeles\"", ",", "\"California\"", ",", 
+                "\"UnitedStates\""}], "}"}]}], "]"}], 
+        "\"Entity[\\\"City\\\", {\\\"LosAngeles\\\", \\\"California\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "Los Angeles", "template" -> 
+        "Assuming \"Los Angeles\" is a city${separator}Use as ${desc} or \
+${desc} or ${desc} or ${desc} or ${desc} or ${desc} or ${desc} instead", 
+        "count" -> "8", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"Los Angeles\"} -> {\"City\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"Los Angeles\"} -> {\"City\"}"}, {
+          "name" -> "AdministrativeDivision", "desc" -> 
+           "an administrative division", "input" -> 
+           "{\"C\", \"Los Angeles\"} -> {\"AdministrativeDivision\"}"}, {
+          "name" -> "NBATeam", "desc" -> "an NBA team", "input" -> 
+           "{\"C\", \"Los Angeles\"} -> {\"NBATeam\"}"}, {
+          "name" -> "MLBTeam", "desc" -> "an MLB team", "input" -> 
+           "{\"C\", \"Los Angeles\"} -> {\"MLBTeam\"}"}, {
+          "name" -> "NFLTeam", "desc" -> "an NFL team", "input" -> 
+           "{\"C\", \"Los Angeles\"} -> {\"NFLTeam\"}"}, {
+          "name" -> "MusicWorkRendition", "desc" -> "a music work rendition", 
+           "input" -> 
+           "{\"C\", \"Los Angeles\"} -> {\"MusicWorkRendition\"}"}, {
+          "name" -> "MusicAlbum", "desc" -> "a music album", "input" -> 
+           "{\"C\", \"Los Angeles\"} -> {\"MusicAlbum\"}"}, {
+          "name" -> "MusicWork", "desc" -> "a music work", "input" -> 
+           "{\"C\", \"Los Angeles\"} -> {\"MusicWork\"}"}}}, {
+       "type" -> "SubCategory", "word" -> "Los Angeles", "template" -> 
+        "Assuming Los Angeles (United States)${separator}Use ${desc} or \
+${desc} instead", "count" -> "3", "pulldown" -> "false", "default" -> 
+        "{\"DPClash\", \"CityE\", \"Los Angeles\"} -> {{\"LosAngeles\", \
+\"California\", \"UnitedStates\"}, \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "{LosAngeles, California, UnitedStates}", "desc" -> 
+           "Los Angeles (United States)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Los Angeles\"} -> {{\"LosAngeles\", \
+\"California\", \"UnitedStates\"}}"}, {
+          "name" -> "{LosAngeles, BioBio, Chile}", "desc" -> 
+           "Los Angeles (Chile)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Los Angeles\"} -> {{\"LosAngeles\", \
+\"BioBio\", \"Chile\"}}"}, {
+          "name" -> "{LosAngeles, Butuan, Philippines}", "desc" -> 
+           "Los Angeles (Philippines)", "input" -> 
+           "{\"DPClash\", \"CityE\", \"Los Angeles\"} -> {{\"LosAngeles\", \
+\"Butuan\", \"Philippines\"}}"}}}}, Typeset`assumptions$$ = {}, 
+      Typeset`open$$ = {1, 2}, Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.659432`6.2707150116537544, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{160., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", "Now"}], "]"}], "-", 
+  RowBox[{"AirTemperatureData", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "New York City", Typeset`boxes$$ = 
+      TemplateBox[{"\"New York City\"", 
+        RowBox[{"Entity", "[", 
+          RowBox[{"\"City\"", ",", 
+            RowBox[{"{", 
+              
+              RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+                "\"UnitedStates\""}], "}"}]}], "]"}], 
+        "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"", "\"city\""}, "Entity"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "New York City", "template" -> 
+        "Assuming \"New York City\" is a city${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"New York City\"} -> {\"City\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "City", "desc" -> "a city", "input" -> 
+           "{\"C\", \"New York City\"} -> {\"City\"}"}, {
+          "name" -> "VisualArts", "desc" -> "an artwork", "input" -> 
+           "{\"C\", \"New York City\"} -> {\"VisualArts\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.903737`6.407587056640748, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{171., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", "Now"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.948235660212727*^9, 3.948235706863295*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"6be81a6e-ce5a-48a0-a9aa-3abfa6c40eb4"],
+
+Cell[BoxData[
+ RowBox[{"DateListPlot", "[", 
+  RowBox[{"WordFrequencyData", "[", 
+   RowBox[{"\"\<groovy\>\"", ",", "\"\<TimeSeries\>\""}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.948235711010394*^9, 3.9482357533452168`*^9}, {
+  3.948235857680049*^9, 3.9482358598337173`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"9fb28904-aff3-4b7a-a505-c31c48c9c077"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   NamespaceBox["LinguisticAssistant",
+    DynamicModuleBox[{Typeset`query$$ = "UK", Typeset`boxes$$ = 
+     TemplateBox[{"\"United Kingdom\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Country\"", ",", "\"UnitedKingdom\""}], "]"}], 
+       "\"Entity[\\\"Country\\\", \\\"UnitedKingdom\\\"]\"", "\"country\""}, 
+      "Entity"], 
+     Typeset`allassumptions$$ = {{
+      "type" -> "Clash", "word" -> "UK", "template" -> 
+       "Assuming \"UK\" is a country${separator}Use as ${desc} instead", 
+       "count" -> "2", "pulldown" -> "false", "default" -> 
+       "{\"C\", \"UK\"} -> {\"Country\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "Country", "desc" -> "a country", "input" -> 
+          "{\"C\", \"UK\"} -> {\"Country\"}"}, {
+         "name" -> "GivenName", "desc" -> "a given name", "input" -> 
+          "{\"C\", \"UK\"} -> {\"GivenName\"}"}}}}, 
+     Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+     Typeset`querystate$$ = {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.963902`6.435577874885594, "Messages" -> {}}}, 
+     DynamicBox[ToBoxes[
+       AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+        Dynamic[Typeset`query$$], 
+        Dynamic[Typeset`boxes$$], 
+        Dynamic[Typeset`allassumptions$$], 
+        Dynamic[Typeset`assumptions$$], 
+        Dynamic[Typeset`open$$], 
+        Dynamic[Typeset`querystate$$]], StandardForm],
+      ImageSizeCache->{205., {7., 15.}},
+      TrackedSymbols:>{
+       Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+        Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+     DynamicModuleValues:>{},
+     UndoTrackedVariables:>{Typeset`open$$}],
+    BaseStyle->{"Deploy"},
+    DeleteWithContents->True,
+    Editable->False,
+    SelectWithContents->True], "[", 
+   RowBox[{"Dated", "[", 
+    RowBox[{"\"\<Population\>\"", ",", "2000"}], "]"}], "]"}], "-", 
+  RowBox[{
+   NamespaceBox["LinguisticAssistant",
+    DynamicModuleBox[{Typeset`query$$ = "UK", Typeset`boxes$$ = 
+     TemplateBox[{"\"United Kingdom\"", 
+       RowBox[{"Entity", "[", 
+         RowBox[{"\"Country\"", ",", "\"UnitedKingdom\""}], "]"}], 
+       "\"Entity[\\\"Country\\\", \\\"UnitedKingdom\\\"]\"", "\"country\""}, 
+      "Entity"], 
+     Typeset`allassumptions$$ = {{
+      "type" -> "Clash", "word" -> "UK", "template" -> 
+       "Assuming \"UK\" is a country${separator}Use as ${desc} instead", 
+       "count" -> "2", "pulldown" -> "false", "default" -> 
+       "{\"C\", \"UK\"} -> {\"Country\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "Country", "desc" -> "a country", "input" -> 
+          "{\"C\", \"UK\"} -> {\"Country\"}"}, {
+         "name" -> "GivenName", "desc" -> "a given name", "input" -> 
+          "{\"C\", \"UK\"} -> {\"GivenName\"}"}}}}, 
+     Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+     Typeset`querystate$$ = {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.622644`6.245784800947523, "Messages" -> {}}}, 
+     DynamicBox[ToBoxes[
+       AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+        Dynamic[Typeset`query$$], 
+        Dynamic[Typeset`boxes$$], 
+        Dynamic[Typeset`allassumptions$$], 
+        Dynamic[Typeset`assumptions$$], 
+        Dynamic[Typeset`open$$], 
+        Dynamic[Typeset`querystate$$]], StandardForm],
+      ImageSizeCache->{205., {7., 15.}},
+      TrackedSymbols:>{
+       Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+        Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+     DynamicModuleValues:>{},
+     UndoTrackedVariables:>{Typeset`open$$}],
+    BaseStyle->{"Deploy"},
+    DeleteWithContents->True,
+    Editable->False,
+    SelectWithContents->True], "[", 
+   RowBox[{"Dated", "[", 
+    RowBox[{"\"\<Population\>\"", ",", "1900"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.948235865065329*^9, 3.948235895653243*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"32777750-d21c-41bf-b72a-3d0fe1444df6"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.948235930876976*^9, 
+  3.948235930877706*^9}},ExpressionUUID->"d3da2a51-7528-4794-a24e-\
+0d7b24863999"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 747},
+WindowMargins->{{73, Automatic}, {Automatic, 16}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b730d291-3110-4d85-be1c-c861de950eb9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6416, 129, 39, "Input",ExpressionUUID->"8f10402d-da7b-4b79-8cdd-ad97244610ff"],
+Cell[6977, 151, 20357, 373, 68, "Input",ExpressionUUID->"1239a825-b461-4b67-8ef7-79ef0f405ea1"],
+Cell[27337, 526, 7928, 155, 39, "Input",ExpressionUUID->"751915d5-a408-4c16-a349-b8e6c058da90"],
+Cell[35268, 683, 1478, 31, 39, "Input",ExpressionUUID->"d1975c82-3c4b-4082-a6d4-a3ddffe473f7"],
+Cell[36749, 716, 7515, 157, 39, "Input",ExpressionUUID->"b2f3d816-0d8c-4093-8d2d-74a4949937b1"],
+Cell[44267, 875, 4974, 102, 39, "Input",ExpressionUUID->"def00828-9db5-4d7d-9686-d6b4601033d0"],
+Cell[49244, 979, 3637, 73, 40, "Input",ExpressionUUID->"64a131c2-3a88-4787-9629-2c153f5cc721"],
+Cell[52884, 1054, 16565, 294, 68, "Input",ExpressionUUID->"4a7f5bf5-0441-4ee1-98f5-83f5999d0572"],
+Cell[69452, 1350, 4444, 86, 40, "Input",ExpressionUUID->"bd0a5a58-7709-4e91-81cd-143912253893"],
+Cell[73899, 1438, 2336, 46, 39, "Input",ExpressionUUID->"fc97bb7e-7263-4b46-bc4d-522e86d17bbf"],
+Cell[76238, 1486, 580, 15, 30, "Input",ExpressionUUID->"5ce7a223-ab5e-48c9-819d-82b710f7f3dd"],
+Cell[76821, 1503, 4978, 95, 39, "Input",ExpressionUUID->"12ae1a44-6be7-411e-a324-fdbf4f64871b"],
+Cell[81802, 1600, 6776, 132, 60, "Input",ExpressionUUID->"442620ea-02db-4c2a-91de-6cd1048bd4e1"],
+Cell[CellGroupData[{
+Cell[88603, 1736, 160, 3, 54, "Subsection",ExpressionUUID->"d2071656-a4d8-456d-82ad-f84a4705ba6f"],
+Cell[88766, 1741, 1374, 30, 39, "Input",ExpressionUUID->"65cad2ec-b8d2-4958-8984-edba61b6f75e"],
+Cell[90143, 1773, 1932, 40, 39, "Input",ExpressionUUID->"c8b7314c-8e7b-47f4-9648-7b6661c37b98"],
+Cell[92078, 1815, 1346, 29, 41, "Input",ExpressionUUID->"15c292f2-e434-4586-a291-00b90807ab0f"],
+Cell[93427, 1846, 4160, 87, 39, "Input",ExpressionUUID->"bb95a887-97cb-49fb-8c42-4bb4fe3e0213"],
+Cell[97590, 1935, 319, 7, 30, "Input",ExpressionUUID->"c3d63477-5283-4fdd-ae5c-db31a9020a05"],
+Cell[97912, 1944, 245, 4, 30, "Input",ExpressionUUID->"d24b0a72-f227-4d66-b373-04a0686d5953"],
+Cell[98160, 1950, 2219, 47, 41, "Input",ExpressionUUID->"23b31ee0-f89a-498e-ba28-05296ac79d2b"],
+Cell[100382, 1999, 2257, 48, 41, "Input",ExpressionUUID->"b0d4897c-9cfb-4c7b-90f9-73e61a995df4"],
+Cell[102642, 2049, 6613, 132, 39, "Input",ExpressionUUID->"b0c28153-bced-4f32-9350-5ad29b0f4be3"],
+Cell[109258, 2183, 2848, 57, 77, "Input",ExpressionUUID->"707c1299-581a-4344-a41d-7f99f878aa84"],
+Cell[112109, 2242, 4065, 84, 39, "Input",ExpressionUUID->"5386af3d-df11-4e1d-83f4-d6c289bd7184"],
+Cell[116177, 2328, 4298, 89, 39, "Input",ExpressionUUID->"fbe927a8-45dd-464c-a4ee-8ae347e6d07d"],
+Cell[120478, 2419, 6397, 125, 68, "Input",ExpressionUUID->"6be81a6e-ce5a-48a0-a9aa-3abfa6c40eb4"],
+Cell[126878, 2546, 363, 7, 30, "Input",ExpressionUUID->"9fb28904-aff3-4b7a-a505-c31c48c9c077"],
+Cell[CellGroupData[{
+Cell[127266, 2557, 4011, 87, 65, InheritFromParent,ExpressionUUID->"32777750-d21c-41bf-b72a-3d0fe1444df6"],
+Cell[131280, 2646, 152, 3, 30, InheritFromParent,ExpressionUUID->"d3da2a51-7528-4794-a24e-0d7b24863999"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
