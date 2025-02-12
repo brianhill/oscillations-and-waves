@@ -4,10 +4,12 @@
 
 ### 2025-02-11 &mdash; PS7 &mdash; *EIWL3* Sections 18 and 19
 
+* [Rania's solution](./Rania-PS07.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS07.nb.pdf)
 
 ### 2025-02-11 &mdash; PS6 &mdash; Damped Pendulum
 
+* [Rania's solution](./Rania-PS06.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS06.nb.pdf)
 
 ### 2025-02-04 &mdash; PS5 &mdash; *EIWL3* Sections 14 and 17
