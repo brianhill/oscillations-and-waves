@@ -12,6 +12,7 @@
 
 ### 2025-02-04 &mdash; PS5 &mdash; *EIWL3* Sections 14 and 17
 
+* [Jeremy's solution](./Jeremy-PS05.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS05.nb.pdf)
 
 ### 2025-01-29 &mdash; PS4 &mdash; *EIWL3* Second Half of Section 11, and Sections 12 and 13
