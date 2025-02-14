@@ -2,6 +2,10 @@
 
 *Listed reverse-chronologically (most recent at top)*
 
+### 2025-02-14 &mdash; Exam 1 &mdash; Naval Battle
+
+* [Brian's solution](../brian54321/Brian-Exam1.nb.pdf)
+
 ### 2025-02-11 &mdash; PS7 &mdash; *EIWL3* Sections 18 and 19
 
 * [Brian's solution](../brian54321/Brian-PS07.nb.pdf)
