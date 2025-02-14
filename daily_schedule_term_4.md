@@ -29,9 +29,9 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 ### Week 5 &mdash; Forced Pendulum &mdash; Phase Space &mdash; Chaos &mdash; Exam 1
 
 * Tuesday, Feb. 11 &mdash; Problem Sets 6 and 7: As Problem Set 6, re-download my slightly tweaked version of the *[Damped Pendulum - With Animated Graphics](./worksheets/06-DampedPendulum-WithAnimatedGraphics.nb.pdf)* notebook that we started in the last class, finish it, and email it, and then as Problem Set 7, do the exercises from Sections 18 and 19 and email them as well &mdash; In-class: Examine *[Forced Pendulum - Phase Space - Chaos](./worksheets/07-ForcedPendulum-PhaseSpace-Chaos.nb.pdf)* notebook
-* Friday, Feb. 14 &mdash; Exam 1
+* Friday, Feb. 14 &mdash; [Exam 1 - Naval Battle](./exams/Exam1.nb.pdf)
 
-<img src="./illustrations/ForcedPendulumPhaseSpacePlot.png" width="100%">
+<img src="./illustrations/NavalBattle.png" width="60%">
 
 ### Week 6 &mdash; Systems with Two Masses
 
