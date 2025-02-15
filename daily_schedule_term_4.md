@@ -29,20 +29,23 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 ### Week 5 &mdash; Forced Pendulum &mdash; Phase Space &mdash; Chaos &mdash; Exam 1
 
 * Tuesday, Feb. 11 &mdash; Problem Sets 6 and 7: As Problem Set 6, re-download my slightly tweaked version of the *[Damped Pendulum - With Animated Graphics](./worksheets/06-DampedPendulum-WithAnimatedGraphics.nb.pdf)* notebook that we started in the last class, finish it, and email it, and then as Problem Set 7, do the exercises from Sections 18 and 19 and email them as well &mdash; In-class: Examine *[Forced Pendulum - Phase Space - Chaos](./worksheets/07-ForcedPendulum-PhaseSpace-Chaos.nb.pdf)* notebook
-* Friday, Feb. 14 &mdash; [Exam 1 - Naval Battle](./exams/Exam1.nb.pdf) &mdash; [Brian's Solution](./solutions/brian54321/Brian-Exam1.nb.pdf)
+* Friday, Feb. 14 &mdash; *[Exam 1 - Naval Battle](./exams/Exam1.nb.pdf)* &mdash; *[Brian's Solution](./solutions/brian54321/Brian-Exam1.nb.pdf)*
 
-<img src="./illustrations/NavalBattle.png" width="60%">
+### Week 6 &mdash; Systems with Two Masses and Systems with Many Masses
 
-### Week 6 &mdash; Systems with Two Masses
+#### *EIWL3* Section 20, Section 23, Sections 25-34, and Sections 38-41 are when we get to the grammar and a significantly more advanced understanding of the Wolfram Language
+
+* Tuesday, Feb. 18 &mdash; Problem Set 8: Do the Exercises from *EIWL3* Sections 20, 21, and 22 &mdash; In-class: Develop *[Coupled Harmonic Oscillators - Theory](./theory/CoupledHarmonicOscillators-Theory.nb.pdf)* and then complete the *Coupled Harmonic Oscillators* notebook
+
+<img src="./illustrations/CoupledHarmonicOscillators.png" width="80%">
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
-* Tuesday, Feb. 18 &mdash; Coupled Harmonic Oscillators
-* Friday, Feb. 21 &mdash; Compound Pendulum
+* Friday, Feb. 21 &mdash; Problem Set 9: Do the Exercises from *EIWL3* Sections 23, 24, and 25 &mdash; In-Class: Many Coupled Harmonic Oscillators
 
-### Week 7
+### Week 7 &mdash; Compound Pendulum
 
-* Tuesday, Feb. 25
+* Tuesday, Feb. 25 &mdash; Problem Set 10: Do the Exercises from *EIWL3* Sections 26, 27, and 28 &mdash; In-Class: Compound Pendulum
 
 ## Daily Schedule Term 5
 
@@ -55,3 +58,9 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 * Tuesday, March 25
 * Friday, March 28
+
+### Week 10
+
+* Tuesday, April 1
+* Friday, April 4
+
