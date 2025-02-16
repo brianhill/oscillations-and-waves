@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    243285,       4304]
-NotebookOptionsPosition[    240391,       4244]
-NotebookOutlinePosition[    240875,       4263]
-CellTagsIndexPosition[    240832,       4260]
+NotebookDataLength[    243570,       4308]
+NotebookOptionsPosition[    240676,       4248]
+NotebookOutlinePosition[    241160,       4267]
+CellTagsIndexPosition[    241117,       4264]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -4088,7 +4088,8 @@ iE7PrwTTKy5oOoJoK89jYDrj7fapYHWHj4Ppd90el0F0pvY6MA0AaO3KfA==
 Cell[TextData[{
  "The notebook you are about to do only has two masses and three springs. Can \
 you see what we might have to do if we had seven masses and eight springs, \
-with the two end springs connected to the walls being identical:\n\n",
+and while we are generalizing, let\[CloseCurlyQuote]s make all the springs \
+identical to reduce the work a bit:\n\n",
  Cell[BoxData[
   FormBox[
    RowBox[{"\[VeryThinSpace]", 
@@ -4102,7 +4103,7 @@ with the two end springs connected to the walls being identical:\n\n",
        SubscriptBox["x", "1"]}], "+", 
       RowBox[{
        SuperscriptBox[
-        SubscriptBox["\[Omega]", "12"], "2"], "(", 
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
        RowBox[{
         SubscriptBox["x", "2"], "-", 
         SubscriptBox["x", "1"]}], ")"}]}]}]}], TraditionalForm]],
@@ -4117,13 +4118,13 @@ with the two end springs connected to the walls being identical:\n\n",
       RowBox[{"-", 
        RowBox[{
         SuperscriptBox[
-         SubscriptBox["\[Omega]", "12"], "2"], "(", 
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
         RowBox[{
          SubscriptBox["x", "2"], "-", 
          SubscriptBox["x", "1"]}], ")"}]}], "+", "\[VeryThinSpace]", 
       RowBox[{
        SuperscriptBox[
-        SubscriptBox["\[Omega]", "23"], "2"], "(", 
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
        RowBox[{
         SubscriptBox["x", "3"], "-", 
         SubscriptBox["x", "2"]}], ")"}]}]}]}], TraditionalForm]],
@@ -4138,13 +4139,13 @@ with the two end springs connected to the walls being identical:\n\n",
       RowBox[{"-", 
        RowBox[{
         SuperscriptBox[
-         SubscriptBox["\[Omega]", "23"], "2"], "(", 
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
         RowBox[{
          SubscriptBox["x", "3"], "-", 
          SubscriptBox["x", "2"]}], ")"}]}], "+", "\[VeryThinSpace]", 
       RowBox[{
        SuperscriptBox[
-        SubscriptBox["\[Omega]", "34"], "2"], "(", 
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
        RowBox[{
         SubscriptBox["x", "4"], "-", 
         SubscriptBox["x", "3"]}], ")"}]}]}]}], TraditionalForm]],
@@ -4159,13 +4160,13 @@ with the two end springs connected to the walls being identical:\n\n",
       RowBox[{"-", 
        RowBox[{
         SuperscriptBox[
-         SubscriptBox["\[Omega]", "34"], "2"], "(", 
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
         RowBox[{
          SubscriptBox["x", "4"], "-", 
          SubscriptBox["x", "3"]}], ")"}]}], "+", "\[VeryThinSpace]", 
       RowBox[{
        SuperscriptBox[
-        SubscriptBox["\[Omega]", "45"], "2"], "(", 
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
        RowBox[{
         SubscriptBox["x", "5"], "-", 
         SubscriptBox["x", "4"]}], ")"}]}]}]}], TraditionalForm]],
@@ -4180,13 +4181,13 @@ with the two end springs connected to the walls being identical:\n\n",
       RowBox[{"-", 
        RowBox[{
         SuperscriptBox[
-         SubscriptBox["\[Omega]", "45"], "2"], "(", 
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
         RowBox[{
          SubscriptBox["x", "5"], "-", 
          SubscriptBox["x", "4"]}], ")"}]}], "+", "\[VeryThinSpace]", 
       RowBox[{
        SuperscriptBox[
-        SubscriptBox["\[Omega]", "56"], "2"], "(", 
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
        RowBox[{
         SubscriptBox["x", "6"], "-", 
         SubscriptBox["x", "5"]}], ")"}]}]}]}], TraditionalForm]],
@@ -4201,13 +4202,13 @@ with the two end springs connected to the walls being identical:\n\n",
       RowBox[{"-", 
        RowBox[{
         SuperscriptBox[
-         SubscriptBox["\[Omega]", "56"], "2"], "(", 
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
         RowBox[{
          SubscriptBox["x", "6"], "-", 
          SubscriptBox["x", "5"]}], ")"}]}], "+", "\[VeryThinSpace]", 
       RowBox[{
        SuperscriptBox[
-        SubscriptBox["\[Omega]", "67"], "2"], "(", 
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
        RowBox[{
         SubscriptBox["x", "7"], "-", 
         SubscriptBox["x", "6"]}], ")"}]}]}]}], TraditionalForm]],
@@ -4219,25 +4220,28 @@ with the two end springs connected to the walls being identical:\n\n",
     RowBox[{
      SubscriptBox["a", "7"], "=", 
      RowBox[{
-      RowBox[{
-       RowBox[{"-", 
+      RowBox[{"-", 
+       RowBox[{
         SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"]}], "\[VeryThinSpace]", 
-       SubscriptBox["x", "7"]}], "-", 
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
+        RowBox[{
+         SubscriptBox["x", "7"], "-", 
+         SubscriptBox["x", "6"]}], ")"}]}], "-", 
       RowBox[{
        SuperscriptBox[
-        SubscriptBox["\[Omega]", "67"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["x", "7"], "-", 
-        SubscriptBox["x", "6"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"b94fc92d-28e4-4675-bc58-6f8d8db2d252"],
+        SubscriptBox["\[Omega]", "0"], "2"], "\[VeryThinSpace]", 
+       SubscriptBox["x", "7"]}]}]}]}], TraditionalForm]],ExpressionUUID->
+  "b94fc92d-28e4-4675-bc58-6f8d8db2d252"],
  "\n\nThe only ones that break the pattern a little are the end masses that \
-are connected to the walls. All the interior masses follow a  repetitive \
-pattern."
+are connected to the walls. All the interior masses follow a  completely \
+repetitive pattern. The two exceptions to the pattern are that the left-most \
+mass doesn\[CloseCurlyQuote]t have a left neighbor, and the right-most mass \
+doesn\[CloseCurlyQuote]t have a right neighbor."
 }], "Text",
  CellChangeTimes->{{3.948634652163192*^9, 3.948634957603264*^9}, {
   3.948634998780159*^9, 3.9486351722609653`*^9}, {3.948635204233398*^9, 
-  3.94863534645627*^9}},ExpressionUUID->"08c5ebf1-c225-495c-9297-\
+  3.94863534645627*^9}, {3.94865323827969*^9, 
+  3.9486534544418497`*^9}},ExpressionUUID->"08c5ebf1-c225-495c-9297-\
 c84c023738cc"]
 }, Open  ]]
 }, Open  ]]
@@ -4303,7 +4307,7 @@ Cell[230644, 3960, 4138, 110, 589, "Text",ExpressionUUID->"c538817a-9424-441e-92
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[234819, 4075, 592, 10, 83, "Subsection",ExpressionUUID->"b66e9333-d1c2-4cc6-a8c8-e1f2271a97e6"],
-Cell[235414, 4087, 4949, 153, 634, "Text",ExpressionUUID->"08c5ebf1-c225-495c-9297-c84c023738cc"]
+Cell[235414, 4087, 5234, 157, 668, "Text",ExpressionUUID->"08c5ebf1-c225-495c-9297-c84c023738cc"]
 }, Open  ]]
 }, Open  ]]
 }
