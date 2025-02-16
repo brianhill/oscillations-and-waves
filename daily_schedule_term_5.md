@@ -14,7 +14,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 * Friday, March 21 &mdash; Problem Set 12: Do the Exercises from *EIWL3* Sections 31 and 32 &mdash; In-Class: Complete the *Torsion Waves* notebook
 
-### Week 9
+### Week 9 &mdash; Two-Dimensional Grids of Masses
 
 * Tuesday, March 25
 * Friday, March 28

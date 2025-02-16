@@ -31,7 +31,7 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 * Tuesday, Feb. 11 &mdash; Problem Set 6: Re-download *[Damped Pendulum - With Animated Graphics](./worksheets/06-DampedPendulum-WithAnimatedGraphics.nb.pdf)* notebook that we started in the last class and finish it &mdash; *[PS6 Solution](./solutions/brian54321/Brian-PS06.nb.pdf)* &mdash; Problem Set 7: Do the exercises from *EIWL3* Sections 18 and 19 &mdash; *[PS7 Solution](./solutions/brian54321/Brian-PS07.nb.pdf)* &mdash; In-class: Examine *[Forced Pendulum - Phase Space - Chaos](./worksheets/07-ForcedPendulum-PhaseSpace-Chaos.nb.pdf)* notebook
 * Friday, Feb. 14 &mdash; *[Exam 1 - Naval Battle](./exams/Exam1.nb.pdf)* &mdash; *[Exam 1 Solution](./solutions/brian54321/Brian-Exam1.nb.pdf)*
 
-### Week 6 &mdash; Systems with Two Masses and Systems with Many Masses
+### Week 6 &mdash; Systems with Two Masses &mdash; Systems with Many Masses
 
 #### *EIWL3* Section 20, Section 23, Sections 25-34, and Sections 38-41 are when we get to the grammar and a significantly more advanced understanding of the Wolfram Language
 
@@ -55,7 +55,7 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 * Friday, March 21 &mdash; Problem Set 12: Do the Exercises from *EIWL3* Sections 31 and 32 &mdash; In-Class: Complete the *Torsion Waves* notebook
 
-### Week 9
+### Week 9 &mdash; Two-Dimensional Grids of Masses
 
 * Tuesday, March 25
 * Friday, March 28
