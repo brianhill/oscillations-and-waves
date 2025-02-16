@@ -39,8 +39,6 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 <img src="./illustrations/CoupledHarmonicOscillators.png" width="80%">
 
-#### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
-
 * Friday, Feb. 21 &mdash; Problem Set 9: Do the Exercises from *EIWL3* Sections 23, 24, and 25 &mdash; In-Class: Complete the *[Many Harmonic Oscillators](./worksheets/09-ManyHarmonicOscillators.nb.pdf)* notebook
 
 ### Week 7 &mdash; Compound Pendulum
@@ -52,6 +50,9 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 ## Daily Schedule Term 5
 
 * Tuesday, March 18 &mdash; Problem Set 11: Do the Exercises from *EIWL3* Sections 29 and 30 &mdash; In-Class: Complete the *Torsion Pendulum* and *Coupled Torsion Pendula* notebooks
+
+#### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
+
 * Friday, March 21 &mdash; Problem Set 12: Do the Exercises from *EIWL3* Sections 31 and 32 &mdash; In-Class: Complete the *Torsion Waves* notebook
 
 ### Week 9
