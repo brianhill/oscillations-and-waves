@@ -41,18 +41,18 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes
 
-* Friday, Feb. 21 &mdash; Problem Set 9: Do the Exercises from *EIWL3* Sections 23, 24, and 25 &mdash; In-Class: Many Coupled Harmonic Oscillators
+* Friday, Feb. 21 &mdash; Problem Set 9: Do the Exercises from *EIWL3* Sections 23, 24, and 25 &mdash; In-Class: Complete the *[Many Harmonic Oscillators](./worksheets/09-ManyHarmonicOscillators.nb.pdf)* notebook
 
 ### Week 7 &mdash; Compound Pendulum
 
-* Tuesday, Feb. 25 &mdash; Problem Set 10: Do the Exercises from *EIWL3* Sections 26, 27, and 28 &mdash; In-Class: Compound Pendulum
+#### *EIWL3* Section 26 finally starts taking us into the depths of functional programming
+
+* Tuesday, Feb. 25 &mdash; Problem Set 10: Do the Exercises from *EIWL3* Sections 26, 27, and 28 &mdash; In-Class: Complete the *Compound Pendulum* notebook
 
 ## Daily Schedule Term 5
 
-### Week 8
-
-* Tuesday, March 18
-* Friday, March 21
+* Tuesday, March 18 &mdash; Problem Set 11: Do the Exercises from *EIWL3* Sections 29 and 30 &mdash; In-Class: Complete the *Torsion Pendulum* and *Coupled Torsion Pendula* notebooks
+* Friday, March 21 &mdash; Problem Set 12: Do the Exercises from *EIWL3* Sections 31 and 32 &mdash; In-Class: Complete the *Torsion Waves* notebook
 
 ### Week 9
 
