@@ -59,11 +59,11 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 ### Week 9 &mdash; Two-Dimensional Grids of Masses
 
-* Tuesday, March 25
-* Friday, March 28
+* Tuesday, March 25 &mdash; Square Grid of Masses
+* Friday, March 28 &mdash; Radial Grid of Masses
 
-### Week 10
+### Week 10 &mdash; Three-Dimensional Grid of Masses &mdash; Exam 2
 
-* Tuesday, April 1
-* Friday, April 4
+* Tuesday, April 1 &mdash; Cubical Grid of Masses
+* Friday, April 4 &mdash; Exam 2
 

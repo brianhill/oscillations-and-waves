@@ -2,6 +2,18 @@
 
 *Listed reverse-chronologically (most recent at top)*
 
+### 2025-03-21 &mdash; PS12 &mdash; *EIWL3* Sections 31 and 32
+
+### 2025-03-18 &mdash; PS11 &mdash; *EIWL3* Sections 29 and 30
+
+### 2025-02-25 &mdash; PS10 &mdash; *EIWL3* Sections 26, 27, and 28
+
+### 2025-02-21 &mdash; PS9 &mdash; *EIWL3* Sections 23, 24, and 25
+
+### 2025-02-18 &mdash; PS8 &mdash; *EIWL3* Sections 20, 21, and 22
+
+* [Brian's solution](../brian54321/Brian-PS08.nb.pdf)
+
 ### 2025-02-14 &mdash; Exam 1 &mdash; Naval Battle
 
 * [Eli's solution](./Eli-Exam1.nb.pdf)
