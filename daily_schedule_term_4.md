@@ -36,9 +36,6 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 #### *EIWL3* Section 20, Section 23, Sections 25-34, and Sections 38-41 are when we get to the grammar and a significantly more advanced understanding of the Wolfram Language
 
 * Tuesday, Feb. 18 &mdash; Problem Set 8: Do the Exercises from *EIWL3* Sections 20, 21, and 22 &mdash; In-class: Develop *[Coupled Harmonic Oscillators - Theory](./theory/CoupledHarmonicOscillators-Theory.nb.pdf)* and then complete the *[Coupled Harmonic Oscillators](./worksheets/08-CoupledHarmonicOscillators.nb.pdf)* notebook
-
-<img src="./illustrations/CoupledHarmonicOscillators.png" width="70%">
-
 * Friday, Feb. 21 &mdash; Problem Set 9: Do the Exercises from *EIWL3* Sections 23, 24, and 25 &mdash; In-Class: Complete the *[Many Harmonic Oscillators](./worksheets/09-ManyHarmonicOscillators.nb.pdf)* notebook
 
 ### Week 7 &mdash; Compound Pendulum
@@ -48,3 +45,7 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 * Tuesday, Feb. 25 &mdash; Problem Set 10: Do the Exercises from *EIWL3* Sections 26, 27, and 28 &mdash; In-Class: Complete the *Compound Pendulum* notebook
 
 #### See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
+
+<img src="./illustrations/CoupledHarmonicOscillatorsPlot.png" width="65%">
+
+#### Coupled Harmonic Oscillators Plot
