@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     45710,       1026]
-NotebookOptionsPosition[     43996,        986]
-NotebookOutlinePosition[     44483,       1005]
-CellTagsIndexPosition[     44440,       1002]
+NotebookDataLength[     46610,       1039]
+NotebookOptionsPosition[     44896,        999]
+NotebookOutlinePosition[     45383,       1018]
+CellTagsIndexPosition[     45340,       1015]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -165,10 +165,11 @@ mx4D0f3Be8G0mYpgTB6QVnJUBdMAKPizhg==
   "],ExpressionUUID->"18ab59cd-1909-4c9d-8c1a-1c4d41ecfacb"],
 
 Cell[TextData[{
- "I took the following equations from Louisiana State University Phys 7221 \
-(https://www.phys.lsu.edu/faculty/gonzalez/Teaching/Phys7221/) which is a \
-first-year graduate course in mechanics. These were Eqs. 69 and 70 that they \
-got to at the end of the first week of the class:\n",
+ "The equations below are from \
+https://www.phys.lsu.edu/faculty/gonzalez/Teaching/Phys7221/ which is the \
+course notes for LSU Phys 7221, a first-year graduate course for physicists. \
+It is a course in advanced mechanics. The following were Eqs. 69 and 70 that \
+they got to at the end of the first week of class:\n",
  Cell[BoxData[
   GraphicsBox[
    TagBox[RasterBox[CompressedData["
@@ -511,19 +512,31 @@ fq9e33of9TcBLmj/ALmyhTM=
        "], "RGB", "XYZ"], Interleaving -> True],
     Selectable->False],
    DefaultBaseStyle->"ImageGraphics",
-   ImageSize->{383.26000000000005`, Automatic},
+   ImageSize->{581.7650000000003, Automatic},
    ImageSizeRaw->{984., 138.},
    PlotRange->{{0, 984.}, {0, 138.}}]], "Input",ExpressionUUID->
   "ab759cdd-719e-4436-846a-3dabddc2c07d"],
  "\nIt\[CloseCurlyQuote]s just Newton\[CloseCurlyQuote]s Laws again, but for \
 a system that is much harder to analyze than any of the others we have dealt \
-with, and I am not going to attempt the derivation. It is enough for us to \
-trust that these equations describe the system."
+with, and I am not going to attempt to do the derivation for you. The only \
+reason I am doing such a challenging system as our final system in Term 4 is \
+that it exhibits chaos \[LongDash] but with no external driving force! At the \
+beginning of Term 5, we will get right back to equations that are less \
+challenging to derive the theory for.\n\nTo turn these equations into \
+something you will recognize, I have to mention that the \[Theta]\
+\[CloseCurlyQuote]s with one dot over them are what we have been calling the \
+\[Omega]\[CloseCurlyQuote]s, and the \[Theta]\[CloseCurlyQuote]s with two \
+dots over them are what we have been calling the \
+\[Alpha]\[CloseCurlyQuote]s."
 }], "Text",
  CellChangeTimes->{{3.949164233562807*^9, 3.9491642865289288`*^9}, {
   3.949164327253952*^9, 3.94916440239148*^9}, {3.9491644445293016`*^9, 
-  3.9491645595498123`*^9}, {3.94916460215596*^9, 
-  3.949164608796378*^9}},ExpressionUUID->"0d65f6e9-a549-4293-801d-\
+  3.9491645595498123`*^9}, {3.94916460215596*^9, 3.949164608796378*^9}, {
+  3.949164883805849*^9, 3.949165010251987*^9}, {3.949165042338984*^9, 
+  3.949165047285694*^9}, {3.949165126223712*^9, 3.949165184900449*^9}, {
+  3.9491652285555983`*^9, 3.9491653184787617`*^9}, {3.949165366287436*^9, 
+  3.949165378453854*^9}, {3.949165567074728*^9, 
+  3.949165571510206*^9}},ExpressionUUID->"0d65f6e9-a549-4293-801d-\
 e171d952f83b"]
 }, Open  ]],
 
@@ -534,13 +547,13 @@ Second-Order Runge-Kutta \[LongDash] Formulas for Two Particles \[LongDash] \
 Recap\
 \>", "Subsection",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQAWIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
+1:eJxTTMoPSmViYGAQBWIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
 bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
 vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
 N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
 BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9Jakj/V5QHqZ5PNmEL0tfPUe
-EP0n+zqYTrCaehJEv8pjPQWiV+3MeQyizV0VnoPVHZ4tm5vz1rHlz2U5EA0A
-tH+qSw==
+EP0n+zqYTrCaehJEv8pjPQWiV+3MeQyizV0VnoPVHZ4tm5vz1rHlz2U5EH3l
+xr3IfCA9y+QnmAYArgqzYQ==
   "],ExpressionUUID->"061234eb-b27f-4fb7-987b-561d93a6cd22"],
 
 Cell[TextData[{
@@ -1013,19 +1026,19 @@ Cell[3009, 65, 3381, 85, 659, "Text",ExpressionUUID->"f7276b5e-eb83-40bc-891a-85
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[6427, 155, 572, 9, 83, "Subsection",ExpressionUUID->"18ab59cd-1909-4c9d-8c1a-1c4d41ecfacb"],
-Cell[7002, 166, 21636, 360, 239, "Text",ExpressionUUID->"0d65f6e9-a549-4293-801d-e171d952f83b"]
+Cell[7002, 166, 22520, 373, 453, "Text",ExpressionUUID->"0d65f6e9-a549-4293-801d-e171d952f83b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28675, 531, 586, 12, 83, "Subsection",ExpressionUUID->"061234eb-b27f-4fb7-987b-561d93a6cd22"],
-Cell[29264, 545, 4732, 152, 518, "Text",ExpressionUUID->"fd0576a9-57cb-4378-b41c-ce5037dd1e4b"]
+Cell[29559, 544, 602, 12, 83, "Subsection",ExpressionUUID->"061234eb-b27f-4fb7-987b-561d93a6cd22"],
+Cell[30164, 558, 4732, 152, 518, "Text",ExpressionUUID->"fd0576a9-57cb-4378-b41c-ce5037dd1e4b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34033, 702, 1316, 23, 83, "Subsection",ExpressionUUID->"90a048fe-8606-460f-96d6-a19d522c082f"],
-Cell[35352, 727, 2879, 81, 356, "Text",ExpressionUUID->"54d249cf-f1be-482e-9719-378932da30fa"]
+Cell[34933, 715, 1316, 23, 83, "Subsection",ExpressionUUID->"90a048fe-8606-460f-96d6-a19d522c082f"],
+Cell[36252, 740, 2879, 81, 356, "Text",ExpressionUUID->"54d249cf-f1be-482e-9719-378932da30fa"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38268, 813, 679, 14, 83, "Subsection",ExpressionUUID->"c5bd257b-3727-4506-9f92-3bff3a05b6af"],
-Cell[38950, 829, 5018, 153, 552, "Text",ExpressionUUID->"4bd251b9-be3b-46fb-bd88-461b9049215b"]
+Cell[39168, 826, 679, 14, 83, "Subsection",ExpressionUUID->"c5bd257b-3727-4506-9f92-3bff3a05b6af"],
+Cell[39850, 842, 5018, 153, 552, "Text",ExpressionUUID->"4bd251b9-be3b-46fb-bd88-461b9049215b"]
 }, Open  ]]
 }, Open  ]]
 }
