@@ -1,0 +1,316 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12041,        308]
+NotebookOptionsPosition[     10839,        278]
+NotebookOutlinePosition[     11323,        297]
+CellTagsIndexPosition[     11280,        294]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Double Pendulum", "Section",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944259504220365*^9, 
+  3.944259508854402*^9}, {3.9451065856437073`*^9, 3.945106593079445*^9}, {
+  3.946308448646846*^9, 3.946308451385337*^9}, {3.946552457165756*^9, 
+  3.9465524707004967`*^9}, {3.9465525521152363`*^9, 3.946552554916573*^9}, {
+  3.9465788311752863`*^9, 3.946578833173499*^9}, {3.946870573058391*^9, 
+  3.9468705830476847`*^9}, {3.946870640652769*^9, 3.946870640891918*^9}, {
+  3.947291676151257*^9, 3.9472917061453037`*^9}, {3.947294845743719*^9, 
+  3.947294852851272*^9}, {3.948630305288838*^9, 3.948630310177161*^9}, {
+  3.948650550058112*^9, 3.948650550752973*^9}, {3.948656320210555*^9, 
+  3.948656323114634*^9}, {3.949163350125869*^9, 
+  3.9491633507387447`*^9}},ExpressionUUID->"08f90a5e-ac65-4417-8844-\
+b6de9f5e59a2"],
+
+Cell[CellGroupData[{
+
+Cell["Completed and Analyzed in class, February 25, 2025", "Subtitle",
+ CellChangeTimes->{{3.944069658419606*^9, 3.944069670238837*^9}, {
+   3.944259441457538*^9, 3.944259441514864*^9}, {3.945368563122921*^9, 
+   3.94536856339248*^9}, {3.94630825627395*^9, 3.946308258224854*^9}, {
+   3.946308899126011*^9, 3.9463089397149553`*^9}, 3.946311308159807*^9, 
+   3.946311633761958*^9, {3.9464799861433*^9, 3.946479993858527*^9}, {
+   3.946552494389028*^9, 3.946552494447125*^9}, {3.946870590010352*^9, 
+   3.946870590173767*^9}, {3.947291719345838*^9, 3.94729171966033*^9}, {
+   3.947357538497875*^9, 3.947357543750285*^9}, {3.947692784431519*^9, 
+   3.94769279117017*^9}, {3.948630334763303*^9, 3.948630334931707*^9}, {
+   3.9486408574940767`*^9, 3.948640859126906*^9}, {3.9486505540692043`*^9, 
+   3.948650554565543*^9}, {3.948656352035777*^9, 3.9486563525285397`*^9}},
+ FontSize->18,ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
+
+Cell["This is the tenth notebook for you to complete.", "Text",
+ CellChangeTimes->CompressedData["
+1:eJwd0FsoQ3EAx/HlYfZEZo1CsdKhSVJaPKgjY+7yIFoiM4Zp5NKsRJTFJDms
+lJZ11uT2gNQS9qBcamopd0skaRy3spDb/3cevn3ev3G1hjJtkEAgiCHBmiQH
+c1bL0QeV1BTMXSywQX2Kl4VZEn3iLdH5Y5DDC5FOAf+EVUo4qDjPh6NbVDn0
+XEtewjUcHZjKfofs3fnIdz1HyyxXDEzPYRfgkU+0BJNvqLUfYngf7YIrYcJj
+eHw1xitO9VvbGzjaFPFsg71+cUYH8VCuLYATFv/HHtH9GvkJRzqH7kN0HO3Y
+f3yALkbZH0o0P0kH4KRmm6KI99aWRGh0rbVCqVjSBhXXuqFLYmbP3TB0qsys
+j6j3TvPGRpmN6kaOtpS+mOChyVo9Q4x2q7Swc1Nlh8YvGQsZ5ewyrHhLXoXz
+ysodWFyi2oW/o76EpmbyT5OTBmfH6woNRM/0RhFvtzu4g7g4x4igOt5+2kXM
+s63zfqgV0hY9R3tPArz/XiT39A==
+  "],ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
+
+Cell[CellGroupData[{
+
+Cell["Double Pendulum \[LongDash] Angular Accelerations \[LongDash] Recap", \
+"Subsection",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQAmIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
+bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
+vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
+N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
+BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9Jakj/V5QHqZ5PNmEL0tfPUe
+EP0n+zqYTrCaehJEv8pjPQWiV+3MeQyizV0VnoPVHZ4tm5vz1rHlz2U5ED1p
+0Y9EEL1Tqi8ZRHMIN2SCaK5pjVkg+ozoqRYQvd5vURuIlmtouwKiP8r1g2mT
+Y3k3QHSt0r5bILqfNzsvD0gnmsUWgmgAmIPZlg==
+  "],ExpressionUUID->"09fb1b47-6eeb-4402-b4a9-906780e5e2e7"],
+
+Cell["Copied over from the theory we just developed.", "Text",
+ CellChangeTimes->CompressedData["
+1:eJwd0FsoQ3EAx/HlgT2RWaMol9IhkpQWD+rImLs8iEZkxjBGhplElMUkOayU
+Fh1Nbg9ILWFFuRRZyt0SSRrHrQi5/X/n4dvn/Rtcqs1VuQkEgkASLImcYE5L
+OXqvgBqBKbPpFqiJdrAwUawJvyFaf7QR8FyolsI/9yIZ7JaepcH+NSoP7l6J
+n32UHP0+kvQG2duzvu9yjg4xXTIwLpmdgYdO4RyMuqaWfog+HbQNLni7H8Gj
+ywFeUYzL3FDB0QbfJwtsd4nidcSDCFU6HDK5PraJ9he/T9jX2HPnqeboiZ2H
+e2hjZJ1eROOjpAsOKzcoinhnrgmHettSHZSIxPVQeqXuuSAmtN32QqvcyDqJ
+Gscob5C/Ua+o5GhTzrMBHhjMxWPEALtcBRtX5eNQ/xXCQkY2OQ/zX6MW4bSs
+YBNmZcu34G+/M6yqmvxTJsfCycGyDC1xd3Qlk7fF7qEjzk4xQqgIHT9pIqZa
+lnk/FFJJjYajHcfvvAPWHV0tLMxsho+hFa1wcH+d9x93WQjb
+  "],ExpressionUUID->"a1ef221a-c8bc-49cb-9cb0-69e29c99f1b0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Second-Order Runge-Kutta \[LongDash] Double Pendulum \[LongDash] \
+Recap", "Subsection",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQAmIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
+bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
+vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
+N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
+BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9Jakj/V5QHqZ5PNmEL0tfPUe
+EP0n+zqYTrCaehJEv8pjPQWiV+3MeQyizV0VnoPVHZ4tm5vz1rHlz2U5ED1p
+0Y9EEL1Tqi8ZRHMIN2SCaK5pjVkg+ozoqRYQvd5vURuIlmtouwKiP8r1g2mT
+Y3k3QHSt0r5bIHpVf2xRHpDW4ykC0wCfBtni
+  "],ExpressionUUID->"89d9d17a-83ec-4564-bf8b-734e48ff57eb"],
+
+Cell["Also copied over from the theory we just developed.", "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQB2IQnaCzZPLNpLeOZyPVZ4Jo9zXe80B0jsGFxSDaSSRH
+8wmQXvY3XxtE3+bIMAfR/9liXUF0m/ktLxDdt089DESfeSjyQTj5reO3mS5f
+QfTiZ7d6/qS9dVTqvj8ZRFu6LV4Noq/e5VgLovUeqW/9C6SFGxx3gOhNgmzX
+QPS1+xPAtJDRq2nF6W8dq8TfzwPR9a+ErEqA9CXtVG8QPaX71Y8TQHr/R4mf
+ILqntPMFX8ZbxyUn37wG0TsmuzbxA+n2d2LNIHpq8mF1dSD9YlquJoiu2LG1
+AESLCYkUgmjzhxmdd4C0Xe2zLhC9zKN98V0gnXNhDphWkG6viM5869gd8KEK
+RF+qmha/AEjL7PdIBdGlez0WguiKX0qLQfRk1+UbQXTEJ73NIHqVa+QxEO3n
+73EcRP/ru6uRlQ0Mv2Q3UxC9fFKKTz6QPjNnjy+YrtzPXgKk16yczAGio1UX
+3igD0p7zdoHpH9HmYrk5bx0vXP8GpicsO1mSB6QPBeZWgGjnL+Y1IDqxdj2Y
+BgB4jAiD
+  "],ExpressionUUID->"a50c3644-db0a-4106-a1d3-e5fa91a2a50f"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", 
+     RowBox[{"i", "+", "1"}]], "=", 
+    RowBox[{
+     SubscriptBox["t", "i"], "+", 
+     RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}]}], 
+   TraditionalForm]],ExpressionUUID->"6c681ca4-95eb-4b57-a6f2-fa5da7ad2007"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["\[Theta]", "1"], "*"], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Theta]", "1"], "(", 
+      SubscriptBox["t", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["\[Omega]", "1"], "(", 
+       SubscriptBox["t", "i"], ")"}], "\[CenterDot]", "\[VeryThinSpace]", 
+      FractionBox[
+       RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}]}]}], 
+   TraditionalForm]],ExpressionUUID->"5f35f54d-4bf4-4f94-92ec-1f55074bdb5a"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["\[Theta]", "2"], "*"], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Theta]", "2"], "(", 
+      SubscriptBox["t", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["\[Omega]", "2"], "(", 
+       SubscriptBox["t", "i"], ")"}], "\[CenterDot]", "\[VeryThinSpace]", 
+      FractionBox[
+       RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}]}]}], 
+   TraditionalForm]],ExpressionUUID->"d4cb2f0f-485a-4a62-a2e3-42928a8b221a"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Omega]", "1"], "(", 
+     SubscriptBox["t", 
+      RowBox[{"i", "+", "1"}]], ")"}], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Omega]", "1"], "(", 
+      SubscriptBox["t", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["\[Alpha]", "1"], "(", 
+        RowBox[{
+         SuperscriptBox[
+          SubscriptBox["\[Theta]", "1"], "*"], ",", 
+         SuperscriptBox[
+          SubscriptBox["\[Theta]", "2"], "*"]}], ")"}], "\[CenterDot]", 
+       "\[CapitalDelta]"}], "\[VeryThinSpace]", "t"}]}]}], TraditionalForm]],
+  ExpressionUUID->"54c8b9c3-20c5-4fee-8faf-e6d18dc76b19"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Omega]", "2"], "(", 
+     SubscriptBox["t", 
+      RowBox[{"i", "+", "1"}]], ")"}], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Omega]", "2"], "(", 
+      SubscriptBox["t", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["\[Alpha]", "2"], "(", 
+        RowBox[{
+         SuperscriptBox[
+          SubscriptBox["\[Theta]", "1"], "*"], ",", 
+         SuperscriptBox[
+          SubscriptBox["\[Theta]", "2"], "*"]}], ")"}], "\[CenterDot]", 
+       "\[CapitalDelta]"}], "\[VeryThinSpace]", "t"}]}]}], TraditionalForm]],
+  ExpressionUUID->"b6088e29-13da-4de0-9bdd-9f2dbeaa76aa"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Theta]", "1"], "(", 
+     SubscriptBox["t", 
+      RowBox[{"i", "+", "1"}]], ")"}], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Theta]", "1"], "(", 
+      SubscriptBox["t", "i"], ")"}], "+", " ", 
+     RowBox[{
+      FormBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Omega]", "1"], "(", 
+          SubscriptBox["t", "i"], ")"}], "+", 
+         RowBox[{
+          SubscriptBox["\[Omega]", "1"], "(", 
+          SubscriptBox["t", 
+           RowBox[{"i", "+", "1"}]], ")"}]}], ")"}],
+       TraditionalForm], 
+      FractionBox[
+       RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}]}]}], 
+   TraditionalForm]],ExpressionUUID->"acb229c2-a578-4a79-813e-73879808f629"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Theta]", "2"], "(", 
+     SubscriptBox["t", 
+      RowBox[{"i", "+", "1"}]], ")"}], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Theta]", "2"], "(", 
+      SubscriptBox["t", "i"], ")"}], "+", " ", 
+     RowBox[{
+      FormBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Omega]", "2"], "(", 
+          SubscriptBox["t", "i"], ")"}], "+", 
+         RowBox[{
+          SubscriptBox["\[Omega]", "2"], "(", 
+          SubscriptBox["t", 
+           RowBox[{"i", "+", "1"}]], ")"}]}], ")"}],
+       TraditionalForm], 
+      FractionBox[
+       RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "2"]}]}]}], 
+   TraditionalForm]],ExpressionUUID->"73f61adf-38c6-438e-9ff3-72f5ba9dc92c"]
+}], "Text",
+ CellChangeTimes->{{3.948639418999289*^9, 3.948639679290537*^9}, {
+  3.948639766586013*^9, 3.948639774970867*^9}, {3.9486400760316887`*^9, 
+  3.948640089337327*^9}, {3.9491606991575623`*^9, 3.9491607006568193`*^9}, {
+  3.949160908286027*^9, 3.949160909332308*^9}, {3.949161325163554*^9, 
+  3.949161481218955*^9}, {3.949162152581376*^9, 3.9491621530462303`*^9}, {
+  3.949162204232039*^9, 
+  3.9491622053853197`*^9}},ExpressionUUID->"04b24031-6f62-49c2-a520-\
+1e14b34a2f8c"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1470, 1183},
+WindowMargins->{{Automatic, 315}, {6, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"79d99d9c-2760-41a1-b3ad-6f9f4f8469c8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 894, 13, 103, "Section",ExpressionUUID->"08f90a5e-ac65-4417-8844-b6de9f5e59a2"],
+Cell[CellGroupData[{
+Cell[1477, 37, 936, 12, 69, "Subtitle",ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
+Cell[2416, 51, 678, 11, 52, "Text",ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
+Cell[CellGroupData[{
+Cell[3119, 66, 657, 11, 83, "Subsection",ExpressionUUID->"09fb1b47-6eeb-4402-b4a9-906780e5e2e7"],
+Cell[3779, 79, 697, 11, 52, "Text",ExpressionUUID->"a1ef221a-c8bc-49cb-9cb0-69e29c99f1b0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4513, 95, 656, 11, 83, "Subsection",ExpressionUUID->"89d9d17a-83ec-4564-bf8b-734e48ff57eb"],
+Cell[5172, 108, 723, 12, 52, "Text",ExpressionUUID->"a50c3644-db0a-4106-a1d3-e5fa91a2a50f"],
+Cell[5898, 122, 4913, 152, 454, "Text",ExpressionUUID->"04b24031-6f62-49c2-a520-1e14b34a2f8c"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

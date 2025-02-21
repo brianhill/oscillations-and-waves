@@ -39,9 +39,9 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 * Friday, Feb. 21 &mdash; Problem Set 9: Do the Exercises from *EIWL3* Sections 23, 24, and 25 &mdash; In-Class: Complete the *[Many Harmonic Oscillators](./worksheets/09-ManyHarmonicOscillators.nb.pdf)* notebook
 
-### Week 7 &mdash; Compound Pendulum
+### Week 7 &mdash; Double Pendulum
 
-* Tuesday, Feb. 25 &mdash; Problem Set 10: Do the Exercises from *EIWL3* Sections 26, 27, and 28 &mdash; In-Class: Complete the *Compound Pendulum* notebook
+* Tuesday, Feb. 25 &mdash; Problem Set 10: Do the Exercises from *EIWL3* Sections 26, 27, and 28 &mdash; In-Class: In-class: Develop *[Double Pendulum - Theory](./theory/DoublePendulum-Theory.nb.pdf)* and then complete the *[Double Pendulum](./worksheets/10-DoublePendulum.nb.pdf)* notebook
 
 #### See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
