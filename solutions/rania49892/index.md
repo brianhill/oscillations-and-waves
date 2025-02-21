@@ -10,8 +10,12 @@
 
 ### 2025-02-21 &mdash; PS9 &mdash; *EIWL3* Sections 23, 24, and 25
 
+* [Eli's solution](./Rania-PS09.nb.pdf)
+* [Brian's solution](../brian54321/Brian-PS09.nb.pdf)
+
 ### 2025-02-18 &mdash; PS8 &mdash; *EIWL3* Sections 20, 21, and 22
 
+* [Eli's solution](./Rania-PS08.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS08.nb.pdf)
 
 ### 2025-02-14 &mdash; Exam 1 &mdash; Naval Battle
