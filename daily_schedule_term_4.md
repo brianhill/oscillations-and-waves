@@ -37,11 +37,11 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 #### *EIWL3* Sections 25-34, and Sections 38-41 are when we get to the grammar and a significantly more advanced understanding of the Wolfram Language. You already learned about options in Section 20. Now pay particular attention to Sections 25 and 26, which I deliberately spread across two problem sets so that they would have more time to sink in. These two sections start exposing the heart of functional programming.
 
-* Friday, Feb. 21 &mdash; Problem Set 9: Do the Exercises from *EIWL3* Sections 23, 24, and 25 &mdash; In-Class: Complete the *[Many Harmonic Oscillators](./worksheets/09-ManyHarmonicOscillators.nb.pdf)* notebook
+* Friday, Feb. 21 &mdash; Problem Set 9: Do the Exercises from *EIWL3* Sections 23, 24, and 25 &mdash; In-class: Complete the *[Many Harmonic Oscillators](./worksheets/09-ManyHarmonicOscillators.nb.pdf)* notebook
 
 ### Week 7 &mdash; Double Pendulum
 
-* Tuesday, Feb. 25 &mdash; Problem Set 10: Do the Exercises from *EIWL3* Sections 26, 27, and 28 &mdash; In-Class: In-class: Develop *[Double Pendulum - Theory](./theory/DoublePendulum-Theory.nb.pdf)* and then complete the *[Double Pendulum](./worksheets/10-DoublePendulum.nb.pdf)* notebook
+* Tuesday, Feb. 25 &mdash; Problem Set 10: Do the Exercises from *EIWL3* Sections 26, 27, and 28 &mdash; In-class: Develop *[Double Pendulum - Theory](./theory/DoublePendulum-Theory.nb.pdf)* and then complete the *[Double Pendulum](./worksheets/10-DoublePendulum.nb.pdf)* notebook
 
 #### See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
