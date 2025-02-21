@@ -33,7 +33,6 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 ### Week 6 &mdash; Systems with Two Masses &mdash; Systems with Many Masses
 
-
 * Tuesday, Feb. 18 &mdash; Problem Set 8: Do the Exercises from *EIWL3* Sections 20, 21, and 22 &mdash; In-class: Develop *[Coupled Harmonic Oscillators - Theory](./theory/CoupledHarmonicOscillators-Theory.nb.pdf)* and then complete the *[Coupled Harmonic Oscillators](./worksheets/08-CoupledHarmonicOscillators.nb.pdf)* notebook
 
 #### *EIWL3* Sections 25-34, and Sections 38-41 are when we get to the grammar and a significantly more advanced understanding of the Wolfram Language. You already learned about options in Section 20. Now pay particular attention to Sections 25 and 26, which I deliberately spread across two problem sets so that they would have more time to sink in. These two sections start exposing the heart of functional programming.
