@@ -41,10 +41,10 @@ See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
 ### Week 7 &mdash; Double Pendulum
 
-* Tuesday, Feb. 25 &mdash; Problem Set 10: Do the Exercises from *EIWL3* Sections 26, 27, and 28 &mdash; In-class: Develop *[Double Pendulum - Theory](./theory/DoublePendulum-Theory.nb.pdf)* and then complete the *[Double Pendulum](./worksheets/10-DoublePendulum.nb.pdf)* notebook
+* Tuesday, Feb. 25 &mdash; Problem Set 10: Do the Exercises from *EIWL3* Sections 26, 27, and 28 &mdash; In-class: Present *[Double Pendulum - Theory](./theory/DoublePendulum-Theory.nb.pdf)* and then complete the *[Double Pendulum](./worksheets/10-DoublePendulum.nb.pdf)* notebook
 
 #### See also [Daily Schedule Term 5](./daily_schedule_term_5.html)
 
-<img src="./illustrations/CoupledHarmonicOscillatorsPlot.png" width="65%">
+<img src="./illustrations/DoublePendulum.png" width="65%">
 
-#### Coupled Harmonic Oscillators Plot
+#### Double Pendulum
