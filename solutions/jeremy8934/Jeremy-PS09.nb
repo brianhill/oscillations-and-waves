@@ -1,0 +1,768 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     32514,        760]
+NotebookOptionsPosition[     28969,        711]
+NotebookOutlinePosition[     29456,        729]
+CellTagsIndexPosition[     29413,        726]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   RowBox[{"Sqrt", "[", "2", "]"}], ",", "500"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9491459813937693`*^9, 3.949146002928637*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"859c142f-1877-46f6-8c10-98a3219c2d2b"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"RandomReal", "[", "1", "]"}], ",", "10"}], "]"}]], "Input",
+ CellChangeTimes->{{3.949146018809664*^9, 3.949146030976367*^9}, 
+   3.9491460622565737`*^9},
+ CellLabel->"In[81]:=",ExpressionUUID->"586e89b6-6cdf-4415-8d8c-765394cdd1d3"],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"RandomReal", "[", "1", "]"}], ",", 
+      RowBox[{"RandomReal", "[", "1", "]"}]}], "}"}], ",", "200"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.949146080447124*^9, 3.9491461080329723`*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"9f1ed840-b235-414c-9025-fd01e9cef4b4"],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Line", "[", 
+   RowBox[{"AnglePath", "[", 
+    RowBox[{"RandomReal", "[", 
+     RowBox[{
+      RowBox[{"2", "Pi"}], ",", "1000"}], "]"}], "]"}], "]"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.949146135564025*^9, 3.949146218400997*^9}, {
+  3.949146263377037*^9, 3.9491462740888443`*^9}, {3.949146404835945*^9, 
+  3.949146416117886*^9}},
+ CellLabel->"In[91]:=",ExpressionUUID->"1b0fa1fe-a43e-428d-b383-c7cab4dff10c"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Mod", "[", 
+    RowBox[{
+     RowBox[{"n", "^", "2"}], ",", "10"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "0", ",", "30"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.949146438945331*^9, 3.949146464454872*^9}},
+ CellLabel->"In[94]:=",ExpressionUUID->"da18c1ca-d6eb-4624-a052-87d2e692646d"],
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Mod", "[", 
+     RowBox[{
+      RowBox[{"n", "^", "n"}], ",", "10"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "100"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.949146486621372*^9, 3.949146514252549*^9}},
+ CellLabel->"In[96]:=",ExpressionUUID->"e0c7d910-b312-4798-b2bc-d4dc0f1ccd22"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Round", "[", 
+    RowBox[{
+     RowBox[{"Pi", "^", "n"}], ",", "1"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.949146525852759*^9, 3.9491465587827806`*^9}},
+ CellLabel->"In[97]:=",ExpressionUUID->"1b658f1d-4352-4878-be44-2450a5dc3eab"],
+
+Cell[BoxData[
+ RowBox[{"Graph", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"n", "\[Rule]", 
+     RowBox[{"Mod", "[", 
+      RowBox[{
+       RowBox[{"n", "^", "2"}], ",", "100"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "0", ",", "99"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9491466048461447`*^9, 3.9491466465867357`*^9}},
+ CellLabel->"In[99]:=",ExpressionUUID->"92cc281a-063f-4c6c-9d45-fd3034cedd81"],
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Style", "[", 
+     RowBox[{
+      RowBox[{"Circle", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"RandomReal", "[", "10", "]"}], ",", 
+          RowBox[{"RandomReal", "[", "10", "]"}]}], "}"}], ",", 
+        RowBox[{"RandomReal", "[", "2", "]"}]}], "]"}], ",", 
+      RowBox[{"RandomColor", "[", "]"}]}], "]"}], ",", "50"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.949146664253093*^9, 3.9491468090257587`*^9}},
+ CellLabel->
+  "In[102]:=",ExpressionUUID->"f1961009-1c86-424d-a922-0973eb026d30"],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"Prime", "[", "n", "]"}], 
+     RowBox[{"n", "*", 
+      RowBox[{"Log", "[", "n", "]"}]}]], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "2", ",", "1000"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.949146840882276*^9, 3.949146912058031*^9}},
+ CellLabel->
+  "In[104]:=",ExpressionUUID->"a70debad-b4e3-47ce-a1f7-ead6d27ed57b"],
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Prime", "[", 
+      RowBox[{"n", "+", "1"}], "]"}], "-", 
+     RowBox[{"Prime", "[", "n", "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "100"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.949146950156168*^9, 3.949146985777014*^9}},
+ CellLabel->
+  "In[105]:=",ExpressionUUID->"d237b348-46d4-4a10-9643-d33a595856a1"],
+
+Cell[BoxData[
+ RowBox[{"Sound", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"SoundNote", "[", 
+     RowBox[{"\"\<C\>\"", ",", 
+      RowBox[{"RandomReal", "[", "0.5", "]"}]}], "]"}], ",", "20"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.949147018216693*^9, 3.949147160197979*^9}},
+ CellLabel->
+  "In[107]:=",ExpressionUUID->"5489b2d4-e551-427e-8680-182c2c7404ca"],
+
+Cell[BoxData[
+ RowBox[{"ArrayPlot", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Mod", "[", 
+     RowBox[{"i", ",", "j"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "50"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "50"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9491471001771297`*^9, 3.949147101558717*^9}, {
+  3.9491471772202187`*^9, 3.949147205151773*^9}},
+ CellLabel->
+  "In[108]:=",ExpressionUUID->"5980b94c-59b9-41e2-9554-30f7652ecb29"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Mod", "[", 
+       RowBox[{
+        RowBox[{"x", "^", "y"}], ",", "n"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "50"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "50"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "2", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.949147224569943*^9, 3.949147322903653*^9}},
+ CellLabel->
+  "In[109]:=",ExpressionUUID->"5d9e59b0-81c6-4323-abe7-8e785128115c"],
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"n", "^", "x"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "10"}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "2", ",", "4"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.949147367542383*^9, 3.949147418567443*^9}, {
+  3.949147448633717*^9, 3.9491474505990763`*^9}},
+ CellLabel->
+  "In[111]:=",ExpressionUUID->"fb025c52-8d12-4eed-8fd1-17837e6d87a4"],
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Prime", "[", "n", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "20"}], "}"}]}], "]"}], ",", 
+   RowBox[{"Filling", "\[Rule]", "Axis"}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "All"}], ",", 
+   RowBox[{"MeshStyle", "\[Rule]", "Red"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.949147469430525*^9, 3.949147567886335*^9}, {
+  3.949147611669549*^9, 3.949147612691424*^9}},
+ CellLabel->
+  "In[113]:=",ExpressionUUID->"e8691b94-259d-4f86-a9fa-8d3ed9f6b27b"],
+
+Cell[BoxData[
+ RowBox[{"ListPlot3D", "[", 
+  RowBox[{"GeoElevationData", "[", 
+   RowBox[{"GeoDisk", "[", 
+    RowBox[{
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "Mt Fuji", Typeset`boxes$$ = 
+       TemplateBox[{"\"Mount Fuji\"", 
+         RowBox[{"Entity", "[", 
+           RowBox[{"\"Mountain\"", ",", "\"FujiSan\""}], "]"}], 
+         "\"Entity[\\\"Mountain\\\", \\\"FujiSan\\\"]\"", "\"mountain\""}, 
+        "Entity"], 
+       Typeset`allassumptions$$ = {{
+        "word" -> "", "template" -> 
+         "Assuming \"Mt Fuji\" is a mountain${separator}Use \"Fuji\" as \
+${desc} instead", "count" -> "2", "pulldown" -> "false", "type" -> 
+         "MultiClash", "default" -> 
+         "{\"MC\", \"Mt Fuji\"} -> {\"Mountain\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "Mountain", "desc" -> "a mountain", "input" -> 
+            "{\"MC\", \"Mt Fuji\"} -> {\"Mountain\"}", "word" -> "Mt Fuji"}, {
+           "name" -> "City", "desc" -> "a city", "input" -> 
+            "{\"MC\", \"Mt Fuji\"} -> {\"City\"}", "word" -> "Fuji"}}}}, 
+       Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+       Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        1.065416`6.479064208058107, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{175., {7., 15.}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True], ",", 
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "20 miles", Typeset`boxes$$ = 
+       TemplateBox[{"20", "\"mi\"", "miles", "\"Miles\""}, "Quantity", 
+        SyntaxForm -> Mod], Typeset`allassumptions$$ = {}, 
+       Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+       Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.864137`6.3881275943398546, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{78., {9.5, 14.5}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True]}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.949147642723916*^9, 3.949147671404275*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"3bda613d-f4ad-4aa4-abe0-76b873e6e27a"],
+
+Cell[BoxData[
+ RowBox[{"ReliefPlot", "[", 
+  RowBox[{"GeoElevationData", "[", 
+   RowBox[{"GeoDisk", "[", 
+    RowBox[{
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "Mt Fuji", Typeset`boxes$$ = 
+       TemplateBox[{"\"Mount Fuji\"", 
+         RowBox[{"Entity", "[", 
+           RowBox[{"\"Mountain\"", ",", "\"FujiSan\""}], "]"}], 
+         "\"Entity[\\\"Mountain\\\", \\\"FujiSan\\\"]\"", "\"mountain\""}, 
+        "Entity"], 
+       Typeset`allassumptions$$ = {{
+        "word" -> "", "template" -> 
+         "Assuming \"Mt Fuji\" is a mountain${separator}Use \"Fuji\" as \
+${desc} instead", "count" -> "2", "pulldown" -> "false", "type" -> 
+         "MultiClash", "default" -> 
+         "{\"MC\", \"Mt Fuji\"} -> {\"Mountain\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "Mountain", "desc" -> "a mountain", "input" -> 
+            "{\"MC\", \"Mt Fuji\"} -> {\"Mountain\"}", "word" -> "Mt Fuji"}, {
+           "name" -> "City", "desc" -> "a city", "input" -> 
+            "{\"MC\", \"Mt Fuji\"} -> {\"City\"}", "word" -> "Fuji"}}}}, 
+       Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+       Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        1.065416`6.479064208058107, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{175., {7., 15.}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True], ",", 
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "100 miles", Typeset`boxes$$ = 
+       TemplateBox[{"100", "\"mi\"", "miles", "\"Miles\""}, "Quantity", 
+        SyntaxForm -> Mod], Typeset`allassumptions$$ = {}, 
+       Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+       Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.482295`6.134857753067316, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{85., {9.5, 14.5}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True]}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9491479737689734`*^9, 3.949147975074018*^9}, {
+  3.949148008211907*^9, 
+  3.9491480090192213`*^9}},ExpressionUUID->"3bb98b4f-ff34-4132-b7cf-\
+a5d7b369fe0d"],
+
+Cell[BoxData[
+ RowBox[{"ListPlot3D", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Mod", "[", 
+     RowBox[{"i", ",", "j"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "100"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "100"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.949148031649514*^9, 3.949148059079493*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"085a4630-1aae-469f-9df0-739c5e264387"],
+
+Cell[BoxData[
+ RowBox[{"Histogram", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Prime", "[", 
+      RowBox[{"n", "+", "1"}], "]"}], "-", 
+     RowBox[{"Prime", "[", "n", "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "10000"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.949148091710573*^9, 3.949148112865053*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"97746ea6-ff92-4b1b-a157-ea54cae39860"],
+
+Cell[BoxData[
+ RowBox[{"Histogram", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"First", "[", 
+     RowBox[{"IntegerDigits", "[", 
+      RowBox[{"n", "^", "2"}], "]"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "10000"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.949148135779213*^9, 3.94914815752837*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"c361336c-3cad-426f-83bc-c3e3882e4f44"],
+
+Cell[BoxData[
+ RowBox[{"Histogram", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"StringLength", "[", 
+     RowBox[{"RomanNumeral", "[", "n", "]"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1000"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.94914817869415*^9, 3.949148179978863*^9}, {
+  3.949148233002419*^9, 3.94914824571342*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"0859ee13-b73e-49ce-a02f-8643db94b3e0"],
+
+Cell[BoxData[
+ RowBox[{"Histogram", "[", 
+  RowBox[{"StringLength", "[", 
+   RowBox[{"TextSentences", "[", 
+    RowBox[{"WikipediaData", "[", "\"\<computers\>\"", "]"}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.949148261177438*^9, 3.949148289915011*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"11e5c4b9-7e1b-4c58-b579-8e06bf3391be"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Histogram", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Total", "[", 
+       RowBox[{"RandomReal", "[", 
+        RowBox[{"100", ",", "n"}], "]"}], "]"}], ",", "10000"}], "]"}], "]"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.949148340824182*^9, 3.949148343582809*^9}, {
+  3.9491485212227793`*^9, 3.94914853273914*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"607d0deb-0a7d-4da9-8024-dc51b244bf2e"],
+
+Cell[BoxData[
+ RowBox[{"ListPlot3D", "[", 
+  RowBox[{"-", 
+   RowBox[{"ImageData", "[", 
+    RowBox[{"Binarize", "[", 
+     RowBox[{"Rasterize", "[", 
+      RowBox[{"Style", "[", 
+       RowBox[{"\"\<W\>\"", ",", "200"}], "]"}], "]"}], "]"}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.949148680944384*^9, 3.949148728941545*^9}, 
+   3.949148832319886*^9},
+ CellLabel->"In[13]:=",ExpressionUUID->"3c92973c-3166-4bc0-98cf-2b5d9e67d3e2"],
+
+Cell[BoxData[
+ RowBox[{"f", "/@", 
+  RowBox[{"Range", "[", "5", "]"}]}]], "Input",
+ CellChangeTimes->{{3.9491487849429283`*^9, 3.949148802668036*^9}, {
+  3.9491488897555857`*^9, 3.9491488901869926`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"2c4584d5-3139-4340-9a0e-418269afa97d"],
+
+Cell[BoxData[
+ RowBox[{"f", "/@", 
+  RowBox[{"g", "/@", 
+   RowBox[{"Range", "[", "10", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.9491489370065613`*^9, 3.949148956913149*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"3c6f645c-214a-4b6e-8e9d-fa969270a94b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "//", "d"}], "//", "c"}], "//", "b"}], "//", "a"}]], "Input",\
+
+ CellChangeTimes->{{3.949148973426387*^9, 3.9491489900912933`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"92904c86-4a31-4071-a831-4c66165c0959"],
+
+Cell[BoxData[
+ RowBox[{"Framed", "/@", 
+  RowBox[{"Alphabet", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.949149014155386*^9, 3.949149022145916*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"4ece0bf1-9a4b-48a1-b71c-0c2d9278d556"],
+
+Cell[BoxData[
+ RowBox[{"ColorNegate", "/@", 
+  RowBox[{"EntityValue", "[", 
+   RowBox[{
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "planets", Typeset`boxes$$ = 
+      TemplateBox[{"\"planets\"", 
+        RowBox[{"EntityClass", "[", 
+          RowBox[{"\"Planet\"", ",", "All"}], "]"}], 
+        "\"EntityClass[\\\"Planet\\\", All]\"", "\"planets\""}, 
+       "EntityClass"], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "planets", "template" -> 
+        "Assuming \"planets\" is referring to planets${separator}Use as \
+${desc} or ${desc} or ${desc} instead", "count" -> "4", "pulldown" -> "false",
+         "default" -> "{\"C\", \"planets\"} -> {\"PlanetClass\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "PlanetClass", "desc" -> " referring to planets", "input" -> 
+           "{\"C\", \"planets\"} -> {\"PlanetClass\"}"}, {
+          "name" -> "ExoplanetClass", "desc" -> " referring to exoplanets", 
+           "input" -> "{\"C\", \"planets\"} -> {\"ExoplanetClass\"}"}, {
+          "name" -> "MinorPlanetClass", "desc" -> 
+           " referring to minor planets", "input" -> 
+           "{\"C\", \"planets\"} -> {\"MinorPlanetClass\"}"}, {
+          "name" -> "Word", "desc" -> "a word", "input" -> 
+           "{\"C\", \"planets\"} -> {\"Word\"}"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.63285`6.252845777933535, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{163., {7., 15.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], ",", "\"\<Image\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.949149035316277*^9, 3.94914915375922*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"45fe051e-32a8-415c-b863-041ae9f56073"],
+
+Cell[BoxData[
+ RowBox[{"GeoGraphics", "/@", 
+  RowBox[{"EntityList", "[", 
+   NamespaceBox["LinguisticAssistant",
+    DynamicModuleBox[{Typeset`query$$ = "G5 countries", Typeset`boxes$$ = 
+     TemplateBox[{"\"Group of 5\"", 
+       RowBox[{"EntityClass", "[", 
+         RowBox[{"\"Country\"", ",", "\"GroupOf5\""}], "]"}], 
+       "\"EntityClass[\\\"Country\\\", \\\"GroupOf5\\\"]\"", "\"countries\""},
+       "EntityClass"], 
+     Typeset`allassumptions$$ = {{
+      "word" -> "", "template" -> 
+       "Assuming the input is a class of countries${separator}Use \"G5\" as \
+${desc} instead", "count" -> "2", "pulldown" -> "false", "type" -> 
+       "MultiClash", "default" -> 
+       "{\"MC\", \"\"} -> {\"CountryClass\", \"dflt\"}", 
+       "Values" -> {{
+         "name" -> "CountryClass", "desc" -> "a class of countries", "input" -> 
+          "{\"MC\", \"\"} -> {\"CountryClass\"}", "word" -> "the input"}, {
+         "name" -> "Company", "desc" -> "a company", "input" -> 
+          "{\"MC\", \"\"} -> {\"Company\"}", "word" -> "G5"}}}}, 
+     Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+     Typeset`querystate$$ = {
+     "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+      0.932931`6.421394517813334, "Messages" -> {}}}, 
+     DynamicBox[ToBoxes[
+       AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+        Dynamic[Typeset`query$$], 
+        Dynamic[Typeset`boxes$$], 
+        Dynamic[Typeset`allassumptions$$], 
+        Dynamic[Typeset`assumptions$$], 
+        Dynamic[Typeset`open$$], 
+        Dynamic[Typeset`querystate$$]], StandardForm],
+      ImageSizeCache->{195., {7., 15.}},
+      TrackedSymbols:>{
+       Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+        Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+     DynamicModuleValues:>{},
+     UndoTrackedVariables:>{Typeset`open$$}],
+    BaseStyle->{"Deploy"},
+    DeleteWithContents->True,
+    Editable->False,
+    SelectWithContents->True], "]"}]}]], "Input",
+ CellChangeTimes->{{3.949149202043847*^9, 3.949149249925288*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"2770e240-1049-4818-bb1f-d31880275688"],
+
+Cell[BoxData[
+ RowBox[{"ImageCollage", "[", 
+  RowBox[{"Binarize", "/@", 
+   RowBox[{"EntityValue", "[", 
+    RowBox[{
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "european countries", 
+       Typeset`boxes$$ = RowBox[{
+         TemplateBox[{"\"Europe\"", 
+           RowBox[{"Entity", "[", 
+             RowBox[{"\"GeographicRegion\"", ",", "\"Europe\""}], "]"}], 
+           "\"Entity[\\\"GeographicRegion\\\", \\\"Europe\\\"]\"", 
+           "\"geographic region\""}, "Entity"], "[", 
+         TemplateBox[{"\"countries\"", 
+           RowBox[{"EntityProperty", "[", 
+             RowBox[{"\"GeographicRegion\"", ",", "\"Countries\""}], "]"}], 
+           "\"EntityProperty[\\\"GeographicRegion\\\", \\\"Countries\\\"]\""},
+           "EntityProperty"], "]"}], 
+       Typeset`allassumptions$$ = {{
+        "word" -> "", "template" -> 
+         "Assuming \"european\" is a continent${separator}Use the input as \
+${desc} instead", "count" -> "2", "pulldown" -> "false", "type" -> 
+         "MultiClash", "default" -> 
+         "{\"MC\", \"\"} -> {\"GeographicRegion\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "GeographicRegion", "desc" -> "a continent", "input" -> 
+            "{\"MC\", \"\"} -> {{\"GeographicRegion\", \"a continent\"}}", 
+            "word" -> "european"}, {
+           "name" -> "CountryClass", "desc" -> "a class of countries", 
+            "input" -> "{\"MC\", \"\"} -> {\"CountryClass\"}", "word" -> 
+            "the input"}}}}, Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 
+       2}, Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.787703`6.347907492997237, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{318., {14.5, 17.5}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True], ",", "\"\<Flag\>\""}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9491492980031137`*^9, 3.949149374668015*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"7c3735c3-b3d3-4a1b-af06-13d5e6ac5df5"],
+
+Cell[BoxData[
+ RowBox[{"Column", "/@", 
+  RowBox[{"DominantColors", "/@", 
+   RowBox[{"EntityValue", "[", 
+    RowBox[{
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "planets", Typeset`boxes$$ = 
+       TemplateBox[{"\"planets\"", 
+         RowBox[{"EntityClass", "[", 
+           RowBox[{"\"Planet\"", ",", "All"}], "]"}], 
+         "\"EntityClass[\\\"Planet\\\", All]\"", "\"planets\""}, 
+        "EntityClass"], 
+       Typeset`allassumptions$$ = {{
+        "type" -> "Clash", "word" -> "planets", "template" -> 
+         "Assuming \"planets\" is referring to planets${separator}Use as \
+${desc} or ${desc} or ${desc} instead", "count" -> "4", "pulldown" -> "false",
+          "default" -> "{\"C\", \"planets\"} -> {\"PlanetClass\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "PlanetClass", "desc" -> " referring to planets", 
+            "input" -> "{\"C\", \"planets\"} -> {\"PlanetClass\"}"}, {
+           "name" -> "ExoplanetClass", "desc" -> " referring to exoplanets", 
+            "input" -> "{\"C\", \"planets\"} -> {\"ExoplanetClass\"}"}, {
+           "name" -> "MinorPlanetClass", "desc" -> 
+            " referring to minor planets", "input" -> 
+            "{\"C\", \"planets\"} -> {\"MinorPlanetClass\"}"}, {
+           "name" -> "Word", "desc" -> "a word", "input" -> 
+            "{\"C\", \"planets\"} -> {\"Word\"}"}}}}, 
+       Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+       Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        1.007473`6.454778409492112, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{163., {7., 15.}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True], ",", "\"\<Image\>\""}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.949149399358983*^9, 3.94914942305694*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"c491a667-3b8d-4dbe-94f0-d5c7cdf22cee"],
+
+Cell[BoxData[
+ RowBox[{"Total", "[", 
+  RowBox[{"LetterNumber", "/@", 
+   RowBox[{"Characters", "[", "\"\<wolfram\>\"", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9491494606220703`*^9, 3.949149496133353*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"48bbad87-a8ed-48e4-8c1b-45859fecff80"]
+},
+WindowSize->{808, 747},
+WindowMargins->{{220, Automatic}, {0, Automatic}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c4c36eaa-42b2-4129-b527-820578f1c1ed"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 258, 5, 30, "Input",ExpressionUUID->"859c142f-1877-46f6-8c10-98a3219c2d2b"],
+Cell[819, 27, 293, 6, 30, "Input",ExpressionUUID->"586e89b6-6cdf-4415-8d8c-765394cdd1d3"],
+Cell[1115, 35, 402, 10, 30, "Input",ExpressionUUID->"9f1ed840-b235-414c-9025-fd01e9cef4b4"],
+Cell[1520, 47, 467, 11, 30, "Input",ExpressionUUID->"1b0fa1fe-a43e-428d-b383-c7cab4dff10c"],
+Cell[1990, 60, 369, 9, 30, "Input",ExpressionUUID->"da18c1ca-d6eb-4624-a052-87d2e692646d"],
+Cell[2362, 71, 405, 10, 30, "Input",ExpressionUUID->"e0c7d910-b312-4798-b2bc-d4dc0f1ccd22"],
+Cell[2770, 83, 363, 9, 30, "Input",ExpressionUUID->"1b658f1d-4352-4878-be44-2450a5dc3eab"],
+Cell[3136, 94, 446, 11, 30, "Input",ExpressionUUID->"92cc281a-063f-4c6c-9d45-fd3034cedd81"],
+Cell[3585, 107, 628, 17, 52, "Input",ExpressionUUID->"f1961009-1c86-424d-a922-0973eb026d30"],
+Cell[4216, 126, 448, 12, 51, "Input",ExpressionUUID->"a70debad-b4e3-47ce-a1f7-ead6d27ed57b"],
+Cell[4667, 140, 445, 12, 30, "Input",ExpressionUUID->"d237b348-46d4-4a10-9643-d33a595856a1"],
+Cell[5115, 154, 382, 10, 30, "Input",ExpressionUUID->"5489b2d4-e551-427e-8680-182c2c7404ca"],
+Cell[5500, 166, 492, 13, 30, "Input",ExpressionUUID->"5980b94c-59b9-41e2-9554-30f7652ecb29"],
+Cell[5995, 181, 600, 17, 30, "Input",ExpressionUUID->"5d9e59b0-81c6-4323-abe7-8e785128115c"],
+Cell[6598, 200, 525, 14, 30, "Input",ExpressionUUID->"fb025c52-8d12-4eed-8fd1-17837e6d87a4"],
+Cell[7126, 216, 567, 14, 30, "Input",ExpressionUUID->"e8691b94-259d-4f86-a9fa-8d3ed9f6b27b"],
+Cell[7696, 232, 3465, 72, 40, "Input",ExpressionUUID->"3bda613d-f4ad-4aa4-abe0-76b873e6e27a"],
+Cell[11164, 306, 3501, 74, 40, "Input",ExpressionUUID->"3bb98b4f-ff34-4132-b7cf-a5d7b369fe0d"],
+Cell[14668, 382, 437, 11, 30, "Input",ExpressionUUID->"085a4630-1aae-469f-9df0-739c5e264387"],
+Cell[15108, 395, 439, 11, 30, "Input",ExpressionUUID->"97746ea6-ff92-4b1b-a157-ea54cae39860"],
+Cell[15550, 408, 420, 10, 30, "Input",ExpressionUUID->"c361336c-3cad-426f-83bc-c3e3882e4f44"],
+Cell[15973, 420, 446, 10, 30, "Input",ExpressionUUID->"0859ee13-b73e-49ce-a02f-8643db94b3e0"],
+Cell[16422, 432, 347, 7, 30, "Input",ExpressionUUID->"11e5c4b9-7e1b-4c58-b579-8e06bf3391be"],
+Cell[16772, 441, 538, 14, 30, "Input",ExpressionUUID->"607d0deb-0a7d-4da9-8024-dc51b244bf2e"],
+Cell[17313, 457, 442, 11, 30, "Input",ExpressionUUID->"3c92973c-3166-4bc0-98cf-2b5d9e67d3e2"],
+Cell[17758, 470, 282, 5, 30, "Input",ExpressionUUID->"2c4584d5-3139-4340-9a0e-418269afa97d"],
+Cell[18043, 477, 255, 5, 30, "Input",ExpressionUUID->"3c6f645c-214a-4b6e-8e9d-fa969270a94b"],
+Cell[18301, 484, 274, 7, 30, "Input",ExpressionUUID->"92904c86-4a31-4071-a831-4c66165c0959"],
+Cell[18578, 493, 230, 4, 30, "Input",ExpressionUUID->"4ece0bf1-9a4b-48a1-b71c-0c2d9278d556"],
+Cell[18811, 499, 2476, 49, 39, "Input",ExpressionUUID->"45fe051e-32a8-415c-b863-041ae9f56073"],
+Cell[21290, 550, 2139, 44, 39, "Input",ExpressionUUID->"2770e240-1049-4818-bb1f-d31880275688"],
+Cell[23432, 596, 2681, 54, 47, "Input",ExpressionUUID->"7c3735c3-b3d3-4a1b-af06-13d5e6ac5df5"],
+Cell[26116, 652, 2554, 50, 39, "Input",ExpressionUUID->"c491a667-3b8d-4dbe-94f0-d5c7cdf22cee"],
+Cell[28673, 704, 292, 5, 30, "Input",ExpressionUUID->"48bbad87-a8ed-48e4-8c1b-45859fecff80"]
+}
+]
+*)
+
