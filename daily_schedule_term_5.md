@@ -39,17 +39,17 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 * Tuesday, April 8 &mdash; Guitar Strings
 * Friday, April 11 &mdash; Drumheads
 
-### Week 12 &mdash; Diffusion of Heat and Pollutants
+### Week 12 &mdash; Sound Waves &mdash; Diffusion of Heat in a Rod
 
-* Tuesday, April 15 &mdash; Diffusion in One Dimension
-* Friday, April 18 &mdash; Diffusion in Three Dimensions
+* Tuesday, April 15 &mdash; Sound Waves
+* Friday, April 18 &mdash; Diffusion in One Dimension
 
-### Week 13 &mdash; Sound Waves &mdash; Schrodinger's Equation
+### Week 13 &mdash; Diffusion of Pollutants &mdash; Schrodinger's Equation
 
-* Tuesday, April 22 &mdash; Sound Waves
-* Friday, April 25 &mdash; Quantum-Mechanical Particle in a Box
+* Tuesday, April 22 &mdash; Diffusion in Three Dimensions
+* Friday, April 25 &mdash; Quantum-Mechanical Particle Confined to a Box
 
-### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
+### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions OR GitHub Crash Course
 
 * Tuesday, April 29 &mdash; Exam 3
-* Friday, May 2 &mdash; The s, p, d, and f Orbitals of Hydrogen
+* Friday, May 2 &mdash; The s, p, d, and f Orbitals of Hydrogen &mdash; Or maybe for our very last class I teach you how to turn in your final assignment using GitHub, which is a valuable collaboration tool everybody should know nowadays
