@@ -32,24 +32,24 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 * Tuesday, April 1 &mdash; Cubical Grid of Masses
 * Friday, April 4 &mdash; Exam 2
 
-### Week 11 &mdash; Continuous Systems from The *n&rarr;&infin;* Limit
+### Week 11 &mdash; Continuous Systems from the *n&rarr;&infin;* Limit &mdash; Guitar Strings and Drumheads
 
-#### We are going to blast into the stratosphere and instead of doing large numbers of particles &mdash; like 72 rods or 100 masses &mdash; for the remainder of the course, we are going to take the limit that *n&rarr;&infin;.* You might reasonably ask how does Mathematica cope with continuous systems which have an infinite number of particles? Deep under the hood, it breaks continuous systems up into little chunks, but from now on in this course, you are not going to have to code those little chunks up as we have been doing. Functions that are built into Mathematica will be doing that work. In fact, the little time steps that we have been manually coding are also well within the repertoire of Mathematica to do without us every having to even know what time steps are being used to approximate the infinity of possible times that exists in any time interval in the real world.
+#### We have a little less than one-third of the course left, and we are going to blast into the stratosphere: instead of doing large numbers of particles &mdash; like 72 rods or 100 masses &mdash; we are going to take the limit that *n&rarr;&infin;.* You might reasonably ask that if it is too expensive for Mathematica to do a million particles for a million time steps, how is Mathematica going to cope with continuous systems which have an infinite number of particles? The answer is that deep under the hood, it breaks continuous systems up into little chunks just as we have been chunking up the world by simulating large numbers of small masses. In other words, Mathematica turns the continuous problems back into problems with a finite number of particles. However, from now on in this course, Mathematica is going to hide its need for those little chunks from you. Also, in a real system, there is an infinity of possible times that exist in any time interval, but we have been breaking the time interval up into a finite number of time steps. It is also well within Mathematica's repertoire to hide from us its need to break continuous time up into time steps. Mathematica draws graphs and creates animations by choosing the chunks and the time steps to be so small that we cannot perceive them unless we blow up the graphics to a large size. Sometimes, the chunkiness leaks through enough to be obvious in the graphics, but if that happens and we are not satisfied, we can order Mathematica to use finer grids and finer time steps. Of course, the processor in your laptop may not appreciate this, but if you are patient with your computer's processor, and also if your computer has enough memory to hold the intermediate results, there is no limit to how accurately Mathematica can do most simulations — the only exceptions being simulations with singularities, and these are only encountered in extreme situations.
 
-* Tuesday, April 8
-* Friday, April 11
+* Tuesday, April 8 &mdash; Guitar Strings
+* Friday, April 11 &mdash; Drumheads
 
-### Week 12
+### Week 12 &mdash; Diffusion of Heat and Pollutants
 
-* Tuesday, April 15
-* Friday, April 18
+* Tuesday, April 15 &mdash; Diffusion in One Dimension
+* Friday, April 18 &mdash; Diffusion in Three Dimensions
 
-### Week 13
+### Week 13 &mdash; Sound Waves &mdash; Schrodinger's Equation
 
-* Tuesday, April 22
-* Friday, April 25
+* Tuesday, April 22 &mdash; Sound Waves
+* Friday, April 25 &mdash; Quantum-Mechanical Particle in a Box
 
-### Week 14
+### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
 
-* Tuesday, April 29
-* Friday, May 2
+* Tuesday, April 29 &mdash; Exam 3
+* Friday, May 2 &mdash; The s, p, d, and f Orbitals of Hydrogen
