@@ -6,9 +6,9 @@ Course [home page](./)
 
 See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
-### Week 8 &mdash; Torsion Pendulum &mdash; Coupled Torsion Pendula &mdash; Torsion Waves
+### Week 8 &mdash; Torsion Pendulum &mdash; Coupled Torsion Pendula &mdash; The Second Derivative &mdash; Torsion Waves
 
-#### As a way of refreshing on material that is now more than three weeks old due to the Term 4-5 break, our eleventh and twelfth notebooks (Torsion Pendulum and Coupled Torsion Pendula) are straightforward recapitulations of our fourth and eighth notebooks (Mass on a Spring and Coupled Harmonic Oscillators).
+#### As a way of refreshing on material that is fully three weeks old due to the Term 4-5 break, our eleventh and twelfth notebooks (Torsion Pendulum and Coupled Torsion Pendula) are straightforward recapitulations of our fourth and eighth notebooks (Mass on a Spring and Coupled Harmonic Oscillators). The main thing that is new is that we are going to start making a connection to an important calculus idea, called &ldquo;The Second Derivative.&rdquo; Wave phenomena typically show up in systems for which Newton's Laws involve second derivatives with respect to both space and time.
 
 * Tuesday, March 18 &mdash; Problem Set 11: Do the Exercises from *EIWL3* Sections 29 and 30 &mdash; In-Class: Develop *[Torsion Pendula - Theory](./theory/TorsionPendula-Theory.nb.pdf)* and then complete the *[Torsion Pendulum](./worksheets/11-TorsionPendulum.nb.pdf)* and *[Coupled Torsion Pendula](./worksheets/12-CoupledTorsionPendula.nb.pdf)* notebooks
 
