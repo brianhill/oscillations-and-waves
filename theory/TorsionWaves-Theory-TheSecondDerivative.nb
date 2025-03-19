@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   2166547,      35691]
-NotebookOptionsPosition[   2165203,      35658]
-NotebookOutlinePosition[   2165687,      35677]
-CellTagsIndexPosition[   2165644,      35674]
+NotebookDataLength[   2172504,      35825]
+NotebookOptionsPosition[   2170827,      35787]
+NotebookOutlinePosition[   2171308,      35806]
+CellTagsIndexPosition[   2171265,      35803]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -244,21 +244,282 @@ our twelfth notebook was:\n\n",
 
 Cell[CellGroupData[{
 
-Cell["Torsion Waves \[LongDash] Theory", "Subsection",
+Cell["Five Rods \[LongDash] Theory \[LongDash] Fixed Ends", "Subsection",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQA2IQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
+1:eJxTTMoPSmViYGCQAGIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
 bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
 vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
 N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
 BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9IcHB9ZlA+msL6/B9BKxGVtA
 9K1Ujq0g+ljdmSMgOjL2GZg+lHZi/Yyct45XD9huBNFNZ/bsAdGFa36B6SP+
-KusmFrx1LHt5YSOI5vD5/xBEq2xpegSiAQW+v6U=
+KusmFrx1LHt5YSOI5vD5/xBEq2xpegSiK7a+mjgJSH9wWTgZRHe5Tl0Cop02
+My4F0QAtT9Ea
   "],ExpressionUUID->"4e20471f-c045-44d0-9742-3df803e57e3f"],
 
 Cell[TextData[{
  "Now we just need to graduate from one or two rods connected by stainless \
-steel wires to seventy-two rods and we\[CloseCurlyQuote]ll be able to build a \
-notebook that simulates this:\n",
+steel wires to seventy-two rods. Of course, seventy-two is not a magic \
+number, and we will want to generalize to ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],ExpressionUUID->
+  "e231eedb-a584-4a0c-b6af-19a1b91a54aa"],
+ " rods,  where ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "25891046-0050-4e90-8ff6-29fb22cb8c81"],
+ " is anything from from 1 to 1000, or whatever you like.\n\nLet\
+\[CloseCurlyQuote]s write down the equations for five rods with six wires \
+connecting them to each other and to the walls. That should be enough to see \
+where we need to go:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "1"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"], "(", "\[VeryThinSpace]", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "1"], "-", "0"}], ")"}]}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "2"], "-", 
+        SubscriptBox["\[Theta]", "1"]}], ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"67158394-d26d-45a6-9e2c-65d7f96035d9"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "2"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "2"], "-", 
+         SubscriptBox["\[Theta]", "1"]}], ")"}]}], "+", "\[VeryThinSpace]", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "3"], "-", 
+        SubscriptBox["\[Theta]", "2"]}], ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"9a743f56-7d2d-4eef-959d-817886e5a74c"],
+ "\n \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "3"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "3"], "-", 
+         SubscriptBox["\[Theta]", "2"]}], ")"}]}], "+", "\[VeryThinSpace]", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "4"], "-", 
+        SubscriptBox["\[Theta]", "3"]}], ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"9526c36a-dd02-477d-909e-e40f730f7ba4"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "4"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "4"], "-", 
+         SubscriptBox["\[Theta]", "3"]}], ")"}]}], "+", "\[VeryThinSpace]", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "5"], "-", 
+        SubscriptBox["\[Theta]", "4"]}], ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"f644a5bd-d72a-4bfe-8351-37ff382f2859"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "5"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "5"], "-", 
+         SubscriptBox["\[Theta]", "4"]}], ")"}]}], "+", "\[VeryThinSpace]", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
+       RowBox[{"0", "-", 
+        SubscriptBox["\[Theta]", "5"]}], ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"2894ff4b-fefb-4396-b3c9-8ece93eca963"],
+ "\n\nwhere\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["\[Omega]", "0"], "2"], "\[Congruent]", 
+    FractionBox["\[Kappa]", "I"]}], TraditionalForm]],ExpressionUUID->
+  "a7143bdd-0152-4e16-89a0-be424b8a2875"],
+ "\n\nThe left-most and right-most rods have equations that don\
+\[CloseCurlyQuote]t quite fit the pattern due to being on the ends. This is \
+assuming there are ends that can\[CloseCurlyQuote]t move. Their lack of \
+movement is captured in the ",
+ Cell[BoxData[
+  FormBox["0", TraditionalForm]],ExpressionUUID->
+  "65ed8d99-9865-4445-8f4c-9b310c767f3a"],
+ "\[CloseCurlyQuote]s that I have suggestively placed into the amount the two \
+end stainless steel wires are twisted."
+}], "Text",
+ CellChangeTimes->{{3.948630711439576*^9, 3.948630774109071*^9}, {
+   3.9486314616672783`*^9, 3.9486325069622297`*^9}, {3.948632551468163*^9, 
+   3.948632589026087*^9}, {3.9486326413957*^9, 3.9486328160382566`*^9}, {
+   3.948632866574149*^9, 3.948633109826956*^9}, {3.948633155086842*^9, 
+   3.9486333464960117`*^9}, 3.948633504459333*^9, {3.94924990745057*^9, 
+   3.94924991461482*^9}, {3.949250028350224*^9, 3.949250073996264*^9}, {
+   3.9492502313691893`*^9, 3.94925024245277*^9}, {3.94925037869573*^9, 
+   3.949250450214093*^9}, {3.94925048338027*^9, 3.949250484520529*^9}, {
+   3.949250540068571*^9, 3.949250553854912*^9}, {3.951333151695529*^9, 
+   3.951333347139648*^9}, {3.951333397736767*^9, 3.951333490852311*^9}, {
+   3.9513345646883802`*^9, 3.9513346862880487`*^9}, {3.951334813169015*^9, 
+   3.95133486478216*^9}},ExpressionUUID->"077570e8-22c0-45b7-832a-\
+4b9d0c4fc65c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Five Rods \[LongDash] Theory \[LongDash] Free Ends", "Subsection",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQAGIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
+bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
+vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
+N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
+BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9IcHB9ZlA+msL6/B9BKxGVtA
+9K1Ujq0g+ljdmSMgOjL2GZg+lHZi/Yyct45XD9huBNFNZ/bsAdGFa36B6SP+
+KusmFrx1LHt5YSOI5vD5/xBEq2xpegSiK7a+mjgJSH9wWTgZRHe5Tl0Coldd
+v7YURAMANonSew==
+  "],ExpressionUUID->"1b0d4d4c-111d-4caf-a389-ee9f1c94b8bb"],
+
+Cell[TextData[{
+ "If there are no wires at the ends, we call that \[OpenCurlyDoubleQuote]free\
+\[CloseCurlyDoubleQuote] instead of \[OpenCurlyDoubleQuote]fixed,\
+\[CloseCurlyDoubleQuote] and the equations are:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "1"], "=", 
+     RowBox[{"0", "+", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "2"], "-", 
+        SubscriptBox["\[Theta]", "1"]}], ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"bae5b026-a80c-4fd6-a868-b247c97ff3ba"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "2"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "2"], "-", 
+         SubscriptBox["\[Theta]", "1"]}], ")"}]}], "+", "\[VeryThinSpace]", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "3"], "-", 
+        SubscriptBox["\[Theta]", "2"]}], ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"2e918e8c-a7ad-4e64-b2e5-1b22e7310646"],
+ "\n \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "3"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "3"], "-", 
+         SubscriptBox["\[Theta]", "2"]}], ")"}]}], "+", "\[VeryThinSpace]", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "4"], "-", 
+        SubscriptBox["\[Theta]", "3"]}], ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"46f6d2d8-6c4f-4335-a73e-d7dcbd4326c7"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "4"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "4"], "-", 
+         SubscriptBox["\[Theta]", "3"]}], ")"}]}], "+", "\[VeryThinSpace]", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "5"], "-", 
+        SubscriptBox["\[Theta]", "4"]}], ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"8495ef42-3436-4251-836f-fbe5eeaef538"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "5"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "5"], "-", 
+         SubscriptBox["\[Theta]", "4"]}], ")"}]}], "+", "\[VeryThinSpace]", 
+      "0"}]}]}], TraditionalForm]],ExpressionUUID->
+  "d41e29b5-d241-4551-baf0-06d1bf2cc4d9"],
+ "\n\nIf you look at the apparatus that is usually set up for physics \
+demonstration, it is usually set up with free ends, and so maybe that is the \
+more interesting case for us to code up first.\n",
  Cell[BoxData[
   GraphicsBox[
    TagBox[RasterBox[CompressedData["
@@ -35487,159 +35748,12 @@ fq9e33of9TcBLmj/ALmyhTM=
    ImageSize->{200.82850000000002`, Automatic},
    ImageSizeRaw->{2270., 1012.},
    PlotRange->{{0, 2270.}, {0, 1012.}}]], "Input",ExpressionUUID->
-  "75f3f38f-40e1-4d11-8b9d-ffc57ecf99df"],
- "\nOf course, seventy-two is not a magic number, and we will want to \
-generalize to ",
- Cell[BoxData[
-  FormBox["n", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "e231eedb-a584-4a0c-b6af-19a1b91a54aa"],
- " rods,  where is anything from from 1 to 1000, or whatever you like.\n\nLet\
-\[CloseCurlyQuote]s write down the equations for seven rods with eight wires \
-connecting them and to the walls. That should be enough to see where we need \
-to go:\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "1"], "=", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"-", 
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"]}], "\[VeryThinSpace]", 
-       SubscriptBox["\[Theta]", "1"]}], "+", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "2"], "-", 
-        SubscriptBox["\[Theta]", "1"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"67158394-d26d-45a6-9e2c-65d7f96035d9"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "2"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "2"], "-", 
-         SubscriptBox["\[Theta]", "1"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "3"], "-", 
-        SubscriptBox["\[Theta]", "2"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"9a743f56-7d2d-4eef-959d-817886e5a74c"],
- "\n \n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "3"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "3"], "-", 
-         SubscriptBox["\[Theta]", "2"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "4"], "-", 
-        SubscriptBox["\[Theta]", "3"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"9526c36a-dd02-477d-909e-e40f730f7ba4"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "4"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "4"], "-", 
-         SubscriptBox["\[Theta]", "3"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "5"], "-", 
-        SubscriptBox["\[Theta]", "4"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"f644a5bd-d72a-4bfe-8351-37ff382f2859"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "5"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "5"], "-", 
-         SubscriptBox["\[Theta]", "4"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "6"], "-", 
-        SubscriptBox["\[Theta]", "5"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"2894ff4b-fefb-4396-b3c9-8ece93eca963"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "6"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "6"], "-", 
-         SubscriptBox["\[Theta]", "5"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "7"], "-", 
-        SubscriptBox["\[Theta]", "6"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"b41512b0-1657-47e9-82a9-24ab862d170a"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "7"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "7"], "-", 
-         SubscriptBox["\[Theta]", "6"]}], ")"}]}], "-", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "\[VeryThinSpace]", 
-       SubscriptBox["\[Theta]", "7"]}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"8f75b528-84cc-4c46-9ef0-9fb3c6105f8d"]
+  "985f42a3-1cc0-47ab-8765-519f6ebb7b86"],
+ "\nHowever, there are little clips that come with the apparatus so that you \
+can make the left end of the wire to the left of the first rod fixed and the \
+right end of the wire to the right of the seventy-second rod fixed. It is \
+nice to understand both cases, because the way waves reflect off of free ends \
+is quite different than the way they reflect off of fixed ends."
 }], "Text",
  CellChangeTimes->{{3.948630711439576*^9, 3.948630774109071*^9}, {
    3.9486314616672783`*^9, 3.9486325069622297`*^9}, {3.948632551468163*^9, 
@@ -35650,14 +35764,29 @@ to go:\n\n",
    3.9492502313691893`*^9, 3.94925024245277*^9}, {3.94925037869573*^9, 
    3.949250450214093*^9}, {3.94925048338027*^9, 3.949250484520529*^9}, {
    3.949250540068571*^9, 3.949250553854912*^9}, {3.951333151695529*^9, 
-   3.951333347139648*^9}, {3.951333397736767*^9, 
-   3.951333490852311*^9}},ExpressionUUID->"077570e8-22c0-45b7-832a-\
-4b9d0c4fc65c"]
-}, Open  ]]
+   3.951333347139648*^9}, {3.951333397736767*^9, 3.951333490852311*^9}, {
+   3.9513345646883802`*^9, 3.9513346862880487`*^9}, {3.951334729360924*^9, 
+   3.9513348062282467`*^9}, {3.951334888609079*^9, 3.9513349822404957`*^9}, {
+   3.9513351145319033`*^9, 
+   3.951335173781609*^9}},ExpressionUUID->"1b15caa7-7bcc-488a-868c-\
+621873d068cf"]
+}, Open  ]],
+
+Cell["The Second Derivative", "Subsection",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQBGIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
+bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
+vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
+N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
+BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9IcHB9ZlA+msL6/B9BKxGVtA
+9K1Ujq0g+ljdmSMgOjL2GZg+lHZi/Yyct45XD9huBNFNZ/bsAdGFa36B6SP+
+KusmFrx1LHt5YSOI5vD5/xBEq2xpegSiK7a+mjgJSH9wWTgZRHe5Tl0Coldd
+v7YURP/NyrwAosXMHl4E0QCvU9t6
+  "],ExpressionUUID->"96175bf7-90c3-4aa3-ad0f-6d6ebeb2fcea"]
 }, Open  ]]
 },
-WindowSize->{1470, 1183},
-WindowMargins->{{Automatic, 142}, {Automatic, 0}},
+WindowSize->{991, 1183},
+WindowMargins->{{1, Automatic}, {Automatic, 0}},
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
 Magnification:>1.25 Inherited,
@@ -35679,19 +35808,24 @@ Notebook[{
 Cell[558, 20, 1044, 15, 103, "Section",ExpressionUUID->"08f90a5e-ac65-4417-8844-b6de9f5e59a2"],
 Cell[CellGroupData[{
 Cell[1627, 39, 902, 12, 69, "Subtitle",ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
-Cell[2532, 53, 1630, 25, 87, "Text",ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
+Cell[2532, 53, 1630, 25, 121, "Text",ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
 Cell[CellGroupData[{
 Cell[4187, 82, 546, 9, 83, "Subsection",ExpressionUUID->"6f78337b-e569-4641-bad1-a534a36f90c5"],
-Cell[4736, 93, 2619, 72, 785, "Text",ExpressionUUID->"09820751-1cc0-4cba-b766-a774920195a2"]
+Cell[4736, 93, 2619, 72, 853, "Text",ExpressionUUID->"09820751-1cc0-4cba-b766-a774920195a2"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[7392, 170, 569, 9, 83, "Subsection",ExpressionUUID->"878e9ef7-0338-4186-977f-fdeff7867b90"],
-Cell[7964, 181, 1974, 60, 385, "Text",ExpressionUUID->"69a6b746-eec6-4719-80f9-57ce68e1d368"]
+Cell[7964, 181, 1974, 60, 419, "Text",ExpressionUUID->"69a6b746-eec6-4719-80f9-57ce68e1d368"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9975, 246, 559, 9, 83, "Subsection",ExpressionUUID->"4e20471f-c045-44d0-9742-3df803e57e3f"],
-Cell[10537, 257, 2154638, 35397, 842, "Text",ExpressionUUID->"077570e8-22c0-45b7-832a-4b9d0c4fc65c"]
-}, Open  ]]
+Cell[9975, 246, 611, 10, 83, "Subsection",ExpressionUUID->"4e20471f-c045-44d0-9742-3df803e57e3f"],
+Cell[10589, 258, 5617, 148, 883, "Text",ExpressionUUID->"077570e8-22c0-45b7-832a-4b9d0c4fc65c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16243, 411, 614, 10, 83, "Subsection",ExpressionUUID->"1b0d4d4c-111d-4caf-a389-ee9f1c94b8bb"],
+Cell[16860, 423, 2153339, 35348, 852, "Text",ExpressionUUID->"1b15caa7-7bcc-488a-868c-621873d068cf"]
+}, Open  ]],
+Cell[2170214, 35774, 597, 10, 83, "Subsection",ExpressionUUID->"96175bf7-90c3-4aa3-ad0f-6d6ebeb2fcea"]
 }, Open  ]]
 }
 ]
