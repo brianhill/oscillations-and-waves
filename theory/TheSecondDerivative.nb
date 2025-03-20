@@ -10,30 +10,23 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   2172504,      35825]
-NotebookOptionsPosition[   2170827,      35787]
-NotebookOutlinePosition[   2171308,      35806]
-CellTagsIndexPosition[   2171265,      35803]
+NotebookDataLength[   2179650,      36072]
+NotebookOptionsPosition[   2178269,      36039]
+NotebookOutlinePosition[   2178752,      36058]
+CellTagsIndexPosition[   2178709,      36055]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell["Torsion Waves \[LongDash] Theory \[LongDash] The Second Derivative", \
-"Section",
- CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
-  3.944068820428216*^9, 3.944068822060533*^9}, {3.944259504220365*^9, 
-  3.944259508854402*^9}, {3.9451065856437073`*^9, 3.945106593079445*^9}, {
-  3.946308448646846*^9, 3.946308451385337*^9}, {3.946552457165756*^9, 
-  3.9465524707004967`*^9}, {3.9465525521152363`*^9, 3.946552554916573*^9}, {
-  3.9465788311752863`*^9, 3.946578833173499*^9}, {3.946870573058391*^9, 
-  3.9468705830476847`*^9}, {3.946870640652769*^9, 3.946870640891918*^9}, {
-  3.947291676151257*^9, 3.9472917061453037`*^9}, {3.947294845743719*^9, 
-  3.947294852851272*^9}, {3.948630305288838*^9, 3.948630310177161*^9}, {
-  3.9486334497576313`*^9, 3.948633452438908*^9}, {3.949248888206951*^9, 
-  3.9492488906161423`*^9}, {3.95124593160141*^9, 3.95124593215134*^9}, {
-  3.9512472000665283`*^9, 3.951247200534174*^9}, {3.951331737124187*^9, 
-  3.951331742596403*^9}},ExpressionUUID->"08f90a5e-ac65-4417-8844-\
-b6de9f5e59a2"],
+Cell["The Second Derivative", "Section",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBmIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNPWvOzf
+hJPfOjqHzwbTDjNNJm9Meet4oUtpCoj+tkkk50/aW8d1ITlg+oGv6sTi9LeO
+FVnXJoFolg3Mc0H0xJBYMP1p9tPCBiDt16taBKLD7y18ypfx1nFR28NnILrm
+scg7ED2jSwZMS15vab4DpEOWubSD6J4z2/nvAen5trMFQLSmnaZKVjbQvNVH
+wXSLncXabCDdyd0HpiPms+nPyHnrWLA9GEwfsCv2TS9463j8eguYZlBkegOi
+v4gLgunwn8rGE4H0HtHLYPrp4ctGj4B0869MUxANAB+7ngw=
+  "],ExpressionUUID->"b5f5697d-15c3-403e-a5b2-7954f38929e8"],
 
 Cell[CellGroupData[{
 
@@ -49,477 +42,11 @@ Cell["March 21, 2025", "Subtitle",
    3.94769279117017*^9}, {3.948630334763303*^9, 3.948630334931707*^9}, {
    3.9486334580365763`*^9, 3.9486334592670527`*^9}, {3.9492489974206553`*^9, 
    3.949248997945656*^9}, {3.951245961492091*^9, 3.9512459619415627`*^9}},
- FontSize->18,ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
-
-Cell["\<\
-We are headed into the last of three notebooks on torsion pendula, and by the \
-time we we are done with the last one it will become obvious that we are \
-finally seeing waves.\
-\>", "Text",
- CellChangeTimes->{{3.944139933130417*^9, 3.944139977229712*^9}, {
-   3.94414001836478*^9, 3.944140062505911*^9}, {3.944161611377473*^9, 
-   3.944161627499713*^9}, {3.944161723251081*^9, 3.944161834907104*^9}, {
-   3.944161878819278*^9, 3.944161969242011*^9}, {3.944259456652563*^9, 
-   3.944259498143794*^9}, {3.946308710840654*^9, 3.946308766985734*^9}, {
-   3.946308957102322*^9, 3.946308968277079*^9}, {3.94631108124636*^9, 
-   3.946311106046884*^9}, {3.94631134418966*^9, 3.9463113485273237`*^9}, {
-   3.946552503318612*^9, 3.946552567471616*^9}, {3.946553808591125*^9, 
-   3.946553947161599*^9}, {3.9467273673295383`*^9, 3.94672736877951*^9}, {
-   3.946870596295599*^9, 3.9468706233996143`*^9}, {3.946871826174282*^9, 
-   3.946871832716617*^9}, {3.946920254105906*^9, 3.946920267424671*^9}, {
-   3.946920837678768*^9, 3.9469208406272078`*^9}, {3.947291723277492*^9, 
-   3.9472917352027884`*^9}, {3.947293980227618*^9, 3.947293980900442*^9}, {
-   3.947551684222061*^9, 3.947551703509832*^9}, {3.9476927967024927`*^9, 
-   3.947692842273329*^9}, {3.947693322273127*^9, 3.947693337093075*^9}, {
-   3.947693453227243*^9, 3.947693465467083*^9}, {3.947693618789754*^9, 
-   3.9476936262596807`*^9}, {3.948630342923705*^9, 3.9486304421996527`*^9}, 
-   3.948633471103031*^9, {3.9492489144219933`*^9, 3.949248990534996*^9}, {
-   3.951331773321113*^9, 
-   3.95133179466544*^9}},ExpressionUUID->"260f1f1a-e8fb-41a0-808a-\
-db36f0f0e445"],
-
-Cell[CellGroupData[{
-
-Cell["Torsion Pendulum \[LongDash] Theory", "Subsection",
- CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQBWIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
-bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
-vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
-N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
-BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9IcHB9ZlA+msL6/B9BKxGVtA
-9K1Ujq0g+ljdmSMgOjL2GZg+lHZi/Yyct45XD9huBNFNZ/bsAdGFa36B6SP+
-KusmFrx1XOkTtQlEAwBIJbX3
-  "],ExpressionUUID->"6f78337b-e569-4641-bad1-a534a36f90c5"],
+ FontSize->18,ExpressionUUID->"24cd0e42-971f-4822-9082-9d92beaffae3"],
 
 Cell[TextData[{
- "The theory we developed for the torsion pendulum and promptly used in our \
-eleventh notebook was:\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[Tau]", "=", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"-", 
-       SubscriptBox["\[Kappa]", "L"]}], "\[Theta]"}], "-", 
-     RowBox[{
-      SubscriptBox["\[Kappa]", "R"], "\[Theta]"}]}]}], TraditionalForm]],
-  ExpressionUUID->"f61e455f-7dcc-4eb3-9392-fd46c0714bc2"],
- "\n\nand\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[Tau]", "=", 
-    RowBox[{"I", "\[VeryThinSpace]", "\[Alpha]"}]}], TraditionalForm]],
-  ExpressionUUID->"8fdcbf52-c339-492f-9ec6-499e5c6db57a"],
- "\n\nThe formula that plays the role of ",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"F", "=", 
-    RowBox[{"m", "\[VeryThinSpace]", "a"}]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "79975fa3-1e57-4844-919d-0f50287c07a5"],
- " but involves torque is read, \[OpenCurlyDoubleQuote]torque, \[Tau], equals \
-the moment of inertia, ",
- Cell[BoxData[
-  FormBox["I", TraditionalForm]],ExpressionUUID->
-  "96d00c96-ce0a-4e9f-81b1-1d75406da6eb"],
- ", times angular acceleration, \[Alpha].\[CloseCurlyDoubleQuote] I want to \
-stress that this law involving torques is not an independent law. In a \
-mechanics course, you would derive this law from Newton\[CloseCurlyQuote]s \
-Second Law.\n\nWe put those two equations together to get:\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[Alpha]", "=", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"-", 
-         SubscriptBox["\[Kappa]", "L"]}], "\[Theta]"}], "-", 
-       RowBox[{
-        SubscriptBox["\[Kappa]", "R"], "\[Theta]"}]}], ")"}], "/", "I"}]}], 
-   TraditionalForm]],ExpressionUUID->"b4597e21-cfee-4a4f-b306-842dfd0f952e"],
- "\n\nThen we defined\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{
-    SuperscriptBox[
-     SubscriptBox["\[Omega]", "0"], "2"], "\[Congruent]", 
-    FractionBox[
-     RowBox[{
-      SubscriptBox["\[Kappa]", "L"], "+", 
-      SubscriptBox["\[Kappa]", "R"]}], "I"]}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "aa9ec286-bfc1-443a-85df-dbf35ee65355"],
- "\n\nand our formula was elegantly written as\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[Alpha]", "=", 
-    RowBox[{
-     RowBox[{"-", 
-      SuperscriptBox[
-       SubscriptBox["\[Omega]", "0"], "2"]}], "\[Theta]"}]}], 
-   TraditionalForm]],ExpressionUUID->"ad69a455-6388-4687-8450-a2d81e5ec70b"]
-}], "Text",
- CellChangeTimes->{{3.951332761334323*^9, 3.951333038816676*^9}, {
-  3.95133308864044*^9, 
-  3.951333108335041*^9}},ExpressionUUID->"09820751-1cc0-4cba-b766-\
-a774920195a2"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Coupled Torsion Pendula \[LongDash] Theory", "Subsection",
- CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQA2IQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
-bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
-vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
-N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
-BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9IcHB9ZlA+msL6/B9BKxGVtA
-9K1Ujq0g+ljdmSMgOjL2GZg+lHZi/Yyct45XD9huBNFNZ/bsAdGFa36B6SP+
-KusmFrx1XOkTtQlEv3p1+jKIXrAv8AqIBgAI6sBL
-  "],ExpressionUUID->"878e9ef7-0338-4186-977f-fdeff7867b90"],
-
-Cell[TextData[{
- "The theory we developed for coupled torsion pendula and promptly used in \
-our twelfth notebook was:\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "1"], "=", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"-", 
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"]}], "\[VeryThinSpace]", 
-       SubscriptBox["\[Theta]", "1"]}], "+", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "12"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "2"], "-", 
-        SubscriptBox["\[Theta]", "1"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"0aaafec3-1799-4635-b72f-096cf716722e"],
- "\n \n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "2"], "=", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"-", 
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"]}], "\[VeryThinSpace]", 
-       SubscriptBox["\[Theta]", "2"]}], "-", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "12"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "2"], "-", 
-        SubscriptBox["\[Theta]", "1"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"76d81c65-6045-46b9-960c-5e3ff0ebc9a2"],
- "\n \nwhere,\n \[LineSeparator]",
- Cell[BoxData[
-  FormBox[
-   RowBox[{
-    SuperscriptBox[
-     SubscriptBox["\[Omega]", "0"], "2"], "\[Congruent]", 
-    FractionBox["\[Kappa]", "I"]}], TraditionalForm]],ExpressionUUID->
-  "c15bee56-149b-4b01-bbaa-9a41a2aa352e"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{
-    SuperscriptBox[
-     SubscriptBox["\[Omega]", "12"], "2"], "\[Congruent]", 
-    FractionBox[
-     SubscriptBox["\[Kappa]", "12"], "I"]}], TraditionalForm]],ExpressionUUID->
-  "52ffd273-390f-4272-930e-7a918c7e661e"]
-}], "Text",
- CellChangeTimes->{{3.951333048908646*^9, 
-  3.951333075865878*^9}},ExpressionUUID->"69a6b746-eec6-4719-80f9-\
-57ce68e1d368"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Five Rods \[LongDash] Theory \[LongDash] Fixed Ends", "Subsection",
- CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGCQAGIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
-bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
-vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
-N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
-BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9IcHB9ZlA+msL6/B9BKxGVtA
-9K1Ujq0g+ljdmSMgOjL2GZg+lHZi/Yyct45XD9huBNFNZ/bsAdGFa36B6SP+
-KusmFrx1LHt5YSOI5vD5/xBEq2xpegSiK7a+mjgJSH9wWTgZRHe5Tl0Cop02
-My4F0QAtT9Ea
-  "],ExpressionUUID->"4e20471f-c045-44d0-9742-3df803e57e3f"],
-
-Cell[TextData[{
- "Now we just need to graduate from one or two rods connected by stainless \
-steel wires to seventy-two rods. Of course, seventy-two is not a magic \
-number, and we will want to generalize to ",
- Cell[BoxData[
-  FormBox["n", TraditionalForm]],ExpressionUUID->
-  "e231eedb-a584-4a0c-b6af-19a1b91a54aa"],
- " rods,  where ",
- Cell[BoxData[
-  FormBox["n", TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "25891046-0050-4e90-8ff6-29fb22cb8c81"],
- " is anything from from 1 to 1000, or whatever you like.\n\nLet\
-\[CloseCurlyQuote]s write down the equations for five rods with six wires \
-connecting them to each other and to the walls. That should be enough to see \
-where we need to go:\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "1"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", "\[VeryThinSpace]", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "1"], "-", "0"}], ")"}]}], "+", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "2"], "-", 
-        SubscriptBox["\[Theta]", "1"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"67158394-d26d-45a6-9e2c-65d7f96035d9"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "2"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "2"], "-", 
-         SubscriptBox["\[Theta]", "1"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "3"], "-", 
-        SubscriptBox["\[Theta]", "2"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"9a743f56-7d2d-4eef-959d-817886e5a74c"],
- "\n \n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "3"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "3"], "-", 
-         SubscriptBox["\[Theta]", "2"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "4"], "-", 
-        SubscriptBox["\[Theta]", "3"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"9526c36a-dd02-477d-909e-e40f730f7ba4"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "4"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "4"], "-", 
-         SubscriptBox["\[Theta]", "3"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "5"], "-", 
-        SubscriptBox["\[Theta]", "4"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"f644a5bd-d72a-4bfe-8351-37ff382f2859"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "5"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "5"], "-", 
-         SubscriptBox["\[Theta]", "4"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{"0", "-", 
-        SubscriptBox["\[Theta]", "5"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"2894ff4b-fefb-4396-b3c9-8ece93eca963"],
- "\n\nwhere\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{
-    SuperscriptBox[
-     SubscriptBox["\[Omega]", "0"], "2"], "\[Congruent]", 
-    FractionBox["\[Kappa]", "I"]}], TraditionalForm]],ExpressionUUID->
-  "a7143bdd-0152-4e16-89a0-be424b8a2875"],
- "\n\nThe left-most and right-most rods have equations that don\
-\[CloseCurlyQuote]t quite fit the pattern due to being on the ends. This is \
-assuming there are ends that can\[CloseCurlyQuote]t move. Their lack of \
-movement is captured in the ",
- Cell[BoxData[
-  FormBox["0", TraditionalForm]],ExpressionUUID->
-  "65ed8d99-9865-4445-8f4c-9b310c767f3a"],
- "\[CloseCurlyQuote]s that I have suggestively placed into the amount the two \
-end stainless steel wires are twisted."
-}], "Text",
- CellChangeTimes->{{3.948630711439576*^9, 3.948630774109071*^9}, {
-   3.9486314616672783`*^9, 3.9486325069622297`*^9}, {3.948632551468163*^9, 
-   3.948632589026087*^9}, {3.9486326413957*^9, 3.9486328160382566`*^9}, {
-   3.948632866574149*^9, 3.948633109826956*^9}, {3.948633155086842*^9, 
-   3.9486333464960117`*^9}, 3.948633504459333*^9, {3.94924990745057*^9, 
-   3.94924991461482*^9}, {3.949250028350224*^9, 3.949250073996264*^9}, {
-   3.9492502313691893`*^9, 3.94925024245277*^9}, {3.94925037869573*^9, 
-   3.949250450214093*^9}, {3.94925048338027*^9, 3.949250484520529*^9}, {
-   3.949250540068571*^9, 3.949250553854912*^9}, {3.951333151695529*^9, 
-   3.951333347139648*^9}, {3.951333397736767*^9, 3.951333490852311*^9}, {
-   3.9513345646883802`*^9, 3.9513346862880487`*^9}, {3.951334813169015*^9, 
-   3.95133486478216*^9}},ExpressionUUID->"077570e8-22c0-45b7-832a-\
-4b9d0c4fc65c"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Five Rods \[LongDash] Theory \[LongDash] Free Ends", "Subsection",
- CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGCQAGIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
-bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
-vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
-N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
-BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9IcHB9ZlA+msL6/B9BKxGVtA
-9K1Ujq0g+ljdmSMgOjL2GZg+lHZi/Yyct45XD9huBNFNZ/bsAdGFa36B6SP+
-KusmFrx1LHt5YSOI5vD5/xBEq2xpegSiK7a+mjgJSH9wWTgZRHe5Tl0Coldd
-v7YURAMANonSew==
-  "],ExpressionUUID->"1b0d4d4c-111d-4caf-a389-ee9f1c94b8bb"],
-
-Cell[TextData[{
- "If there are no wires at the ends, we call that \[OpenCurlyDoubleQuote]free\
-\[CloseCurlyDoubleQuote] instead of \[OpenCurlyDoubleQuote]fixed,\
-\[CloseCurlyDoubleQuote] and the equations are:\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "1"], "=", 
-     RowBox[{"0", "+", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "2"], "-", 
-        SubscriptBox["\[Theta]", "1"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"bae5b026-a80c-4fd6-a868-b247c97ff3ba"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "2"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "2"], "-", 
-         SubscriptBox["\[Theta]", "1"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "3"], "-", 
-        SubscriptBox["\[Theta]", "2"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"2e918e8c-a7ad-4e64-b2e5-1b22e7310646"],
- "\n \n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "3"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "3"], "-", 
-         SubscriptBox["\[Theta]", "2"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "4"], "-", 
-        SubscriptBox["\[Theta]", "3"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"46f6d2d8-6c4f-4335-a73e-d7dcbd4326c7"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "4"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "4"], "-", 
-         SubscriptBox["\[Theta]", "3"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      RowBox[{
-       SuperscriptBox[
-        SubscriptBox["\[Omega]", "0"], "2"], "(", 
-       RowBox[{
-        SubscriptBox["\[Theta]", "5"], "-", 
-        SubscriptBox["\[Theta]", "4"]}], ")"}]}]}]}], TraditionalForm]],
-  ExpressionUUID->"8495ef42-3436-4251-836f-fbe5eeaef538"],
- "\n\n",
- Cell[BoxData[
-  FormBox[
-   RowBox[{"\[VeryThinSpace]", 
-    RowBox[{
-     SubscriptBox["\[Alpha]", "5"], "=", 
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{
-        SuperscriptBox[
-         SubscriptBox["\[Omega]", "0"], "2"], "(", 
-        RowBox[{
-         SubscriptBox["\[Theta]", "5"], "-", 
-         SubscriptBox["\[Theta]", "4"]}], ")"}]}], "+", "\[VeryThinSpace]", 
-      "0"}]}]}], TraditionalForm]],ExpressionUUID->
-  "d41e29b5-d241-4551-baf0-06d1bf2cc4d9"],
- "\n\nIf you look at the apparatus that is usually set up for physics \
-demonstration, it is usually set up with free ends, and so maybe that is the \
-more interesting case for us to code up first.\n",
+ "It is time to introduce the second derivative, and torsion waves are a \
+great place to do it. Here again is our apparatus:\n",
  Cell[BoxData[
   GraphicsBox[
    TagBox[RasterBox[CompressedData["
@@ -35748,45 +35275,770 @@ fq9e33of9TcBLmj/ALmyhTM=
    ImageSize->{200.82850000000002`, Automatic},
    ImageSizeRaw->{2270., 1012.},
    PlotRange->{{0, 2270.}, {0, 1012.}}]], "Input",ExpressionUUID->
-  "985f42a3-1cc0-47ab-8765-519f6ebb7b86"],
- "\nHowever, there are little clips that come with the apparatus so that you \
-can make the left end of the wire to the left of the first rod fixed and the \
-right end of the wire to the right of the seventy-second rod fixed. It is \
-nice to understand both cases, because the way waves reflect off of free ends \
-is quite different than the way they reflect off of fixed ends."
+  "b9790642-b3ff-4e3a-afb0-1fcafa47da23"],
+ "\n\nEach rod has an angle, and it has a new angle at every time step. I am \
+going to try to be consistent and write ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Theta]", "j"], "(", 
+    SubscriptBox["t", "i"], ")"}], TraditionalForm]],ExpressionUUID->
+  "04f768d1-3def-4f97-b01e-62b6b5c53c7c"],
+ ". In other words, if there are 72 rods, ",
+ Cell[BoxData[
+  FormBox["j", TraditionalForm]],ExpressionUUID->
+  "635bdbd3-adb9-47b2-9a78-cab6bf4ec704"],
+ " is going to be the index that through the range 1 to 72. Meanwhile, ",
+ Cell[BoxData[
+  FormBox["i", TraditionalForm]],ExpressionUUID->
+  "2cebdda4-80d3-49d2-9822-eb8fec8117df"],
+ " is going to be the index that goes through the time steps."
 }], "Text",
- CellChangeTimes->{{3.948630711439576*^9, 3.948630774109071*^9}, {
-   3.9486314616672783`*^9, 3.9486325069622297`*^9}, {3.948632551468163*^9, 
-   3.948632589026087*^9}, {3.9486326413957*^9, 3.9486328160382566`*^9}, {
-   3.948632866574149*^9, 3.948633109826956*^9}, {3.948633155086842*^9, 
-   3.9486333464960117`*^9}, 3.948633504459333*^9, {3.94924990745057*^9, 
-   3.94924991461482*^9}, {3.949250028350224*^9, 3.949250073996264*^9}, {
-   3.9492502313691893`*^9, 3.94925024245277*^9}, {3.94925037869573*^9, 
-   3.949250450214093*^9}, {3.94925048338027*^9, 3.949250484520529*^9}, {
-   3.949250540068571*^9, 3.949250553854912*^9}, {3.951333151695529*^9, 
-   3.951333347139648*^9}, {3.951333397736767*^9, 3.951333490852311*^9}, {
-   3.9513345646883802`*^9, 3.9513346862880487`*^9}, {3.951334729360924*^9, 
-   3.9513348062282467`*^9}, {3.951334888609079*^9, 3.9513349822404957`*^9}, {
-   3.9513351145319033`*^9, 
-   3.951335173781609*^9}},ExpressionUUID->"1b15caa7-7bcc-488a-868c-\
-621873d068cf"]
+ CellChangeTimes->{{3.951494882169281*^9, 3.951495002919482*^9}, {
+  3.951497873419155*^9, 
+  3.951497939450336*^9}},ExpressionUUID->"a6a9e8af-ddb6-45d2-b223-\
+d5cda660008d"],
+
+Cell[CellGroupData[{
+
+Cell["Derivatives With Respect to Time", "Subsection",
+ CellChangeTimes->CompressedData["
+1:eJwdxUsow3EcAPDZhZNirFBGjYvCQUPL6l+olcdymObd1oaNmWithcNOkiWW
+7EJWlKR5bONgYWsbaTRlZNYeFHn8wnLYMPy+v8OnT6F4qEVKp9FoeRjsPNvv
+2hUjKnNuXwzHLPoAfP/mIGuOywdv8PMl30r40iVMMCSIylVtkWdc6sUfGaJ4
+5wtL8G12immkF1Glbha5qNEShrV8YwSe9DgqRvHxnrUqeCw/GBrHM9mMMFwv
+cb+m9yGqPdWPYN5yGaMYrxRVZ8E7t9ocmJ48ICceO6aDePOuQA83xXIzQnij
+QU2W8+0cuQJR3A9uJfweOTIr8PLPF/IK02iFA9I0G+yZ8LpgUecD2Sk72TQO
+IMp/VLMN67x2Ozy88UV2NbPNsypEqZ9823Baw18UZlt1d7DG9jw7h3+vNRng
+qbr5FXj9+moVTsr7fTCTE72AC35b3RF8G+uQvNctPIUF33HyP1kp7u4=
+  "],ExpressionUUID->"ec18b5f7-9258-4ec6-a018-abc750cf92e2"],
+
+Cell[TextData[{
+ "Here is why we defined the average angular velocity for rod ",
+ Cell[BoxData[
+  FormBox["j", TraditionalForm]],ExpressionUUID->
+  "9462e9d2-732c-4a88-8f5e-1ad297bbeec1"],
+ " from time ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "i"], TraditionalForm]],ExpressionUUID->
+  "ca2c2788-d869-45e9-905b-52fc7984b2a8"],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", 
+    RowBox[{"i", "+", "1"}]], TraditionalForm]],ExpressionUUID->
+  "6f321be3-1f2d-4785-8c95-94bc299d98c2"],
+ ":\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Omega]", 
+     RowBox[{"j", ",", 
+      RowBox[{"i", "->", 
+       RowBox[{"i", "+", "1"}]}], ",", "avg"}]], "\[Congruent]", 
+    FractionBox[
+     RowBox[{
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       SubscriptBox["t", 
+        RowBox[{"i", "+", "1"}]], ")"}], "-", 
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       SubscriptBox["t", "i"], ")"}]}], 
+     RowBox[{
+      SubscriptBox["t", 
+       RowBox[{"i", "+", "1"}]], "-", 
+      SubscriptBox["t", "i"]}]]}], TraditionalForm]],ExpressionUUID->
+  "182eb4bc-e5bd-4806-a53b-a4f92c66d924"],
+ "\n\nAnother way you might write this using ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", 
+     RowBox[{"i", "+", "1"}]], "=", 
+    RowBox[{
+     SubscriptBox["t", "i"], "+", 
+     RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}]}], 
+   TraditionalForm]],ExpressionUUID->"39638dae-57b5-4898-83cc-406e62c63952"],
+ " is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Omega]", 
+     RowBox[{"j", ",", 
+      RowBox[{"i", "->", 
+       RowBox[{"i", "+", "1"}]}], ",", "avg"}]], "=", 
+    FractionBox[
+     RowBox[{
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       RowBox[{
+        SubscriptBox["t", "i"], "+", 
+        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}], ")"}], "-", 
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       SubscriptBox["t", "i"], ")"}]}], 
+     RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]]}], 
+   TraditionalForm]],ExpressionUUID->"3b682d3a-ca5a-4d1a-a1b8-487c5dbf6755"],
+ ".\n\nand it is helpful to think of this loosely as ",
+ Cell[BoxData[
+  FormBox["\"\<\!\(\*SubscriptBox[\(\[Omega]\), \
+\(j\)]\)(\!\(\*SubscriptBox[\(t\), \(i + 1/2\)]\))\>\"", TraditionalForm]],
+  ExpressionUUID->"c22736ef-53d8-44b3-85c4-0def4a4d309f"],
+ ". We also have: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Omega]", 
+     RowBox[{"j", ",", 
+      RowBox[{
+       RowBox[{"i", "-", "1"}], "->", "i"}], ",", "avg"}]], "=", 
+    FractionBox[
+     RowBox[{
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       SubscriptBox["t", "i"], ")"}], "-", 
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       RowBox[{
+        SubscriptBox["t", "i"], "-", 
+        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}], ")"}]}], 
+     RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]]}], 
+   TraditionalForm]],ExpressionUUID->"b155b230-f445-43d8-bb4a-5edf133a0167"],
+ ".\n\nand it is helpful to think of that loosely as ",
+ Cell[BoxData[
+  FormBox["\"\<\!\(\*SubscriptBox[\(\[Omega]\), \
+\(j\)]\)(\!\(\*SubscriptBox[\(t\), \(i - 1/2\)]\))\>\"", TraditionalForm]],
+  ExpressionUUID->"5f41920b-6977-4d8f-92f2-c82323f9768e"],
+ ". If we want to get the average angular acceleration, we compute the rate \
+of change of angular velocity as follows:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Alpha]", 
+       RowBox[{"j", ",", "avg"}]], "(", 
+      SubscriptBox["t", "i"], ")"}], "\[Congruent]", 
+     FractionBox[
+      RowBox[{"\"\<\!\(\*SubscriptBox[\(\[Omega]\), \
+\(j\)]\)(\!\(\*SubscriptBox[\(t\), \(i + 1/2\)]\))\>\"", 
+       "-", "\"\<\!\(\*SubscriptBox[\(\[Omega]\), \
+\(j\)]\)(\!\(\*SubscriptBox[\(t\), \(i - 1/2\)]\))\>\""}], 
+      RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]]}], "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          RowBox[{
+           SubscriptBox["t", "i"], "+", 
+           RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}], ")"}], "-", 
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}]}], 
+        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]], "-", 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}], "-", 
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          RowBox[{
+           SubscriptBox["t", "i"], "-", 
+           RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}], ")"}]}], 
+        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]]}], 
+      RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]], "=", 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        SubscriptBox["\[Theta]", "j"], "(", 
+        RowBox[{
+         SubscriptBox["t", "i"], "+", 
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}], ")"}], "-", 
+       RowBox[{"2", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "j"], "(", 
+         SubscriptBox["t", "i"], ")"}]}], "+", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "j"], "(", 
+        RowBox[{
+         SubscriptBox["t", "i"], "-", 
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}]}], ")"}]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], ")"}], 
+       "2"]]}]}], TraditionalForm]],ExpressionUUID->
+  "4ed3e34c-803e-4354-93cc-214778747518"],
+ "\n\nEquivalently, I could have written:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Alpha]", 
+      RowBox[{"j", ",", "avg"}]], "(", 
+     SubscriptBox["t", "i"], ")"}], "=", 
+    FractionBox[
+     RowBox[{
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       SubscriptBox["t", 
+        RowBox[{"i", "+", "1"}]], ")"}], "-", 
+      RowBox[{"2", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "j"], "(", 
+        SubscriptBox["t", "i"], ")"}]}], "+", 
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       SubscriptBox["t", 
+        RowBox[{"i", "-", "1"}]], ")"}]}], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], ")"}], "2"]]}], 
+   TraditionalForm]],ExpressionUUID->"dcdb04d8-a819-4b52-ad7e-358564383feb"],
+ "\n\nOf course, this is an average velocity, and if you are in a calculus \
+course, you learn how to take the limit that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "->", "0"}], 
+   TraditionalForm]],ExpressionUUID->"8107ab91-915b-41bc-a6eb-524005e5c96a"],
+ " at which point the right-hand side becomes the second derivative, and the \
+left-hand side is what we call instantaneous acceleration.\n\nThe second \
+derivative here is a second derivative with respect to the time coordinate, \
+",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],ExpressionUUID->
+  "80775e96-26f4-4030-91fe-60271e298898"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.951494882169281*^9, 3.951495306771594*^9}, {
+  3.951495342196533*^9, 3.951495849101326*^9}, {3.951496938896318*^9, 
+  3.9514969429480257`*^9}, {3.9514980655399313`*^9, 
+  3.951498071837838*^9}},ExpressionUUID->"3974a22e-f000-4e8e-a902-\
+b31388b94165"]
 }, Open  ]],
 
-Cell["The Second Derivative", "Subsection",
+Cell[CellGroupData[{
+
+Cell["Derivatives With Respect to Space", "Subsection",
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGCQBGIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNMVxw1y
-bwLpqdq/80D0lSNhP4WT3zpKFWwA0/1Hyub+SXvraHdu+jwQfVuUcWFx+ltH
-vaPyYFrVd/N9EF3lOeMBiO44dtCkBEj/SFhhAaJr5O7cqwXSYirC90G0W/LR
-N3wZbx2j2a++BdF2C/SF1YB0XqSlCIjedLtKEkQz/d0Hpn8+j+m5A6TXbQvo
-BdF+n6QE7wHpGZPLwHSW5x6zrOy3jtYfrc1B9IcHB9ZlA+msL6/B9BKxGVtA
-9K1Ujq0g+ljdmSMgOjL2GZg+lHZi/Yyct45XD9huBNFNZ/bsAdGFa36B6SP+
-KusmFrx1LHt5YSOI5vD5/xBEq2xpegSiK7a+mjgJSH9wWTgZRHe5Tl0Coldd
-v7YURP/NyrwAosXMHl4E0QCvU9t6
-  "],ExpressionUUID->"96175bf7-90c3-4aa3-ad0f-6d6ebeb2fcea"]
+1:eJwdxUsow3EcAPBxsZNirDzyqHFR7CCPRP0LpTyWgzXvtjZs3rS0cHCSLG1r
+2YWspiSN2cNhC1sbEpoysq09KPL4ZeSwmdfv+zt8+uTzR1qFiTQaLRuDHefW
+bgsfUalKKx/+MMq98P2bnTx1zB66xauL4sPwlbMtxhAgKnN0h7zklK58ixBV
+c7G8CvvSE7QTfYgqduWSC5qMQVjWoAnB80f20kl8tHejAp7O8Qdm8EwWIwjX
+C1yvyf2I6kjyILhmrYRRiB/mVabBuz5ZBpz4s0+OPXYu+vF6C0cON39kpgTw
+GpWULG6wlYkliKp6ryqHI6FDvQQv/nwh65gaE+wV0s3w0eyZE+Z1PZAdopNt
+zSCiPIfVBnjuzGaDx7a+yM4Wll4xiijpk9sA0xv/wjDLNHcHT5mfFUp8pFar
+ghfq1Dp48+Z6Hf4RD7hhZln4Es775bpC+PbcA/JeT9spzIlHyXpRFjeMj46z
+yf+Q+Pdk
+  "],ExpressionUUID->"4df40c25-5632-40bb-8829-26c1780a8ec0"],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s inspect more closely, just as an example, the \
+formula ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Alpha]", "3"], TraditionalForm]],ExpressionUUID->
+  "6f32125c-8978-49ea-87ab-e694e81234be"],
+ " we had in the \[LineSeparator]\[OpenCurlyDoubleQuote]Torsion Saves\
+\[LongDash]Theory\[CloseCurlyDoubleQuote] derivation:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "3"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        SuperscriptBox[
+         SubscriptBox["\[Omega]", "0"], "2"], "(", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "3"], "-", 
+         SubscriptBox["\[Theta]", "2"]}], ")"}]}], "+", "\[VeryThinSpace]", 
+      RowBox[{
+       SuperscriptBox[
+        SubscriptBox["\[Omega]", "0"], "2"], "(", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "4"], "-", 
+        SubscriptBox["\[Theta]", "3"]}], ")"}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"867a40d8-f36d-46fb-b319-666301b9e940"],
+ "\n\nRemember that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["\[Omega]", "0"], "2"], "=", 
+    FractionBox["\[Kappa]", "I"]}], TraditionalForm]],ExpressionUUID->
+  "ba65bbf5-888f-4091-bd43-24eb44172ca8"],
+ " where ",
+ Cell[BoxData[
+  FormBox["\[Kappa]", TraditionalForm]],ExpressionUUID->
+  "3a8aac02-2a13-4da6-b486-ca798c240719"],
+ " is the proportionality constant that says how much torque the stainless \
+steel wire creates in opposition to twist, and ",
+ Cell[BoxData[
+  FormBox["I", TraditionalForm]],ExpressionUUID->
+  "934ba14b-1b0b-472a-8b87-7a2d8496f34c"],
+ " is the moment of inertia of the rod. So putting some of these things back \
+in, and letting ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"j", "=", "3"}], TraditionalForm]],ExpressionUUID->
+  "0155ba38-3ada-41dc-a48e-26d5c2915a8e"],
+ " so that we have a formula that is true for any rod (except for the end \
+ones that are a little bit special), we have\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Alpha]", "j"], "(", 
+      SubscriptBox["t", "i"], ")"}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["\[Kappa]", "I"]}], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}], "-", 
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "-", "1"}]], "(", 
+          SubscriptBox["t", "i"], ")"}]}], ")"}]}], "+", "\[VeryThinSpace]", 
+      RowBox[{
+       FractionBox["\[Kappa]", "I"], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "+", "1"}]], "(", 
+          SubscriptBox["t", "i"], ")"}], "-", 
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}]}], ")"}]}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"933f1858-5ab1-4237-b3ae-b8be4b33071e"],
+ "\n\nI also put back in the times so that you don\[CloseCurlyQuote]t forget \
+how much complexity is hidden in the notation.\n\nNow I need to argue two \
+more things: (1) That if you have a piece of stainless steel wire, and you \
+cut it in half, it will resist twisting twice as much; (2) That if you have a \
+sheet of material and you cut it into rods that are half as wide, each rod \
+will have half the moment of inertia. \n\n",
+ StyleBox["In other words, if you have a continuous sheet, and you are trying \
+to imagine that it has a backbone on which the continuous sheet is carried, \
+and you are imagining that this backbone is cut up into little bits of length \
+",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], TraditionalForm]],
+  FontWeight->"Plain",
+  FontSlant->"Italic",ExpressionUUID->
+  "8c368ac0-5538-453b-90b2-797254480178"],
+ StyleBox[", then the \[Kappa] is actually inversely proportional to ",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], TraditionalForm]],
+  FontWeight->"Plain",
+  FontSlant->"Italic",ExpressionUUID->
+  "d39d5a75-cb54-4bc8-829b-ec9903513fa5"],
+ StyleBox[" and the ",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox["I", TraditionalForm]],
+  FontWeight->"Plain",
+  FontSlant->"Italic",ExpressionUUID->
+  "320d2fd5-41c6-4f7c-8728-848e1a9673c0"],
+ StyleBox[" is actually proportional to ",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], TraditionalForm]],
+  FontWeight->"Plain",
+  FontSlant->"Italic",ExpressionUUID->
+  "fb05dd43-034a-4aed-abf9-62615d13e5dd"],
+ StyleBox[". In other words, if we want to capture the correct transition to \
+an infinite number of infinitely narrow rods, we should have written:\n\n",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Alpha]", "j"], "(", 
+      SubscriptBox["t", "i"], ")"}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"\[Kappa]", "/", "\[CapitalDelta]"}], "\[VeryThinSpace]", 
+          "x"}], 
+         RowBox[{
+         "I", "\[VeryThinSpace]", "\[CapitalDelta]", "\[VeryThinSpace]", 
+          "x"}]]}], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}], "-", 
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "-", "1"}]], "(", 
+          SubscriptBox["t", "i"], ")"}]}], ")"}]}], "+", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{"\[Kappa]", "/", "\[CapitalDelta]"}], "\[VeryThinSpace]", 
+         "x"}], 
+        RowBox[{
+        "I", "\[VeryThinSpace]", "\[CapitalDelta]", "\[VeryThinSpace]", 
+         "x"}]], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "+", "1"}]], "(", 
+          SubscriptBox["t", "i"], ")"}], "-", 
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}]}], ")"}]}]}]}]}], TraditionalForm]],
+  ExpressionUUID->"55db4a53-c787-44e8-9e38-26f8284f9e5d"],
+ "\n\nNow let\[CloseCurlyQuote]s re-introduce ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["\[Omega]", "0"], "2"], "=", 
+    FractionBox["\[Kappa]", "I"]}], TraditionalForm]],ExpressionUUID->
+  "84082f54-7aa7-4b8f-bc43-be857b732aad"],
+ " and simplify, and we see\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Alpha]", "j"], "(", 
+      SubscriptBox["t", "i"], ")"}], "=", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["\[Omega]", "0"], "2"], 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         SubscriptBox["\[Theta]", 
+          RowBox[{"j", "+", "1"}]], 
+         RowBox[{"(", 
+          SubscriptBox["t", "i"], ")"}]}], "-", 
+        RowBox[{"2", 
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["\[Theta]", 
+          RowBox[{"j", "-", "1"}]], "(", 
+         SubscriptBox["t", "i"], ")"}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], ")"}], 
+        "2"]]}]}]}], TraditionalForm]],ExpressionUUID->
+  "663adcfc-29e2-4432-ad85-c9608a34a5a1"],
+ "\n\nIf you look closely at the right-hand side, you will see that the \
+combination of ",
+ Cell[BoxData[
+  FormBox["\[Theta]", TraditionalForm]],ExpressionUUID->
+  "05ec3567-3a79-42b1-b83b-e8cdc57171d8"],
+ "\[CloseCurlyQuote]s is shockingly similar to the second derivative with \
+respect to time, which was\n\n",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Theta]", "j"], "(", 
+      SubscriptBox["t", 
+       RowBox[{"i", "+", "1"}]], ")"}], "-", 
+     RowBox[{"2", 
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       SubscriptBox["t", "i"], ")"}]}], "+", 
+     RowBox[{
+      SubscriptBox["\[Theta]", "j"], "(", 
+      SubscriptBox["t", 
+       RowBox[{"i", "-", "1"}]], ")"}]}], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], ")"}], "2"]], 
+   TraditionalForm]],ExpressionUUID->"24b87b22-ed1f-429a-82dc-055b9f0c9c03"],
+ "\n\nThe difference is that the index ",
+ Cell[BoxData[
+  FormBox["j", TraditionalForm]],ExpressionUUID->
+  "8772f545-4882-41d5-99a9-034b9ec25ba7"],
+ " is changing instead of the index ",
+ Cell[BoxData[
+  FormBox["i", TraditionalForm]],ExpressionUUID->
+  "269f0675-b813-4c7e-8b8b-8f6539ba518d"],
+ " and what is in the denominator is the rod-spacing squared instead of the \
+time-step squared. This new combination is called the second derivative with \
+respect to the space coordinate, ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "7041d48d-c7d2-4086-af09-ef13e2ba4778"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.951496011663062*^9, 3.9514967585409527`*^9}, {
+  3.951496790144783*^9, 3.95149703029836*^9}, {3.9514980086867847`*^9, 
+  3.9514980238658733`*^9}, {3.9514980961859903`*^9, 
+  3.9514980966330757`*^9}},ExpressionUUID->"66ff79d0-1ba1-4a2d-bbc5-\
+4bce16bd9b41"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Putting the Equations Together", "Subsection",
+ CellChangeTimes->CompressedData["
+1:eJwdxUsow3EcAPBx4SBhTKaMml0UDmJa1L9QymM5TPNu2jDMPFpr4eAkWdrW
+sgtZTUn6e2weZXm1ISHKIyzbKBp+YTlsY/h9f4dPnwxJT400ksFgcDB472Sz
+aU2CqAT9pgT2W7W38OP7Lll9kNt9gzdmfSvgC4coyGxFFFu5RJ5wqKZ+ZIgq
+Pp2chu+SIsz9bYjKdnLImZVWN6wpN3ng0f3dvAF8oGWODw+mue6H8Cwu0w2X
+tTrfYtsRVR91ieDimRwmD68QFybCK3eaFDgyvEUOPjeMu/D0mlALV/nZ8fd4
+k0FFlpfb8+WdiBJ8CgrgD88O3YmXf72SLSyTDb6VRq/C+8PHDljc+ETekx0u
+mroQdblTtAyPHNvtcO9CiOyo5tI6JaJUvrNlOLrizwtzbSMPsHr1RafHf5SY
+DfBYqdECz19fzcJheccZzMr3nsPpv7VOD76Os01ebxYdwcLvAJmWpdZ68YG+
+XDI/MO+Dt9DUC7yRzOQ/4OPoNnJMNs8Ch4RS8j+qsBI3
+  "],ExpressionUUID->"2644968d-fd90-4023-8a89-7bcc16f30a57"],
+
+Cell[TextData[{
+ "We have two expressions for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "j"], "(", 
+     SubscriptBox["t", "i"], ")"}]}], TraditionalForm]],ExpressionUUID->
+  "327ae625-2e22-46ab-b914-3a275322612d"],
+ " and putting them equal to each other, we see that what we are having \
+Mathematica do is doing is solving these equations:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        SubscriptBox["\[Theta]", "j"], "(", 
+        SubscriptBox["t", 
+         RowBox[{"i", "+", "1"}]], ")"}], "-", 
+       RowBox[{"2", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "j"], "(", 
+         SubscriptBox["t", "i"], ")"}]}], "+", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "j"], "(", 
+        SubscriptBox["t", 
+         RowBox[{"i", "-", "1"}]], ")"}]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], ")"}], "2"]], "=", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["\[Omega]", "0"], "2"], 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         SubscriptBox["\[Theta]", 
+          RowBox[{"j", "+", "1"}]], 
+         RowBox[{"(", 
+          SubscriptBox["t", "i"], ")"}]}], "-", 
+        RowBox[{"2", 
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["\[Theta]", 
+          RowBox[{"j", "-", "1"}]], "(", 
+         SubscriptBox["t", "i"], ")"}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], ")"}], 
+        "2"]]}]}]}], TraditionalForm]],ExpressionUUID->
+  "fd56eb18-e2f9-4d02-a07f-9ad65bc650de"],
+ "\n\nThese equations tell how to get the \[Theta] values at a later time \
+from the \[Theta] values at the current and previous times. If you don\
+\[CloseCurlyQuote]t see this, let me re-arrange so that you can see that this \
+is really a way of stepping forward in time:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Theta]", "j"], "(", 
+      SubscriptBox["t", 
+       RowBox[{"i", "+", "1"}]], ")"}], "=", 
+     RowBox[{
+      RowBox[{"2", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "j"], "(", 
+        SubscriptBox["t", "i"], ")"}]}], "-", 
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       SubscriptBox["t", 
+        RowBox[{"i", "-", "1"}]], ")"}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox[
+          SubscriptBox["\[Omega]", "0"], "2"], "(", 
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], ")"}], "2"], 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "+", "1"}]], 
+          RowBox[{"(", 
+           SubscriptBox["t", "i"], ")"}]}], "-", 
+         RowBox[{"2", 
+          RowBox[{
+           SubscriptBox["\[Theta]", "j"], "(", 
+           SubscriptBox["t", "i"], ")"}]}], "+", 
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "-", "1"}]], "(", 
+          SubscriptBox["t", "i"], ")"}]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], ")"}], 
+         "2"]]}]}]}]}], TraditionalForm]],ExpressionUUID->
+  "191a4bb4-d82c-412c-874c-1f0184fcde27"],
+ "\n\nRunge-Kutta 2 is a tad fancier because it introduces a time ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["t", "*"], TraditionalForm]],ExpressionUUID->
+  "c3680c7b-c9bb-4a5d-ac7b-d1b78cd870a8"],
+ " which is part-way from ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", "i"], TraditionalForm]],ExpressionUUID->
+  "be806f60-5491-4276-9b8f-7d823d059579"],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["t", 
+    RowBox[{"i", "+", "1"}]], TraditionalForm]],ExpressionUUID->
+  "9c3983fc-a7f3-4215-946f-5f147b08bbee"],
+ ", but it is only doing that for sake of efficiency, and it is essentially \
+doing this work.\n\nThat\[CloseCurlyQuote]s enough on second derivatives for \
+now, except I guess I should introduce the very fancy notation that is used \
+when the time steps ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "35f7739a-751e-4306-821c-69fd22bfc7cb"],
+ " and the spacing ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "27b107de-1f63-453f-a5ed-24832faa7c15"],
+ " is taken to zero. Then the way to write\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["lim", 
+       RowBox[{
+        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], "->", "0"}]], 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         SubscriptBox["\[Theta]", "j"], "(", 
+         SubscriptBox["t", 
+          RowBox[{"i", "+", "1"}]], ")"}], "-", 
+        RowBox[{"2", 
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "j"], "(", 
+         SubscriptBox["t", 
+          RowBox[{"i", "-", "1"}]], ")"}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], ")"}], "2"]]}],
+      "=", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["\[Omega]", "0"], "2"], "\[VeryThinSpace]", 
+      RowBox[{
+       SubscriptBox["lim", 
+        RowBox[{
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], "->", "0"}]], 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "+", "1"}]], 
+          RowBox[{"(", 
+           SubscriptBox["t", "i"], ")"}]}], "-", 
+         RowBox[{"2", 
+          RowBox[{
+           SubscriptBox["\[Theta]", "j"], "(", 
+           SubscriptBox["t", "i"], ")"}]}], "+", 
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "-", "1"}]], "(", 
+          SubscriptBox["t", "i"], ")"}]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], ")"}], 
+         "2"]]}]}]}]}], TraditionalForm]],ExpressionUUID->
+  "e7dc5ac2-8ba9-4dda-a1c3-b515f25d6504"],
+ "\n\nis\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[PartialD]", "2"], "\[Theta]"}], 
+     RowBox[{"\[PartialD]", 
+      SuperscriptBox["t", "2"]}]], "=", 
+    RowBox[{
+     SuperscriptBox[
+      SubscriptBox["\[Omega]", "0"], "2"], 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[PartialD]", "2"], "\[Theta]"}], 
+      RowBox[{"\[PartialD]", 
+       SuperscriptBox["x", "2"]}]]}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "944e26f2-707e-4ead-9492-84e4ff96f391"],
+ "\n\nThis means no more and no less than the equations you are already \
+familiar with, but the notation is becoming ever more abstract and compact.\n\
+\nWhen you see physicists and mathematicians write down \
+\[OpenCurlyDoubleQuote]wave equations\[CloseCurlyDoubleQuote] this is the \
+notation they use."
+}], "Text",
+ CellChangeTimes->{{3.951496011663062*^9, 3.9514967585409527`*^9}, {
+  3.951496790144783*^9, 3.95149703029836*^9}, {3.951497064510545*^9, 
+  3.9514971461998987`*^9}, {3.9514971874661293`*^9, 3.9514974796756897`*^9}, {
+  3.951498129743782*^9, 3.951498299958806*^9}, {3.9514983461709957`*^9, 
+  3.951498485355667*^9}, {3.9514985377402*^9, 
+  3.951498572344738*^9}},ExpressionUUID->"9ebc9a3e-dcc3-4fc2-8493-\
+cce48b537c3f"]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{991, 1183},
-WindowMargins->{{1, Automatic}, {Automatic, 0}},
+WindowSize->{991, 1181},
+WindowMargins->{{Automatic, 351}, {Automatic, 2}},
 PrintingCopies->1,
 PrintingPageRange->{1, Automatic},
 Magnification:>1.25 Inherited,
@@ -35805,27 +36057,22 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1044, 15, 103, "Section",ExpressionUUID->"08f90a5e-ac65-4417-8844-b6de9f5e59a2"],
+Cell[558, 20, 492, 8, 103, "Section",ExpressionUUID->"b5f5697d-15c3-403e-a5b2-7954f38929e8"],
 Cell[CellGroupData[{
-Cell[1627, 39, 902, 12, 69, "Subtitle",ExpressionUUID->"13bc130c-7f5e-44a4-9ed0-26cf2333f1d9"],
-Cell[2532, 53, 1630, 25, 121, "Text",ExpressionUUID->"260f1f1a-e8fb-41a0-808a-db36f0f0e445"],
+Cell[1075, 32, 902, 12, 69, "Subtitle",ExpressionUUID->"24cd0e42-971f-4822-9082-9d92beaffae3"],
+Cell[1980, 46, 2149670, 35253, 398, "Text",ExpressionUUID->"a6a9e8af-ddb6-45d2-b223-d5cda660008d"],
 Cell[CellGroupData[{
-Cell[4187, 82, 546, 9, 83, "Subsection",ExpressionUUID->"6f78337b-e569-4641-bad1-a534a36f90c5"],
-Cell[4736, 93, 2619, 72, 853, "Text",ExpressionUUID->"09820751-1cc0-4cba-b766-a774920195a2"]
+Cell[2151675, 35303, 636, 10, 83, "Subsection",ExpressionUUID->"ec18b5f7-9258-4ec6-a018-abc750cf92e2"],
+Cell[2152314, 35315, 7412, 207, 955, "Text",ExpressionUUID->"3974a22e-f000-4e8e-a902-b31388b94165"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7392, 170, 569, 9, 83, "Subsection",ExpressionUUID->"878e9ef7-0338-4186-977f-fdeff7867b90"],
-Cell[7964, 181, 1974, 60, 419, "Text",ExpressionUUID->"69a6b746-eec6-4719-80f9-57ce68e1d368"]
+Cell[2159763, 35527, 650, 11, 83, "Subsection",ExpressionUUID->"4df40c25-5632-40bb-8829-26c1780a8ec0"],
+Cell[2160416, 35540, 9359, 259, 1507, "Text",ExpressionUUID->"66ff79d0-1ba1-4a2d-bbc5-4bce16bd9b41"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9975, 246, 611, 10, 83, "Subsection",ExpressionUUID->"4e20471f-c045-44d0-9742-3df803e57e3f"],
-Cell[10589, 258, 5617, 148, 883, "Text",ExpressionUUID->"077570e8-22c0-45b7-832a-4b9d0c4fc65c"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[16243, 411, 614, 10, 83, "Subsection",ExpressionUUID->"1b0d4d4c-111d-4caf-a389-ee9f1c94b8bb"],
-Cell[16860, 423, 2153339, 35348, 852, "Text",ExpressionUUID->"1b15caa7-7bcc-488a-868c-621873d068cf"]
-}, Open  ]],
-Cell[2170214, 35774, 597, 10, 83, "Subsection",ExpressionUUID->"96175bf7-90c3-4aa3-ad0f-6d6ebeb2fcea"]
+Cell[2169812, 35804, 683, 11, 83, "Subsection",ExpressionUUID->"2644968d-fd90-4023-8a89-7bcc16f30a57"],
+Cell[2170498, 35817, 7743, 218, 1070, "Text",ExpressionUUID->"9ebc9a3e-dcc3-4fc2-8493-cce48b537c3f"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
