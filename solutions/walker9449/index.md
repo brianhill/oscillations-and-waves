@@ -4,6 +4,9 @@
 
 ### 2025-03-21 &mdash; PS12 &mdash; *EIWL3* Sections 31 and 32
 
+* [Walker's solution](./Walker-PS12.nb.pdf)
+* [Brian's solution](../brian54321/Brian-PS12.nb.pdf)
+
 ### 2025-03-18 &mdash; PS11 &mdash; *EIWL3* Sections 29 and 30
 
 * [Walker's solution](./Walker-PS11.nb.pdf)
