@@ -8,7 +8,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 ### Week 8 &mdash; Torsion Pendulum &mdash; Coupled Torsion Pendula &mdash; The Second Derivative &mdash; Torsion Waves
 
-#### As a way of refreshing on material that is three weeks old due to the Term 4-5 break, our eleventh and twelfth notebooks (Torsion Pendulum and Coupled Torsion Pendula) are straightforward recapitulations of our third and eighth notebooks (Mass on a Spring and Coupled Harmonic Oscillators). Similarly, our thirteenth notebook (Torsion Waves) will be a straightforward recapitulation of our ninth notebook (Many Harmonic Oscillators), but we will press on the initial conditions harder and learn how to get waves that are not jumbled to appear. Also, we are about to start making a connection to an important calculus idea, &ldquo;The Second Derivative.&rdquo; Waves typically show up in systems for which Newton's Laws involve second derivatives with respect to both space and time. 
+#### As a way of refreshing on material that is three weeks old due to the Term 4-5 break, our eleventh and twelfth notebooks (Torsion Pendulum and Coupled Torsion Pendula) are straightforward recapitulations of our third and eighth notebooks (Mass on a Spring and Coupled Harmonic Oscillators). Similarly, our thirteenth notebook (Torsion Waves) will be a straightforward recapitulation of our ninth notebook (Many Harmonic Oscillators), but we will press on the initial conditions harder and get obvious traveling waves to appear. Also, we are about to start making a connection to an important calculus idea, &ldquo;The Second Derivative.&rdquo; Waves typically show up in systems for which Newton's Laws involve second derivatives with respect to both space and time. 
 
 * Tuesday, March 18 &mdash; Problem Set 11: Do the Exercises from *EIWL3* Sections 29 and 30 &mdash; In-Class: Complete the *[Torsion Pendulum](./worksheets/11-TorsionPendulum.nb.pdf)* and *[Coupled Torsion Pendula](./worksheets/12-CoupledTorsionPendula.nb.pdf)* notebooks
 * Friday, March 21 &mdash; Problem Set 12: Do the Exercises from *EIWL3* Sections 31 and 32 &mdash; In-Class: Develop *[Torsion Waves - Theory](./theory/TorsionWaves-Theory.nb.pdf),* complete the *[Torsion Waves](./worksheets/13-TorsionWaves.nb.pdf)* notebook, and then develop *[The Second Derivative](./theory/TheSecondDerivative.nb.pdf)*
@@ -17,12 +17,13 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Torsion Wave Apparatus
 
-### Week 9 &mdash; Two-Dimensional Grids of Masses
+### Week 9 &mdash; Drumheads &mdash; Two-Dimensional Grids of Masses
+
+* Tuesday, March 25 &mdash; Problem Set 13: Do the Exercises from *EIWL3* Sections 33 and 34 &mdash; In-Class: A Square Drumhead Modeled as Square Grid of Masses
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, March 25 &mdash; Problem Set 13: Do the Exercises from *EIWL3* Sections 33 and 34 &mdash; In-Class: Square Grid of Masses
-* Friday, March 28 &mdash; Problem Set 14: Do the Exercises from *EIWL3* Sections 35 and 36 &mdash; In-Class: Radial Grid of Masses
+* Friday, March 28 &mdash; Problem Set 14: Do the Exercises from *EIWL3* Sections 35 and 36 &mdash; In-Class: A Round Drumhead Modeled as a Radial Grid of Masses
 
 ### Week 10 &mdash; Three-Dimensional Grid of Masses &mdash; Exam 2
 
