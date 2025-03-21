@@ -13,13 +13,13 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 * Tuesday, March 18 &mdash; Problem Set 11: Do the Exercises from *EIWL3* Sections 29 and 30 &mdash; In-Class: Complete the *[Torsion Pendulum](./worksheets/11-TorsionPendulum.nb.pdf)* and *[Coupled Torsion Pendula](./worksheets/12-CoupledTorsionPendula.nb.pdf)* notebooks
 * Friday, March 21 &mdash; Problem Set 12: Do the Exercises from *EIWL3* Sections 31 and 32 &mdash; In-Class: Develop *[Torsion Waves - Theory](./theory/TorsionWaves-Theory.nb.pdf),* complete the *[Torsion Waves](./worksheets/13-TorsionWaves.nb.pdf)* notebook, and then develop *[The Second Derivative](./theory/TheSecondDerivative.nb.pdf)*
 
-<img src="./illustrations/TorsionWaveApparatus.png" width="85%">
-
-#### Torsion Wave Apparatus
-
 ### Week 9 &mdash; Drumheads &mdash; Two-Dimensional Grids of Masses
 
 * Tuesday, March 25 &mdash; Problem Set 13: Do the Exercises from *EIWL3* Sections 33 and 34 &mdash; In-Class: A Square Drumhead Modeled as Square Grid of Masses
+
+<img src="./illustrations/DrumheadMode.png" width="70%">
+
+#### Drumhead Mode
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
