@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     47830,       1002]
-NotebookOptionsPosition[     44572,        940]
-NotebookOutlinePosition[     45025,        958]
-CellTagsIndexPosition[     44982,        955]
+NotebookDataLength[     71695,       1541]
+NotebookOptionsPosition[     68168,       1473]
+NotebookOutlinePosition[     68621,       1491]
+CellTagsIndexPosition[     68578,       1488]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -507,14 +507,64 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{
     RowBox[{"free\[Alpha]", "[", 
-     RowBox[{"j_", ",", "all\[Theta]s_"}], "]"}], ":=", " ", "rock"}], ";"}], 
+     RowBox[{"j_", ",", "all\[Theta]s_"}], "]"}], ":=", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox["omega0", "2"]}], 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"j", "==", "1"}], ",", "0", ",", 
+        RowBox[{
+         RowBox[{"all\[Theta]s", "[", 
+          RowBox[{"[", "j", "]"}], "]"}], "-", 
+         RowBox[{"all\[Theta]s", "[", 
+          RowBox[{"[", 
+           RowBox[{"j", "-", "1"}], "]"}], "]"}]}]}], "]"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["omega0", "2"], 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"j", "==", "n"}], ",", "0", ",", 
+        RowBox[{
+         RowBox[{"all\[Theta]s", "[", 
+          RowBox[{"[", 
+           RowBox[{"j", "+", "1"}], "]"}], "]"}], "-", 
+         RowBox[{"all\[Theta]s", "[", 
+          RowBox[{"[", "j", "]"}], "]"}]}]}], "]"}]}]}]}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
     RowBox[{"fixed\[Alpha]", "[", 
-     RowBox[{"j_", ",", "all\[Theta]s_"}], "]"}], ":=", " ", "paper"}], ";"}],
-   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+     RowBox[{"j_", ",", "all\[Theta]s_"}], "]"}], ":=", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox["omega0", "2"]}], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"all\[Theta]s", "[", 
+         RowBox[{"[", "j", "]"}], "]"}], "-", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"j", "==", "1"}], ",", " ", "0", ",", " ", 
+          RowBox[{"all\[Theta]s", "[", 
+           RowBox[{"[", 
+            RowBox[{"j", "-", "1"}], "]"}], "]"}]}], "]"}]}], ")"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["omega0", "2"], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"j", "==", "n"}], ",", "0", ",", 
+          RowBox[{"all\[Theta]s", "[", 
+           RowBox[{"[", 
+            RowBox[{"j", "+", "1"}], "]"}], "]"}]}], "]"}], "-", 
+        RowBox[{"all\[Theta]s", "[", 
+         RowBox[{"[", "j", "]"}], "]"}]}], ")"}]}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"\[Alpha]", "[", 
@@ -544,9 +594,8 @@ Cell[BoxData[{
    3.951511354656205*^9, 3.951511374871126*^9}, 3.951511949646709*^9, {
    3.951511989896983*^9, 3.951512094345108*^9}, {3.951512535062204*^9, 
    3.951512541882607*^9}, {3.9515125795662317`*^9, 3.951512585700652*^9}, {
-   3.95151264256534*^9, 3.951512649102755*^9}, {3.951512683745914*^9, 
-   3.951512691868877*^9}},ExpressionUUID->"38124e45-ef41-4a4a-9e59-\
-ccf5211adf15"],
+   3.95151264256534*^9, 3.951512649102755*^9}},
+ CellLabel->"In[97]:=",ExpressionUUID->"38124e45-ef41-4a4a-9e59-ccf5211adf15"],
 
 Cell[CellGroupData[{
 
@@ -782,6 +831,8 @@ enclosing region as in the last notebook."
    3.9515105043272963`*^9}},ExpressionUUID->"1d830223-90e9-42df-a9cc-\
 1c3d0a2568ac"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{"halfHeight", "=", "1"}], ";"}], "\[IndentingNewLine]", 
@@ -840,7 +891,41 @@ Cell[BoxData[{
         "\[IndentingNewLine]", 
         RowBox[{"Table", "[", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"{", "scissors", "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", " ", 
+            RowBox[{"Thickness", "[", "0.005", "]"}], ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "halfWidth"}], "+", 
+                  RowBox[{"j", " ", "spacing"}]}], ",", 
+                 RowBox[{
+                  RowBox[{"-", "halfDepth"}], " ", 
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"\[Theta]s", "[", 
+                    RowBox[{"[", "j", "]"}], "]"}], "]"}]}], ",", 
+                 RowBox[{"halfHeight", " ", 
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"\[Theta]s", "[", 
+                    RowBox[{"[", "j", "]"}], "]"}], "]"}]}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "halfWidth"}], "+", 
+                  RowBox[{"j", " ", "spacing"}]}], ",", 
+                 RowBox[{"halfDepth", " ", 
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"\[Theta]s", "[", 
+                    RowBox[{"[", "j", "]"}], "]"}], "]"}]}], ",", 
+                 RowBox[{
+                  RowBox[{"-", "halfHeight"}], " ", 
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"\[Theta]s", "[", 
+                    RowBox[{"[", "j", "]"}], "]"}], "]"}]}]}], "}"}]}], "}"}],
+              "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
           RowBox[{"{", 
            RowBox[{"j", ",", "n"}], "}"}]}], "\[IndentingNewLine]", "]"}]}], 
        "}"}], ",", "\[IndentingNewLine]", "1"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
@@ -868,10 +953,406 @@ Cell[BoxData[{
    3.951503723416111*^9, {3.951506861226605*^9, 3.9515069332650747`*^9}, {
    3.9515071902959146`*^9, 3.951507207976911*^9}, {3.9515074142295713`*^9, 
    3.951507490803034*^9}, {3.951507524363678*^9, 3.951507528558053*^9}, {
-   3.9515075942367277`*^9, 3.95150760302663*^9}, 3.951512623453596*^9, {
-   3.951512708477669*^9, 
-   3.951512710484109*^9}},ExpressionUUID->"8ee8c113-b9ce-48d5-bca3-\
-4537426a207c"],
+   3.9515075942367277`*^9, 3.95150760302663*^9}, 3.951512623453596*^9},
+ CellLabel->
+  "In[108]:=",ExpressionUUID->"8ee8c113-b9ce-48d5-bca3-4537426a207c"],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {FaceForm[{RGBColor[0, 0, 1], Opacity[0.04]}], 
+    CuboidBox[{-5, -1, -1}, {5, 1, 1}]}, 
+   {RGBColor[0, 0, 1], Thickness[0.002], 
+    Line3DBox[{{-5, 0, 0}, {5, 0, 0}}]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-355, 73], -1, 0}, {
+       Rational[-355, 73], 1, 0}}, {{-4.863013698630137, -1, 
+        0}, {-4.863013698630137, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-345, 73], -1, 0}, {
+       Rational[-345, 73], 1, 0}}, {{-4.726027397260274, -1, 
+        0}, {-4.726027397260274, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-335, 73], -1, 0}, {
+       Rational[-335, 73], 1, 0}}, {{-4.589041095890411, -1, 
+        0}, {-4.589041095890411, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-325, 73], -1, 0}, {
+       Rational[-325, 73], 1, 0}}, {{-4.4520547945205475`, -1, 
+        0}, {-4.4520547945205475`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-315, 73], -
+        Cos[15 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]) Degree], -
+        Sin[15 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]) Degree]}, {
+       Rational[-315, 73], Cos[
+        15 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]) Degree], Sin[
+        15 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]) 
+         Degree]}}, {{-4.315068493150685, -0.9908315703130899, \
+-0.1351029210302146}, {-4.315068493150685, 0.9908315703130899, 
+      0.1351029210302146}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-305, 73], Rational[-1, 2] 
+        2^Rational[-1, 2] (1 + 3^Rational[1, 2]), Rational[-1, 2] 
+        2^Rational[-1, 2] (-1 + 3^Rational[1, 2])}, {
+       Rational[-305, 73], Rational[1, 2] 
+        2^Rational[-1, 2] (1 + 3^Rational[1, 2]), Rational[1, 2] 
+        2^Rational[-1, 2] (-1 + 
+         3^Rational[
+           1, 2])}}, {{-4.178082191780822, -0.9659258262890682, \
+-0.2588190451025207}, {-4.178082191780822, 0.9659258262890682, 
+      0.2588190451025207}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-295, 73], -Cos[15 2^Rational[1, 2] Degree], -
+        Sin[15 2^Rational[1, 2] Degree]}, {
+       Rational[-295, 73], Cos[15 2^Rational[1, 2] Degree], Sin[
+        15 2^Rational[1, 2] 
+         Degree]}}, {{-4.041095890410959, -0.9322404424570728, \
+-0.3618394083670837}, {-4.041095890410959, 0.9322404424570728, 
+      0.3618394083670837}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-285, 73], -Cos[15 3^Rational[1, 2] Degree], -
+        Sin[15 3^Rational[1, 2] Degree]}, {
+       Rational[-285, 73], Cos[15 3^Rational[1, 2] Degree], Sin[
+        15 3^Rational[1, 2] 
+         Degree]}}, {{-3.904109589041096, -0.8989411850837511, \
+-0.43806933898667366`}, {-3.904109589041096, 0.8989411850837511, 
+      0.43806933898667366`}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-275, 73], -
+        Cos[15 2^Rational[-1, 2] (1 + 3^Rational[1, 2]) Degree], -
+        Sin[15 2^Rational[-1, 2] (1 + 3^Rational[1, 2]) Degree]}, {
+       Rational[-275, 73], Cos[
+        15 2^Rational[-1, 2] (1 + 3^Rational[1, 2]) Degree], Sin[
+        15 2^Rational[-1, 2] (1 + 3^Rational[1, 2]) 
+         Degree]}}, {{-3.767123287671233, -0.8748077004948734, \
+-0.48447031607196717`}, {-3.767123287671233, 0.8748077004948734, 
+      0.48447031607196717`}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-265, 73], Rational[-1, 2] 3^Rational[1, 2], 
+        Rational[-1, 2]}, {
+       Rational[-265, 73], Rational[1, 2] 3^Rational[1, 2], Rational[
+        1, 2]}}, {{-3.6301369863013697`, -0.8660254037844386, -0.5}, \
+{-3.6301369863013697`, 0.8660254037844386, 0.5}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-255, 73], -
+        Cos[15 2^Rational[-1, 2] (1 + 3^Rational[1, 2]) Degree], -
+        Sin[15 2^Rational[-1, 2] (1 + 3^Rational[1, 2]) Degree]}, {
+       Rational[-255, 73], Cos[
+        15 2^Rational[-1, 2] (1 + 3^Rational[1, 2]) Degree], Sin[
+        15 2^Rational[-1, 2] (1 + 3^Rational[1, 2]) 
+         Degree]}}, {{-3.493150684931507, -0.8748077004948734, \
+-0.48447031607196717`}, {-3.493150684931507, 0.8748077004948734, 
+      0.48447031607196717`}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{
+       Rational[-245, 73], -Cos[15 3^Rational[1, 2] Degree], -
+        Sin[15 3^Rational[1, 2] Degree]}, {
+       Rational[-245, 73], Cos[15 3^Rational[1, 2] Degree], Sin[
+        15 3^Rational[1, 2] 
+         Degree]}}, {{-3.356164383561644, -0.8989411850837511, \
+-0.43806933898667366`}, {-3.356164383561644, 0.8989411850837511, 
+      0.43806933898667366`}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-235, 73], -Cos[15 2^Rational[1, 2] Degree], -
+        Sin[15 2^Rational[1, 2] Degree]}, {
+       Rational[-235, 73], Cos[15 2^Rational[1, 2] Degree], Sin[
+        15 2^Rational[1, 2] 
+         Degree]}}, {{-3.219178082191781, -0.9322404424570728, \
+-0.3618394083670837}, {-3.219178082191781, 0.9322404424570728, 
+      0.3618394083670837}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-225, 73], Rational[-1, 2] 
+        2^Rational[-1, 2] (1 + 3^Rational[1, 2]), Rational[-1, 2] 
+        2^Rational[-1, 2] (-1 + 3^Rational[1, 2])}, {
+       Rational[-225, 73], Rational[1, 2] 
+        2^Rational[-1, 2] (1 + 3^Rational[1, 2]), Rational[1, 2] 
+        2^Rational[-1, 2] (-1 + 
+         3^Rational[
+           1, 2])}}, {{-3.0821917808219177`, -0.9659258262890682, \
+-0.2588190451025207}, {-3.0821917808219177`, 0.9659258262890682, 
+      0.2588190451025207}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-215, 73], -
+        Cos[15 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]) Degree], -
+        Sin[15 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]) Degree]}, {
+       Rational[-215, 73], Cos[
+        15 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]) Degree], Sin[
+        15 2^Rational[-1, 2] (-1 + 3^Rational[1, 2]) 
+         Degree]}}, {{-2.9452054794520546`, -0.9908315703130899, \
+-0.1351029210302146}, {-2.9452054794520546`, 0.9908315703130899, 
+      0.1351029210302146}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-205, 73], -1, 0}, {
+       Rational[-205, 73], 1, 0}}, {{-2.808219178082192, -1, 
+        0}, {-2.808219178082192, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-195, 73], -1, 0}, {
+       Rational[-195, 73], 1, 0}}, {{-2.671232876712329, -1, 
+        0}, {-2.671232876712329, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-185, 73], -1, 0}, {
+       Rational[-185, 73], 1, 0}}, {{-2.5342465753424657`, -1, 
+        0}, {-2.5342465753424657`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-175, 73], -1, 0}, {
+       Rational[-175, 73], 1, 0}}, {{-2.3972602739726026`, -1, 
+        0}, {-2.3972602739726026`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-165, 73], -1, 0}, {
+       Rational[-165, 73], 1, 0}}, {{-2.26027397260274, -1, 
+        0}, {-2.26027397260274, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-155, 73], -1, 0}, {
+       Rational[-155, 73], 1, 0}}, {{-2.1232876712328768`, -1, 
+        0}, {-2.1232876712328768`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-145, 73], -1, 0}, {
+       Rational[-145, 73], 1, 0}}, {{-1.9863013698630136`, -1, 
+        0}, {-1.9863013698630136`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-135, 73], -1, 0}, {
+       Rational[-135, 73], 1, 0}}, {{-1.8493150684931507`, -1, 
+        0}, {-1.8493150684931507`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-125, 73], -1, 0}, {
+       Rational[-125, 73], 1, 0}}, {{-1.7123287671232876`, -1, 
+        0}, {-1.7123287671232876`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-115, 73], -1, 0}, {
+       Rational[-115, 73], 1, 0}}, {{-1.5753424657534247`, -1, 
+        0}, {-1.5753424657534247`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-105, 73], -1, 0}, {
+       Rational[-105, 73], 1, 0}}, {{-1.4383561643835616`, -1, 
+        0}, {-1.4383561643835616`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-95, 73], -1, 0}, {
+       Rational[-95, 73], 1, 0}}, {{-1.3013698630136987`, -1, 
+        0}, {-1.3013698630136987`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-85, 73], -1, 0}, {
+       Rational[-85, 73], 1, 0}}, {{-1.1643835616438356`, -1, 
+        0}, {-1.1643835616438356`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-75, 73], -1, 0}, {
+       Rational[-75, 73], 1, 0}}, {{-1.0273972602739727`, -1, 
+        0}, {-1.0273972602739727`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-65, 73], -1, 0}, {
+       Rational[-65, 73], 1, 0}}, {{-0.8904109589041096, -1, 
+        0}, {-0.8904109589041096, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-55, 73], -1, 0}, {
+       Rational[-55, 73], 1, 0}}, {{-0.7534246575342466, -1, 
+        0}, {-0.7534246575342466, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-45, 73], -1, 0}, {
+       Rational[-45, 73], 1, 0}}, {{-0.6164383561643836, -1, 
+        0}, {-0.6164383561643836, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-35, 73], -1, 0}, {
+       Rational[-35, 73], 1, 0}}, {{-0.4794520547945205, -1, 
+        0}, {-0.4794520547945205, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-25, 73], -1, 0}, {
+       Rational[-25, 73], 1, 0}}, {{-0.3424657534246575, -1, 
+        0}, {-0.3424657534246575, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-15, 73], -1, 0}, {
+       Rational[-15, 73], 1, 0}}, {{-0.2054794520547945, -1, 
+        0}, {-0.2054794520547945, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[-5, 73], -1, 0}, {
+       Rational[-5, 73], 1, 0}}, {{-0.0684931506849315, -1, 
+        0}, {-0.0684931506849315, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[5, 73], -1, 0}, {Rational[5, 73], 1, 0}}, {{
+       0.0684931506849315, -1, 0}, {0.0684931506849315, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[15, 73], -1, 0}, {Rational[15, 73], 1, 0}}, {{
+       0.2054794520547945, -1, 0}, {0.2054794520547945, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[25, 73], -1, 0}, {Rational[25, 73], 1, 0}}, {{
+       0.3424657534246575, -1, 0}, {0.3424657534246575, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[35, 73], -1, 0}, {Rational[35, 73], 1, 0}}, {{
+       0.4794520547945205, -1, 0}, {0.4794520547945205, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[45, 73], -1, 0}, {Rational[45, 73], 1, 0}}, {{
+       0.6164383561643836, -1, 0}, {0.6164383561643836, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[55, 73], -1, 0}, {Rational[55, 73], 1, 0}}, {{
+       0.7534246575342466, -1, 0}, {0.7534246575342466, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[65, 73], -1, 0}, {Rational[65, 73], 1, 0}}, {{
+       0.8904109589041096, -1, 0}, {0.8904109589041096, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[75, 73], -1, 0}, {Rational[75, 73], 1, 0}}, {{
+       1.0273972602739727`, -1, 0}, {1.0273972602739727`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[85, 73], -1, 0}, {Rational[85, 73], 1, 0}}, {{
+       1.1643835616438356`, -1, 0}, {1.1643835616438356`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[95, 73], -1, 0}, {Rational[95, 73], 1, 0}}, {{
+       1.3013698630136987`, -1, 0}, {1.3013698630136987`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[105, 73], -1, 0}, {Rational[105, 73], 1, 0}}, {{
+       1.4383561643835616`, -1, 0}, {1.4383561643835616`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[115, 73], -1, 0}, {Rational[115, 73], 1, 0}}, {{
+       1.5753424657534247`, -1, 0}, {1.5753424657534247`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[125, 73], -1, 0}, {Rational[125, 73], 1, 0}}, {{
+       1.7123287671232876`, -1, 0}, {1.7123287671232876`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[135, 73], -1, 0}, {Rational[135, 73], 1, 0}}, {{
+       1.8493150684931507`, -1, 0}, {1.8493150684931507`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[145, 73], -1, 0}, {Rational[145, 73], 1, 0}}, {{
+       1.9863013698630136`, -1, 0}, {1.9863013698630136`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[155, 73], -1, 0}, {Rational[155, 73], 1, 0}}, {{
+       2.1232876712328768`, -1, 0}, {2.1232876712328768`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[165, 73], -1, 0}, {Rational[165, 73], 1, 0}}, {{
+       2.26027397260274, -1, 0}, {2.26027397260274, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[175, 73], -1, 0}, {Rational[175, 73], 1, 0}}, {{
+       2.3972602739726026`, -1, 0}, {2.3972602739726026`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[185, 73], -1, 0}, {Rational[185, 73], 1, 0}}, {{
+       2.5342465753424657`, -1, 0}, {2.5342465753424657`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[195, 73], -1, 0}, {Rational[195, 73], 1, 0}}, {{
+       2.671232876712329, -1, 0}, {2.671232876712329, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[205, 73], -1, 0}, {Rational[205, 73], 1, 0}}, {{
+       2.808219178082192, -1, 0}, {2.808219178082192, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[215, 73], -1, 0}, {Rational[215, 73], 1, 0}}, {{
+       2.9452054794520546`, -1, 0}, {2.9452054794520546`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[225, 73], -1, 0}, {Rational[225, 73], 1, 0}}, {{
+       3.0821917808219177`, -1, 0}, {3.0821917808219177`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[235, 73], -1, 0}, {Rational[235, 73], 1, 0}}, {{
+       3.219178082191781, -1, 0}, {3.219178082191781, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[245, 73], -1, 0}, {Rational[245, 73], 1, 0}}, {{
+       3.356164383561644, -1, 0}, {3.356164383561644, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[255, 73], -1, 0}, {Rational[255, 73], 1, 0}}, {{
+       3.493150684931507, -1, 0}, {3.493150684931507, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[265, 73], -1, 0}, {Rational[265, 73], 1, 0}}, {{
+       3.6301369863013697`, -1, 0}, {3.6301369863013697`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[275, 73], -1, 0}, {Rational[275, 73], 1, 0}}, {{
+       3.767123287671233, -1, 0}, {3.767123287671233, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[285, 73], -1, 0}, {Rational[285, 73], 1, 0}}, {{
+       3.904109589041096, -1, 0}, {3.904109589041096, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[295, 73], -1, 0}, {Rational[295, 73], 1, 0}}, {{
+       4.041095890410959, -1, 0}, {4.041095890410959, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[305, 73], -1, 0}, {Rational[305, 73], 1, 0}}, {{
+       4.178082191780822, -1, 0}, {4.178082191780822, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[315, 73], -1, 0}, {Rational[315, 73], 1, 0}}, {{
+       4.315068493150685, -1, 0}, {4.315068493150685, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[325, 73], -1, 0}, {Rational[325, 73], 1, 0}}, {{
+       4.4520547945205475`, -1, 0}, {4.4520547945205475`, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[335, 73], -1, 0}, {Rational[335, 73], 1, 0}}, {{
+       4.589041095890411, -1, 0}, {4.589041095890411, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[345, 73], -1, 0}, {Rational[345, 73], 1, 0}}, {{
+       4.726027397260274, -1, 0}, {4.726027397260274, 1, 0}}]]}, 
+   {GrayLevel[0], Thickness[0.005], 
+    Line3DBox[
+     NCache[{{Rational[355, 73], -1, 0}, {Rational[355, 73], 1, 0}}, {{
+       4.863013698630137, -1, 0}, {4.863013698630137, 1, 0}}]]}}]], "Output",
+ CellChangeTimes->{
+  3.951510537592711*^9, 3.951510838814876*^9, 3.9515109511697283`*^9, 
+   3.951511129377224*^9, 3.9515112094010887`*^9, 3.9515112531714153`*^9, 
+   3.951511521577162*^9, 3.9515116722037477`*^9, 3.951511709247443*^9, 
+   3.95151255022128*^9, 3.951512590892015*^9, {3.9515126274623413`*^9, 
+   3.951512653671495*^9}},
+ CellLabel->
+  "Out[115]=",ExpressionUUID->"f4670410-0853-4f12-9c20-ba35aa96ddc0"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -910,6 +1391,8 @@ default duration of the animation is the actual duration of the animation:\
    3.947436505685787*^9}},ExpressionUUID->"09b29e39-aa25-412a-86c9-\
 cf11e16c14b1"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"Animate", "[", 
   RowBox[{
@@ -933,7 +1416,57 @@ Cell[BoxData[
    3.9512991654204617`*^9}, 3.951299804245123*^9, 3.95150760629354*^9, {
    3.951507663969358*^9, 3.951507710767568*^9}},
  CellLabel->
-  "In[116]:=",ExpressionUUID->"81ba6af8-62b6-4513-ba7d-da5d4355f0a1"]
+  "In[116]:=",ExpressionUUID->"81ba6af8-62b6-4513-ba7d-da5d4355f0a1"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`step$$ = 2091, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`step$$], 0, 5000, 1, ControlType -> Animator}}, 
+    Typeset`size$$ = {450., {121.2404725638261, 128.40538955601357`}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`step$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> $CellContext`torsionWavesGraphic[
+        Part[$CellContext`\[Theta]s, $CellContext`step$$]], 
+      "Specifications" :> {{$CellContext`step$$, 0, 5000, 1, DefaultDuration -> 
+         10., AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 20.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{509.375, {169.61547256382607`, 176.78038955601357`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.951510537619458*^9, 3.951510838847763*^9, 3.951510951201569*^9, 
+   3.951511129382756*^9, 3.9515112094323997`*^9, 3.9515112531890717`*^9, 
+   3.951511521583372*^9, 3.951511672237235*^9, 3.951511709274671*^9, 
+   3.95151255023452*^9, 3.951512590920969*^9, {3.951512627502737*^9, 
+   3.951512653698238*^9}},
+ CellLabel->
+  "Out[116]=",ExpressionUUID->"209efa4e-a947-42ae-bfb4-55ae20fb05e5"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -982,25 +1515,31 @@ Cell[18237, 387, 1319, 37, 198, "Text",ExpressionUUID->"e50cb18b-9f58-4729-a24e-
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[19605, 430, 647, 11, 66, "Subsection",ExpressionUUID->"eb40c26c-cee1-4b7d-b56f-5c19cad11ca7"],
-Cell[20255, 443, 4488, 105, 470, "Input",ExpressionUUID->"38124e45-ef41-4a4a-9e59-ccf5211adf15"],
+Cell[20255, 443, 6141, 154, 521, "Input",ExpressionUUID->"38124e45-ef41-4a4a-9e59-ccf5211adf15"],
 Cell[CellGroupData[{
-Cell[24768, 552, 1870, 32, 87, "Input",ExpressionUUID->"db54b8a9-deff-4b5f-8dc1-358b1956126f"],
-Cell[26641, 586, 317, 5, 41, "Output",ExpressionUUID->"87587267-9e82-4466-9cf4-298f36b4b8d8"]
+Cell[26421, 601, 1870, 32, 87, "Input",ExpressionUUID->"db54b8a9-deff-4b5f-8dc1-358b1956126f"],
+Cell[28294, 635, 317, 5, 41, "Output",ExpressionUUID->"87587267-9e82-4466-9cf4-298f36b4b8d8"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27007, 597, 562, 9, 66, "Subsection",ExpressionUUID->"8d0acd0e-83e8-47b0-a861-e526f983c7ea"],
-Cell[27572, 608, 374, 6, 42, "Text",ExpressionUUID->"a2e792a4-8ea7-4b61-bc74-aab408f39044"],
-Cell[27949, 616, 6183, 109, 419, "Input",ExpressionUUID->"e1c51e3d-bbc3-4da4-9aef-8767a9ee6c4e"]
+Cell[28660, 646, 562, 9, 66, "Subsection",ExpressionUUID->"8d0acd0e-83e8-47b0-a861-e526f983c7ea"],
+Cell[29225, 657, 374, 6, 42, "Text",ExpressionUUID->"a2e792a4-8ea7-4b61-bc74-aab408f39044"],
+Cell[29602, 665, 6183, 109, 419, "Input",ExpressionUUID->"e1c51e3d-bbc3-4da4-9aef-8767a9ee6c4e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34169, 730, 988, 14, 66, "Subsection",ExpressionUUID->"3ce0aa00-305a-42e3-978f-f27fecb3ddff"],
-Cell[35160, 746, 1849, 36, 69, "Text",ExpressionUUID->"1d830223-90e9-42df-a9cc-1c3d0a2568ac"],
-Cell[37012, 784, 4109, 89, 368, "Input",ExpressionUUID->"8ee8c113-b9ce-48d5-bca3-4537426a207c"],
+Cell[35822, 779, 988, 14, 66, "Subsection",ExpressionUUID->"3ce0aa00-305a-42e3-978f-f27fecb3ddff"],
+Cell[36813, 795, 1849, 36, 69, "Text",ExpressionUUID->"1d830223-90e9-42df-a9cc-1c3d0a2568ac"],
 Cell[CellGroupData[{
-Cell[41146, 877, 1296, 18, 54, "Subsubsection",ExpressionUUID->"13369a8d-1e43-4d03-93ce-673889973e1b"],
-Cell[42445, 897, 825, 13, 42, "Text",ExpressionUUID->"09b29e39-aa25-412a-86c9-cf11e16c14b1"],
-Cell[43273, 912, 1259, 23, 36, "Input",ExpressionUUID->"81ba6af8-62b6-4513-ba7d-da5d4355f0a1"]
+Cell[38687, 835, 5529, 122, 394, "Input",ExpressionUUID->"8ee8c113-b9ce-48d5-bca3-4537426a207c"],
+Cell[44219, 959, 17947, 394, 270, "Output",ExpressionUUID->"f4670410-0853-4f12-9c20-ba35aa96ddc0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62203, 1358, 1296, 18, 54, "Subsubsection",ExpressionUUID->"13369a8d-1e43-4d03-93ce-673889973e1b"],
+Cell[63502, 1378, 825, 13, 42, "Text",ExpressionUUID->"09b29e39-aa25-412a-86c9-cf11e16c14b1"],
+Cell[CellGroupData[{
+Cell[64352, 1395, 1259, 23, 36, "Input",ExpressionUUID->"81ba6af8-62b6-4513-ba7d-da5d4355f0a1"],
+Cell[65614, 1420, 2502, 47, 367, "Output",ExpressionUUID->"209efa4e-a947-42ae-bfb4-55ae20fb05e5"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
