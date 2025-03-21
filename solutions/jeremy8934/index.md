@@ -6,7 +6,13 @@
 
 ### 2025-03-18 &mdash; PS11 &mdash; *EIWL3* Sections 29 and 30
 
+* [Jeremy's solution](./Jeremy-PS11.nb.pdf)
+* [Brian's solution](../brian54321/Brian-PS11.nb.pdf)
+
 ### 2025-02-25 &mdash; PS10 &mdash; *EIWL3* Sections 26, 27, and 28
+
+* [Jeremy's solution](./Jeremy-PS10.nb.pdf)
+* [Brian's solution](../brian54321/Brian-PS10.nb.pdf)
 
 ### 2025-02-21 &mdash; PS9 &mdash; *EIWL3* Sections 23, 24, and 25
 

@@ -4,7 +4,11 @@
 
 ### 2025-03-21 &mdash; PS12 &mdash; *EIWL3* Sections 31 and 32
 
+* [Brian's solution](../brian54321/Brian-PS12.nb.pdf)
+
 ### 2025-03-18 &mdash; PS11 &mdash; *EIWL3* Sections 29 and 30
+
+* [Brian's solution](../brian54321/Brian-PS11.nb.pdf)
 
 ### 2025-02-25 &mdash; PS10 &mdash; *EIWL3* Sections 26, 27, and 28
 
