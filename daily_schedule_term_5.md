@@ -15,7 +15,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 ### Week 9 &mdash; Drumheads &mdash; Two-Dimensional Grids of Masses
 
-* Tuesday, March 25 &mdash; Problem Set 13: Do the Exercises from *EIWL3* Sections 33 and 34 &mdash; In-Class: A Square Drumhead Modeled as Square Grid of Masses
+* Tuesday, March 25 &mdash; Problem Set 13: Do the Exercises from *EIWL3* Sections 33 and 34 &mdash; In-Class: Complete the [Square Drumhead](./worksheets/14-SquareDrumhead.nb.pdf) notebook which models a drumhead as a square grid of masses
 
 <img src="./illustrations/DrumheadMode.png" width="70%">
 
