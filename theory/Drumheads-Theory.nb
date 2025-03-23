@@ -1,0 +1,756 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     28283,        748]
+NotebookOptionsPosition[     26210,        702]
+NotebookOutlinePosition[     26737,        722]
+CellTagsIndexPosition[     26694,        719]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Drumheads \[LongDash] Theory", "Section",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQfejs7rhtSW8dhSbtTgLRnzb33gLRj98fBNPWvOzf
+hJPfOjqHzwbTDjNNJm9Meet4oUtpCoj+tkkk50/aW8d1ITlg+oGv6sTi9LeO
+FVnXJoFolg3Mc0H0xJBYMP1p9tPCBiDt16taBKLD7y18ypfx1nFR28NnILrm
+scg7ED2jSwZMS15vab4DpEOWubSD6J4z2/nvAen5trMFQLSmnaZKVjbQvNVH
+wXSLncXabCDdyd0HpiPms+nPyHnrWLA9GEwfsCv2TS9463j8eguYZlBkegOi
+v4gLgunwn8rGE4H0HtHLYPrp4ctGj4B0869MUxB9rWfXiZjCt45Tvv4/CaIB
+Ww+oOA==
+  "],ExpressionUUID->"b5f5697d-15c3-403e-a5b2-7954f38929e8"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "March 25 or March 28, 2025\n\n",
+ StyleBox["This is a work in progress that I will have ready to present for \
+March 25 or March 28.",
+  FontSlant->"Italic"]
+}], "Subtitle",
+ CellChangeTimes->{{3.944069658419606*^9, 3.944069670238837*^9}, {
+   3.944259441457538*^9, 3.944259441514864*^9}, {3.945368563122921*^9, 
+   3.94536856339248*^9}, {3.94630825627395*^9, 3.946308258224854*^9}, {
+   3.946308899126011*^9, 3.9463089397149553`*^9}, 3.946311308159807*^9, 
+   3.946311633761958*^9, {3.9464799861433*^9, 3.946479993858527*^9}, {
+   3.946552494389028*^9, 3.946552494447125*^9}, {3.946870590010352*^9, 
+   3.946870590173767*^9}, {3.947291719345838*^9, 3.94729171966033*^9}, {
+   3.947357538497875*^9, 3.947357543750285*^9}, {3.947692784431519*^9, 
+   3.94769279117017*^9}, {3.948630334763303*^9, 3.948630334931707*^9}, {
+   3.9486334580365763`*^9, 3.9486334592670527`*^9}, {3.9492489974206553`*^9, 
+   3.949248997945656*^9}, {3.951245961492091*^9, 3.9512459619415627`*^9}, {
+   3.951748691330028*^9, 3.951748691447647*^9}, {3.9517497491616573`*^9, 
+   3.951749780887241*^9}},
+ FontSize->18,ExpressionUUID->"24cd0e42-971f-4822-9082-9d92beaffae3"],
+
+Cell[CellGroupData[{
+
+Cell["The Second Derivative \[LongDash] Recap", "Subsection",
+ CellChangeTimes->CompressedData["
+1:eJwdzU0og3EcwPFx4aQYK8pbDQeFg4aW1VMo5S0Hwry0teEZY9HSwsFJIiF5
+LkRNSRqzITYv07OR0NRGbDEvEfbPLId5Gf6//+Hb5/hNlnRUykI5HE48Dtw/
+MTWsSxAVNW6SgH7DyBV4/2Yh9hxktV9iJ9O/laCDrfrkShEV17lCHGXV0z9y
+RIlOp2ZAV0zIXFczojKsicSUUsMNqClmPOCgzZLdjQ00LeSCvQnu6z4sj8+9
+AYukVm9EC6LqwpwIFM1mclOxypq8aHDVpYkFQ4M7xM8n8bAbq1uvGAHL/HGR
+11hmQk2ki80CWoEo4bswB/R59nQKLP3xStTyGCN4JQtfA239xyxYU/9I3Jcf
+LjNtiHLu5evBgWOzGVQtfRHZcr5urBNR6me7Hgwv+bsF+caBO7Bn7WVsHOsr
+mJsAhwonteDixfk8GKRb7SBPcHsGJv1WWz3Y2sRd4kZj1RFY8R0gbqYV2cUq
+/CnbItJp26+g4yHMC/4DRC3/lg==
+  "],ExpressionUUID->"ec18b5f7-9258-4ec6-a018-abc750cf92e2"],
+
+Cell[TextData[{
+ "At the end of the theory that we developed for the second derivative, the \
+wave equation looked like this:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[PartialD]", "2"], "\[Theta]"}], 
+      RowBox[{"\[PartialD]", 
+       SuperscriptBox["t", "2"]}]], "=", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["v", "0"], "2"], 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[PartialD]", "2"], "\[Theta]"}], 
+       RowBox[{"\[PartialD]", 
+        SuperscriptBox["x", "2"]}]]}]}]}], TraditionalForm]],ExpressionUUID->
+  "2f43dbb9-5647-4aae-96e8-168f329d9b5b"],
+ "\n  \nThe constant ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "0"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4b2c6bdd-ee51-4f8f-92f7-6284d4a5f05b"],
+ " had the units of velocity.\n\nNow we are leaving torsion waves, and moving \
+to drumheads. So instead of an angle being dependent on ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "401bcdba-e268-479d-96cc-b8b4dfa79b71"],
+ " and ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "dd0fe1a3-3a5e-4740-93c5-8c604eaa7bee"],
+ " our first change is that we will have a ",
+ Cell[BoxData[
+  FormBox["z", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7bb56b23-a19b-4354-a5cf-2ba22d783a53"],
+ " displacement that depends on ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0849cdb1-69df-4da5-aa02-2db51a85b831"],
+ " and ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4ad2e440-2a30-4303-9e8a-aebb14d6f0da"],
+ ". So the first change is simply a renaming of the dependent variable:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[PartialD]", "2"], "z"}], 
+      RowBox[{"\[PartialD]", 
+       SuperscriptBox["t", "2"]}]], "=", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["v", "0"], "2"], 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[PartialD]", "2"], "z"}], 
+       RowBox[{"\[PartialD]", 
+        SuperscriptBox["x", "2"]}]]}]}]}], TraditionalForm]],ExpressionUUID->
+  "9f2355fb-b57f-460a-8df8-76835b4d9aa2"]
+}], "Text",
+ CellChangeTimes->{{3.951494882169281*^9, 3.951495306771594*^9}, {
+  3.951495342196533*^9, 3.951495849101326*^9}, {3.951496938896318*^9, 
+  3.9514969429480257`*^9}, {3.9514980655399313`*^9, 3.951498071837838*^9}, {
+  3.951748750675027*^9, 3.951748995516481*^9}, {3.951749871890324*^9, 
+  3.951749931093215*^9}},ExpressionUUID->"3974a22e-f000-4e8e-a902-\
+b31388b94165"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Introducing the Second Dimension \[LongDash] Rectangular Case", \
+"Subsection",
+ CellChangeTimes->CompressedData["
+1:eJwdzU0ow2EAx/Fx4aQYKw6GhoPCQUOi/uW1vOVA3jV5+4+ZaEk47CSRkOxC
+VpSkeSfMaxuSlymmITZEXp7McvDO83sO3z7Hr7+sNqvMWSAQiGlwc3+5aF5G
+OI+eZRl0zHSewZuXDWbjdniNhdoX8qWAx4bsD2Ep4XyUk8wug2rgu5xwcQf9
+g/Dcy0lbX0G4UKOYGZg2cwWbUjRW2La1EdFAfS8ZjYLNvheXLVSRRHgFE0uN
+z26VhMt3OSEwbihMGERV5EZ7wunzJm/o/LPK/Lgv6Lig6uYzO2G6w8f9kqrp
+VTH5FL2UlxMu5jUmEtqt6zo5lX97Yg6LNLPwrMx1Dm617hlgbuEdc7N8Z0JT
+TbiT9dgpqN7T62Hd+CfTkCHRdSsJp3owTUHX1D8blMyqr2Hj3GN3D9Uer+2F
+7Ql9w3Ds1DwCf/gqExRJbUfQ7zfHaKXmideYC8XZuzDz6525GJxoKqijn/Ql
+Jh+88gSPb12e4WFV7SsMUG874K/UnFRItaQpk+E/YWAQuQ==
+  "],ExpressionUUID->"040f82f7-6008-4a8c-8f02-253d9d483283"],
+
+Cell[TextData[{
+ "The waves on a drumhead can propagate in any direction (the ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2ee3f3cf-91b9-4f01-a756-1afcae4720b2"],
+ " direction, the ",
+ Cell[BoxData[
+  FormBox["y", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1365abbd-b373-4f26-b223-1c097b2ad858"],
+ " direction, and any other angle in the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "-", "y"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "12e7ac5d-ade6-47ee-9c02-bf05661095be"],
+ " plane).\n\nI can explain where the following comes from more, and indeed \
+it isn\[CloseCurlyQuote]t very hard to see, but first I will just write down \
+the two-dimensional wave equation without explanation:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[PartialD]", "2"], "z"}], 
+      RowBox[{"\[PartialD]", 
+       SuperscriptBox["t", "2"]}]], "=", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["v", "0"], "2"], "(", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[PartialD]", "2"], "z"}], 
+        RowBox[{"\[PartialD]", 
+         SuperscriptBox["x", "2"]}]], "+", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[PartialD]", "2"], "z"}], 
+        RowBox[{"\[PartialD]", 
+         SuperscriptBox["y", "2"]}]]}], ")"}]}]}], TraditionalForm]],
+  ExpressionUUID->"2fd7b153-a802-4688-8bc8-d437d0a48767"],
+ "  \n\nThe dependent variable is ",
+ Cell[BoxData[
+  FormBox["z", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4b7fb87f-4da7-489b-96de-c17b167a98c6"],
+ ". The independent space variables are ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4bc76bab-b788-4717-95f2-b2d40f336f29"],
+ " and y. As always, time ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "8bb99d13-19a2-47b3-af42-b43ebb061a99"],
+ " is an independent variable. Our job will be to get Mathematica to predict \
+the ",
+ Cell[BoxData[
+  FormBox["z", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "205e0444-b4b8-4c11-a512-a7d2d675e6c2"],
+ "\[CloseCurlyQuote]s as a function of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c541f453-9891-491d-8edd-89923af2ccc2"],
+ ", ",
+ Cell[BoxData[
+  FormBox["y", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "1219c6ca-5bf1-4685-979a-7cc046807384"],
+ ", and ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "14255bc2-db0c-4089-9d11-3df9e744a00d"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.951494882169281*^9, 3.951495306771594*^9}, {
+  3.951495342196533*^9, 3.951495849101326*^9}, {3.951496938896318*^9, 
+  3.9514969429480257`*^9}, {3.9514980655399313`*^9, 3.951498071837838*^9}, {
+  3.951748750675027*^9, 3.9517491541153183`*^9}, {3.951749864780405*^9, 
+  3.951749865315051*^9}, {3.9517499497078667`*^9, 
+  3.9517500691389236`*^9}},ExpressionUUID->"7ef9f4b8-1d5c-43a3-aedb-\
+8c5efc99f2d8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Discretizing (Gridding) the Rectangular Case", "Subsection",
+ CellChangeTimes->CompressedData["
+1:eJwdxV1Ik1EABuC5m0QisumiBVkxvRHMi5gTSThlgZA5xB9MLZls1qfZpjGG
+VBe7ilBEx2ggE4UpMuQrU1fgWE42i1hikKVTdFMsZh7aRhebP+V5z8XDc0n7
+uEonlUgklxk8/2X2nltLyZmBWS1OTPWG8PYfH9/8sfDRKtuWf9CBv/lrU7IW
+ShSGN/w+v8lxqKekdPHVEF7LThvpaqWkIJDDz62Y2sTd5fYwfrHgu/qEnWwe
+V+OnF9Y3nrHlStkmvtUS2Dv1gJKGE8sUlw5fkeWxO+qLs/Dbte5zWHrk5ad+
+Nfass0W3phffSSgyN9h2q4kvlHtUQhslJfGSIhwLz4ltbOHvb75Tbp/GIV36
+DF54HvTj+qaf/Hn9p9f2dkqW565NYkvQ48HGiX2+v1Ip9hsoMUWXJnH67f8R
+rJy2bGHzzG7/ADtWNmLFL2/anNj14/soPhIeLmG5KvIVX/xXFwiz7+Z84L+7
+X/sZaw6SfFF/vi7CTnYW8tVJVxR7qWMXvz8rU2+xT4ut/JMFeU68r9Hxd9zG
+601GSki86wZ2jcWr8UqiuQb7BmsMOMOZYcTHjCsqtg==
+  "],ExpressionUUID->"e4c54bda-2c78-4355-808d-e439cda73d78"],
+
+Cell[TextData[{
+ "What is our expression that we are \n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["a", "j"], "(", 
+      SubscriptBox["t", "i"], ")"}], "=", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["v", "0"], "2"], 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         SubscriptBox["z", 
+          RowBox[{"j", "+", "1"}]], "(", 
+         SubscriptBox["t", "i"], ")"}], "-", 
+        RowBox[{"2", 
+         RowBox[{
+          SubscriptBox["z", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["z", 
+          RowBox[{"j", "-", "1"}]], "(", 
+         SubscriptBox["t", "i"], ")"}]}], 
+       SuperscriptBox[
+        SubscriptBox["w", "x"], "2"]]}]}]}], TraditionalForm]],ExpressionUUID->
+  "a40fdd74-e4e7-4265-9d11-0a1bf269b775"],
+ "\n\nI decided to rename ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "b5e4961b-09f1-4eaa-b549-2232df241322"],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["w", "x"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7b67977e-0183-4b43-9352-967814ac4ae0"],
+ " where ",
+ Cell[BoxData[
+  FormBox["w", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7b3dd438-120f-4a36-bcd3-6e3255956475"],
+ " is short for \[OpenCurlyDoubleQuote]width.\[CloseCurlyDoubleQuote] This is \
+the ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "96d89180-b053-4342-961f-aa79d0b8951f"],
+ " spacing between ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["z", 
+    RowBox[{"j", "+", "1"}]], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "278556a2-90c7-413b-a3cf-64c03412e93c"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["z", "j"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "f6aec01a-6b83-4d80-846e-0fe4577d7ade"],
+ ". When we add in the second dimension, we have\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["a", "j"], "(", 
+      SubscriptBox["t", "i"], ")"}], "=", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["v", "0"], "2"], 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         SubscriptBox["z", 
+          RowBox[{"j", "+", "1"}]], "(", 
+         SubscriptBox["t", "i"], ")"}], "-", 
+        RowBox[{"2", 
+         RowBox[{
+          SubscriptBox["z", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["z", 
+          RowBox[{"j", "-", "1"}]], "(", 
+         SubscriptBox["t", "i"], ")"}]}], 
+       SuperscriptBox[
+        SubscriptBox["w", "x"], "2"]]}]}]}], TraditionalForm]],ExpressionUUID->
+  "b4559e30-26a7-43c5-b248-c29101e5ed19"],
+ "\n\nThese equations tell how to get the \[Theta] values at a later time \
+from the \[Theta] values at the current and previous times. If you don\
+\[CloseCurlyQuote]t see this, let me re-arrange so that you can see that this \
+is really a way of stepping forward in time:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Theta]", "j"], "(", 
+      SubscriptBox["t", 
+       RowBox[{"i", "+", "1"}]], ")"}], "=", 
+     RowBox[{
+      RowBox[{"2", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "j"], "(", 
+        SubscriptBox["t", "i"], ")"}]}], "-", 
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       SubscriptBox["t", 
+        RowBox[{"i", "-", "1"}]], ")"}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox[
+          SubscriptBox["\[Omega]", "0"], "2"], "(", 
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], ")"}], "2"], 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "+", "1"}]], 
+          RowBox[{"(", 
+           SubscriptBox["t", "i"], ")"}]}], "-", 
+         RowBox[{"2", 
+          RowBox[{
+           SubscriptBox["\[Theta]", "j"], "(", 
+           SubscriptBox["t", "i"], ")"}]}], "+", 
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "-", "1"}]], "(", 
+          SubscriptBox["t", "i"], ")"}]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], ")"}], 
+         "2"]]}]}]}]}], TraditionalForm]],ExpressionUUID->
+  "6f9acabd-304c-4184-ad33-893a25906754"],
+ "\nns write down \[OpenCurlyDoubleQuote]wave equations\
+\[CloseCurlyDoubleQuote] this is the notation they use."
+}], "Text",
+ CellChangeTimes->{{3.951496011663062*^9, 3.9514967585409527`*^9}, {
+   3.951496790144783*^9, 3.95149703029836*^9}, {3.951497064510545*^9, 
+   3.9514971461998987`*^9}, {3.9514971874661293`*^9, 
+   3.9514974796756897`*^9}, {3.951498129743782*^9, 3.951498299958806*^9}, {
+   3.9514983461709957`*^9, 3.951498485355667*^9}, {3.9514985377402*^9, 
+   3.951498572344738*^9}, {3.951749676699102*^9, 3.9517496888889017`*^9}, 
+   3.951749722613886*^9, {3.951749811190576*^9, 3.951749837235139*^9}, {
+   3.9517500768067102`*^9, 3.9517501218364058`*^9}, {3.951750152649355*^9, 
+   3.9517503210558453`*^9}},ExpressionUUID->"aac5ee78-f21d-41cb-8ea8-\
+ca3f7e7dfe44"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Polar Coordinates \[LongDash] Circular Case", "Subsection",
+ CellChangeTimes->CompressedData["
+1:eJwdzWkow2EAx/FRzheKseKFq+GFcpQcifoXsnIsL8itLcbfHS0JL/ZKIiHZ
+G6KmJM1NmLMNyTHlyBFzRI4ntrxw8/yeF98+L78+ssq0QmuBQOBNg2s7C3kz
+MsK5dC7IoGWy7RTevKwy6zZCyk+o3YFfFfBAn/4hlBPOo2qM2a5X9n4XES52
+t6cPnrlZDdQoCBdk8GL6JU9ewnqJ2gSb11fDaqnvBUORsMHz/KKRKhILL2GC
+3PDsVEy4bLtDAmP7g4X+1IrMKFc4cVbvDq1/lpgf9zmt51TtjLQNplg8nC+o
+6i4lk5fowvlSwkWboyPgq2lFW0rl356YGpF6Cp4W2k/D9aZtPczMvWOuFW2O
+qssId7gSMw5V2zodrB75ZOpTxdqOKsIpH4zj0D7p7wqKp1TXsG76saOT+ho3
+0AVb4rs1cPj4aBD+8CVGKAq/2ofevxkGEzXLa5k5m5++BaVf78y5gARjTjX9
+pMwz+YDFJ3hwa/cM90oqzdBXtWGBxQ6fNrlUk0JqC69DdYnQUaCQwH+LIBZh
+
+  "],ExpressionUUID->"9a12ac84-ad5b-434f-bfe2-ef33c6ac542e"],
+
+Cell[TextData[{
+ "If we describe the drumhead in terms of ",
+ Cell[BoxData[
+  FormBox["r", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c4ef1713-9672-4c95-9fe1-742eb5315588"],
+ " and ",
+ Cell[BoxData[
+  FormBox["\[Phi]", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a5fb3a9f-e523-46c0-9128-9fc03d677480"],
+ " instead of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "c13c6327-49c9-4e08-8556-4ed1088ddbc6"],
+ " and ",
+ Cell[BoxData[
+  FormBox["y", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "dae0f1a4-8d79-4f1f-a2b2-5c59faf6e82d"],
+ ", but the displacement is still in the ",
+ Cell[BoxData[
+  FormBox["z", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "034c891e-b922-496d-87a4-963b7c388bbd"],
+ " direction, the equation becomes\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[PartialD]", "2"], "z"}], 
+      RowBox[{"\[PartialD]", 
+       SuperscriptBox["t", "2"]}]], "=", 
+     RowBox[{
+      SuperscriptBox["v", "2"], "(", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[PartialD]", "2"], "z"}], 
+        RowBox[{"\[PartialD]", 
+         SuperscriptBox["r", "2"]}]], "+", 
+       RowBox[{
+        FractionBox["1", "r"], 
+        FractionBox[
+         RowBox[{"\[PartialD]", "z"}], 
+         RowBox[{"\[PartialD]", "r"}]]}], "+", 
+       RowBox[{
+        FractionBox["1", 
+         SuperscriptBox["r", "2"]], 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[PartialD]", "2"], "z"}], 
+         RowBox[{"\[PartialD]", 
+          SuperscriptBox["\[Phi]", "2"]}]]}]}], ")"}]}]}], TraditionalForm]],
+  ExpressionUUID->"ea748697-5a6c-4de7-82e8-a9d1fb569c29"],
+ "  "
+}], "Text",
+ CellChangeTimes->{{3.951494882169281*^9, 3.951495306771594*^9}, {
+  3.951495342196533*^9, 3.951495849101326*^9}, {3.951496938896318*^9, 
+  3.9514969429480257`*^9}, {3.9514980655399313`*^9, 3.951498071837838*^9}, {
+  3.951748750675027*^9, 
+  3.951749315467648*^9}},ExpressionUUID->"c4495a6b-ce32-4c20-b5a2-\
+422135eff1e5"],
+
+Cell[TextData[{
+ "I can explain where the first and third term come from pretty easily. The \
+middle term that only has one derivative is trickier. You have to imagine a \
+cone-shaped ",
+ Cell[BoxData[
+  FormBox["z", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d6add2f2-5d92-4ac1-823f-ab0fa84aa9b9"],
+ " displacement and realize that even if there is zero second derivative in \
+the ",
+ Cell[BoxData[
+  FormBox["r", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3c19b139-6340-4994-b948-6f1c65b8bcff"],
+ " direction (z is linear in ",
+ Cell[BoxData[
+  FormBox["r", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3524eb4e-8da5-4c71-a33c-ef15dc6550d9"],
+ "), and only constancy in the ",
+ Cell[BoxData[
+  FormBox["\[Phi]", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "9d233f61-d404-41bc-92b1-5747ae310ec5"],
+ " direction (no dependence of ",
+ Cell[BoxData[
+  FormBox["z", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "abde902b-2739-4425-8f7d-5349a51444c2"],
+ " on \[Phi]), that a cone shaped drumhead will want to flatten itself out, \
+and the linear derivative is what accounts for that."
+}], "Text",
+ CellChangeTimes->{{3.951494882169281*^9, 3.951495306771594*^9}, {
+  3.951495342196533*^9, 3.951495849101326*^9}, {3.951496938896318*^9, 
+  3.9514969429480257`*^9}, {3.9514980655399313`*^9, 3.951498071837838*^9}, {
+  3.951748750675027*^9, 
+  3.95174962176333*^9}},ExpressionUUID->"ba9301f2-1646-43d8-bb15-\
+c5016efb10fb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Discretizing the Rectangular Case", "Subsection",
+ CellChangeTimes->CompressedData["
+1:eJwdxVkow3EcAPDxwoOEMaEcNXtR40FMon6uUo7lYXIMTRv+zqG1hAdPEgnJ
+XiZqSkt/xxi15eo/JEQ5csQ2IccvJg+b+/f9PXz6xCiai5TePB4vmoA39y0V
+ZgVGQcMWBfxuGriAb1836NrthMZz8mjcVxN8zMk8/GqMwlvm6IOcRv+twij9
+YGwcvgzxmmyrwUhsi6LH5ptu4I5cnR3u3dpIbCe7q6YlcGfk1XUXWSDk38A5
+1bYX/1qMynxOMJw+Ec8XkZtKUoLhhcuOMNj7Z5XueSjvvyKzZukAXPAeHnhN
+1o1o6EyuNYmpxyjVlZoMv9nX2Xoy8/FMNwh0i/CF0ncJ3ure4+AS+T19U7Uz
+q2vA6GQ9bR7u2bNaYfXMJ50rFLJDLRhpHg/nYd+8PwcsXOxxwtqlp6Fh8lvW
+5Ajclz1qgI1np1PwD1N3CAuSHEdw9G+xzU4ujVqjL1fKdmHpl5vOqiKKHWR3
+awJd4jY+wqtY/wSvhPIlTnIAW0P3E4sM8KdUSb8zqzPkaoyQqy0T/gcZDBpm
+
+  "],ExpressionUUID->"2644968d-fd90-4023-8a89-7bcc16f30a57"],
+
+Cell[TextData[{
+ "What is our expression that we are \n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        SubscriptBox["\[Theta]", "j"], "(", 
+        SubscriptBox["t", 
+         RowBox[{"i", "+", "1"}]], ")"}], "-", 
+       RowBox[{"2", 
+        RowBox[{
+         SubscriptBox["\[Theta]", "j"], "(", 
+         SubscriptBox["t", "i"], ")"}]}], "+", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "j"], "(", 
+        SubscriptBox["t", 
+         RowBox[{"i", "-", "1"}]], ")"}]}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], ")"}], "2"]], "=", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["\[Omega]", "0"], "2"], 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         SubscriptBox["\[Theta]", 
+          RowBox[{"j", "+", "1"}]], 
+         RowBox[{"(", 
+          SubscriptBox["t", "i"], ")"}]}], "-", 
+        RowBox[{"2", 
+         RowBox[{
+          SubscriptBox["\[Theta]", "j"], "(", 
+          SubscriptBox["t", "i"], ")"}]}], "+", 
+        RowBox[{
+         SubscriptBox["\[Theta]", 
+          RowBox[{"j", "-", "1"}]], "(", 
+         SubscriptBox["t", "i"], ")"}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], ")"}], 
+        "2"]]}]}]}], TraditionalForm]],ExpressionUUID->
+  "fd56eb18-e2f9-4d02-a07f-9ad65bc650de"],
+ "\n\nThese equations tell how to get the \[Theta] values at a later time \
+from the \[Theta] values at the current and previous times. If you don\
+\[CloseCurlyQuote]t see this, let me re-arrange so that you can see that this \
+is really a way of stepping forward in time:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[VeryThinSpace]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Theta]", "j"], "(", 
+      SubscriptBox["t", 
+       RowBox[{"i", "+", "1"}]], ")"}], "=", 
+     RowBox[{
+      RowBox[{"2", 
+       RowBox[{
+        SubscriptBox["\[Theta]", "j"], "(", 
+        SubscriptBox["t", "i"], ")"}]}], "-", 
+      RowBox[{
+       SubscriptBox["\[Theta]", "j"], "(", 
+       SubscriptBox["t", 
+        RowBox[{"i", "-", "1"}]], ")"}], "+", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{
+         SuperscriptBox[
+          SubscriptBox["\[Omega]", "0"], "2"], "(", 
+         RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "t"}], ")"}], "2"], 
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "+", "1"}]], 
+          RowBox[{"(", 
+           SubscriptBox["t", "i"], ")"}]}], "-", 
+         RowBox[{"2", 
+          RowBox[{
+           SubscriptBox["\[Theta]", "j"], "(", 
+           SubscriptBox["t", "i"], ")"}]}], "+", 
+         RowBox[{
+          SubscriptBox["\[Theta]", 
+           RowBox[{"j", "-", "1"}]], "(", 
+          SubscriptBox["t", "i"], ")"}]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"\[CapitalDelta]", "\[VeryThinSpace]", "x"}], ")"}], 
+         "2"]]}]}]}]}], TraditionalForm]],ExpressionUUID->
+  "191a4bb4-d82c-412c-874c-1f0184fcde27"],
+ "\nns write down \[OpenCurlyDoubleQuote]wave equations\
+\[CloseCurlyDoubleQuote] this is the notation they use."
+}], "Text",
+ CellChangeTimes->{{3.951496011663062*^9, 3.9514967585409527`*^9}, {
+   3.951496790144783*^9, 3.95149703029836*^9}, {3.951497064510545*^9, 
+   3.9514971461998987`*^9}, {3.9514971874661293`*^9, 
+   3.9514974796756897`*^9}, {3.951498129743782*^9, 3.951498299958806*^9}, {
+   3.9514983461709957`*^9, 3.951498485355667*^9}, {3.9514985377402*^9, 
+   3.951498572344738*^9}, {3.951749676699102*^9, 3.9517496888889017`*^9}, 
+   3.951749722613886*^9},ExpressionUUID->"9ebc9a3e-dcc3-4fc2-8493-\
+cce48b537c3f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Discretizing (Gridding) the Circular Case", "Subsection",
+ CellChangeTimes->CompressedData["
+1:eJwdxUtI03EAB/C1Sx4kyuVCBR+wvAi6Q9hCFH72ACFtSGzOXMVkm22+1mKI
+VAdPIomojHYxFFbIkL+PPQwc5sZmESoTfJCKbkqK2o/c6DC1Wb/v7/DhU6Br
+q9WLRSJRAYODizNPfTpKMgZmdDjh7t3Ae78D/I6v8pYfbHvReSteCalOJY2U
+ZLdP8PtCtqG/Bkoqlt5/wJuZl0asRkqKw3n8m9XuHdxZ5Yji7vnArVfs5PNR
+BX6du7X9hi2VSXbwg8bwrytNlDy5vEpxxXCJpJDdqrlzHU9tdmZhcWqWf3rQ
+8G6LLfiUvbgmkX1tm+0YtPFNVf5Sk5mSsnjZbXwSnRPMbNOfY75T6vDgDX2a
+F8+/XQhhjXafHzR8G3c0U7I6Vz6Juxb8fmwZO+OHHsmE/nZKbIeRSZz28F8M
+yzxdu7jDe9Q/wD65NzKIe+7bndi1vvYRp0wvIlhaGlvG+RfqcJRdn/eFP/1M
+9R0rz5N8wZCjjrGTL+V8RdJ1iGfp0BH+fEOi2GVfFYz89OJCJz5T6vk/fZZK
+rYUSErfexa5P8cfYGdDU4f8PRyMK
+  "],ExpressionUUID->"ade80c21-9380-495a-9f24-9388b71f5223"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.951496011663062*^9, 3.9514967585409527`*^9}, {
+   3.951496790144783*^9, 3.95149703029836*^9}, {3.951497064510545*^9, 
+   3.9514971461998987`*^9}, {3.9514971874661293`*^9, 
+   3.9514974796756897`*^9}, {3.951498129743782*^9, 3.951498299958806*^9}, {
+   3.9514983461709957`*^9, 3.951498485355667*^9}, {3.9514985377402*^9, 
+   3.951498572344738*^9}, {3.951749676699102*^9, 3.9517496888889017`*^9}, 
+   3.951749722613886*^9, {3.951749811190576*^9, 
+   3.951749811623535*^9}},ExpressionUUID->"9a0a1ea8-7e3b-4ab0-822d-\
+c8c0fa16bd43"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{991, 1181},
+WindowMargins->{{Automatic, 193}, {-85, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+TaggingRules-><|"TryRealOnly" -> False|>,
+Magnification:>1.25 Inherited,
+FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"79d99d9c-2760-41a1-b3ad-6f9f4f8469c8"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 520, 9, 103, "Section",ExpressionUUID->"b5f5697d-15c3-403e-a5b2-7954f38929e8"],
+Cell[CellGroupData[{
+Cell[1103, 33, 1161, 19, 180, "Subtitle",ExpressionUUID->"24cd0e42-971f-4822-9082-9d92beaffae3"],
+Cell[CellGroupData[{
+Cell[2289, 56, 676, 11, 83, "Subsection",ExpressionUUID->"ec18b5f7-9258-4ec6-a018-abc750cf92e2"],
+Cell[2968, 69, 2804, 78, 472, "Text",ExpressionUUID->"3974a22e-f000-4e8e-a902-b31388b94165"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5809, 152, 720, 12, 83, "Subsection",ExpressionUUID->"040f82f7-6008-4a8c-8f02-253d9d483283"],
+Cell[6532, 166, 3211, 88, 441, "Text",ExpressionUUID->"7ef9f4b8-1d5c-43a3-aedb-8c5efc99f2d8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9780, 259, 758, 12, 83, "Subsection",ExpressionUUID->"e4c54bda-2c78-4355-808d-e439cda73d78"],
+Cell[10541, 273, 5331, 152, 554, "Text",ExpressionUUID->"aac5ee78-f21d-41cb-8ea8-ca3f7e7dfe44"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15909, 430, 713, 12, 83, "Subsection",ExpressionUUID->"9a12ac84-ad5b-434f-bfe2-ef33c6ac542e"],
+Cell[16625, 444, 2182, 65, 167, "Text",ExpressionUUID->"c4495a6b-ce32-4c20-b5a2-422135eff1e5"],
+Cell[18810, 511, 1537, 37, 223, "Text",ExpressionUUID->"ba9301f2-1646-43d8-bb15-c5016efb10fb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20384, 553, 703, 12, 83, "Subsection",ExpressionUUID->"2644968d-fd90-4023-8a89-7bcc16f30a57"],
+Cell[21090, 567, 3747, 103, 374, "Text",ExpressionUUID->"9ebc9a3e-dcc3-4fc2-8493-cce48b537c3f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24874, 675, 739, 12, 83, "Subsection",ExpressionUUID->"ade80c21-9380-495a-9f24-9388b71f5223"],
+Cell[25616, 689, 566, 9, 52, "Text",ExpressionUUID->"9a0a1ea8-7e3b-4ab0-822d-c8c0fa16bd43"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
