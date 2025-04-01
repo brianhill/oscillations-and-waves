@@ -26,7 +26,12 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 ### Week 10 &mdash; Three-Dimensional Grid of Masses &mdash; Exam 2
 
 * Tuesday, April 1 &mdash; Problem Set 15: Do the Exercises from *EIWL3* Sections 37 and 38 &mdash; In-Class: Let's attempt to consolidate our understanding or at least record in one place the [Drumheads — Theory](./theory/Drumheads-Theory.nb.pdf) that we have been using, which now includes the ideas of longitudinal and transverse waves and then complete the [Cubical Grid of Masses - Transverse Waves](./worksheets/16-CubicalGridOfMasses-TransverseWaves.nb.pdf), and finally discuss what Friday's exam will cover (obviously we have covered so much since Exam 1, it would be unfair and impossible to comprehensively test it)
-* Friday, April 4 &mdash; Exam 2 (most of the exam will involve things similar to what you did in the transverse waves notebook) &mdash; Check out the next problem set and do it before the exam!
+
+<img src="./illustrations/TransverseWave.png" width="70%">
+
+#### Transverse Wave Transiting With Periodic Boundary Conditions
+
+* Friday, April 4 &mdash; Exam 2 (much of the exam will involve things similar to what you did in the transverse waves notebook) &mdash; Check out the next problem set and do it before the exam (even though it isn't officially due until April 8)
 
 ### Week 11 &mdash; Continuous Systems from the *n&rarr;&infin;* Limit &mdash; Guitar Strings and Drumheads
 
@@ -34,7 +39,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, April 8 &mdash; Problem Set 16: Make a Mathematica notebook containing your favorite (or least favorite) low-level Mathematics syntax tricks (such as @@, @@@, /@ ./, Table, Array) and email it to me before or after Friday's exam &mdash; I am going to share everyone's cheat cheets on Tuesday, April 8 (the class after the exam) &mdash; Guitar strings (a lot like the one-dimensional waves we have already done, but this time letting Mathematica do all the discretization)
+* Tuesday, April 8 &mdash; Problem Set 16: Make a Mathematica notebook containing your favorite (or least favorite) low-level Mathematica syntax tricks (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; I will post everyone's cheat cheets ([Brian's - which is barely begun](./cheat-sheets/WolframCheatSheet-Brian.nb.pdf), Eli's, Harper's, Hexi's, Jeremy's, Rania's, Tahm's, and Walker's) &mdash; Guitar strings (a lot like the one-dimensional waves we have already done, but this time letting Mathematica do all the hard work)
 * Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; Drumheads again (but again letting Mathematica do the hard work)
 
 ### Week 12 &mdash; Sound Waves &mdash; Diffusion of Heat in a Rod
