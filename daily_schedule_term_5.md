@@ -26,7 +26,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 ### Week 10 &mdash; Three-Dimensional Grid of Masses &mdash; Exam 2
 
 * Tuesday, April 1 &mdash; Problem Set 15: Do the Exercises from *EIWL3* Sections 37 and 38 &mdash; In-Class: Let's attempt to consolidate our understanding or at least record in one place the [Drumheads — Theory](./theory/Drumheads-Theory.nb.pdf) that we have been using, and then complete the [Cubical Grid of Masses - Transverse Waves](./worksheets/16-CubicalGridOfMasses-TransverseWaves.nb.pdf), and finally discuss what Friday's exam should cover (obviously we have covered so much since Exam 1, it would be unfair and impossible to comprehensively test it, so we have to pick and choose what the exam ought to do)
-* Friday, April 4 &mdash; Exam 2
+* Friday, April 4 &mdash; Exam 2 &mdash; Check out the next problem set and do it before the exam!
 
 ### Week 11 &mdash; Continuous Systems from the *n&rarr;&infin;* Limit &mdash; Guitar Strings and Drumheads
 
@@ -34,7 +34,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, April 8 &mdash; Problem Set 16: TBD! &mdash; Guitar strings (a lot like the one-dimensional waves we have already done, but this time letting Mathematica do all the discretization)
+* Tuesday, April 8 &mdash; Problem Set 16: Make a Mathematica notebook containing your favorite (or least favorite) low-level Mathematics syntax tricks (such as @@, @@@, /@ ./, Table, Array) and email it to me before or after Friday's exam &mdash; I am going to share everyone's cheat cheets on Tuesday, April 8 (the class after the exam) &mdash; Guitar strings (a lot like the one-dimensional waves we have already done, but this time letting Mathematica do all the discretization)
 * Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; Drumheads again (but again letting Mathematica do the hard work)
 
 ### Week 12 &mdash; Sound Waves &mdash; Diffusion of Heat in a Rod
