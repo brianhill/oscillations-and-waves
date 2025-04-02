@@ -1,0 +1,487 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19862,        477]
+NotebookOptionsPosition[     17908,        445]
+NotebookOutlinePosition[     18402,        463]
+CellTagsIndexPosition[     18359,        460]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9525127124370604`*^9, 
+  3.9525127135117655`*^9}},ExpressionUUID->"77eb7609-0071-44fb-93e5-\
+bd5515de7bcb"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"EvenQ", "[", "n", "]"}], ",", 
+     RowBox[{"Style", "[", 
+      RowBox[{"n", ",", 
+       RowBox[{"Background", "\[Rule]", "Yellow"}]}], "]"}], ",", 
+     RowBox[{"Style", "[", 
+      RowBox[{"n", ",", 
+       RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "100"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9525129469706306`*^9, 3.9525130378897634`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"bc2059ee-a2b1-47ed-a424-7dff15b2b6bc"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"PrimeQ", "[", "n", "]"}], ",", 
+     RowBox[{"Framed", "[", "n", "]"}], ",", "n"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "100"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.952513051374073*^9, 3.9525130782592525`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"ae606618-a489-4e23-afbe-64ce2b948dfa"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"PrimeQ", "[", "n", "]"}], ",", 
+     RowBox[{"Labeled", "[", 
+      RowBox[{
+       RowBox[{"Framed", "[", "n", "]"}], ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{
+         RowBox[{"Mod", "[", 
+          RowBox[{"n", ",", "4"}], "]"}], ",", "LightGray"}], "]"}]}], "]"}], 
+     ",", "n"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "100"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.952513091025606*^9, 3.9525131707394857`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"896cce77-6fb5-4cbb-b13d-1195e632a7cf"],
+
+Cell[BoxData[
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Graphics", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"RandomColor", "[", "]"}], ",", 
+       RowBox[{"Disk", "[", "]"}]}], "}"}], "]"}], ",", "3", ",", "6"}], 
+   "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9525131940043283`*^9, 3.952513259010206*^9}, {
+  3.952513366715129*^9, 3.9525134088733473`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"040a7b06-2dba-42ac-8b94-6d619c943cc8"],
+
+Cell[BoxData[
+ RowBox[{"PieChart", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Labeled", "[", 
+     RowBox[{
+      RowBox[{"#", "[", "\"\<GDP\>\"", "]"}], ",", "#"}], "]"}], "&"}], "/@", 
+   RowBox[{"EntityList", "[", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "G5 countries", Typeset`boxes$$ = 
+      TemplateBox[{"\"Group of 5\"", 
+        RowBox[{"EntityClass", "[", 
+          RowBox[{"\"Country\"", ",", "\"GroupOf5\""}], "]"}], 
+        "\"EntityClass[\\\"Country\\\", \\\"GroupOf5\\\"]\"", 
+        "\"countries\""}, "EntityClass"], 
+      Typeset`allassumptions$$ = {{
+       "word" -> "", "template" -> 
+        "Assuming the input is a class of countries${separator}Use \"G5\" as \
+${desc} instead", "count" -> "2", "pulldown" -> "false", "type" -> 
+        "MultiClash", "default" -> 
+        "{\"MC\", \"\"} -> {\"CountryClass\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "CountryClass", "desc" -> "a class of countries", "input" -> 
+           "{\"MC\", \"\"} -> {\"CountryClass\"}", "word" -> "the input"}, {
+          "name" -> "Company", "desc" -> "a company", "input" -> 
+           "{\"MC\", \"\"} -> {\"Company\"}", "word" -> "G5"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.04085`7.468933140041933, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{198., {7., 17.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9525134394201226`*^9, 3.952513441148703*^9}, {
+  3.9525135041954465`*^9, 3.9525135386086845`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"2adc3b90-0469-453f-a445-49fb626ae837"],
+
+Cell[BoxData[
+ RowBox[{"PieChart", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Legended", "[", 
+     RowBox[{
+      RowBox[{"#", "[", "\"\<Population\>\"", "]"}], ",", "#"}], "]"}], "&"}],
+    "/@", 
+   RowBox[{"EntityList", "[", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "G5 countries", Typeset`boxes$$ = 
+      TemplateBox[{"\"Group of 5\"", 
+        RowBox[{"EntityClass", "[", 
+          RowBox[{"\"Country\"", ",", "\"GroupOf5\""}], "]"}], 
+        "\"EntityClass[\\\"Country\\\", \\\"GroupOf5\\\"]\"", 
+        "\"countries\""}, "EntityClass"], 
+      Typeset`allassumptions$$ = {{
+       "word" -> "", "template" -> 
+        "Assuming the input is a class of countries${separator}Use \"G5\" as \
+${desc} instead", "count" -> "2", "pulldown" -> "false", "type" -> 
+        "MultiClash", "default" -> 
+        "{\"MC\", \"\"} -> {\"CountryClass\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "CountryClass", "desc" -> "a class of countries", "input" -> 
+           "{\"MC\", \"\"} -> {\"CountryClass\"}", "word" -> "the input"}, {
+          "name" -> "Company", "desc" -> "a company", "input" -> 
+           "{\"MC\", \"\"} -> {\"Company\"}", "word" -> "G5"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.8343096`7.372872234326634, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{198., {7., 17.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.952513556602281*^9, 3.952513611446821*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"075c82fc-74d1-40d7-9a08-0b8ff1f6ef1f"],
+
+Cell[BoxData[
+ RowBox[{"GraphicsGrid", "[", 
+  RowBox[{"Partition", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"PieChart", "[", 
+       RowBox[{"Counts", "[", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"2", "^", "n"}], "]"}], "]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "25"}], "}"}]}], "]"}], ",", "5"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9525136456761155`*^9, 3.952513720763343*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"980175bc-4c77-4cb9-9629-344b0cc728d2"],
+
+Cell[BoxData[
+ RowBox[{"GraphicsRow", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"WordCloud", "[", 
+     RowBox[{"WikipediaData", "[", "#", "]"}], "]"}], "&"}], "/@", 
+   RowBox[{"EntityList", "[", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "G5 Countries", Typeset`boxes$$ = 
+      TemplateBox[{"\"Group of 5\"", 
+        RowBox[{"EntityClass", "[", 
+          RowBox[{"\"Country\"", ",", "\"GroupOf5\""}], "]"}], 
+        "\"EntityClass[\\\"Country\\\", \\\"GroupOf5\\\"]\"", 
+        "\"countries\""}, "EntityClass"], 
+      Typeset`allassumptions$$ = {{
+       "word" -> "", "template" -> 
+        "Assuming the input is a class of countries${separator}Use \"G5\" as \
+${desc} instead", "count" -> "2", "pulldown" -> "false", "type" -> 
+        "MultiClash", "default" -> 
+        "{\"MC\", \"\"} -> {\"CountryClass\", \"dflt\"}", 
+        "Values" -> {{
+          "name" -> "CountryClass", "desc" -> "a class of countries", "input" -> 
+           "{\"MC\", \"\"} -> {\"CountryClass\"}", "word" -> "the input"}, {
+          "name" -> "Company", "desc" -> "a company", "input" -> 
+           "{\"MC\", \"\"} -> {\"Company\"}", "word" -> "G5"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       1.1863561`7.525760061151745, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{198., {7., 17.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9525137380536346`*^9, 3.9525137860199223`*^9}, {
+  3.9525138677324314`*^9, 3.952513872672879*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"bbf34109-ad6a-444c-8227-973710e93c64"],
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "=", 
+     RowBox[{"Range", "[", "10", "]"}]}], "}"}], ",", 
+   RowBox[{"x", "=", 
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "+", "x"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.952514163336534*^9, 3.9525141930677176`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"481db937-1179-4950-96ab-1c6e2ee74e10"],
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"RandomInteger", "[", "100", "]"}], ",", "10"}], "]"}]}], 
+    "}"}], ",", 
+   RowBox[{"Column", "[", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"Sort", "[", "x", "]"}], ",", 
+      RowBox[{"Max", "[", "x", "]"}], ",", 
+      RowBox[{"Total", "[", "x", "]"}]}], "}"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9525142039397717`*^9, 3.952514262505883*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"6324da1f-fe66-4efe-a473-a80aa661eb9c"],
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"giraffe", "=", 
+     NamespaceBox["LinguisticAssistant",
+      DynamicModuleBox[{Typeset`query$$ = "picture of a giraffe", 
+       Typeset`boxes$$ = RowBox[{
+         TemplateBox[{"\"giraffe\"", 
+           RowBox[{"Entity", "[", 
+             
+             RowBox[{"\"TaxonomicSpecies\"", ",", 
+               "\"GiraffaCamelopardalis::y5488\""}], "]"}], 
+           "\"Entity[\\\"TaxonomicSpecies\\\", \
+\\\"GiraffaCamelopardalis::y5488\\\"]\"", "\"species specification\""}, 
+          "Entity"], "[", 
+         TemplateBox[{"\"image\"", 
+           RowBox[{"EntityProperty", "[", 
+             RowBox[{"\"TaxonomicSpecies\"", ",", "\"Image\""}], "]"}], 
+           "\"EntityProperty[\\\"TaxonomicSpecies\\\", \\\"Image\\\"]\""}, 
+          "EntityProperty"], "]"}], 
+       Typeset`allassumptions$$ = {{
+        "word" -> "", "template" -> 
+         "Assuming \"giraffe\" is a species specification${separator}Use the \
+input as ${desc} instead", "count" -> "2", "pulldown" -> "false", "type" -> 
+         "MultiClash", "default" -> 
+         "{\"MC\", \"\"} -> {\"TaxonomicSpecies\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "TaxonomicSpecies", "desc" -> "a species specification", 
+            "input" -> "{\"MC\", \"\"} -> {\"TaxonomicSpecies\"}", "word" -> 
+            "giraffe"}, {
+           "name" -> "WordData", "desc" -> " referring to English words", 
+            "input" -> "{\"MC\", \"\"} -> {\"WordData\"}", "word" -> 
+            "the input"}}}, {
+        "type" -> "SubCategory", "word" -> "giraffe", "template" -> 
+         "Assuming Giraffa camelopardalis (animal)${separator}Use ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+         "{\"DPClash\", \"TaxonomicSpeciesE\", \"giraffe\"} -> \
+{\"GiraffaCamelopardalis::y5488\", \"dflt\"}", 
+         "Values" -> {{
+           "name" -> "GiraffaCamelopardalis::y5488", "desc" -> 
+            "Giraffa camelopardalis (animal)", "input" -> 
+            "{\"DPClash\", \"TaxonomicSpeciesE\", \"giraffe\"} -> \
+{\"GiraffaCamelopardalis::y5488\"}"}, {
+           "name" -> "Giraffa::j97pd", "desc" -> "Giraffa (animal)", "input" -> 
+            
+            "{\"DPClash\", \"TaxonomicSpeciesE\", \"giraffe\"} -> \
+{\"Giraffa::j97pd\"}"}}}}, Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 
+       2}, Typeset`querystate$$ = {
+       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+        0.996148`7.449868860843665, "Messages" -> {}}}, 
+       DynamicBox[ToBoxes[
+         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+          Dynamic[Typeset`query$$], 
+          Dynamic[Typeset`boxes$$], 
+          Dynamic[Typeset`allassumptions$$], 
+          Dynamic[Typeset`assumptions$$], 
+          Dynamic[Typeset`open$$], 
+          Dynamic[Typeset`querystate$$]], StandardForm],
+        ImageSizeCache->{311., {14.5, 19.5}},
+        TrackedSymbols:>{
+         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+       DynamicModuleValues:>{},
+       UndoTrackedVariables:>{Typeset`open$$}],
+      BaseStyle->{"Deploy"},
+      DeleteWithContents->True,
+      Editable->False,
+      SelectWithContents->True]}], "}"}], ",", 
+   RowBox[{"ImageCollage", "[", 
+    RowBox[{"{", 
+     RowBox[{"giraffe", ",", 
+      RowBox[{"Blur", "[", "giraffe", "]"}], ",", 
+      RowBox[{"EdgeDetect", "[", "giraffe", "]"}], ",", 
+      RowBox[{"ColorNegate", "[", "giraffe", "]"}]}], "}"}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9525142807413106`*^9, 3.9525144020980415`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"910cccb2-30b9-4893-94be-407989a3fe26"],
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"r", "=", 
+     RowBox[{"Range", "[", "10", "]"}]}], "}"}], ",", 
+   RowBox[{"ListLinePlot", "[", 
+    RowBox[{"Nest", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Join", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"Reverse", "[", "#", "]"}]}], "]"}], "&"}], ",", "r", ",", 
+      "2"}], "]"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9525144123171153`*^9, 3.952514627662335*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"37fd4ee9-5fa2-4fc8-8c6b-e99383beadb7"],
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "=", 
+     RowBox[{"Range", "[", "10", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "+", "1"}], ",", 
+     RowBox[{"x", "-", "1"}], ",", 
+     RowBox[{"Reverse", "[", "x", "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.952514643574992*^9, 3.9525146687994556`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"9500f77a-fde0-416c-b7d3-4d43aac901bc"],
+
+Cell[BoxData[
+ RowBox[{"NestList", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Mod", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"17", "#"}], "+", "2"}], ",", "11"}], "]"}], "&"}], ",", "10", 
+   ",", "20"}], "]"}]], "Input",
+ CellChangeTimes->{{3.952514988005637*^9, 3.9525150162982855`*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"42f31a35-581e-4421-b7de-8c9c6b999853"],
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "=", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<a\>\"", ",", "\"\<e\>\"", ",", "\"\<i\>\"", ",", "\"\<o\>\"", ",", 
+       "\"\<u\>\""}], "}"}]}], "}"}], ",", 
+   RowBox[{
+    RowBox[{"y", "=", 
+     RowBox[{"Complement", "[", 
+      RowBox[{
+       RowBox[{"Alphabet", "[", "]"}], ",", "x"}], "]"}]}], ";", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", "y", "]"}], ",", 
+         RowBox[{"RandomChoice", "[", "x", "]"}], ",", 
+         RowBox[{"RandomChoice", "[", "y", "]"}], ",", 
+         RowBox[{"RandomChoice", "[", "x", "]"}], ",", 
+         RowBox[{"RandomChoice", "[", "y", "]"}]}], "}"}], "]"}], ",", "10"}],
+      "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.952515038114174*^9, 3.952515048980069*^9}, {
+  3.952515091422428*^9, 3.9525151567482047`*^9}, {3.9525152303213043`*^9, 
+  3.9525153630862846`*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"06435c2f-18e9-4434-81a5-aa2f25603f31"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.952515412190595*^9, 
+  3.9525154136611557`*^9}},ExpressionUUID->"9b1f5d0b-80b2-4895-97cd-\
+e038dc82ccec"]
+},
+WindowSize->{760, 833},
+WindowMargins->{{Automatic, 486}, {216, Automatic}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e63d79a0-4e8d-485e-9655-8f49b72af86c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 156, 3, 28, "Input",ExpressionUUID->"77eb7609-0071-44fb-93e5-bd5515de7bcb"],
+Cell[717, 25, 603, 15, 48, "Input",ExpressionUUID->"bc2059ee-a2b1-47ed-a424-7dff15b2b6bc"],
+Cell[1323, 42, 415, 10, 28, "Input",ExpressionUUID->"ae606618-a489-4e23-afbe-64ce2b948dfa"],
+Cell[1741, 54, 629, 17, 28, "Input",ExpressionUUID->"896cce77-6fb5-4cbb-b13d-1195e632a7cf"],
+Cell[2373, 73, 491, 12, 28, "Input",ExpressionUUID->"040a7b06-2dba-42ac-8b94-6d619c943cc8"],
+Cell[2867, 87, 2381, 50, 41, "Input",ExpressionUUID->"2adc3b90-0469-453f-a445-49fb626ae837"],
+Cell[5251, 139, 2340, 50, 41, "Input",ExpressionUUID->"075c82fc-74d1-40d7-9a08-0b8ff1f6ef1f"],
+Cell[7594, 191, 543, 14, 28, "Input",ExpressionUUID->"980175bc-4c77-4cb9-9629-344b0cc728d2"],
+Cell[8140, 207, 2364, 49, 41, "Input",ExpressionUUID->"bbf34109-ad6a-444c-8227-973710e93c64"],
+Cell[10507, 258, 389, 10, 28, "Input",ExpressionUUID->"481db937-1179-4950-96ab-1c6e2ee74e10"],
+Cell[10899, 270, 603, 16, 28, "Input",ExpressionUUID->"6324da1f-fe66-4efe-a473-a80aa661eb9c"],
+Cell[11505, 288, 3740, 77, 80, "Input",ExpressionUUID->"910cccb2-30b9-4893-94be-407989a3fe26"],
+Cell[15248, 367, 558, 15, 28, "Input",ExpressionUUID->"37fd4ee9-5fa2-4fc8-8c6b-e99383beadb7"],
+Cell[15809, 384, 462, 12, 28, "Input",ExpressionUUID->"9500f77a-fde0-416c-b7d3-4d43aac901bc"],
+Cell[16274, 398, 376, 10, 28, "Input",ExpressionUUID->"42f31a35-581e-4421-b7de-8c9c6b999853"],
+Cell[16653, 410, 1094, 28, 67, "Input",ExpressionUUID->"06435c2f-18e9-4434-81a5-aa2f25603f31"],
+Cell[17750, 440, 154, 3, 28, "Input",ExpressionUUID->"9b1f5d0b-80b2-4895-97cd-e038dc82ccec"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
