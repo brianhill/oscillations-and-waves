@@ -39,7 +39,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, April 8 &mdash; Problem Set 16: Make a Mathematica notebook containing your favorite (or least favorite) low-level Mathematica syntax tricks (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; I will post everyone's cheat cheets ([Brian's - which is barely begun](./cheat-sheets/WolframCheatSheet-Brian.nb.pdf), Eli's, Harper's, Hexi's, Jeremy's, Rania's, Tahm's, and Walker's) &mdash; Guitar strings (a lot like the one-dimensional waves we have already done, but this time letting Mathematica do all the hard work)
+* Tuesday, April 8 &mdash; Problem Set 16: Make a Wolfram Language notebook containing your favorite (or least favorite) low-level Mathematica syntax and functions (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; I will post everyone's cheat cheets ([Brian's - which is barely begun](./cheat-sheets/WolframCheatSheet-Brian.nb.pdf), Eli's, Harper's, Hexi's, Jeremy's, Rania's, Tahm's, and Walker's) &mdash; Guitar strings (a lot like the one-dimensional waves we have already done, but this time letting Mathematica do all the hard work)
 * Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; Drumheads again (but again letting Mathematica do the hard work)
 
 ### Week 12 &mdash; Sound Waves &mdash; Diffusion of Heat in a Rod

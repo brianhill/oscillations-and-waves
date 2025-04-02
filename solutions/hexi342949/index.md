@@ -2,6 +2,18 @@
 
 *Listed reverse-chronologically (most recent at top)*
 
+### 2025-04-01 &mdash; PS15 &mdash; *EIWL3* Sections 37 and 38
+
+* [Brian's solution](../brian54321/Brian-PS15.nb.pdf)
+
+### 2025-03-28 &mdash; PS14 &mdash; *EIWL3* Sections 35 and 36
+
+* [Brian's solution](../brian54321/Brian-PS14.nb.pdf)
+
+### 2025-03-25 &mdash; PS13 &mdash; *EIWL3* Sections 33 and 34
+
+* [Brian's solution](../brian54321/Brian-PS13.nb.pdf)
+
 ### 2025-03-21 &mdash; PS12 &mdash; *EIWL3* Sections 31 and 32
 
 * [Hexi's solution](./Hexi-PS12.nb.pdf)
