@@ -12,6 +12,7 @@
 
 ### 2025-03-25 &mdash; PS13 &mdash; *EIWL3* Sections 33 and 34
 
+* [Hexi's solution](./Hexi-PS13.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS13.nb.pdf)
 
 ### 2025-03-21 &mdash; PS12 &mdash; *EIWL3* Sections 31 and 32
