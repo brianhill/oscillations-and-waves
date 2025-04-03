@@ -1,0 +1,3716 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[    162698,       3708]
+NotebookOptionsPosition[    156994,       3595]
+NotebookOutlinePosition[    157487,       3614]
+CellTagsIndexPosition[    157444,       3611]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Walker \[LongDash] Problem Set 14", "Title",
+ CellChangeTimes->{{3.952168443890254*^9, 3.95216844869412*^9}, {
+  3.9526269606437187`*^9, 3.952626960777109*^9}, {3.95263318794786*^9, 
+  3.952633191092976*^9}},ExpressionUUID->"54b0d720-3db6-43f7-ac60-\
+e8583cc90269"],
+
+Cell[CellGroupData[{
+
+Cell["Section 35", "Section",
+ CellChangeTimes->{{3.9521684616701927`*^9, 
+  3.952168464046956*^9}},ExpressionUUID->"6b21c73b-fa51-4b3d-b0bf-\
+f4b422cdee14"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<Location\>\"", "]"}], 
+  "[", "\"\<Eiffel Tower\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.952168671314899*^9, 3.952168721852375*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"a8286974-89b9-4cbb-aff9-64f7bd6cee53"],
+
+Cell[BoxData[
+ RowBox[{"GeoPosition", "[", 
+  RowBox[{"{", 
+   RowBox[{"48.858333333333334`", ",", "2.2944444444444443`"}], "}"}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.952168730514181*^9, 3.9525184178531322`*^9, 
+  3.952627753981757*^9, 3.9526332057435617`*^9},
+ CellLabel->"Out[23]=",ExpressionUUID->"562e0ee1-7a15-47f0-9f77-a3cdac58ec3f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<University\>\"", "]"}], 
+  "[", "\"\<U of T\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.952168742069319*^9, 3.952168752676045*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"d808234e-eff5-4011-8a18-ff07d455a638"],
+
+Cell[BoxData[
+ TemplateBox[{"\"University of Toronto\"", 
+   RowBox[{"Entity", "[", 
+     RowBox[{"\"University\"", ",", "\"UniversityOfToronto::52z4q\""}], "]"}],
+    "\"Entity[\\\"University\\\", \\\"UniversityOfToronto::52z4q\\\"]\"", 
+   "\"university\""},
+  "Entity"]], "Output",
+ CellChangeTimes->{3.952168755094612*^9, 3.952518417913069*^9, 
+  3.9526277540195503`*^9, 3.952633208225321*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"e39370ab-e58c-48f3-b5c1-bc385a3cb7d8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<Chemical\>\"", "]"}], "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<C2H4\>\"", ",", "\"\<C2H6\>\"", ",", "\"\<C3H8\>\""}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.952168856501193*^9, 3.952168925013852*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"8ff3d73c-bcbc-4579-a811-ce39f9bb570d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"ethylene\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Chemical\"", ",", "\"Ethylene\""}], "]"}], 
+     "\"Entity[\\\"Chemical\\\", \\\"Ethylene\\\"]\"", "\"chemical\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"ethane\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Chemical\"", ",", "\"Ethane\""}], "]"}], 
+     "\"Entity[\\\"Chemical\\\", \\\"Ethane\\\"]\"", "\"chemical\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"propane\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Chemical\"", ",", "\"Propane\""}], "]"}], 
+     "\"Entity[\\\"Chemical\\\", \\\"Propane\\\"]\"", "\"chemical\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{{3.9521689070362*^9, 3.9521689266111393`*^9}, 
+   3.952518417921007*^9, 3.952627754029059*^9, 3.952633210841935*^9},
+ CellLabel->"Out[25]=",ExpressionUUID->"f0cdc0a7-dc85-42d4-81b0-c05091e0d4e9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<Date\>\"", "]"}], 
+  "[", "\"\<\[OpenCurlyDoubleQuote]20140108\[CloseCurlyDoubleQuote]\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.952168945118849*^9, 3.9521689534670486`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"76cb3dbf-cd67-40d3-9827-6b6ce8211e8a"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"\"Wed 8 Jan 2014\""}], 
+   RowBox[{"DateObject", "[", 
+     RowBox[{
+       RowBox[{"{", 
+         RowBox[{"2014", ",", "1", ",", "8"}], "}"}], ",", "\"Day\""}], "]"}]},
+  "DateObject",
+  Editable->False]], "Output",
+ CellChangeTimes->{3.952168955644957*^9, 3.952518418147147*^9, 
+  3.9526277542481003`*^9, 3.9526332111219893`*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"b9e56b01-dc14-4014-9a9b-6a1ebb402490"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Interpreter", "[", "\"\<University\>\"", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"\"\<U of \>\"", ",", "#"}], "]"}], "&"}], "/@", 
+     RowBox[{"ToUpperCase", "[", 
+      RowBox[{"Alphabet", "[", "]"}], "]"}]}], "]"}], ",", "_Entity"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9521689659556093`*^9, 3.952168981540208*^9}, {
+  3.952169054710126*^9, 3.952169121382711*^9}, {3.95216925249321*^9, 
+  3.952169258142207*^9}, {3.952169447264045*^9, 3.952169489008363*^9}, {
+  3.95216952104865*^9, 3.9521695511857843`*^9}, {3.952169595337181*^9, 
+  3.952169595614893*^9}, {3.952169875589319*^9, 3.9521698782379436`*^9}, {
+  3.952518506287833*^9, 3.952518516061426*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"1c4b7b63-9992-49f1-adc4-9af4f1484fc9"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"University of Birjand\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"University\"", ",", "\"UniversityOfBirjand::43f66\""}], 
+       "]"}], "\"Entity[\\\"University\\\", \
+\\\"UniversityOfBirjand::43f66\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"University of California\[Hyphen]Berkeley\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"University\"", ",", "\"UniversityOfCaliforniaBerkeley::65rrq\""}], 
+       "]"}], "\"Entity[\\\"University\\\", \
+\\\"UniversityOfCaliforniaBerkeley::65rrq\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"The University of Edinburgh\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"University\"", ",", "\"TheUniversityOfEdinburgh::7z697\""}],
+        "]"}], "\"Entity[\\\"University\\\", \
+\\\"TheUniversityOfEdinburgh::7z697\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"University of Georgia\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"University\"", ",", "\"UniversityOfGeorgia::st72k\""}], 
+       "]"}], "\"Entity[\\\"University\\\", \
+\\\"UniversityOfGeorgia::st72k\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"University of Houston\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"University\"", ",", "\"UniversityOfHouston::48vhk\""}], 
+       "]"}], "\"Entity[\\\"University\\\", \
+\\\"UniversityOfHouston::48vhk\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"University of Illinois at Urbana-Champaign\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"University\"", ",", 
+         "\"UniversityOfIllinoisAtUrbanaChampaign::gc368\""}], "]"}], 
+     "\"Entity[\\\"University\\\", \
+\\\"UniversityOfIllinoisAtUrbanaChampaign::gc368\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"University of Lethbridge\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"University\"", ",", "\"UniversityOfLethbridge::9zcdx\""}], 
+       "]"}], "\"Entity[\\\"University\\\", \\\"UniversityOfLethbridge::9zcdx\
+\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"University of Michigan\[Hyphen]Ann Arbor\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"University\"", ",", "\"UniversityOfMichiganAnnArbor::hjqj5\""}], 
+       "]"}], "\"Entity[\\\"University\\\", \
+\\\"UniversityOfMichiganAnnArbor::hjqj5\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"University of Phoenix-Online Campus\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{
+        "\"University\"", ",", "\"UniversityOfPhoenixOnlineCampus::xxt8z\""}],
+        "]"}], "\"Entity[\\\"University\\\", \
+\\\"UniversityOfPhoenixOnlineCampus::xxt8z\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"University of Regina\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"University\"", ",", "\"UniversityOfRegina::ny963\""}], 
+       "]"}], "\"Entity[\\\"University\\\", \
+\\\"UniversityOfRegina::ny963\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"University of Saskatchewan\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"University\"", ",", "\"UniversityOfSaskatchewan::jd6dq\""}],
+        "]"}], "\"Entity[\\\"University\\\", \
+\\\"UniversityOfSaskatchewan::jd6dq\\\"]\"", "\"university\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"University of Toronto\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"University\"", ",", "\"UniversityOfToronto::52z4q\""}], 
+       "]"}], "\"Entity[\\\"University\\\", \
+\\\"UniversityOfToronto::52z4q\\\"]\"", "\"university\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{3.952169750957877*^9, 3.952169879449318*^9, 
+  3.952518418219653*^9, 3.952518516665246*^9, 3.952627754286097*^9, 
+  3.9526332129495*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"170a95b9-d8c6-4472-8df0-2c9dac741dd7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Interpreter", "[", "\"\<Movie\>\"", "]"}], "[", 
+    RowBox[{"CommonName", "/@", 
+     TemplateBox[<|"query" -> "US State Capital", "boxes" -> RowBox[{
+          TemplateBox[{"\"all US states with District of Columbia\"", 
+            RowBox[{"EntityClass", "[", 
+              
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                "\"AllUSStatesPlusDC\""}], "]"}], 
+            "\"EntityClass[\\\"AdministrativeDivision\\\", \
+\\\"AllUSStatesPlusDC\\\"]\"", "\"administrative divisions\""}, 
+           "EntityClass"], "[", 
+          TemplateBox[{"\"capital city\"", 
+            RowBox[{"EntityProperty", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", "\"CapitalCity\""}], 
+              "]"}], "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"CapitalCity\\\"]\""}, "EntityProperty"], "]"}], 
+       "allassumptions" -> {{
+         "type" -> "SubCategory", "word" -> "US State", "template" -> 
+          "Assuming all US states with District of Columbia${separator}Use \
+${desc} instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+          "{\"DPClash\", \"USStateEC\", \"US State\"} -> {\"AllUSStatesPlusDC\
+\", \"dflt\"}", 
+          "Values" -> {{
+            "name" -> "AllUSStatesPlusDC", "desc" -> 
+             "all US states with District of Columbia", "input" -> 
+             "{\"DPClash\", \"USStateEC\", \"US State\"} -> \
+{\"AllUSStatesPlusDC\"}"}, {
+            "name" -> "USStatesAllStates", "desc" -> "all US states", "input" -> 
+             "{\"DPClash\", \"USStateEC\", \"US State\"} -> \
+{\"USStatesAllStates\"}"}}}}, "assumptions" -> {}, "open" -> {1, 2}, 
+       "querystate" -> {
+        "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+         0.857121`6.38458712921487, "Messages" -> {}}, "contextinfo" -> 
+       Automatic, "version" -> 5|>,
+      "LinguisticAssistantTemplate"]}], "]"}], ",", "_Entity"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9521695586557207`*^9, 3.952169558682147*^9}, {
+  3.95251853248218*^9, 3.952518602691041*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"2cf01c23-131a-4f6f-b61a-e31ac05f20ea"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"Phoenix\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Phoenix::nvg9z\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Phoenix::nvg9z\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Honolulu\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Honolulu::sm2dd\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Honolulu::sm2dd\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Topeka\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Topeka::444p8\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Topeka::444p8\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Annapolis\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Annapolis::3d4hy\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Annapolis::3d4hy\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Lincoln\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Lincoln::ywsw3\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Lincoln::ywsw3\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Santa Fe\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"SantaFe::35cjs\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"SantaFe::35cjs\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Expedition: Bismarck\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Expedition:Bismarck::5f93j\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Expedition:Bismarck::5f93j\\\"]\"", 
+     "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Columbus\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Columbus::hsjx2\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Columbus::hsjx2\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Providence\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Providence::44yj5\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Providence::44yj5\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Nashville\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Nashville::v89b8\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Nashville::v89b8\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Olympia\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Olympia::9vpj2\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Olympia::9vpj2\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Madison\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Madison::sxz2b\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Madison::sxz2b\\\"]\"", "\"movie\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Cheyenne\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"Movie\"", ",", "\"Cheyenne::tdyf2\""}], "]"}], 
+     "\"Entity[\\\"Movie\\\", \\\"Cheyenne::tdyf2\\\"]\"", "\"movie\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.952518547335031*^9, {3.9525185886109247`*^9, 3.9525186033277283`*^9}, 
+   3.952627754781836*^9, 3.952633219530849*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"62c60127-a131-4b99-88d8-1bee9075f0f2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Interpreter", "[", "\"\<City\>\"", "]"}], "[", 
+    RowBox[{"StringJoin", "/@", 
+     RowBox[{"Permutations", "[", 
+      RowBox[{"{", 
+       RowBox[{"\"\<l\>\"", ",", "\"\<i\>\"", ",", "\"\<m\>\"", 
+        ",", "\"\<a\>\""}], "}"}], "]"}]}], "]"}], ",", "_Entity"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.952518655301647*^9},
+ CellLabel->"In[29]:=",ExpressionUUID->"4a23b7b9-b452-4c7e-8767-8beaa854be8a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"Lima\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Lima\"", ",", "\"Lima\"", ",", "\"Peru\""}], "}"}]}], 
+       "]"}], "\"Entity[\\\"City\\\", {\\\"Lima\\\", \\\"Lima\\\", \\\"Peru\\\
+\"}]\"", "\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Lamai\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Lamai\"", ",", "\"Manipur\"", ",", "\"India\""}], 
+           "}"}]}], "]"}], 
+     "\"Entity[\\\"City\\\", {\\\"Lamai\\\", \\\"Manipur\\\", \\\"India\\\"}]\
+\"", "\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Lami\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Lami\"", ",", "\"Central\"", ",", "\"Fiji\""}], "}"}]}],
+        "]"}], "\"Entity[\\\"City\\\", {\\\"Lami\\\", \\\"Central\\\", \
+\\\"Fiji\\\"}]\"", "\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Ilam\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Ilam\"", ",", "\"Ilam\"", ",", "\"Iran\""}], "}"}]}], 
+       "]"}], "\"Entity[\\\"City\\\", {\\\"Ilam\\\", \\\"Ilam\\\", \\\"Iran\\\
+\"}]\"", "\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Balm\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Balm\"", ",", "\"Florida\"", ",", "\"UnitedStates\""}], 
+           "}"}]}], "]"}], 
+     "\"Entity[\\\"City\\\", {\\\"Balm\\\", \\\"Florida\\\", \\\"UnitedStates\
+\\\"}]\"", "\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Mali\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Mali\"", ",", "\"Mali\"", ",", "\"Guinea\""}], "}"}]}], 
+       "]"}], "\"Entity[\\\"City\\\", {\\\"Mali\\\", \\\"Mali\\\", \\\"Guinea\
+\\\"}]\"", "\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Milah\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Milah\"", ",", "\"Mila\"", ",", "\"Algeria\""}], 
+           "}"}]}], "]"}], 
+     "\"Entity[\\\"City\\\", {\\\"Milah\\\", \\\"Mila\\\", \
+\\\"Algeria\\\"}]\"", "\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Mali\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Mali\"", ",", "\"Mali\"", ",", "\"Guinea\""}], "}"}]}], 
+       "]"}], "\"Entity[\\\"City\\\", {\\\"Mali\\\", \\\"Mali\\\", \\\"Guinea\
+\\\"}]\"", "\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Alim\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           
+           RowBox[{"\"Alim\"", ",", "\"NegrosOccidental\"", ",", 
+             "\"Philippines\""}], "}"}]}], "]"}], 
+     "\"Entity[\\\"City\\\", {\\\"Alim\\\", \\\"NegrosOccidental\\\", \
+\\\"Philippines\\\"}]\"", "\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Amli\"", 
+     RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           
+           RowBox[{"\"Amli\"", ",", "\"DadraAndNagarHaveli\"", ",", 
+             "\"India\""}], "}"}]}], "]"}], 
+     "\"Entity[\\\"City\\\", {\\\"Amli\\\", \\\"DadraAndNagarHaveli\\\", \
+\\\"India\\\"}]\"", "\"city\""},
+    "Entity"]}], "}"}]], "Output",
+ CellChangeTimes->{3.952518657898758*^9, 3.9526277547955627`*^9, 
+  3.952633221611368*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"0077af32-55db-46fc-84d5-d7c0240741bc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"TextCases", "[", 
+   RowBox[{
+    RowBox[{"WikipediaData", "[", "\"\<gunpowder\>\"", "]"}], 
+    ",", "\"\<Country\>\""}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{3.952518693800899*^9},
+ CellLabel->"In[30]:=",ExpressionUUID->"212474ea-5fe4-4d24-a6c9-30f606ccc7d6"],
+
+Cell[BoxData[
+ GraphicsBox[{InsetBox[
+    StyleBox["\<\"Chinese\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.2708978328173375],
+     FontColor->RGBColor[0.24, 0.6, 0.8]], {0, 0}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"China\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.23993808049535606`],
+     FontColor->RGBColor[0.95, 0.627, 0.1425]], {-0.5, -61.5}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Mongols\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.16253869969040247`],
+     FontColor->RGBColor[0.455, 0.7, 0.21]], {-8.5, 52.5}, Center, Automatic],
+    InsetBox[
+    StyleBox["\<\"Portuguese\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10061919504643962`],
+     FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {-0.5, 86.5}, Center,
+     Automatic], InsetBox[
+    StyleBox["\<\"United States\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08513931888544893],
+     FontColor->RGBColor[0.637, 0.65, 0.]], {-0.5, -105.5}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Great Britain\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08513931888544893],
+     FontColor->RGBColor[0.8, 0.4, 0.76]], {4.5, 108.5}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"India\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.13157894736842107`],
+     FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {-100.5, -126.5}, 
+    Center, Automatic], InsetBox[
+    StyleBox["\<\"Mongol\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.10061919504643962`],
+     FontColor->RGBColor[0.578, 0.51, 0.85]], {-0.5, -131.5}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"French\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08513931888544893],
+     FontColor->RGBColor[1., 0.75, 0.]], {-0.5, 130.5}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"France\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.08513931888544893],
+     FontColor->RGBColor[0.4, 0.64, 1.]], {116.5, 72.5}, Center, Automatic], 
+   InsetBox[
+    StyleBox["\<\"United Kingdom\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05417956656346749],
+     FontColor->RGBColor[
+      0.5833680111493557, 0.4126186601628758, 0.8290799721266107]], {15.5, 151.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Germany\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0696594427244582],
+     FontColor->RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85]], {-121.5, 84.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"German\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0696594427244582],
+     FontColor->RGBColor[0.915, 0.3325, 0.2125]], {120.5, 27.5}, Center, 
+    Automatic], InsetBox[
+    StyleBox["\<\"Turkish\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.0696594427244582],
+     FontColor->RGBColor[
+      0.9728288904374106, 0.621644452187053, 0.07336199581899142]], {117.5, 45.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Japan\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05417956656346749],
+     FontColor->RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]], {106.5, -40.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Spaniards\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[0.7678998606330495, 0.7317110956258943, 0.]], {34.5, -39.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"American\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[0.8996399512215667, 0.7463488834690629, 0.]], {55.5, 22.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Peru\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05417956656346749],
+     FontColor->RGBColor[
+      0.838355547812947, 0.44746667828057946`, 0.0208888695323676]], {-108.5, 0.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Australia\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.8439466852489265, 0.3467106629502147, 0.3309221912517893]], {-112.5, -40.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Italy\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.05417956656346749],
+     FontColor->RGBColor[0.736782672705901, 0.358, 0.5030266573755369]], {104.5, -58.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Chilean\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[0.5407932311309059, 0.715, 0.09762679674248334]], {-119.5, 37.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Persian\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.8613800418100862, 0.48092002787339083`, 0.02824203762907758]], {-112.5, -53.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Ireland\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[0.7748409210981391, 0.358, 0.4444755060028629]], {-117.5, 51.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Bengal\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.28240003484173815`, 0.6090799721266095, 0.7538800418100857]], {106.5, -74.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"British\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.9324333565611593, 0.5282889043741062, 0.0921900209050434]], {-110.5, -67.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Syrian\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.35558897405758294`, 0.5505288207539337, 0.8417067688690995]], {94.5, 90.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Indian\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.9874666782805795, 0.6948333914028977, 0.033839968642435214`]], {-115.5, 65.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Persia\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.16397784358994957`, 0.7038177251280403, 0.6117734123079395]], {-62.5, -61.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Greek\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[0.47401116530937026`, 0.47809330081437784`, 0.85]], {-105.5, -82.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Egypt\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.8857244243136628, 0.3764133635295058, 0.1393110607841571]], {-60.5, 23.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Syria\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.8878600487784333, 0.33792799024431336`, 0.2577332520359445]], {-19.5, -38.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"Chile\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.6753413537738198, 0.3589675436319385, 0.5991466155654507]], {-91.5, -96.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"US\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[0.37977756485605163`, 0.715, 0.3025558265468435]], {-13.5, 21.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"UK\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[0.7132613816472081, 0.358, 0.5392132590042952]], {68.5, -38.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"U\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.9637822400302223, 0.5764112001511111, 0.0977879519184]], {-0.5, -4.5},
+     Center, Automatic], InsetBox[
+    StyleBox["\<\"S\"\>",
+     StripOnInput->False,
+     FontSize->Scaled[0.03869969040247678],
+     FontColor->RGBColor[
+      0.6184987019729621, 0.39212575718243875`, 0.7412532450675947]], {-0.5, -17.5},
+     Center, Automatic]},
+  DefaultBaseStyle->{"Graphics", FontFamily -> "Source Sans Pro"},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic},
+  PlotRange->{{-165., 158.}, {-153., 160.}}]], "Output",
+ CellChangeTimes->{{3.952518993265338*^9, 3.952519020852582*^9}, 
+   3.952627764097445*^9, 3.952633236077544*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"7df1b577-f623-42c1-aacc-32086743fde9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TextCases", "[", 
+  RowBox[{"\"\<She sells seashells by the sea shore.\>\"", 
+   ",", "\"\<Noun\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.952518715530547*^9, 3.952518740178727*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"6b3a8f19-99ec-4d55-a543-24c465d95907"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"seashells\"\>", ",", "\<\"sea\"\>", ",", "\<\"shore\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.952518997407536*^9, 3.952627765467813*^9, 
+  3.952633236824151*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"c0b4d301-4f56-4676-9680-38105fe2a4f4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Length", "[", 
+    RowBox[{"TextCases", "[", 
+     RowBox[{
+      RowBox[{"StringTake", "[", 
+       RowBox[{
+        RowBox[{"WikipediaData", "[", "\"\<computers\>\"", "]"}], ",", 
+        "1000"}], "]"}], ",", "#"}], "]"}], "]"}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{"\"\<Noun\>\"", ",", "\"\<Verb\>\"", ",", "\"\<Adjective\>\""}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{3.952518762072817*^9},
+ CellLabel->"In[32]:=",ExpressionUUID->"d2dabda2-ad4a-45fc-8f83-a3b029c1e7f6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"54", ",", "23", ",", "20"}], "}"}]], "Output",
+ CellChangeTimes->{3.952518999421172*^9, 3.952627776504561*^9, 
+  3.952633244249893*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"9e7f645e-3552-49c6-9262-569d8ebbc109"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TextStructure", "[", 
+  RowBox[{
+   RowBox[{"TextSentences", "[", 
+    RowBox[{"WikipediaData", "[", "\"\<computers\>\"", "]"}], "]"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.952519075927289*^9, 3.9525190891771173`*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"eafefec2-d4c7-4313-ad66-28828dcb12a9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TemplateBox[{
+    InterpretationBox[
+     GridBox[{{
+        TemplateBox[{"\[ThinSpace]", "\" \"", 
+          InterpretationBox[
+           GridBox[{{
+              TemplateBox[{"\[ThinSpace]", "\" \"", 
+                InterpretationBox[
+                 GridBox[{{"\"A\""}, {
+                    StyleBox["\"Determiner\"", "TextElementLabel"]}}, 
+                  BaseStyle -> "TextElementGrid"], 
+                 TextElement[
+                 "A", <|"GrammaticalUnit" -> 
+                   Entity["GrammaticalUnit", "Determiner"]|>]], 
+                InterpretationBox[
+                 GridBox[{{"\"computer\""}, {
+                    StyleBox["\"Noun\"", "TextElementLabel"]}}, BaseStyle -> 
+                  "TextElementGrid"], 
+                 TextElement[
+                 "computer", <|
+                  "GrammaticalUnit" -> Entity["GrammaticalUnit", "Noun"]|>]]},
+                "RowWithSeparators"]}, {
+              StyleBox["\"Noun Phrase\"", "TextElementLabel"]}}, BaseStyle -> 
+            "TextElementGrid"], 
+           TextElement[{
+             TextElement[
+             "A", <|"GrammaticalUnit" -> 
+               Entity["GrammaticalUnit", "Determiner"]|>], 
+             TextElement[
+             "computer", <|
+              "GrammaticalUnit" -> Entity["GrammaticalUnit", "Noun"]|>]}, <|
+            "GrammaticalUnit" -> Entity["GrammaticalUnit", "NounPhrase"]|>]], 
+          
+          InterpretationBox[
+           GridBox[{{
+              TemplateBox[{"\[ThinSpace]", "\" \"", 
+                InterpretationBox[
+                 GridBox[{{"\"is\""}, {
+                    StyleBox["\"Verb\"", "TextElementLabel"]}}, BaseStyle -> 
+                  "TextElementGrid"], 
+                 TextElement[
+                 "is", <|"GrammaticalUnit" -> 
+                   Entity["GrammaticalUnit", "Verb"]|>]], 
+                InterpretationBox[
+                 GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"a\""}, {
+                    StyleBox["\"Determiner\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[
+                    "a", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Determiner"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{"\"machine\""}, {
+                    StyleBox["\"Noun\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement[
+                    "machine", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Noun Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "a", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Determiner"]|>], 
+                    TextElement[
+                    "machine", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"that\""}, {
+                    StyleBox["\"Wh-Determiner\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[
+                    "that", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "WhDeterminer"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Wh-Noun Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "that", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "WhDeterminer"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "WhNounPhrase"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"can\""}, {
+                    StyleBox["\"Verb\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement[
+                    "can", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"be\""}, {
+                    StyleBox["\"Verb\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement[
+                    "be", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"programmed\""}, {
+                    StyleBox["\"Verb\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement[
+                    "programmed", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"to\""}, {
+                    StyleBox["\"Preposition\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Preposition"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"automatically\""}, {
+                    StyleBox["\"Adverb\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement[
+                    "automatically", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adverb"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Adverb Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Adverb"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdverbPhrase"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{"\"carry\""}, {
+                    StyleBox["\"Verb\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement[
+                    "carry", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Verb"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"out\""}, {
+                    StyleBox["\"Particle\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Particle"]|>]]}, "RowWithSeparators"]}, {
+                    StyleBox["\"Particle\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Particle"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"sequences\""}, {
+                    StyleBox["\"Noun\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement["sequences", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Noun"]|>]]}, "RowWithSeparators"]}, {
+                    StyleBox["\"Noun Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"of\""}, {
+                    StyleBox["\"Preposition\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Preposition"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"arithmetic\""}, {
+                    StyleBox["\"Adjective\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement["arithmetic", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Adjective"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{"\"or\""}, {
+                    StyleBox["\"Conjunction\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement["or", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Conjunction"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{"\"logical\""}, {
+                    StyleBox["\"Adjective\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement["logical", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Adjective"]|>]]}, "RowWithSeparators"]}, {
+                    StyleBox["\"Adjective Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Conjunction"]|>], 
+                    TextElement["logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Adjective"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdjectivePhrase"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{"\"operations\""}, {
+                    StyleBox["\"Noun\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement["operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Noun Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Conjunction"]|>], 
+                    TextElement["logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Adjective"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"(\""}, {
+                    StyleBox["\"Punctuation\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement["(", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{
+                    TemplateBox[{"\[ThinSpace]", "\" \"", 
+                    InterpretationBox[
+                    GridBox[{{"\"computation\""}, {
+                    StyleBox["\"Noun\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement["computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Noun Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]], 
+                    InterpretationBox[
+                    GridBox[{{"\")\""}, {
+                    StyleBox["\"Punctuation\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[")", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]]}, "RowWithSeparators"]}, {
+                    StyleBox["\"Parenthetical\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Parenthetical"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Noun Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Conjunction"]|>], 
+                    TextElement["logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Adjective"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Parenthetical"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Prepositional Phrase\"", 
+                    "TextElementLabel"]}}, BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement["of", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Conjunction"]|>], 
+                    TextElement["logical", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Adjective"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Parenthetical"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "PrepositionalPhrase"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Noun Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Conjunction"]|>], 
+                    TextElement["logical", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Adjective"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Parenthetical"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]]}, "RowWithSeparators"]}, {
+                    StyleBox["\"Verb Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Adverb"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Particle"]|>]}, <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Adjective"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Parenthetical"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "VerbPhrase"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Verb Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Adverb"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Particle"]|>]}, <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Adjective"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdjectivePhrase"]|>], 
+                    TextElement["operations", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]}, <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", 
+                    "Parenthetical"]|>]}, <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "VerbPhrase"]|>]]}, "RowWithSeparators"]}, {
+                    StyleBox["\"Clause\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Adverb"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Particle"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", 
+                    "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]}, <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Parenthetical"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "VerbPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Clause"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Verb Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "programmed", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adverb"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Particle"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Parenthetical"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "VerbPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Clause"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "VerbPhrase"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Verb Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "be", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "programmed", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adverb"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Particle"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Adjective"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Noun"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Punctuation"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Parenthetical"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Clause"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Verb Phrase\"", "TextElementLabel"]}}, 
+                    BaseStyle -> "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[
+                    "can", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "be", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "programmed", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adverb"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Adjective"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Punctuation"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "Parenthetical"]|>]}, <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Clause"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Clause\"", "TextElementLabel"]}}, BaseStyle -> 
+                    "TextElementGrid"], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "that", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "WhDeterminer"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "WhNounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "can", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "be", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "programmed", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adverb"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", 
+                    "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Punctuation"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Parenthetical"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Clause"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Clause"]|>]]}, 
+                    "RowWithSeparators"]}, {
+                    StyleBox["\"Noun Phrase\"", "TextElementLabel"]}}, 
+                  BaseStyle -> "TextElementGrid"], 
+                 TextElement[{
+                   TextElement[{
+                    TextElement[
+                    "a", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Determiner"]|>], 
+                    TextElement[
+                    "machine", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                   TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "that", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "WhDeterminer"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "WhNounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "can", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "be", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "programmed", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adverb"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement["out", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Punctuation"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "Parenthetical"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Clause"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Clause"]|>]}, <|
+                  "GrammaticalUnit" -> 
+                   Entity["GrammaticalUnit", "NounPhrase"]|>]]}, 
+               "RowWithSeparators"]}, {
+              StyleBox["\"Verb Phrase\"", "TextElementLabel"]}}, BaseStyle -> 
+            "TextElementGrid"], 
+           TextElement[{
+             TextElement[
+             "is", <|"GrammaticalUnit" -> 
+               Entity["GrammaticalUnit", "Verb"]|>], 
+             TextElement[{
+               TextElement[{
+                 TextElement[
+                 "a", <|"GrammaticalUnit" -> 
+                   Entity["GrammaticalUnit", "Determiner"]|>], 
+                 TextElement[
+                 "machine", <|
+                  "GrammaticalUnit" -> 
+                   Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                "GrammaticalUnit" -> 
+                 Entity["GrammaticalUnit", "NounPhrase"]|>], 
+               TextElement[{
+                 TextElement[{
+                   TextElement[
+                   "that", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "WhDeterminer"]|>]}, <|
+                  "GrammaticalUnit" -> 
+                   Entity["GrammaticalUnit", "WhNounPhrase"]|>], 
+                 TextElement[{
+                   TextElement[
+                   "can", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+                   TextElement[{
+                    TextElement[
+                    "be", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "programmed", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adverb"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> Entity[
+                    "GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Punctuation"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Parenthetical"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Clause"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                  "GrammaticalUnit" -> 
+                   Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                "GrammaticalUnit" -> 
+                 Entity["GrammaticalUnit", "Clause"]|>]}, <|
+              "GrammaticalUnit" -> 
+               Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+            "GrammaticalUnit" -> Entity["GrammaticalUnit", "VerbPhrase"]|>]], 
+          
+          InterpretationBox[
+           GridBox[{{"\".\""}, {
+              StyleBox["\"Punctuation\"", "TextElementLabel"]}}, BaseStyle -> 
+            "TextElementGrid"], 
+           TextElement[
+           ".", <|"GrammaticalUnit" -> 
+             Entity["GrammaticalUnit", "Punctuation"]|>]]}, 
+         "RowWithSeparators"]}, {
+        StyleBox["\"Sentence\"", "TextElementLabel"]}}, BaseStyle -> 
+      "TextElementGrid"], 
+     TextElement[{
+       TextElement[{
+         TextElement[
+         "A", <|"GrammaticalUnit" -> 
+           Entity["GrammaticalUnit", "Determiner"]|>], 
+         TextElement[
+         "computer", <|
+          "GrammaticalUnit" -> Entity["GrammaticalUnit", "Noun"]|>]}, <|
+        "GrammaticalUnit" -> Entity["GrammaticalUnit", "NounPhrase"]|>], 
+       TextElement[{
+         TextElement[
+         "is", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+         TextElement[{
+           TextElement[{
+             TextElement[
+             "a", <|"GrammaticalUnit" -> 
+               Entity["GrammaticalUnit", "Determiner"]|>], 
+             TextElement[
+             "machine", <|
+              "GrammaticalUnit" -> Entity["GrammaticalUnit", "Noun"]|>]}, <|
+            "GrammaticalUnit" -> Entity["GrammaticalUnit", "NounPhrase"]|>], 
+           TextElement[{
+             TextElement[{
+               TextElement[
+               "that", <|
+                "GrammaticalUnit" -> 
+                 Entity["GrammaticalUnit", "WhDeterminer"]|>]}, <|
+              "GrammaticalUnit" -> 
+               Entity["GrammaticalUnit", "WhNounPhrase"]|>], 
+             TextElement[{
+               TextElement[
+               "can", <|
+                "GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+               TextElement[{
+                 TextElement[
+                 "be", <|"GrammaticalUnit" -> 
+                   Entity["GrammaticalUnit", "Verb"]|>], 
+                 TextElement[{
+                   TextElement[
+                   "programmed", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+                   TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adverb"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Punctuation"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Parenthetical"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Clause"]|>]}, <|
+                  "GrammaticalUnit" -> 
+                   Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                "GrammaticalUnit" -> 
+                 Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+              "GrammaticalUnit" -> 
+               Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+            "GrammaticalUnit" -> Entity["GrammaticalUnit", "Clause"]|>]}, <|
+          "GrammaticalUnit" -> Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+        "GrammaticalUnit" -> Entity["GrammaticalUnit", "VerbPhrase"]|>], 
+       TextElement[
+       ".", <|"GrammaticalUnit" -> 
+         Entity["GrammaticalUnit", "Punctuation"]|>]}, <|
+      "GrammaticalUnit" -> Entity["GrammaticalUnit", "Sentence"]|>]]},
+   "RowDefault"],
+  TextElement[{
+    TextElement[{
+      TextElement[{
+        TextElement[
+        "A", <|"GrammaticalUnit" -> 
+          Entity["GrammaticalUnit", "Determiner"]|>], 
+        TextElement[
+        "computer", <|
+         "GrammaticalUnit" -> Entity["GrammaticalUnit", "Noun"]|>]}, <|
+       "GrammaticalUnit" -> Entity["GrammaticalUnit", "NounPhrase"]|>], 
+      TextElement[{
+        TextElement[
+        "is", <|"GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+        TextElement[{
+          TextElement[{
+            TextElement[
+            "a", <|"GrammaticalUnit" -> 
+              Entity["GrammaticalUnit", "Determiner"]|>], 
+            TextElement[
+            "machine", <|
+             "GrammaticalUnit" -> Entity["GrammaticalUnit", "Noun"]|>]}, <|
+           "GrammaticalUnit" -> Entity["GrammaticalUnit", "NounPhrase"]|>], 
+          TextElement[{
+            TextElement[{
+              TextElement[
+              "that", <|
+               "GrammaticalUnit" -> 
+                Entity["GrammaticalUnit", "WhDeterminer"]|>]}, <|
+             "GrammaticalUnit" -> 
+              Entity["GrammaticalUnit", "WhNounPhrase"]|>], 
+            TextElement[{
+              TextElement[
+              "can", <|"GrammaticalUnit" -> 
+                Entity["GrammaticalUnit", "Verb"]|>], 
+              TextElement[{
+                TextElement[
+                "be", <|"GrammaticalUnit" -> 
+                  Entity["GrammaticalUnit", "Verb"]|>], 
+                TextElement[{
+                  TextElement[
+                  "programmed", <|
+                   "GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+                  
+                  TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "to", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "automatically", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adverb"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdverbPhrase"]|>], 
+                    TextElement[
+                    "carry", <|
+                    "GrammaticalUnit" -> Entity["GrammaticalUnit", "Verb"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "out", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Particle"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "sequences", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "of", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Preposition"]|>], 
+                    TextElement[{
+                    TextElement[{
+                    TextElement[{
+                    TextElement[
+                    "arithmetic", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>], 
+                    TextElement[
+                    "or", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Conjunction"]|>], 
+                    TextElement[
+                    "logical", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Adjective"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "AdjectivePhrase"]|>], 
+                    TextElement[
+                    "operations", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "(", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Punctuation"]|>], 
+                    TextElement[{
+                    TextElement[
+                    "computation", <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Noun"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>], 
+                    TextElement[
+                    ")", <|"GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Punctuation"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Parenthetical"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "PrepositionalPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                    "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+                   "GrammaticalUnit" -> 
+                    Entity["GrammaticalUnit", "Clause"]|>]}, <|
+                 "GrammaticalUnit" -> 
+                  Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+               "GrammaticalUnit" -> 
+                Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+             "GrammaticalUnit" -> 
+              Entity["GrammaticalUnit", "VerbPhrase"]|>]}, <|
+           "GrammaticalUnit" -> Entity["GrammaticalUnit", "Clause"]|>]}, <|
+         "GrammaticalUnit" -> Entity["GrammaticalUnit", "NounPhrase"]|>]}, <|
+       "GrammaticalUnit" -> Entity["GrammaticalUnit", "VerbPhrase"]|>], 
+      TextElement[
+      ".", <|"GrammaticalUnit" -> 
+        Entity["GrammaticalUnit", "Punctuation"]|>]}, <|
+     "GrammaticalUnit" -> 
+      Entity["GrammaticalUnit", "Sentence"]|>]}]]], "Output",
+ CellChangeTimes->{3.952519093696334*^9, 3.952627780019331*^9, 
+  3.9526332486762323`*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"5d295ccb-51a3-4053-8a11-a3448024b63b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Keys", "[", 
+  RowBox[{"TakeLargest", "[", 
+   RowBox[{
+    RowBox[{"Counts", "[", 
+     RowBox[{"TextCases", "[", 
+      RowBox[{
+       RowBox[{"ExampleData", "[", 
+        RowBox[{"{", 
+         RowBox[{"\"\<Text\>\"", ",", "\"\<AliceInWonderland\>\""}], "}"}], 
+        "]"}], ",", "\"\<Noun\>\""}], "]"}], "]"}], ",", "10"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.9525191160667562`*^9},
+ CellLabel->"In[34]:=",ExpressionUUID->"45b346a6-22a9-4595-a379-dca2e4b82655"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Rabbit\"\>", ",", "\<\"door\"\>", ",", "\<\"voice\"\>", 
+   ",", "\<\"time\"\>", ",", "\<\"way\"\>", ",", "\<\"Mouse\"\>", 
+   ",", "\<\"moment\"\>", ",", "\<\"thing\"\>", ",", "\<\"head\"\>", 
+   ",", "\<\"table\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.9525191211148663`*^9, 3.952627787994832*^9, 
+  3.952633249135041*^9},
+ CellLabel->"Out[34]=",ExpressionUUID->"6a177410-db58-44f8-bc78-6d126c71f3e7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CommunityGraphPlot", "[", 
+  RowBox[{"First", "[", 
+   RowBox[{"TextStructure", "[", 
+    RowBox[{
+     RowBox[{"First", "[", 
+      RowBox[{"TextSentences", "[", 
+       RowBox[{"WikipediaData", "[", "\"\<language\>\"", "]"}], "]"}], "]"}], 
+     ",", "\"\<ConstituentGraphs\>\""}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{3.95251914027776*^9},
+ CellLabel->"In[35]:=",ExpressionUUID->"f9dc0800-0c91-4530-821f-28e3f4a2b728"],
+
+Cell[BoxData[
+ GraphicsBox[{{
+    {EdgeForm[GrayLevel[0.5]], FaceForm[None], 
+     FilledCurveBox[
+      BSplineCurve[{{9.837535516287742, 2.8858395845400544`}, {
+       10.293308731109622`, 2.580950874771006}, {10.703651334781725`, 
+       2.580950874771006}, {11.012102249866214`, 3.179338323070812}, {
+       11.012102249866214`, 3.5896809267429153`}, {10.862003143826898`, 
+       4.257376366147676}, {10.451660540154796`, 4.257376366147676}, {
+       9.942390919214931, 4.075296723499492}, {9.621726212824441, 
+       3.718328432008979}, {9.621726212824441, 3.3079858283368755`}}, 
+       SplineClosed -> True]]}, 
+    {EdgeForm[GrayLevel[0.5]], FaceForm[None], 
+     FilledCurveBox[
+      BSplineCurve[{{4.785176606171342, 5.424364305856383}, {
+       4.550570988973595, 3.2307701773027926`}, {4.550570988973595, 
+       2.820427573630689}, {4.9609135926456975`, 2.820427573630689}, {
+       5.656628694681511, 3.744490978204538}, {5.656628694681511, 
+       4.154833581876641}, {5.535800424711115, 4.570233483408681}, {
+       5.195519209843445, 5.424364305856383}}, SplineClosed -> True]]}, 
+    {EdgeForm[GrayLevel[0.5]], FaceForm[None], 
+     FilledCurveBox[
+      BSplineCurve[{{0.9088681290214127, 4.869222438325936}, {
+       0.5869189653846756, 5.264337715471195}, {0.17657636171257224`, 
+       5.264337715471195}, {-0.20517130183605164`, 
+       4.471304355086766}, {-0.20517130183605164`, 
+       4.060961751414664}, {-0.03368593399326819, 3.167080498481518}, {
+       0.3766566696788351, 3.167080498481518}, {0.7739549235801326, 
+       3.491184245757839}, {1.0727349028687958`, 3.947533164452626}, {
+       1.0727349028687958`, 4.357875768124729}}, SplineClosed -> True]]}, 
+    {EdgeForm[GrayLevel[0.5]], FaceForm[None], 
+     FilledCurveBox[
+      BSplineCurve[{{9.433474264717669, 7.135234419142989}, {9.64575748159678,
+        7.556786966489458}, {9.64575748159678, 7.9671295701615605`}, {
+       9.235414877924677, 7.9671295701615605`}, {8.091573969742482, 
+       7.78533128656619}, {8.091573969742482, 7.374988682894087}, {
+       8.142209016686143, 6.87683786395645}, {8.34000025696359, 
+       6.455607470271521}, {8.750342860635692, 6.455607470271521}, {
+       9.147118242711386, 6.737765346047715}}, SplineClosed -> True]]}, 
+    {EdgeForm[GrayLevel[0.5]], FaceForm[None], 
+     FilledCurveBox[
+      BSplineCurve[{{7.5962342142921, 1.168127267267018}, {7.502782056837046, 
+       0.6640814447987125}, {7.502782056837046, 0.2537388411266091}, {
+       8.470286123473443, -0.20517130183605164`}, {
+       8.880628727145545, -0.20517130183605164`}, {8.880628727145545, 
+       0.20517130183605164`}, {8.746968603772425, 0.6744416527546346}, {
+       8.549440899869323, 1.1518261829281053`}, {8.229264687565625, 
+       1.5422773764746278`}, {7.818922083893522, 1.5422773764746278`}}, 
+       SplineClosed -> True]]}, 
+    {EdgeForm[GrayLevel[0.5]], FaceForm[None], 
+     FilledCurveBox[
+      BSplineCurve[{{7.64334016662949, 4.617674859885944}, {7.460318302655272,
+        3.9157937619337955`}, {7.460318302655272, 3.505451158261692}, {
+       7.870660906327375, 3.505451158261692}, {8.142926015102788, 
+       4.514652171699163}, {8.142926015102788, 4.924994775371266}, {
+       7.732583411430685, 4.924994775371266}}, SplineClosed -> True]]}, 
+    {EdgeForm[GrayLevel[0.5]], FaceForm[None], 
+     FilledCurveBox[
+      BSplineCurve[{{2.8897808667638816`, 2.8037413654555077`}, {
+       3.0544517441042194`, 3.2664146127412077`}, {3.0544517441042194`, 
+       3.676757216413311}, {2.644109140432116, 3.676757216413311}, {
+       2.2964836725088364`, 2.7311976224373913`}, {2.2964836725088364`, 
+       2.320855018765288}, {2.70682627618094, 2.320855018765288}}, 
+       SplineClosed -> True]]}}, {
+    {GrayLevel[0.65], Opacity[0.7], CapForm["Round"], 
+     LineBox[{{9.228302962881617, 7.3404057209790405`}, {9.440586179760729, 
+      7.761958268325509}}], 
+     LineBox[{{9.228302962881617, 7.3404057209790405`}, {8.941946940875335, 
+      6.942936647883767}}], 
+     LineBox[{{8.941946940875335, 6.942936647883767}, {8.545171558799641, 
+      6.660778772107572}}], 
+     LineBox[{{7.848511468465541, 4.412503558049893}, {7.937754713266736, 
+      4.7198234735352145`}}], 
+     LineBox[{{7.848511468465541, 4.412503558049893}, {7.777714037180746, 
+      4.136775367341411}}], 
+     LineBox[{{10.042706818123794`, 3.091010886376106}, {10.498480032945674`, 
+      2.7861221766070576`}}], 
+     LineBox[{{10.042706818123794`, 3.091010886376106}, {9.826897514660493, 
+      3.513157130172927}}], 
+     LineBox[{{10.147562221050983`, 3.8701254216634404`}, {
+      10.656831841990847`, 4.052205064311624}}], 
+     LineBox[{{10.147562221050983`, 3.8701254216634404`}, {9.826897514660493, 
+      3.513157130172927}}], 
+     LineBox[{{10.253487216821743`, 3.458367839808497}, {10.806930948030162`, 
+      3.3845096249068636`}}], 
+     LineBox[{{10.253487216821743`, 3.458367839808497}, {9.826897514660493, 
+      3.513157130172927}}], 
+     BezierCurveBox[{{9.826897514660493, 3.513157130172927}, {9.2865455371182,
+       3.562523462654131}, {8.746193559575907, 3.6118897951353355`}, {
+      8.205841582033615, 3.6612561276165394`}, {7.665489604491324, 
+      3.7106224600977438`}},
+      SplineDegree->2], 
+     LineBox[{{7.801405516128152, 0.9629559654309663}, {7.707953358673097, 
+      0.45891014296266075`}}], 
+     LineBox[{{7.801405516128152, 0.9629559654309663}, {8.024093385729573, 
+      1.3371060746385761`}}], 
+     LineBox[{{8.541797301936374, 0.46927035091858293`}, {8.675457425309494, 
+      0.}}], LineBox[{{8.541797301936374, 0.46927035091858293`}, {
+      8.344269598033272, 0.9466548810920536}}], 
+     LineBox[{{8.344269598033272, 0.9466548810920536}, {8.024093385729573, 
+      1.3371060746385761`}}], 
+     BezierCurveBox[{{8.024093385729573, 1.3371060746385761`}, {
+      7.934442440420011, 1.930485171003368}, {7.8447914951104485`, 
+      2.52386426736816}, {7.7551405498008865`, 3.117243363732952}, {
+      7.665489604491324, 3.7106224600977438`}},
+      SplineDegree->2], 
+     LineBox[{{5.1591592749203885`, 4.782986172933041}, {4.990347908007394, 
+      5.219193004020331}}], 
+     LineBox[{{5.1591592749203885`, 4.782986172933041}, {5.330629122875064, 
+      4.36506218157263}}], 
+     LineBox[{{5.330629122875064, 4.36506218157263}, {5.45145739284546, 
+      3.94966228004059}}], 
+     LineBox[{{4.868991695448274, 3.4221648476053486`}, {4.755742290809646, 
+      3.025598875466741}}], 
+     LineBox[{{4.868991695448274, 3.4221648476053486`}, {5.01543184544163, 
+      3.7531283511462807`}}], 
+     LineBox[{{2.68460956492783, 3.0089126672915594`}, {2.501654974344888, 
+      2.5260263206013396`}}], 
+     LineBox[{{2.68460956492783, 3.0089126672915594`}, {2.8492804422681677`, 
+      3.4715859145772594`}}], 
+     LineBox[{{0.703696827185361, 4.664051136489885}, {0.3817476635486239, 
+      5.059166413635143}}], 
+     LineBox[{{0.703696827185361, 4.664051136489885}, {0.8675636010327441, 
+      4.152704466288678}}], 
+     LineBox[{{0.5687836217440809, 3.6963555475938907`}, {
+      0.17148536784278345`, 3.37225180031757}}], 
+     LineBox[{{0.5687836217440809, 3.6963555475938907`}, {0.8675636010327441, 
+      4.152704466288678}}], 
+     LineBox[{{0.4833728052421815, 4.205462707747755}, {0., 
+      4.266133053250715}}], 
+     LineBox[{{0.4833728052421815, 4.205462707747755}, {0.8675636010327441, 
+      4.152704466288678}}], 
+     BezierCurveBox[{{0.8675636010327441, 4.152704466288678}, {
+      1.3629928113415999`, 3.982424828360823}, {1.858422021650456, 
+      3.8121451904329686`}, {2.353851231959312, 3.641865552505114}, {
+      2.8492804422681677`, 3.4715859145772594`}},
+      SplineDegree->2], 
+     BezierCurveBox[{{2.8492804422681677`, 3.4715859145772594`}, {
+      3.3908182930615336`, 3.5419715237195146`}, {3.932356143854899, 
+      3.61235713286177}, {4.4738939946482645`, 3.6827427420040255`}, {
+      5.01543184544163, 3.7531283511462807`}},
+      SplineDegree->2], 
+     LineBox[{{5.01543184544163, 3.7531283511462807`}, {5.45145739284546, 
+      3.94966228004059}}], 
+     BezierCurveBox[{{5.45145739284546, 3.94966228004059}, {6.004965445756926,
+       3.8899023250548783`}, {6.558473498668391, 3.830142370069167}, {
+      7.1119815515798575`, 3.7703824150834553`}, {7.665489604491324, 
+      3.7106224600977438`}},
+      SplineDegree->2], 
+     LineBox[{{7.665489604491324, 3.7106224600977438`}, {7.777714037180746, 
+      4.136775367341411}}], 
+     BezierCurveBox[{{7.777714037180746, 4.136775367341411}, {
+      7.96957841758547, 4.767776218532951}, {8.161442797990194, 
+      5.398777069724492}, {8.353307178394918, 6.029777920916032}, {
+      8.545171558799641, 6.660778772107572}},
+      SplineDegree->2], 
+     LineBox[{{8.347380318522195, 7.082009165792501}, {8.296745271578533, 
+      7.580159984730138}}], 
+     LineBox[{{8.347380318522195, 7.082009165792501}, {8.545171558799641, 
+      6.660778772107572}}]}, 
+    {GrayLevel[1], Opacity[0], EdgeForm[{GrayLevel[0], Opacity[0.7]}], {
+      {Hue[0.07, 1, 1], EdgeForm[{Hue[0.07, 1, 1], Opacity[1]}], 
+       DiskBox[{9.228302962881617, 7.3404057209790405`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Proper Noun\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {9.228302962881617, 7.3404057209790405},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.07, 1, 1], EdgeForm[{Hue[0.07, 1, 1], Opacity[1]}], 
+       DiskBox[{9.440586179760729, 7.761958268325509}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Language\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {9.440586179760729, 7.761958268325509},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.07, 1, 1], EdgeForm[{Hue[0.07, 1, 1], Opacity[1]}], 
+       DiskBox[{8.941946940875335, 6.942936647883767}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Noun Phrase\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {8.941946940875335, 6.942936647883767},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.1, 0.6, 0.7], EdgeForm[{Hue[0.1, 0.6, 0.7], Opacity[1]}], 
+       DiskBox[{7.848511468465541, 4.412503558049893}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Verb\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {7.848511468465541, 4.412503558049893},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.1, 0.6, 0.7], EdgeForm[{Hue[0.1, 0.6, 0.7], Opacity[1]}], 
+       DiskBox[{7.937754713266736, 4.7198234735352145`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"is\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {7.937754713266736, 4.7198234735352145},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0, 1, 0.8], EdgeForm[{Hue[0, 1, 0.8], Opacity[1]}], 
+       DiskBox[{10.042706818123794`, 3.091010886376106}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Determiner\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {10.042706818123794, 3.091010886376106},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0, 1, 0.8], EdgeForm[{Hue[0, 1, 0.8], Opacity[1]}], 
+       DiskBox[{10.498480032945674`, 2.7861221766070576`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"a\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {10.498480032945674, 2.7861221766070576},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0, 1, 0.8], EdgeForm[{Hue[0, 1, 0.8], Opacity[1]}], 
+       DiskBox[{10.147562221050983`, 3.8701254216634404`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Adjective\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {10.147562221050983, 3.8701254216634404},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0, 1, 0.8], EdgeForm[{Hue[0, 1, 0.8], Opacity[1]}], 
+       DiskBox[{10.656831841990847`, 4.052205064311624}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"structured\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {10.656831841990847, 4.052205064311624},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0, 1, 0.8], EdgeForm[{Hue[0, 1, 0.8], Opacity[1]}], 
+       DiskBox[{10.253487216821743`, 3.458367839808497}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Noun\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {10.253487216821743, 3.458367839808497},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0, 1, 0.8], EdgeForm[{Hue[0, 1, 0.8], Opacity[1]}], 
+       DiskBox[{10.806930948030162`, 3.3845096249068636`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"system\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {10.806930948030162, 3.3845096249068636},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0, 1, 0.8], EdgeForm[{Hue[0, 1, 0.8], Opacity[1]}], 
+       DiskBox[{9.826897514660493, 3.513157130172927}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Noun Phrase\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {9.826897514660493, 3.513157130172927},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.2, 1, 0.6], EdgeForm[{Hue[0.2, 1, 0.6], Opacity[1]}], 
+       DiskBox[{7.801405516128152, 0.9629559654309663}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Preposition\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {7.801405516128152, 0.9629559654309663},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.2, 1, 0.6], EdgeForm[{Hue[0.2, 1, 0.6], Opacity[1]}], 
+       DiskBox[{7.707953358673097, 0.45891014296266075`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"of\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {7.707953358673097, 0.45891014296266075},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.2, 1, 0.6], EdgeForm[{Hue[0.2, 1, 0.6], Opacity[1]}], 
+       DiskBox[{8.541797301936374, 0.46927035091858293`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Noun\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {8.541797301936374, 0.46927035091858293},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.2, 1, 0.6], EdgeForm[{Hue[0.2, 1, 0.6], Opacity[1]}], 
+       DiskBox[{8.675457425309494, 0.}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"communication\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {8.675457425309494, 0.},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.2, 1, 0.6], EdgeForm[{Hue[0.2, 1, 0.6], Opacity[1]}], 
+       DiskBox[{8.344269598033272, 0.9466548810920536}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Noun Phrase\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {8.344269598033272, 0.9466548810920536},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.2, 1, 0.6], EdgeForm[{Hue[0.2, 1, 0.6], Opacity[1]}], 
+       DiskBox[{8.024093385729573, 1.3371060746385761`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Prepositional Phrase\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {8.024093385729573, 1.3371060746385761},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.14, 1, 0.9], EdgeForm[{Hue[0.14, 1, 0.9], Opacity[1]}], 
+       DiskBox[{5.1591592749203885`, 4.782986172933041}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Wh-Determiner\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {5.1591592749203885, 4.782986172933041},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.14, 1, 0.9], EdgeForm[{Hue[0.14, 1, 0.9], Opacity[1]}], 
+       DiskBox[{4.990347908007394, 5.219193004020331}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"that\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {4.990347908007394, 5.219193004020331},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.14, 1, 0.9], EdgeForm[{Hue[0.14, 1, 0.9], Opacity[1]}], 
+       DiskBox[{5.330629122875064, 4.36506218157263}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Wh-Noun Phrase\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {5.330629122875064, 4.36506218157263},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.14, 1, 0.9], EdgeForm[{Hue[0.14, 1, 0.9], Opacity[1]}], 
+       DiskBox[{4.868991695448274, 3.4221648476053486`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Verb\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {4.868991695448274, 3.4221648476053486},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.14, 1, 0.9], EdgeForm[{Hue[0.14, 1, 0.9], Opacity[1]}], 
+       DiskBox[{4.755742290809646, 3.025598875466741}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"consists\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {4.755742290809646, 3.025598875466741},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.5, 1, 0.7], EdgeForm[{Hue[0.5, 1, 0.7], Opacity[1]}], 
+       DiskBox[{2.68460956492783, 3.0089126672915594`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Preposition\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {2.68460956492783, 3.0089126672915594},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.5, 1, 0.7], EdgeForm[{Hue[0.5, 1, 0.7], Opacity[1]}], 
+       DiskBox[{2.501654974344888, 2.5260263206013396`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"of\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {2.501654974344888, 2.5260263206013396},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.8, 0.6, 0.8], EdgeForm[{Hue[0.8, 0.6, 0.8], Opacity[1]}], 
+       DiskBox[{0.703696827185361, 4.664051136489885}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Noun\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {0.703696827185361, 4.664051136489885},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.8, 0.6, 0.8], EdgeForm[{Hue[0.8, 0.6, 0.8], Opacity[1]}], 
+       DiskBox[{0.3817476635486239, 5.059166413635143}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"grammar\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {0.3817476635486239, 5.059166413635143},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.8, 0.6, 0.8], EdgeForm[{Hue[0.8, 0.6, 0.8], Opacity[1]}], 
+       DiskBox[{0.5687836217440809, 3.6963555475938907`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Conjunction\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {0.5687836217440809, 3.6963555475938907},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.8, 0.6, 0.8], EdgeForm[{Hue[0.8, 0.6, 0.8], Opacity[1]}], 
+       DiskBox[{0.17148536784278345`, 3.37225180031757}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"and\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {0.17148536784278345, 3.37225180031757},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.8, 0.6, 0.8], EdgeForm[{Hue[0.8, 0.6, 0.8], Opacity[1]}], 
+       DiskBox[{0.4833728052421815, 4.205462707747755}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Noun\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {0.4833728052421815, 4.205462707747755},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.8, 0.6, 0.8], EdgeForm[{Hue[0.8, 0.6, 0.8], Opacity[1]}], 
+       DiskBox[{0., 4.266133053250715}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"vocabulary\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {0., 4.266133053250715},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.8, 0.6, 0.8], EdgeForm[{Hue[0.8, 0.6, 0.8], Opacity[1]}], 
+       DiskBox[{0.8675636010327441, 4.152704466288678}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Noun Phrase\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {0.8675636010327441, 4.152704466288678},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.5, 1, 0.7], EdgeForm[{Hue[0.5, 1, 0.7], Opacity[1]}], 
+       DiskBox[{2.8492804422681677`, 3.4715859145772594`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Prepositional Phrase\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {2.8492804422681677, 3.4715859145772594},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.14, 1, 0.9], EdgeForm[{Hue[0.14, 1, 0.9], Opacity[1]}], 
+       DiskBox[{5.01543184544163, 3.7531283511462807`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Verb Phrase\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {5.01543184544163, 3.7531283511462807},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.14, 1, 0.9], EdgeForm[{Hue[0.14, 1, 0.9], Opacity[1]}], 
+       DiskBox[{5.45145739284546, 3.94966228004059}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Clause\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {5.45145739284546, 3.94966228004059},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.1, 0.6, 0.7], EdgeForm[{Hue[0.1, 0.6, 0.7], Opacity[1]}], 
+       DiskBox[{7.665489604491324, 3.7106224600977438`}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Noun Phrase\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {7.665489604491324, 3.7106224600977438},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.1, 0.6, 0.7], EdgeForm[{Hue[0.1, 0.6, 0.7], Opacity[1]}], 
+       DiskBox[{7.777714037180746, 4.136775367341411}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Verb Phrase\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {7.777714037180746, 4.136775367341411},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.07, 1, 1], EdgeForm[{Hue[0.07, 1, 1], Opacity[1]}], 
+       DiskBox[{8.347380318522195, 7.082009165792501}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\"Punctuation\"\>",
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {8.347380318522195, 7.082009165792501},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.07, 1, 1], EdgeForm[{Hue[0.07, 1, 1], Opacity[1]}], 
+       DiskBox[{8.296745271578533, 7.580159984730138}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox["\<\".\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->Medium],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {8.296745271578533, 7.580159984730138},
+       BaseStyle->"Graphics"]}, {
+      {Hue[0.07, 1, 1], EdgeForm[{Hue[0.07, 1, 1], Opacity[1]}], 
+       DiskBox[{8.545171558799641, 6.660778772107572}, 0.]}, InsetBox[
+       FrameBox[
+        StyleBox[
+         TemplateBox[{"\"sentence\"", 
+           RowBox[{"Entity", "[", 
+             RowBox[{"\"GrammaticalUnit\"", ",", "\"Sentence\""}], "]"}], 
+           "\"Entity[\\\"GrammaticalUnit\\\", \\\"Sentence\\\"]\""},
+          "EntityTraditionalFramed"],
+         StripOnInput->False,
+         LineColor->GrayLevel[0.55],
+         FrontFaceColor->GrayLevel[0.55],
+         BackFaceColor->GrayLevel[0.55],
+         GraphicsColor->GrayLevel[0.55],
+         FontColor->GrayLevel[0.55]],
+        Background->Directive[
+          GrayLevel[1], 
+          Opacity[1]],
+        FrameMargins->{{0, 0}, {-1, -2}},
+        FrameStyle->Directive[
+          GrayLevel[1], 
+          Opacity[0]],
+        RoundingRadius->2,
+        StripOnInput->False], {8.545171558799641, 6.660778772107572},
+       BaseStyle->"Graphics"]}}}},
+  FormatType->TraditionalForm,
+  FrameTicks->None,
+  ImageSize->800]], "Output",
+ CellChangeTimes->{3.952519142912964*^9, 3.952627792797512*^9, 
+  3.952633254924725*^9},
+ CellLabel->"Out[35]=",ExpressionUUID->"8be9f58e-f30d-49b4-884c-aa79d631f4d8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Length", "[", 
+    RowBox[{"WordList", "[", "#", "]"}], "]"}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{"\"\<Noun\>\"", ",", "\"\<Verb\>\"", ",", "\"\<Adjective\>\"", 
+    ",", "\"\<Adverb\>\""}], "}"}]}]], "Input",
+ CellChangeTimes->{3.952519148479582*^9},
+ CellLabel->"In[36]:=",ExpressionUUID->"0483f4d6-11a6-4452-948a-431febc12a5e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"24493", ",", "6503", ",", "11392", ",", "3120"}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.9525191559370003`*^9, 3.9526277937753763`*^9, 
+  3.952633256828017*^9},
+ CellLabel->"Out[36]=",ExpressionUUID->"aa57547a-bc5a-4ff3-bbb1-d1379418b9c3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Flatten", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"WordTranslation", "[", 
+     RowBox[{
+      RowBox[{"IntegerName", "[", "n", "]"}], ",", "\"\<French\>\""}], "]"}], 
+    ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "2", ",", "10"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{3.952519190430757*^9},
+ CellLabel->"In[37]:=",ExpressionUUID->"99af5538-e85e-4159-8a89-b8c84c08a16b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"deux\"\>", ",", "\<\"trois\"\>", ",", "\<\"quatre\"\>", 
+   ",", "\<\"cinq\"\>", ",", "\<\"six\"\>", ",", "\<\"sept\"\>", 
+   ",", "\<\"huit\"\>", ",", "\<\"neuf\"\>", ",", "\<\"dix\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.952519194476734*^9, 3.952627795722657*^9, 
+  3.952633273021029*^9},
+ CellLabel->"Out[37]=",ExpressionUUID->"67c7428d-1857-45f5-999f-4a9c6a5f3aa6"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Section 36", "Section",
+ CellChangeTimes->{{3.952519227181382*^9, 
+  3.952519229119857*^9}},ExpressionUUID->"b5450f97-a944-4f61-999f-\
+ace2ee85d48d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudPublish", "[", 
+  RowBox[{"Delayed", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+     RowBox[{"RandomInteger", "[", "1000", "]"}], ",", "100"}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.952627431160824*^9},
+ CellLabel->"In[38]:=",ExpressionUUID->"73d39380-f5a0-4415-ba57-a501a3dab2a4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/c2e563f3-f02d-4576-82c9-0a86db7cbecc\"\
+", "https://www.wolframcloud.com/obj/c2e563f3-f02d-4576-82c9-0a86db7cbecc"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/obj/c2e563f3-f02d-4576-82c9-0a86db7cbecc"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.9526277962068*^9, 3.952633273966299*^9},
+ CellLabel->"Out[38]=",ExpressionUUID->"f30e23f7-0f5f-4ef8-a16e-db22e6048c09"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudPublish", "[", 
+  RowBox[{"FormFunction", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<n\>\"", "->", "\"\<Number\>\""}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"#n", "^", "#n"}], "&"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.95262748244917*^9, 3.952627487238703*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"96c69c5c-887b-4d97-8dca-dab9fa1951ce"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/9e5406e5-23d3-4938-bc2d-9bf649964bb7\"\
+", "https://www.wolframcloud.com/obj/9e5406e5-23d3-4938-bc2d-9bf649964bb7"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/obj/9e5406e5-23d3-4938-bc2d-9bf649964bb7"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.952627796371526*^9, 3.9526332742646017`*^9},
+ CellLabel->"Out[39]=",ExpressionUUID->"2a36119d-0de1-4e56-a3bf-f1c636a03def"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudPublish", "[", 
+  RowBox[{"FormFunction", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<n\>\"", "->", "\"\<Number\>\""}], ",", 
+      RowBox[{"\"\<n\>\"", "->", "\"\<Number\>\""}]}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"#n", "^", "#p"}], "&"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9526275146081963`*^9, 3.952627537580697*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"f83410c1-30ce-4a45-bcbb-8d19dbdee0ae"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/404bc3fb-46b5-4219-983e-5042f652dc0e\"\
+", "https://www.wolframcloud.com/obj/404bc3fb-46b5-4219-983e-5042f652dc0e"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/obj/404bc3fb-46b5-4219-983e-5042f652dc0e"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.952627796525938*^9, 3.952633274505473*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"abfb3d2b-889b-40bb-977b-edd6af30b096"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudPublish", "[", 
+  RowBox[{"FormFunction", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<Topic\>\"", "->", "\"\<String\>\""}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"WordCloud", "[", 
+      RowBox[{"WikipediaData", "[", "#Topic", "]"}], "]"}], "&"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.952627567494595*^9, 3.952627578862883*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"7d8e713a-6a23-4e9d-9f08-f6f68c4a51c7"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/5ba286b6-f52e-4131-a70d-ebc6c258ee1a\"\
+", "https://www.wolframcloud.com/obj/5ba286b6-f52e-4131-a70d-ebc6c258ee1a"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/obj/5ba286b6-f52e-4131-a70d-ebc6c258ee1a"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.952627667654932*^9, 3.952627796686304*^9, 
+  3.952633274672761*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"1e6f0961-42ee-430c-a330-c4ed07810aa5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudPublish", "[", 
+  RowBox[{"FormPage", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<string\>\"", "->", "\"\<String\>\""}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"StringReverse", "[", "#string", "]"}], ",", "50"}], "]"}], 
+     "&"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{3.952627599104855*^9},
+ CellLabel->"In[42]:=",ExpressionUUID->"6db47aba-6315-4170-975b-221e6fc8b631"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/858549a0-97ed-423a-b132-7ce037bb82b9\"\
+", "https://www.wolframcloud.com/obj/858549a0-97ed-423a-b132-7ce037bb82b9"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/obj/858549a0-97ed-423a-b132-7ce037bb82b9"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.9526276236145077`*^9, 3.952627796859447*^9, 
+  3.952633274856542*^9},
+ CellLabel->"Out[42]=",ExpressionUUID->"31f87819-65b7-4f90-9653-b55b8c68fe6d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudPublish", "[", 
+  RowBox[{"FormPage", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<n\>\"", "->", "\"\<Number\>\""}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"Graphics", "[", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"RegularPolygon", "[", "#n", "]"}], ",", 
+        RowBox[{"RandomColor", "[", "]"}]}], "]"}], "]"}], "&"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.952627722186473*^9, 3.952627725095278*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"81d597d2-5a01-4f66-993a-7b347e7f53f2"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/ac646f15-43e7-43ee-b1bf-ccfbb73eafed\"\
+", "https://www.wolframcloud.com/obj/ac646f15-43e7-43ee-b1bf-ccfbb73eafed"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/obj/ac646f15-43e7-43ee-b1bf-ccfbb73eafed"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.9526277366593027`*^9, 3.95262779707193*^9, 
+  3.952633275051594*^9},
+ CellLabel->"Out[43]=",ExpressionUUID->"872eff84-af65-42cb-b66a-94a88600d611"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudPublish", "[", 
+  RowBox[{"FormPage", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<location\>\"", "->", "\"\<Location\>\""}], ",", 
+      RowBox[{"\"\<n\>\"", "->", "\"\<Number\>\""}]}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"GeoListPlot", "[", 
+      RowBox[{"GeoNearest", "[", 
+       RowBox[{"\"\<Volcano\>\"", ",", "#location", ",", "#n"}], "]"}], "]"}],
+      "&"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.952627791470427*^9, 3.952627800143607*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"91fc6918-0cd5-48b5-a0b2-c61c8ccc0588"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/eb197c6c-05b6-4f56-a656-9e96fb064c94\"\
+", "https://www.wolframcloud.com/obj/eb197c6c-05b6-4f56-a656-9e96fb064c94"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/obj/eb197c6c-05b6-4f56-a656-9e96fb064c94"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.952627807835943*^9, 3.952633275235793*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"f97edd77-599a-42c7-993d-3386dff53c40"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 828},
+WindowMargins->{{175, Automatic}, {Automatic, 4}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7bca79ad-d12a-4aba-8ae0-5377da8a9a6a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 271, 4, 120, "Title",ExpressionUUID->"54b0d720-3db6-43f7-ac60-e8583cc90269"],
+Cell[CellGroupData[{
+Cell[872, 30, 157, 3, 82, "Section",ExpressionUUID->"6b21c73b-fa51-4b3d-b0bf-f4b422cdee14"],
+Cell[CellGroupData[{
+Cell[1054, 37, 274, 5, 36, "Input",ExpressionUUID->"a8286974-89b9-4cbb-aff9-64f7bd6cee53"],
+Cell[1331, 44, 345, 7, 41, "Output",ExpressionUUID->"562e0ee1-7a15-47f0-9f77-a3cdac58ec3f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1713, 56, 270, 5, 36, "Input",ExpressionUUID->"d808234e-eff5-4011-8a18-ff07d455a638"],
+Cell[1986, 63, 476, 9, 48, "Output",ExpressionUUID->"e39370ab-e58c-48f3-b5c1-bc385a3cb7d8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2499, 77, 345, 7, 36, "Input",ExpressionUUID->"8ff3d73c-bcbc-4579-a811-ce39f9bb570d"],
+Cell[2847, 86, 910, 20, 50, "Output",ExpressionUUID->"f0cdc0a7-dc85-42d4-81b0-c05091e0d4e9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3794, 111, 318, 6, 36, "Input",ExpressionUUID->"76cb3dbf-cd67-40d3-9827-6b6ce8211e8a"],
+Cell[4115, 119, 451, 11, 42, "Output",ExpressionUUID->"b9e56b01-dc14-4014-9a9b-6a1ebb402490"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4603, 135, 865, 18, 62, "Input",ExpressionUUID->"1c4b7b63-9992-49f1-adc4-9af4f1484fc9"],
+Cell[5471, 155, 3855, 83, 187, "Output",ExpressionUUID->"170a95b9-d8c6-4472-8df0-2c9dac741dd7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9363, 243, 2186, 42, 149, "Input",ExpressionUUID->"2cf01c23-131a-4f6f-b61a-e31ac05f20ea"],
+Cell[11552, 287, 3193, 72, 120, "Output",ExpressionUUID->"62c60127-a131-4b99-88d8-1bee9075f0f2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14782, 364, 484, 12, 62, "Input",ExpressionUUID->"4a23b7b9-b452-4c7e-8767-8beaa854be8a"],
+Cell[15269, 378, 3557, 92, 50, "Output",ExpressionUUID->"0077af32-55db-46fc-84d5-d7c0240741bc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18863, 475, 320, 7, 36, "Input",ExpressionUUID->"212474ea-5fe4-4d24-a6c9-30f606ccc7d6"],
+Cell[19186, 484, 8896, 211, 457, "Output",ExpressionUUID->"7df1b577-f623-42c1-aacc-32086743fde9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28119, 700, 289, 5, 36, "Input",ExpressionUUID->"6b3a8f19-99ec-4d55-a543-24c465d95907"],
+Cell[28411, 707, 292, 6, 41, "Output",ExpressionUUID->"c0b4d301-4f56-4676-9680-38105fe2a4f4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28740, 718, 529, 14, 62, "Input",ExpressionUUID->"d2dabda2-ad4a-45fc-8f83-a3b029c1e7f6"],
+Cell[29272, 734, 254, 5, 41, "Output",ExpressionUUID->"9e7f645e-3552-49c6-9262-569d8ebbc109"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29563, 744, 364, 7, 36, "Input",ExpressionUUID->"eafefec2-d4c7-4313-ad66-28828dcb12a9"],
+Cell[29930, 753, 78680, 1599, 433, "Output",ExpressionUUID->"5d295ccb-51a3-4053-8a11-a3448024b63b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[108647, 2357, 504, 13, 113, "Input",ExpressionUUID->"45b346a6-22a9-4595-a379-dca2e4b82655"],
+Cell[109154, 2372, 452, 8, 41, "Output",ExpressionUUID->"6a177410-db58-44f8-bc78-6d126c71f3e7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[109643, 2385, 458, 10, 113, "Input",ExpressionUUID->"f9dc0800-0c91-4530-821f-28e3f4a2b728"],
+Cell[110104, 2397, 37657, 929, 759, "Output",ExpressionUUID->"8be9f58e-f30d-49b4-884c-aa79d631f4d8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[147798, 3331, 383, 9, 36, "Input",ExpressionUUID->"0483f4d6-11a6-4452-948a-431febc12a5e"],
+Cell[148184, 3342, 281, 6, 41, "Output",ExpressionUUID->"aa57547a-bc5a-4ff3-bbb1-d1379418b9c3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[148502, 3353, 429, 11, 36, "Input",ExpressionUUID->"99af5538-e85e-4159-8a89-b8c84c08a16b"],
+Cell[148934, 3366, 422, 8, 41, "Output",ExpressionUUID->"67c7428d-1857-45f5-999f-4a9c6a5f3aa6"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[149405, 3380, 155, 3, 82, "Section",ExpressionUUID->"b5450f97-a944-4f61-999f-ace2ee85d48d"],
+Cell[CellGroupData[{
+Cell[149585, 3387, 329, 8, 36, "Input",ExpressionUUID->"73d39380-f5a0-4415-ba57-a501a3dab2a4"],
+Cell[149917, 3397, 538, 11, 106, "Output",ExpressionUUID->"f30e23f7-0f5f-4ef8-a16e-db22e6048c09"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[150492, 3413, 393, 9, 36, "Input",ExpressionUUID->"96c69c5c-887b-4d97-8dca-dab9fa1951ce"],
+Cell[150888, 3424, 542, 11, 106, "Output",ExpressionUUID->"2a36119d-0de1-4e56-a3bf-f1c636a03def"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[151467, 3440, 472, 11, 36, "Input",ExpressionUUID->"f83410c1-30ce-4a45-bcbb-8d19dbdee0ae"],
+Cell[151942, 3453, 540, 11, 106, "Output",ExpressionUUID->"abfb3d2b-889b-40bb-977b-edd6af30b096"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[152519, 3469, 461, 11, 62, "Input",ExpressionUUID->"7d8e713a-6a23-4e9d-9f08-f6f68c4a51c7"],
+Cell[152983, 3482, 565, 12, 106, "Output",ExpressionUUID->"1e6f0961-42ee-430c-a330-c4ed07810aa5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[153585, 3499, 463, 12, 62, "Input",ExpressionUUID->"6db47aba-6315-4170-975b-221e6fc8b631"],
+Cell[154051, 3513, 567, 12, 106, "Output",ExpressionUUID->"31f87819-65b7-4f90-9653-b55b8c68fe6d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[154655, 3530, 554, 14, 62, "Input",ExpressionUUID->"81d597d2-5a01-4f66-993a-7b347e7f53f2"],
+Cell[155212, 3546, 566, 12, 106, "Output",ExpressionUUID->"872eff84-af65-42cb-b66a-94a88600d611"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[155815, 3563, 596, 14, 62, "Input",ExpressionUUID->"91fc6918-0cd5-48b5-a0b2-c61c8ccc0588"],
+Cell[156414, 3579, 540, 11, 106, "Output",ExpressionUUID->"f97edd77-599a-42c7-993d-3386dff53c40"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
