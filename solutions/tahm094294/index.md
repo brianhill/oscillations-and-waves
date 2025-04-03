@@ -8,6 +8,7 @@
 
 ### 2025-03-28 &mdash; PS14 &mdash; *EIWL3* Sections 35 and 36
 
+* [Tahm's solution](./Tahm-PS14.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS14.nb.pdf)
 
 ### 2025-03-25 &mdash; PS13 &mdash; *EIWL3* Sections 33 and 34
