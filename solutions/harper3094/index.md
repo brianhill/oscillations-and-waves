@@ -4,6 +4,7 @@
 
 ### 2025-04-01 &mdash; PS15 &mdash; *EIWL3* Sections 37 and 38
 
+* [Harper's solution](./Harper-PS15.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS15.nb.pdf)
 
 ### 2025-03-28 &mdash; PS14 &mdash; *EIWL3* Sections 35 and 36

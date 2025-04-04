@@ -4,11 +4,12 @@
 
 ### 2025-04-01 &mdash; PS15 &mdash; *EIWL3* Sections 37 and 38
 
+* [Hexi's solution](./Hexi-PS15.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS15.nb.pdf)
 
 ### 2025-03-28 &mdash; PS14 &mdash; *EIWL3* Sections 35 and 36
 
-* [Hexi's solution](./Hexi-PS14.nb.pdf)
+* [Hexi's solution](./Hexi-PS14.nb.pdf) (I'll grade this one after you re-send it)
 * [Brian's solution](../brian54321/Brian-PS14.nb.pdf)
 
 ### 2025-03-25 &mdash; PS13 &mdash; *EIWL3* Sections 33 and 34
