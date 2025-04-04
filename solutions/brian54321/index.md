@@ -2,6 +2,10 @@
 
 *Listed reverse-chronologically (most recent at top)*
 
+### 2025-04-04 &mdash; Exam 2 &mdash; Compression (Longitudinal) Waves
+
+* [Brian's solution](../brian54321/Brian-Exam2.nb.pdf)
+
 ### 2025-04-01 &mdash; PS15 &mdash; *EIWL3* Sections 37 and 38
 
 * [Brian's solution](../brian54321/Brian-PS15.nb.pdf)

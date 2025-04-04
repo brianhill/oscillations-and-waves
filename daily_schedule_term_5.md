@@ -31,11 +31,11 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Transverse Wave Transiting With Periodic Boundary Conditions
 
-* Friday, April 4 &mdash; *[Exam 2 - Longitudinal Waves](./exams/Exam2.nb.pdf)* (much of the exam will involve things similar to what you did in the transverse waves notebook) &mdash; Check out the next problem set and do it before the exam (even though it isn't officially due until April 8)
+* Friday, April 4 &mdash; *[Exam 2 - Longitudinal (Compression) Waves](./exams/Exam2.nb.pdf)* &mdash; *[Exam 2 Solution](./solutions/brian54321/Brian-Exam2.nb.pdf)* (much of the exam will involve things similar to what you did in the transverse waves notebook) &mdash; Check out the next problem set and do it before the exam (even though it isn't officially due until April 8)
 
 <img src="./illustrations/CompressionWave.png" width="80%">
 
-#### Compression (Longitudinal) Wave
+#### Longitudinal (Compression) Wave
 
 ### Week 11 &mdash; Continuous Systems from the *n&rarr;&infin;* Limit &mdash; Guitar Strings and Drumheads
 
