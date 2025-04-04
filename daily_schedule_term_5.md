@@ -27,11 +27,15 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 * Tuesday, April 1 &mdash; Problem Set 15: Do the Exercises from *EIWL3* Sections 37 and 38 &mdash; In-Class: Let's attempt to consolidate our understanding or at least record in one place the [Drumheads — Theory](./theory/Drumheads-Theory.nb.pdf) that we have been using, which now includes the ideas of longitudinal and transverse waves and then complete the [Cubical Grid of Masses - Transverse Waves](./worksheets/16-CubicalGridOfMasses-TransverseWaves.nb.pdf), and finally discuss what Friday's exam will cover (obviously we have covered so much since Exam 1, it would be unfair and impossible to comprehensively test it)
 
-<img src="./illustrations/TransverseWave.png" width="70%">
+<img src="./illustrations/TransverseWave.png" width="60%">
 
 #### Transverse Wave Transiting With Periodic Boundary Conditions
 
-* Friday, April 4 &mdash; Exam 2 (much of the exam will involve things similar to what you did in the transverse waves notebook) &mdash; Check out the next problem set and do it before the exam (even though it isn't officially due until April 8)
+* Friday, April 4 &mdash; *[Exam 2 - Longitudinal Waves](./exams/Exam2.nb.pdf)* (much of the exam will involve things similar to what you did in the transverse waves notebook) &mdash; Check out the next problem set and do it before the exam (even though it isn't officially due until April 8)
+
+<img src="./illustrations/CompressionWave.png" width="80%">
+
+#### Compression (Longitudinal) Wave
 
 ### Week 11 &mdash; Continuous Systems from the *n&rarr;&infin;* Limit &mdash; Guitar Strings and Drumheads
 
@@ -39,7 +43,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, April 8 &mdash; Problem Set 16: Make a Wolfram language notebook containing a compilation of fundamental, low-level syntax and functions (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; I will post everyone's cheat cheets ([Brian's - which is only just begun](./cheat-sheets/WolframLanguageCheatSheet-Brian.nb.pdf), Eli's, [Harper's]((./cheat-sheets/WolframLanguageCheatSheet-Harper.nb.pdf)), Hexi's, Jeremy's, Rania's, Tahm's, and Walker's) &mdash; Guitar strings (a lot like the one-dimensional waves we have already done, but this time letting Mathematica do all the hard work)
+* Tuesday, April 8 &mdash; Problem Set 16: Make a Wolfram language notebook containing a compilation of fundamental, low-level syntax and functions (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; I will post everyone's cheat cheets ([Brian's - which is only just begun](./cheat-sheets/WolframLanguageCheatSheet-Brian.nb.pdf), Eli's, [Harper's](./cheat-sheets/WolframLanguageCheatSheet-Harper.nb.pdf), Hexi's, Jeremy's, [Rania's](./cheat-sheets/WolframLanguageCheatSheet-Rania.nb.pdf), Tahm's, and Walker's) &mdash; Guitar strings (a lot like the one-dimensional waves we have already done, but this time letting Mathematica do all the hard work)
 * Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; Drumheads again (but again letting Mathematica do the hard work)
 
 ### Week 12 &mdash; Sound Waves &mdash; Diffusion of Heat in a Rod
