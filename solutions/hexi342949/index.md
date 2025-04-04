@@ -9,7 +9,7 @@
 
 ### 2025-03-28 &mdash; PS14 &mdash; *EIWL3* Sections 35 and 36
 
-* [Hexi's solution](./Hexi-PS14.nb.pdf) (I'll grade this one after you re-send it)
+* [Hexi's solution](./Hexi-PS14.nb.pdf)
 * [Brian's solution](../brian54321/Brian-PS14.nb.pdf)
 
 ### 2025-03-25 &mdash; PS13 &mdash; *EIWL3* Sections 33 and 34
