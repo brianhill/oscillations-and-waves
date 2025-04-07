@@ -43,12 +43,12 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, April 8 &mdash; Problem Set 16: Make a Wolfram language notebook containing a compilation of fundamental, low-level syntax and functions (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; I will post everyone's cheat cheets ([Brian's - which is underway - and will have more and more added to it over time](./cheat-sheets/WolframLanguageCheatSheet-Brian.nb.pdf), Eli's, [Harper's](./cheat-sheets/WolframLanguageCheatSheet-Harper.nb.pdf), [Hexi's](./cheat-sheets/WolframLanguageCheatSheet-Hexi.nb.pdf), Jeremy's, [Rania's](./cheat-sheets/WolframLanguageCheatSheet-Rania.nb.pdf), Tahm's, and Walker's) &mdash; The [Guitar String](./worksheets/17-GuitarString.nb.pdf) (this time letting Mathematica do all the hard work)
-* Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; The [Guitar String](./worksheets/17-GuitarString.nb.pdf) (a lot like torsion waves, but again letting Mathematica do the hard work)
+* Tuesday, April 8 &mdash; Problem Set 16: Make a Wolfram language notebook containing a compilation of fundamental, low-level syntax and functions (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; I will post everyone's cheat cheets ([Brian's - which is underway - and will have more and more added to it over time](./cheat-sheets/WolframLanguageCheatSheet-Brian.nb.pdf), Eli's, [Harper's](./cheat-sheets/WolframLanguageCheatSheet-Harper.nb.pdf), [Hexi's](./cheat-sheets/WolframLanguageCheatSheet-Hexi.nb.pdf), Jeremy's, [Rania's](./cheat-sheets/WolframLanguageCheatSheet-Rania.nb.pdf), Tahm's, and Walker's) &mdash; Complete the [Harmonic Oscillator Redux](./worksheets/17-HarmonicOscillatorRedux.nb.pdf) notebook (this time letting Mathematica do all the hard work)
+* Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; Complete the Guitar String notebook (the math is a lot like torsion waves, but the new thing is that again we are going to be letting Mathematica do all the hard work)
 
 ### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
 
-* Tuesday, April 15 &mdash; Problem Set 18: Do the Exercises from *EIWL3* Sections 41 and 42  &mdash; Sound waves (a three-dimensional wave equation)
+* Tuesday, April 15 &mdash; Problem Set 18: Do the Exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the Drumhead Redux notebook
 * Friday, April 18 &mdash; Problem Set 19: Do the Exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves)
 
 ### Week 13 &mdash; Diffusion of Pollutants in Two or Three Dimensions &mdash; Schrodinger's Equation
