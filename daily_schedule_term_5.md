@@ -51,7 +51,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 * Tuesday, April 15 &mdash; Problem Set 18: Do the Exercises from *EIWL3* Sections 41 and 42  &mdash; Sound waves (a three-dimensional wave equation)
 * Friday, April 18 &mdash; Problem Set 19: Do the Exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves)
 
-### Week 13 &mdash; Diffusion of Pollutants &mdash; Schrodinger's Equation
+### Week 13 &mdash; Diffusion of Pollutants in Two or Three Dimensions &mdash; Schrodinger's Equation
 
 * Tuesday, April 22 &mdash; Problem Set 20: Do the Exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions
 * Friday, April 25 &mdash; Problem Set 21: Do the Exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box
