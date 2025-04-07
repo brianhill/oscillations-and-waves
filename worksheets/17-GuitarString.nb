@@ -1,0 +1,598 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     22143,        588]
+NotebookOptionsPosition[     19698,        542]
+NotebookOutlinePosition[     20093,        558]
+CellTagsIndexPosition[     20050,        555]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["A Guitar String \[LongDash] Blasting into the Stratosphere", "Section",
+ CellChangeTimes->{{3.9529848998128223`*^9, 
+  3.952984914986183*^9}},ExpressionUUID->"7b67adc1-2055-4811-a811-\
+8c6018dcc6fb"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Completed and Analyzed in class, April 8, 2025",
+ FontSize->18]], "Subtitle",
+ CellChangeTimes->{{3.9529849444492207`*^9, 
+  3.952984953240123*^9}},ExpressionUUID->"f235e631-c978-4b0e-8b00-\
+025636a6a512"],
+
+Cell["\<\
+This is the seventeenth notebook for you to finish in class.
+
+We are leaving behind the crutch of thinking of continuous systems as chunks. \
+We are going to describe continuous systems as continuous systems, which \
+means imagining the limit that the sizes of the chunks goes to zero while the \
+number of chunks goes to infinity. This is exactly the limit that turns our \
+differences of differences into second derivatives.
+
+But first, we need to get familiar with how Mathematica expects continuous \
+systems to be described. Just as we divided space into chunks, even before \
+that in the course, we learned to divide time into steps and then used Euler\
+\[CloseCurlyQuote]s Method or Second Order Runge-Kutta to march forward \
+through the steps of time.
+
+In reality, time is also continuous. Let\[CloseCurlyQuote]s see how we \
+describe time-dependent equations to Mathematica without resorting to time \
+steps. Mathematica will then solve them for us.
+
+So before we get to the guitar string, we are going all the way back to our \
+fourth notebook, the damped harmonic oscillator, and doing it a new way.\
+\>", "Text",
+ CellChangeTimes->{{3.952985149512128*^9, 3.952985372537319*^9}, {
+  3.952985415784534*^9, 3.952985425370933*^9}, {3.952985459812448*^9, 
+  3.9529856121532717`*^9}},ExpressionUUID->"375cf126-aff4-4f51-9087-\
+9615f09b3fb1"],
+
+Cell[CellGroupData[{
+
+Cell["But First, Back to the Earth \[LongDash] The Harmonic Oscillator", \
+"Subsection",
+ CellChangeTimes->{{3.952985060254702*^9, 3.952985092533787*^9}, {
+  3.9529853770541267`*^9, 
+  3.952985380339149*^9}},ExpressionUUID->"56d2e58c-b909-4a43-b450-\
+202eac0ad966"],
+
+Cell[TextData[{
+ "Back in the fourth notebook, we considered this force law:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"F", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "20"}], "x"}], "-", "v"}]}], TraditionalForm]],
+  ExpressionUUID->"57acf15a-8fc9-4453-a15c-6cd61ada5b47"],
+ "\n\nWe combine this with Newton\[CloseCurlyQuote]s Law ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"F", "=", 
+    RowBox[{"m", "\[VeryThinSpace]", "a"}]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "60e2e958-7172-42ca-ac83-1491c03a5f7e"],
+ " with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"m", "=", "5"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "5818309e-8a8c-4552-8a13-84a0b8d6c3cc"],
+ " and then we had\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"5", "\[VeryThinSpace]", "a"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "20"}], "x"}], "-", "v"}]}], TraditionalForm]],
+  ExpressionUUID->"4a740021-afab-4116-9d7a-467236ab1b4d"],
+ "\n\nThen we got a bit fancier and more general and divided through by the \
+5. In fact, we could put all the terms on the left at the same time:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "+", 
+     RowBox[{
+      FractionBox["20", "5"], "x"}], "+", 
+     RowBox[{
+      FractionBox["1", "5"], "v"}]}], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"ddab9c74-482b-45f8-8f86-0274cd88747a"],
+ "\n\nThe ratio ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["20", "5"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "40d8fffd-eb20-4426-b645-840dce4c2a43"],
+ " is the ratio of the spring constant to the mass and we called that ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["\[Omega]", "0"], "2"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "7d84774b-f895-4875-86c4-5dfc809a5581"],
+ ". So for these constants, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Omega]", "0"], "=", 
+    SqrtBox[
+     FractionBox["20", "5"]]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4b676876-4b94-484b-845f-4c974fffc2b2"],
+ "=2. The ratio",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "5"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "96fd3026-8c87-4d10-b444-b2cd55151c36"],
+ " is the ratio of the damping coefficient to the mass and we called that \
+combination 2\[Gamma]. So for these constants ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"2", "\[Gamma]"}], "=", 
+    FractionBox["1", "5"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3e5eab31-aaf9-49d1-879c-59bedc4827be"],
+ " or ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Gamma]", "=", 
+    FractionBox["1", "10"]}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "65ddeb30-5733-4afb-90c3-12e982313503"],
+ ".  Our equation is now:\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "+", 
+     RowBox[{"2", "\[Gamma]", "\[VeryThinSpace]", "v"}], "+", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["\[Omega]", "0"], "2"], "x"}]}], "=", "0"}], 
+   TraditionalForm]],ExpressionUUID->"40da2b7f-bd44-4853-be1d-96d72708767f"],
+ "\n\nWhen ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Omega]", "0"], ">", "\[Gamma]"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0d132af9-37c6-45c4-8ebb-a173d73ce19b"],
+ " as it is here, the system is \[OpenCurlyDoubleQuote]underdamped.\
+\[CloseCurlyDoubleQuote] The greater the ratio of ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SubscriptBox["\[Omega]", "0"], "\[Gamma]"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "70003184-ffd9-4d9c-939c-4dbcf8e3335f"],
+ " the more oscillations occur for each halving (or ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "e"], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "10ec6681-8804-4be2-b025-f3952e0b86bd"],
+ "-folding) of the envelope of the oscillation. We know all this, and I am \
+giving you a quick refresher, but now we want to force Mathematica to do the \
+hard work.\n\nWe have one more step, which is to introduce the notation of \
+derivatives.\n\nThe velocity ",
+ Cell[BoxData[
+  FormBox["v", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "3eceb87e-1632-4a48-936e-4ced40990041"],
+ " is the rate of change (with respect to time) of the position ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "96c5fc33-86ed-41e4-99f8-1fa909bb824f"],
+ ". Meanwhile the acceleration ",
+ Cell[BoxData[
+  FormBox["a", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "fffde23e-be63-4743-8d11-329da0681e96"],
+ " is the rate of change (with respect to time) of the velocity ",
+ Cell[BoxData[
+  FormBox["v", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "d50252e2-6336-4cde-b6cd-46fa363e0674"],
+ ". The rate of change is called the derivative. To say that you want to take \
+a derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "(", "t", ")"}], TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "101e028d-7c03-4238-8b4b-01a862352111"],
+ " with respect to ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "a995d7d1-5ea6-484f-b3b9-8a4f74969b2a"],
+ " in Mathematica, you write:"
+}], "Text",
+ CellChangeTimes->{{3.952985649823119*^9, 3.95298570206817*^9}, {
+  3.9529857534466133`*^9, 3.9529860345156193`*^9}, {3.952986072407848*^9, 
+  3.952986289783334*^9}, {3.9529863410434933`*^9, 3.9529863820236073`*^9}, {
+  3.952986876998818*^9, 3.9529869143674507`*^9}, {3.952986947987116*^9, 
+  3.9529869623261547`*^9}},ExpressionUUID->"1cc1a04f-89e7-4de2-bd80-\
+b31fd7972c2d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Derivative", "[", "1", "]"}], "[", "x", "]"}], "[", "t", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.952986292167885*^9, 3.952986338927207*^9}, {
+  3.952987407513954*^9, 3.952987462120468*^9}, {3.952987503254409*^9, 
+  3.952987517249407*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"6d22853b-5d2a-44ad-8b12-b88bcdbb0fec"],
+
+Cell[TextData[{
+ "This says take one derivative of the function ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "42e6bb49-8537-43fc-919f-e3cc2e3edb36"],
+ " with respect to its argument, and evaluate the resulting function at time ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "4f9d9d66-8d74-4dbc-a2a8-0805f31cfcab"],
+ ". So far we haven\[CloseCurlyQuote]t done anything at all with our symbolic \
+expression. One thing we can do with it is just display it in a pretty form:"
+}], "Text",
+ CellChangeTimes->{{3.952986402212309*^9, 3.9529864505275383`*^9}, {
+  3.9529866093997383`*^9, 3.9529867039797373`*^9}, {3.952987537801642*^9, 
+  3.95298761422125*^9}},ExpressionUUID->"ff4bc943-d6f8-4ad7-9d4f-\
+d165aa52256c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Derivative", "[", "1", "]"}], "[", "x", "]"}], "[", "t", "]"}], 
+  " ", "//", " ", "TraditionalForm"}]], "Input",
+ CellChangeTimes->{{3.952986292167885*^9, 3.952986338927207*^9}, {
+  3.952987407513954*^9, 3.952987462120468*^9}, {3.952987503254409*^9, 
+  3.952987517249407*^9}, {3.952987622226804*^9, 3.952987625270545*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"a1d67e98-0fd6-473b-9159-3df17e0d210b"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SuperscriptBox["x", "\[Prime]",
+    MultilineFunction->None], "(", "t", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.952987625660831*^9},
+ CellLabel->
+  "Out[15]//TraditionalForm=",ExpressionUUID->"14c07857-d776-4ff8-bc55-\
+c7d79b1ad827"]
+}, Open  ]],
+
+Cell[TextData[{
+ "The afterthought of TraditionalForm says that you would like to see the \
+result as it would be likely to be typeset in a mathematics or physics \
+textbook. Note that physicists (and older mathematicians) often use a \
+different notation for the first derivative, which is known as Leibniz \
+notation. We have our hands full. Let\[CloseCurlyQuote]s not add yet more \
+notations into the mix.\n\nThe acceleration is the rate of change of the \
+velocity, and that is the second derivative, and here is how you tell \
+Mathematica you want to take a second derivative of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "0115547c-d1a9-4010-94e5-8e1d4f120115"],
+ " with respect to ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]],
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2b4fee40-14cb-4172-99bc-3afc9f140c6e"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.952986402212309*^9, 3.9529864505275383`*^9}, {
+  3.9529866093997383`*^9, 3.9529867039797373`*^9}, {3.952987537801642*^9, 
+  3.9529876524376087`*^9}},ExpressionUUID->"b7322084-fef3-4c2d-a6db-\
+2a806ba71fdb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"Derivative", "[", "2", "]"}], "[", "x", "]"}], "[", "t", "]"}], 
+  " ", "//", " ", "TraditionalForm"}]], "Input",
+ CellChangeTimes->{{3.952986672929429*^9, 3.952986673137383*^9}, {
+  3.952987664281392*^9, 3.952987667044807*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"4a836947-ca72-4e51-87a7-f4d92e2635d3"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SuperscriptBox["x", "\[Prime]\[Prime]",
+    MultilineFunction->None], "(", "t", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.9529866738602667`*^9, 3.952987667500684*^9},
+ CellLabel->
+  "Out[16]//TraditionalForm=",ExpressionUUID->"5fe73ba4-4344-43fc-a975-\
+0584635f12d4"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Here is how you write the whole harmonic oscillator equation, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "+", 
+     RowBox[{"2", "\[Gamma]", "\[VeryThinSpace]", "v"}], "+", 
+     RowBox[{
+      SuperscriptBox[
+       SubscriptBox["\[Omega]", "0"], "2"], "x"}]}], "=", "0"}], 
+   TraditionalForm]],ExpressionUUID->"4e9a467a-89e5-4ad9-a584-8ebf17f8ec96"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.952986784999703*^9, 3.952986800044063*^9}, {
+  3.9529877110624323`*^9, 
+  3.952987713822917*^9}},ExpressionUUID->"2a406545-33e5-47cb-87f7-\
+c38d62b89b05"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Derivative", "[", "2", "]"}], "[", "x", "]"}], "[", "t", "]"}],
+     "+", 
+    RowBox[{"2", "gamma", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Derivative", "[", "1", "]"}], "[", "x", "]"}], "[", "t", 
+      "]"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["omega0", "2"], 
+     RowBox[{"x", "[", "t", "]"}]}]}], "==", "0"}], " ", "//", " ", 
+  "TraditionalForm"}]], "Input",
+ CellChangeTimes->{{3.9529868059856997`*^9, 3.9529868526538277`*^9}, {
+  3.9529869310454893`*^9, 3.952986936837288*^9}, {3.952986980696774*^9, 
+  3.9529870406122837`*^9}, {3.952987125124148*^9, 3.952987145704844*^9}, {
+  3.9529877279611187`*^9, 3.952987857078635*^9}, {3.9529879018299227`*^9, 
+  3.9529879054704533`*^9}, {3.952988046224606*^9, 3.952988051532817*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"ca893477-f812-4f8c-b4b4-947d25e2bd89"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"2", " ", "gamma", " ", 
+     RowBox[{
+      SuperscriptBox["x", "\[Prime]",
+       MultilineFunction->None], "(", "t", ")"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["omega0", "2"], " ", 
+     RowBox[{"x", "(", "t", ")"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["x", "\[Prime]\[Prime]",
+      MultilineFunction->None], "(", "t", ")"}]}], "\[LongEqual]", "0"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.952987165588641*^9, {3.952987787413509*^9, 3.952987858083832*^9}, 
+   3.9529879084699507`*^9, 3.9529880518611603`*^9},
+ CellLabel->
+  "Out[22]//TraditionalForm=",ExpressionUUID->"2310cc19-2864-4364-9a06-\
+1a4d9fc82e4a"]
+}, Open  ]],
+
+Cell["\<\
+Notice extremely carefully the use of == rather than = in the equation for \
+the derivative. We are not making an assignment! We are making a conditional \
+test, and Mathematica is going to do its best to approximately satisfy that \
+conditional test when it goes nuts (deep under the hood) applying some solver \
+like Euler, or Runge-Kutta Second Order, or maybe Runge-Kutta Fourth Order \
+(that I never got around to introducing, because it is a mess, even for me).\
+\>", "Text",
+ CellChangeTimes->{{3.952986784999703*^9, 3.952986800044063*^9}, {
+  3.9529877110624323`*^9, 3.952987713822917*^9}, {3.95298792057689*^9, 
+  3.9529880364244833`*^9}},ExpressionUUID->"9efb9ae5-2ba2-487d-9bf5-\
+41b68b765955"],
+
+Cell["\<\
+Now let\[CloseCurlyQuote]s define omega0 and gamma, and also add some initial \
+conditions on the position and velocity:\
+\>", "Text",
+ CellChangeTimes->{{3.952986784999703*^9, 3.952986800044063*^9}, {
+  3.9529877110624323`*^9, 3.952987713822917*^9}, {3.95298792057689*^9, 
+  3.9529880364244833`*^9}, {3.952988067764102*^9, 
+  3.952988089531383*^9}},ExpressionUUID->"b29341fd-0403-4f6d-a958-\
+0aaa2dc7c192"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"omega0", "=", "2"}], ",", " ", 
+      RowBox[{"gamma", "=", 
+       FractionBox["1", "10"]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Derivative", "[", "2", "]"}], "[", "x", "]"}], "[", "t", 
+         "]"}], "+", 
+        RowBox[{"2", "gamma", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Derivative", "[", "1", "]"}], "[", "x", "]"}], "[", "t", 
+          "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["omega0", "2"], 
+         RowBox[{"x", "[", "t", "]"}]}]}], "==", "0"}], ",", 
+      RowBox[{
+       RowBox[{"x", "[", "0", "]"}], "==", "0"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Derivative", "[", "1", "]"}], "[", "x", "]"}], "[", "0", 
+        "]"}], "==", "1"}]}], "}"}]}], "]"}], " ", "//", " ", 
+  "TraditionalForm"}]], "Input",
+ CellChangeTimes->{{3.9529868059856997`*^9, 3.9529868526538277`*^9}, {
+  3.9529869310454893`*^9, 3.952986936837288*^9}, {3.952986980696774*^9, 
+  3.9529870406122837`*^9}, {3.952987125124148*^9, 3.952987145704844*^9}, {
+  3.9529877279611187`*^9, 3.952987857078635*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"c7eed523-fc7f-461c-8bde-7285c48ef8e1"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["x", "\[Prime]\[Prime]",
+        MultilineFunction->None], "(", "t", ")"}], "+", 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["x", "\[Prime]",
+         MultilineFunction->None], "(", "t", ")"}], "5"], "+", 
+      RowBox[{"4", " ", 
+       RowBox[{"x", "(", "t", ")"}]}]}], "\[LongEqual]", "0"}], ",", 
+    RowBox[{
+     RowBox[{"x", "(", "0", ")"}], "\[LongEqual]", "0"}], ",", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["x", "\[Prime]",
+       MultilineFunction->None], "(", "0", ")"}], "\[LongEqual]", "1"}]}], 
+   "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.952988092983985*^9},
+ CellLabel->
+  "Out[23]//TraditionalForm=",ExpressionUUID->"210f4779-4921-40db-a87e-\
+243faf6a35c3"]
+}, Open  ]],
+
+Cell["\<\
+We have failed to do one thing. We have set up a pile of equations, but we \
+haven\[CloseCurlyQuote]t given this pile of equations any name, so we can\
+\[CloseCurlyQuote]t use them anywhere else. Let\[CloseCurlyQuote]s give them \
+a name:\
+\>", "Text",
+ CellChangeTimes->{{3.952986784999703*^9, 3.952986800044063*^9}, {
+  3.9529877110624323`*^9, 3.952987713822917*^9}, {3.95298792057689*^9, 
+  3.9529880364244833`*^9}, {3.952988067764102*^9, 
+  3.952988160348958*^9}},ExpressionUUID->"f0a972ae-f743-4047-b161-\
+5c5d2519e898"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"harmonicOscillatorProblem", "=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"omega0", "=", "2"}], ",", " ", 
+       RowBox[{"gamma", "=", 
+        FractionBox["1", "10"]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Derivative", "[", "2", "]"}], "[", "x", "]"}], "[", "t", 
+          "]"}], "+", 
+         RowBox[{"2", "gamma", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Derivative", "[", "1", "]"}], "[", "x", "]"}], "[", "t", 
+           "]"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["omega0", "2"], 
+          RowBox[{"x", "[", "t", "]"}]}]}], "==", "0"}], ",", 
+       RowBox[{
+        RowBox[{"x", "[", "0", "]"}], "==", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Derivative", "[", "1", "]"}], "[", "x", "]"}], "[", "0", 
+         "]"}], "==", "1"}]}], "}"}]}], "]"}]}], " ", ";"}]], "Input",
+ CellChangeTimes->{{3.952987238544449*^9, 3.952987267885627*^9}, {
+  3.952988165231358*^9, 3.95298818290886*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"ec3cf0a8-676e-445c-8c60-d3bacfe1b682"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7a17dcb1-0212-4d8b-a120-fa1ff516034b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 205, 3, 82, "Section",ExpressionUUID->"7b67adc1-2055-4811-a811-8c6018dcc6fb"],
+Cell[CellGroupData[{
+Cell[784, 27, 229, 4, 55, "Subtitle",ExpressionUUID->"f235e631-c978-4b0e-8b00-025636a6a512"],
+Cell[1016, 33, 1358, 25, 534, "Text",ExpressionUUID->"375cf126-aff4-4f51-9087-9615f09b3fb1"],
+Cell[CellGroupData[{
+Cell[2399, 62, 265, 5, 66, "Subsection",ExpressionUUID->"56d2e58c-b909-4a43-b450-202eac0ad966"],
+Cell[2667, 69, 5756, 159, 886, "Text",ExpressionUUID->"1cc1a04f-89e7-4de2-bd80-b31fd7972c2d"],
+Cell[8426, 230, 386, 9, 36, "Input",ExpressionUUID->"6d22853b-5d2a-44ad-8b12-b88bcdbb0fec"],
+Cell[8815, 241, 820, 17, 96, "Text",ExpressionUUID->"ff4bc943-d6f8-4ad7-9d4f-d165aa52256c"],
+Cell[CellGroupData[{
+Cell[9660, 262, 462, 9, 36, "Input",ExpressionUUID->"a1d67e98-0fd6-473b-9159-3df17e0d210b"],
+Cell[10125, 273, 288, 8, 54, "Output",ExpressionUUID->"14c07857-d776-4ff8-bc55-c7d79b1ad827"]
+}, Open  ]],
+Cell[10428, 284, 1133, 23, 260, "Text",ExpressionUUID->"b7322084-fef3-4c2d-a6db-2a806ba71fdb"],
+Cell[CellGroupData[{
+Cell[11586, 311, 367, 8, 36, "Input",ExpressionUUID->"4a836947-ca72-4e51-87a7-f4d92e2635d3"],
+Cell[11956, 321, 320, 8, 54, "Output",ExpressionUUID->"5fe73ba4-4344-43fc-a975-0584635f12d4"]
+}, Open  ]],
+Cell[12291, 332, 580, 16, 42, "Text",ExpressionUUID->"2a406545-33e5-47cb-87f7-c38d62b89b05"],
+Cell[CellGroupData[{
+Cell[12896, 352, 918, 22, 62, "Input",ExpressionUUID->"ca893477-f812-4f8c-b4b4-947d25e2bd89"],
+Cell[13817, 376, 699, 20, 56, "Output",ExpressionUUID->"2310cc19-2864-4364-9a06-1a4d9fc82e4a"]
+}, Open  ]],
+Cell[14531, 399, 715, 11, 178, "Text",ExpressionUUID->"9efb9ae5-2ba2-487d-9bf5-41b68b765955"],
+Cell[15249, 412, 417, 8, 69, "Text",ExpressionUUID->"b29341fd-0403-4f6d-a958-0aaa2dc7c192"],
+Cell[CellGroupData[{
+Cell[15691, 424, 1349, 37, 117, "Input",ExpressionUUID->"c7eed523-fc7f-461c-8bde-7285c48ef8e1"],
+Cell[17043, 463, 831, 25, 73, "Output",ExpressionUUID->"210f4779-4921-40db-a87e-243faf6a35c3"]
+}, Open  ]],
+Cell[17889, 491, 535, 10, 96, "Text",ExpressionUUID->"f0a972ae-f743-4047-b161-5c5d2519e898"],
+Cell[18427, 503, 1243, 35, 145, "Input",ExpressionUUID->"ec3cf0a8-676e-445c-8c60-d3bacfe1b682"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
