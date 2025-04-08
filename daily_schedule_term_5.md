@@ -49,25 +49,25 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 * Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; In-class: Complete the Guitar String notebook (the math is a lot like torsion waves, but the new thing is that again we are going to be letting Mathematica do all the hard work)
 
-### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
-
-#### Special projects being presented in weeks 12 and 13
+#### Special projects being presented in Weeks 12 and 13
 
 * Jeremy and Eli: Popluation dynamics or other evolution or biology problem that you come up with consulting Andy
-* Walker and Hexi: Economics or High Finance
-* Rania: Liquid drop model of fission (Brian will assist &mdash; this is going to be tricky!)
-* Harper and Tahm: Chaos
+* Walker and Hexi: An economics or high finance problem
+* Rania: Liquid drop model of fission (Brian will assist &mdash; the liquid drop is going to be tricky!)
+* Harper and Tahm: A dynamical system exhibiting chaos (now solved with the new techniques we have at our disposal)
 
-Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how your code solves it, and ideally, activities for the rest of us to do to help us become familiar with the problem and your technique. Email your notebook to the class before your presentation. Try to use notebook sections and other typesetting features to make your presentation clear.
+Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how your code solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and your technique. Email your notebook to the class before your presentation. Try to use notebook sections and other typesetting features to make your presentation clear and professional-looking. Email your presentation to all of us just before the class on the day you are presenting.
+
+### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, April 15 &mdash; Problem Set 18: Do the Exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the Drumhead Redux notebook &mdash; Jeremy and Eli's biological presentation
-* Friday, April 18 &mdash; Problem Set 19: Do the Exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves) &mdash; Rania's presention on fission
+* Tuesday, April 15 &mdash; Problem Set 18: Do the Exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the Drumhead Redux notebook &mdash; Presentation: Jeremy and Eli's presentation on population dynamics or other biology problem
+* Friday, April 18 &mdash; Problem Set 19: Do the Exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves) &mdash; Presentation: Rania's presention on fission
 
 ### Week 13 &mdash; Diffusion of Pollutants in Two or Three Dimensions &mdash; Schrodinger's Equation
 
-* Tuesday, April 22 &mdash; Problem Set 20: Do the Exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions &mdash; Walker and Hexi's presentation on fission
+* Tuesday, April 22 &mdash; Problem Set 20: Do the Exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions &mdash; Presentation: Walker and Hexi's presentation on an economics or finance computation
 * Friday, April 25 &mdash; Problem Set 21: Do the Exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Harper and Tahm's presentation on chaos
 
 ### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
