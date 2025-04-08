@@ -41,22 +41,36 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 ### Week 11 &mdash; Continuous Systems from the *n&rarr;&infin;* Limit &mdash; Oscillators and Guitar Strings
 
-* Tuesday, April 8 &mdash; Problem Set 16: Make a Wolfram language notebook containing a compilation of fundamental, low-level syntax and functions (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; I will post everyone's cheat cheets ([Brian's - which will have more and more added to it over time](./cheat-sheets/WolframLanguageCheatSheet-Brian.nb.pdf), [Eli's](./cheat-sheets/WolframLanguageCheatSheet-Eli.nb.pdf), [Harper's](./cheat-sheets/WolframLanguageCheatSheet-Harper.nb.pdf), [Hexi's](./cheat-sheets/WolframLanguageCheatSheet-Hexi.nb.pdf), [Jeremy's](./cheat-sheets/WolframLanguageCheatSheet-Jeremy.nb.pdf), [Rania's](./cheat-sheets/WolframLanguageCheatSheet-Rania.nb.pdf), [Tahm's](./cheat-sheets/WolframLanguageCheatSheet-Tahm.nb.pdf), and Walker's) &mdash; In-class: Complete the [Harmonic Oscillator Redux](./worksheets/17-HarmonicOscillatorRedux.nb.pdf) notebook (this time letting Mathematica do all the hard work)
+* Tuesday, April 8 &mdash; Problem Set 16: Make a Wolfram language notebook containing a compilation of fundamental, low-level syntax and functions (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; I will post everyone's cheat cheets ([Brian's - which will have more and more added to it over time](./cheat-sheets/WolframLanguageCheatSheet-Brian.nb.pdf), [Eli's](./cheat-sheets/WolframLanguageCheatSheet-Eli.nb.pdf), [Harper's](./cheat-sheets/WolframLanguageCheatSheet-Harper.nb.pdf), [Hexi's](./cheat-sheets/WolframLanguageCheatSheet-Hexi.nb.pdf), [Jeremy's](./cheat-sheets/WolframLanguageCheatSheet-Jeremy.nb.pdf), [Rania's](./cheat-sheets/WolframLanguageCheatSheet-Rania.nb.pdf), [Tahm's](./cheat-sheets/WolframLanguageCheatSheet-Tahm.nb.pdf), and Walker's) &mdash; In-class: Present the [Harmonic Oscillator Redux](./worksheets/17-HarmonicOscillatorRedux.nb.pdf) notebook (this time letting Mathematica do all the hard work)
+
+<img src="./illustrations/DrivenHarmonicOscillator-JustAboveResonance.png" width="50%">
+
+#### Driven Harmonic Oscillator Just Above Resonance
+
 * Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; In-class: Complete the Guitar String notebook (the math is a lot like torsion waves, but the new thing is that again we are going to be letting Mathematica do all the hard work)
 
 ### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
 
+#### Special projects being presented in weeks 12 and 13
+
+* Jeremy and Eli: Popluation dynamics or other evolution or biology problem that you come up with consulting Andy
+* Walker and Hexi: Economics or High Finance
+* Rania: Liquid drop model of fission (Brian will assist &mdash; this is going to be tricky!)
+* Harper and Tahm: Chaos
+
+Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how your code solves it, and ideally, activities for the rest of us to do to help us become familiar with the problem and your technique. Email your notebook to the class before your presentation. Try to use notebook sections and other typesetting features to make your presentation clear.
+
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, April 15 &mdash; Problem Set 18: Do the Exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the Drumhead Redux notebook
-* Friday, April 18 &mdash; Problem Set 19: Do the Exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves)
+* Tuesday, April 15 &mdash; Problem Set 18: Do the Exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the Drumhead Redux notebook &mdash; Jeremy and Eli's biological presentation
+* Friday, April 18 &mdash; Problem Set 19: Do the Exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves) &mdash; Rania's presention on fission
 
 ### Week 13 &mdash; Diffusion of Pollutants in Two or Three Dimensions &mdash; Schrodinger's Equation
 
-* Tuesday, April 22 &mdash; Problem Set 20: Do the Exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions
-* Friday, April 25 &mdash; Problem Set 21: Do the Exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box
+* Tuesday, April 22 &mdash; Problem Set 20: Do the Exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions &mdash; Walker and Hexi's presentation on fission
+* Friday, April 25 &mdash; Problem Set 21: Do the Exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Harper and Tahm's presentation on chaos
 
 ### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
 
-* Tuesday, April 29 &mdash; Exam 3
+* Tuesday, April 29 &mdash; Half-Period Exam 3 (Designed to take about 45 minutes) &mdash; Problems will be like exercises from *EIWL3,* especially those that use your understanding of the core functionality (Map, Apply, virtual functions), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
 * Friday, May 2 &mdash; No Problem Set :) &mdash; In-Class: The s, p, d, and f Orbitals of Hydrogen
