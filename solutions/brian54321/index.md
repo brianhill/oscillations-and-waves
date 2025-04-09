@@ -2,6 +2,14 @@
 
 *Listed reverse-chronologically (most recent at top)*
 
+### 2025-04-11 &mdash; PS 17 &mdash; *EIWL3* Sections 38 and 39
+
+* Coming Friday
+
+### 2025-04-08 &mdash; Wolfram Language Cheat Sheet (I am not grading these)
+
+* [Brian's Cheat Sheet](../../cheat-sheets/WolframLanguageCheatSheet-Brian.nb.pdf)
+
 ### 2025-04-04 &mdash; Exam 2 &mdash; Compression (Longitudinal) Waves
 
 * [Brian's solution](../brian54321/Brian-Exam2.nb.pdf)

@@ -2,6 +2,14 @@
 
 *Listed reverse-chronologically (most recent at top)*
 
+### 2025-04-11 &mdash; PS 17 &mdash; *EIWL3* Sections 38 and 39
+
+* Coming Friday
+
+### 2025-04-08 &mdash; Wolfram Language Cheat Sheet (I am not grading these)
+
+* [Tahm's Cheat Sheet](../../cheat-sheets/WolframLanguageCheatSheet-Tahm.nb.pdf)
+
 ### 2025-04-04 &mdash; Exam 2 &mdash; Longitudinal (Compression) Waves
 
 * [Tahm's solution](./Tahm-Exam2.nb.pdf)
