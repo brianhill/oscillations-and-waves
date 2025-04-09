@@ -62,13 +62,13 @@ Each special project presentation should include a Mathematica notebook that has
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, April 15 &mdash; Problem Set 18: Do the Exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the Drumhead Redux notebook &mdash; Presentation: Jeremy and Eli's presentation on population dynamics or other biology problem
-* Friday, April 18 &mdash; Problem Set 19: Do the Exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves) &mdash; Presentation: Rania's presention on fission
+* Tuesday, April 15 &mdash; Problem Set 18: Do the exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the Drumhead Redux notebook &mdash; Presentation: Jeremy and Eli's presentation on population dynamics or other biology problem
+* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves) &mdash; Presentation: Rania's presention on fission
 
 ### Week 13 &mdash; Diffusion of Pollutants in Two or Three Dimensions &mdash; Schrodinger's Equation
 
-* Tuesday, April 22 &mdash; Problem Set 20: Do the Exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions &mdash; Presentation: Walker and Hexi's presentation on an economics or finance computation
-* Friday, April 25 &mdash; Problem Set 21: Do the Exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Harper and Tahm's presentation on chaos
+* Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions &mdash; Presentation: Walker and Hexi's presentation on an economics or finance computation
+* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Harper and Tahm's presentation on chaos
 
 ### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
 
