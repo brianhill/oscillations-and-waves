@@ -67,8 +67,8 @@ Each special project presentation should include a Mathematica notebook that has
 
 ### Week 13 &mdash; Diffusion of Pollutants in Two or Three Dimensions &mdash; Schrodinger's Equation
 
-* Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions &mdash; Presentation: Walker and Hexi's presentation on an economics or finance computation
-* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Harper and Tahm's presentation on chaos
+* Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions &mdash; Presentation: Walker and Hexi's presentation on an economics or high finance problem
+* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Presentation: Harper and Tahm's presentation on chaos
 
 ### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
 
