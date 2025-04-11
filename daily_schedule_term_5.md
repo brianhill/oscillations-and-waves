@@ -56,14 +56,14 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 * Rania: Liquid drop model of fission (Brian will assist &mdash; the liquid drop is going to be tricky!)
 * Harper and Tahm: Ballistics calculations
 
-Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how your code solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and your technique. Email your notebook to the class before your presentation. Try to use notebook sections and other typesetting features to make your presentation clear and professional-looking. Email your presentation to all of us just before the class on the day you are presenting.
+Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how your code solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and your technique. Email your notebook to the class before your presentation. Use notebook chapters, section, and subsections, and other typesetting features to make your presentation organized and professional-looking. Email your presentation to all of us just before the class on the day you are presenting.
 
 ### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, April 15 &mdash; Problem Set 18: Do the exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the Drumhead Redux notebook &mdash; Presentation: Jeremy and Eli's presentation on population dynamics or other biology problem
-* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves) &mdash; Presentation: Rania's presention on fission
+* Tuesday, April 15 &mdash; Problem Set 18: Do the exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the [Drumheads Redux](./worksheets/19-DrumheadsRedux.nb.pdf) notebook &mdash; Presentation: Jeremy and Eli's presentation on population dynamics or other biology problem
+* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves) &mdash; Presentation: Rania's presention on the liquid drop model of fission
 
 ### Week 13 &mdash; Diffusion of Pollutants in Two or Three Dimensions &mdash; Schrodinger's Equation
 
