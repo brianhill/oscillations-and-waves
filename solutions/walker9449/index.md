@@ -8,7 +8,7 @@
 
 ### 2025-04-08 &mdash; Wolfram Language Cheat Sheet
 
-* [Walker's Cheat Sheet](../../cheat-sheets/WolframLanguageCheatSheet-Walker.nb.pdf) (not received)
+* [Walker's Cheat Sheet](../../cheat-sheets/WolframLanguageCheatSheet-Walker.nb.pdf)
 
 ### 2025-04-04 &mdash; Exam 2 &mdash; Longitudinal (Compression) Waves
 
