@@ -47,7 +47,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Driven Harmonic Oscillator Just Above Resonance
 
-* Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; In-class: Complete the [Guitar String](./worksheets/17-Guitar String.nb.pdf) notebook (the math is a lot like torsion waves, but the new thing is that again we are going to be letting Mathematica do all the hard work) &mdash; If there is spare time, we will use it to launch into the special projects
+* Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; In-class: Complete the [Guitar String](./worksheets/18-GuitarString.nb.pdf) notebook (the math is a lot like torsion waves, but the new thing is that again we are going to be letting Mathematica do all the hard work) &mdash; If there is spare time, we will use it to launch into the special projects
 
 #### Special projects being presented in Weeks 12 and 13
 
