@@ -54,7 +54,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 * Jeremy and Eli: Popluation dynamics or other evolution or biology problem that you come up with consulting Andy
 * Walker and Hexi: An economics or high finance problem
 * Rania: Liquid drop model of fission (Brian will assist &mdash; the liquid drop is going to be tricky!)
-* Harper and Tahm: A dynamical system exhibiting chaos (now solved with the new techniques we have at our disposal)
+* Harper and Tahm: Ballistics calculations
 
 Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how your code solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and your technique. Email your notebook to the class before your presentation. Try to use notebook sections and other typesetting features to make your presentation clear and professional-looking. Email your presentation to all of us just before the class on the day you are presenting.
 
@@ -68,7 +68,7 @@ Each special project presentation should include a Mathematica notebook that has
 ### Week 13 &mdash; Diffusion of Pollutants in Two or Three Dimensions &mdash; Schrodinger's Equation
 
 * Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions &mdash; Presentation: Walker and Hexi's presentation on an economics or high finance problem
-* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Presentation: Harper and Tahm's presentation on chaos
+* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Presentation: Harper and Tahm's presentation on ballistics
 
 ### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
 
