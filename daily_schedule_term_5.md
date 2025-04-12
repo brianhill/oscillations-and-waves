@@ -53,7 +53,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 * Jeremy and Eli: Popluation dynamics or other evolution or biology problem that you come up with consulting Andy
 * Walker and Hexi: An economics or high finance problem
-* Rania: Liquid drop model of fission (Brian will assist &mdash; the liquid drop is going to be tricky!)
+* Rania: [Liquid drop model of fission - DRAFT](./special-projects/LiquidDropModelOfFission.nb.pdf)
 * Harper and Tahm: Ballistics calculations
 
 Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how your code solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and your technique. Email your notebook to the class before your presentation. Use notebook chapters, section, and subsections, and other typesetting features to make your presentation organized and professional-looking. Email your presentation to all of us just before the class on the day you are presenting.
