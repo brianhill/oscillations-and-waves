@@ -62,7 +62,7 @@ Each special project presentation should include a Mathematica notebook that has
 
 #### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
 
-* Tuesday, April 15 &mdash; Problem Set 18: Do the exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the [Drumheads Redux](./worksheets/19-DrumheadsRedux.nb.pdf) notebook &mdash; Presentation: Jeremy and Eli's presentation on population dynamics or other biology problem
+* Tuesday, April 15 &mdash; Problem Set 18: Do the exercises from *EIWL3* Sections 41 and 42  &mdash; Complete the [Rectangular Drumhead Redux] (./worksheets/19-RectangularDrumheadRedux.nb.pdf) notebook [Circular Drumhead Redux] (./worksheets/20-CircularDrumheadRedux.nb.pdf) notebooks &mdash; Presentation: Jeremy and Eli's presentation on population dynamics or other biology problem
 * Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves) &mdash; Presentation: Rania's presention on the liquid drop model of fission
 
 ### Week 13 &mdash; Diffusion of Pollutants in Two or Three Dimensions &mdash; Schrodinger's Equation
