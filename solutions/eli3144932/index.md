@@ -2,9 +2,14 @@
 
 *Listed reverse-chronologically (most recent at top)*
 
+### 2025-04-15 &mdash; PS 18 &mdash; *EIWL3* Sections 40 and 41
+
+* Coming soon to a theater near you
+
 ### 2025-04-11 &mdash; PS 17 &mdash; *EIWL3* Sections 38 and 39
 
-* Coming Friday
+* [Eli's solution](./Eli-PS17.nb.pdf)
+* [Brian's solution](../brian54321/Brian-PS17.nb.pdf)
 
 ### 2025-04-08 &mdash; Wolfram Language Cheat Sheet (I am not grading these)
 
