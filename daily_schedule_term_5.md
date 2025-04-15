@@ -43,7 +43,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 * Tuesday, April 8 &mdash; Problem Set 16: Make a Wolfram language notebook containing a compilation of fundamental, low-level syntax and functions (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; I will post everyone's cheat cheets ([Brian's - which will have more and more added to it over time](./cheat-sheets/WolframLanguageCheatSheet-Brian.nb.pdf), [Eli's](./cheat-sheets/WolframLanguageCheatSheet-Eli.nb.pdf), [Harper's](./cheat-sheets/WolframLanguageCheatSheet-Harper.nb.pdf), [Hexi's](./cheat-sheets/WolframLanguageCheatSheet-Hexi.nb.pdf), [Jeremy's](./cheat-sheets/WolframLanguageCheatSheet-Jeremy.nb.pdf), [Rania's](./cheat-sheets/WolframLanguageCheatSheet-Rania.nb.pdf), [Tahm's](./cheat-sheets/WolframLanguageCheatSheet-Tahm.nb.pdf), and [Walker's](./cheat-sheets/WolframLanguageCheatSheet-Walker.nb.pdf) &mdash; In-class: Present the [Harmonic Oscillator Redux](./worksheets/17-HarmonicOscillatorRedux.nb.pdf) notebook (this time letting Mathematica do all the hard work)
 
-<img src="./illustrations/DrivenHarmonicOscillator-JustAboveResonance.png" width="50%">
+<img src="./illustrations/DrivenHarmonicOscillator-JustAboveResonance.png" width="65%">
 
 #### Driven Harmonic Oscillator Just Above Resonance
 
@@ -51,21 +51,26 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Special projects being presented in Weeks 12 and 13
 
-* Jeremy and Eli: Popluation dynamics or other evolution or biology problem that you come up with consulting Andy
+* Jeremy and Eli: [Lotke-Volterra Equations](../special-projects/LotkeVolterraDemo.nb.pdf)
+* Rania: [Liquid Drop Model of Fission - DRAFT](./special-projects/LiquidDropModelOfFission.nb.pdf)
 * Walker and Hexi: An economics or high finance problem
-* Rania: [Liquid drop model of fission - DRAFT](./special-projects/LiquidDropModelOfFission.nb.pdf)
 * Harper and Tahm: Ballistics calculations
 
 Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how your code solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and your technique. Email your notebook to the class before your presentation. Use notebook chapters, section, and subsections, and other typesetting features to make your presentation organized and professional-looking. Email your presentation to all of us just before the class on the day you are presenting.
 
 ### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
 
-#### Plans for upcoming classes are subject to adjustment, depending especially on the actual pace of the previous classes.
+* Tuesday, April 15 &mdash; Problem Set 18: We will discuss *EIWL3* Sections 41 and 42 *(NB: due date extended to Friday along with Problem Set 19 which is also due on Friday)* &mdash; Complete the [Rectangular Drumhead Redux](./worksheets/19-RectangularDrumheadRedux.nb.pdf) notebook &mdash; Presentation: Jeremy and Eli on the Lotke-Volterra Equations
 
-* Tuesday, April 15 &mdash; Problem Set 18: We will discuss *EIWL3* Sections 41 and 42 *NB: due date extended* &mdash; Complete the [Rectangular Drumhead Redux](./worksheets/19-RectangularDrumheadRedux.nb.pdf) notebook &mdash; Presentation: Jeremy and Eli's presentation on population dynamics or other biology problem
-* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion in one dimension (some of the same features appear in diffusion as in waves) &mdash; Presentation: Rania's presention on the liquid drop model of fission
+<img src="./illustrations/LotkeVolterraGraphs.png" width="45%">
 
-### Week 13 &mdash; Diffusion of Pollutants in Two or Three Dimensions &mdash; Schrodinger's Equation
+#### Lotke-Volterra Graphs for Two Species
+
+* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion of heat in one and two dimensions (some of the same mathematics appears in diffusion as in waves) &mdash; Presentation: Rania on the Liquid Drop Model of Fission
+
+### Week 13 &mdash; Diffusion of Pollutants in Three Dimensions &mdash; Schrodinger's Equation
+
+#### Plans for upcoming classes are still subject to adjustment, depending on the actual pace of the previous classes.
 
 * Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions &mdash; Presentation: Walker and Hexi's presentation on an economics or high finance problem
 * Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Presentation: Harper and Tahm's presentation on ballistics
