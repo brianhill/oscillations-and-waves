@@ -77,5 +77,5 @@ Each special project presentation should include a Mathematica notebook that has
 
 ### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
 
-* Tuesday, April 29 &mdash; Exam 3 (Designed to only take about 45 minutes) &mdash; Problems will be like exercises from *EIWL3,* especially those that use your understanding of the core functionality (Map, Apply, virtual functions), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
+* Tuesday, April 29 &mdash; Exam 3 (Designed to only require about 45 minutes) &mdash; Problems will be like exercises from *EIWL3,* especially those that use your understanding of the core functionality (Map, Apply, virtual functions, *etc.*), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
 * Friday, May 2 &mdash; No Problem Set :) &mdash; In-Class: The s, p, d, and f Orbitals of Hydrogen
