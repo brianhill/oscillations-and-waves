@@ -51,7 +51,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Special projects being presented in Weeks 12 and 13
 
-* Jeremy and Eli: [Lotke-Volterra Equations](../special-projects/LotkeVolterraEquations.nb.pdf)
+* Jeremy and Eli: [Lotke-Volterra Equations](./special-projects/LotkeVolterraEquations.nb.pdf)
 * Rania: [Liquid Drop Model of Fission - DRAFT](./special-projects/LiquidDropModelOfFission.nb.pdf)
 * Walker and Hexi: An economics or high finance problem
 * Harper and Tahm: Ballistics calculations
@@ -60,7 +60,7 @@ Each special project presentation should include a Mathematica notebook that has
 
 ### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
 
-* Tuesday, April 15 &mdash; Problem Set 18: We will discuss *EIWL3* Sections 41 and 42 *(NB: due date extended to Friday along with Problem Set 19 which is also due on Friday)* &mdash; Complete the [Rectangular Drumhead Redux](./worksheets/19-RectangularDrumheadRedux.nb.pdf) notebook &mdash; Presentation: Jeremy and Eli on the [Lotke-Volterra Equations](../special-projects/LotkeVolterraEquations.nb.pdf)
+* Tuesday, April 15 &mdash; Problem Set 18: We will discuss *EIWL3* Sections 41 and 42 *(NB: due date extended to Friday along with Problem Set 19 which is also due on Friday)* &mdash; Complete the [Rectangular Drumhead Redux](./worksheets/19-RectangularDrumheadRedux.nb.pdf) notebook &mdash; Presentation: Jeremy and Eli on the [Lotke-Volterra Equations](./special-projects/LotkeVolterraEquations.nb.pdf)
 
 <img src="./illustrations/LotkeVolterraGraphs.png" width="45%">
 
