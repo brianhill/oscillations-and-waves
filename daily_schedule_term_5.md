@@ -56,17 +56,17 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 * Walker and Hexi: An economics or high finance problem
 * Harper and Tahm: Ballistics calculations
 
-Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how your code solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and your technique. Email your notebook to the class before your presentation. Use notebook chapters, section, and subsections, and other typesetting features to make your presentation organized and professional-looking. Email your presentation to all of us just before the class on the day you are presenting.
+Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how the code you are presenting solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and the solution technique. Email your notebook to the class before your presentation. Use notebook chapters, section, and subsections, and other typesetting features to make your presentation organized and professional-looking. It is fine to rely heavily on already-existing resources. The goal is a clear explanation of a problem and its solution, not to have an original solution.
 
 ### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
 
-* Tuesday, April 15 &mdash; Problem Set 18: We will discuss *EIWL3* Sections 41 and 42 *(NB: due date extended to Friday along with Problem Set 19 which is also due on Friday)* &mdash; Complete the [Rectangular Drumhead Redux](./worksheets/19-RectangularDrumheadRedux.nb.pdf) notebook &mdash; Presentation: Jeremy and Eli on the [Lotke-Volterra Equations](./special-projects/LotkeVolterraEquations.nb.pdf)
+* Tuesday, April 15 &mdash; Problem Set 18: Do the exercises from *EIWL3* Sections 41 and 42 *(NB: due date extended to Friday along with Problem Set 19 which is also due on Friday)* &mdash; Complete the [Rectangular Drumhead Redux](./worksheets/19-RectangularDrumheadRedux.nb.pdf) notebook &mdash; Presentation: Jeremy and Eli on the [Lotke-Volterra Equations](./special-projects/LotkeVolterraEquations.nb.pdf)
 
 <img src="./illustrations/LotkeVolterraGraphs.png" width="45%">
 
 #### Lotke-Volterra Graphs for Two Species
 
-* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; Diffusion of heat in one and two dimensions (some of the same mathematics appears in diffusion as in waves) &mdash; Presentation: Rania on the [Liquid Drop Model of Fission - DRAFT](./special-projects/LiquidDropModelOfFission.nb.pdf)
+* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; [Diffusion of heat in one](./worksheets/20-DiffusionInOneDimension.nb) and two dimensions (some of the same mathematics appears in diffusion as in waves!) &mdash; Presentation: Rania on the [Liquid Drop Model of Fission - DRAFT](./special-projects/LiquidDropModelOfFission.nb.pdf)
 
 ### Week 13 &mdash; Diffusion of Pollutants in Three Dimensions &mdash; Schrodinger's Equation
 
