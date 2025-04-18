@@ -66,13 +66,13 @@ Each special project presentation should include a Mathematica notebook that has
 
 #### Lotke-Volterra Graphs for Two Species
 
-* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; [Diffusion in One Dimension](./worksheets/20-DiffusionInOneDimension.nb) and [Diffusion in Two Dimensions](./worksheets/21-DiffusionInTwoDimensions.nb) (some of the same mathematics appears in diffusion as in waves!) &mdash; Presentation: Rania on the [Liquid Drop Model of Fission - DRAFT](./special-projects/LiquidDropModelOfFission.nb.pdf)
+* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; [Diffusion in One Dimension](./worksheets/20-DiffusionInOneDimension.nb.pdf) and [Steady State Diffusion in Two Dimensions](./worksheets/21-DiffusionInTwoDimensions-SteadyState.nb.pdf) (some of the same mathematics appears in diffusion as in waves!) &mdash; Presentation: Rania on the [Liquid Drop Model of Fission - DRAFT](./special-projects/LiquidDropModelOfFission.nb.pdf)
 
 ### Week 13 &mdash; Diffusion of Pollutants in Three Dimensions &mdash; Schrodinger's Equation
 
 #### Plans for upcoming classes are still subject to adjustment, depending on the actual pace of the previous classes.
 
-* Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; Diffusion in three dimensions &mdash; Presentation: Walker and Hexi's presentation on an economics or high finance problem
+* Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; [Smokestack Diffusion in Three Dimensions](./worksheets/22-DiffusionInThreeDimensions-Smokestack.nb.pdf) &mdash; Presentation: Walker and Hexi's presentation on an economics or high finance problem
 * Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Presentation: Harper and Tahm's presentation on ballistics
 
 ### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
