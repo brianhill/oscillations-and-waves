@@ -52,7 +52,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 #### Special projects being presented in Weeks 12 and 13
 
 * Jeremy and Eli: [Lotke-Volterra Equations](./special-projects/LotkeVolterraEquations.nb.pdf)
-* Rania: [Liquid Drop Model of Fission - DRAFT](./special-projects/LiquidDropModelOfFission.nb.pdf)
+* Rania: Bohr and Wheeler's [Liquid Drop Model of Fission](./special-projects/LiquidDropModelOfFission.nb.pdf)
 * Walker and Hexi: An economics or high finance problem
 * Harper and Tahm: Ballistics calculations
 
@@ -66,7 +66,7 @@ Each special project presentation should include a Mathematica notebook that has
 
 #### Lotke-Volterra Graphs for Two Species
 
-* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; [Diffusion in One Dimension](./worksheets/20-DiffusionInOneDimension.nb.pdf) and [Steady State Diffusion in Two Dimensions](./worksheets/21-DiffusionInTwoDimensions-SteadyState.nb.pdf) (some of the same mathematics appears in diffusion as in waves!) &mdash; Presentation: Rania on the [Liquid Drop Model of Fission - DRAFT](./special-projects/LiquidDropModelOfFission.nb.pdf)
+* Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; [Diffusion in One Dimension](./worksheets/20-DiffusionInOneDimension.nb.pdf) and [Steady State Diffusion in Two Dimensions](./worksheets/21-DiffusionInTwoDimensions-SteadyState.nb.pdf) (some of the same mathematics appears in diffusion as in waves!) &mdash; Presentation: Rania on Bohr and Wheeler's [Liquid Drop Model of Fission](./special-projects/LiquidDropModelOfFission.nb.pdf)
 
 ### Week 13 &mdash; Diffusion of Pollutants in Three Dimensions &mdash; Schrodinger's Equation
 
