@@ -1,0 +1,136 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      4447,        126]
+NotebookOptionsPosition[      3527,        101]
+NotebookOutlinePosition[      3925,        117]
+CellTagsIndexPosition[      3882,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Diffusion in Three Dimensions \[LongDash] Monte Carlo", "Section",
+ CellChangeTimes->{{3.954061981786963*^9, 
+  3.954062009789789*^9}},ExpressionUUID->"b2e1e18c-ce02-4ce2-9992-\
+b98ecf3006dd"],
+
+Cell["\<\
+This is our twenty-second notebook. It is straightforward now that you have \
+seen one- and two-dimensional diffusion solved with NDSolve[] to take the \
+same approach in three dimensions.
+
+So we are going to do something completely different: Monte Carlo. In a way, \
+this takes us all the way back to the very first demonstration I did, which \
+was called \[OpenCurlyDoubleQuote]Heads or Tails.\[CloseCurlyDoubleQuote] \
+What better way to simulate random processes, than to let the computer make \
+random steps?\
+\>", "Text",
+ CellChangeTimes->{{3.9540620268525133`*^9, 3.954062112764989*^9}, {
+  3.954062179101565*^9, 
+  3.954062266928907*^9}},ExpressionUUID->"25bb6008-1092-445f-9e39-\
+d6d1040bd0ab"],
+
+Cell[CellGroupData[{
+
+Cell["A Swarm", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.954062323075589*^9, 
+  3.9540623266450768`*^9}},ExpressionUUID->"ba6c78d8-d93f-4aa1-b4de-\
+6656b5496969"],
+
+Cell["\<\
+We need a list that holds a swarm of particles. The particle properties could \
+get fancy. They could have mass, temperature, and composition. I am just \
+going to deal with swarms of points that have no properties. They only have a \
+position.\
+\>", "Text",
+ CellChangeTimes->{{3.9540623393336477`*^9, 
+  3.9540623971286573`*^9}},ExpressionUUID->"4a056e57-5d79-4e5d-9746-\
+4c87246d1f67"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"addToSwarm", "[", "s_", "]"}], ":=", 
+  RowBox[{"Append", "[", 
+   RowBox[{"s", ",", 
+    RowBox[{"{", "0.0", "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"NestList", "[", 
+  RowBox[{"addToSwarm", ",", 
+   RowBox[{"{", "}"}], ",", "3"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.954062414802788*^9, 3.954062453577976*^9}, {
+  3.954062507462055*^9, 3.9540625383372173`*^9}, {3.954062652769902*^9, 
+  3.954062740854322*^9}, {3.954062788465972*^9, 3.954062897534445*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"b426a2da-7812-4c29-9362-4a5d9bc19ccf"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"{", "0.`", "}"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", "0.`", "}"}], ",", 
+     RowBox[{"{", "0.`", "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", "0.`", "}"}], ",", 
+     RowBox[{"{", "0.`", "}"}], ",", 
+     RowBox[{"{", "0.`", "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9540625390836573`*^9, 3.9540625865849323`*^9, 
+  3.9540626917989693`*^9, 3.954062744225574*^9, 3.95406282126621*^9, 
+  3.954062898727351*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"e9b080a6-7c4b-421a-b5b6-a01fcdd65cad"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{380, Automatic}, {Automatic, 19}},
+FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8f536942-0b3f-411e-b59c-e6b736681f66"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 198, 3, 82, "Section",ExpressionUUID->"b2e1e18c-ce02-4ce2-9992-b98ecf3006dd"],
+Cell[777, 27, 715, 14, 233, "Text",ExpressionUUID->"25bb6008-1092-445f-9e39-d6d1040bd0ab"],
+Cell[CellGroupData[{
+Cell[1517, 45, 300, 5, 66, "Subsection",ExpressionUUID->"ba6c78d8-d93f-4aa1-b4de-6656b5496969"],
+Cell[1820, 52, 398, 8, 96, "Text",ExpressionUUID->"4a056e57-5d79-4e5d-9746-4c87246d1f67"],
+Cell[CellGroupData[{
+Cell[2243, 64, 588, 12, 62, "Input",ExpressionUUID->"b426a2da-7812-4c29-9362-4a5d9bc19ccf"],
+Cell[2834, 78, 653, 18, 41, "Output",ExpressionUUID->"e9b080a6-7c4b-421a-b5b6-a01fcdd65cad"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
