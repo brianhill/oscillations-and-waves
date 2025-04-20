@@ -53,10 +53,10 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 * Jeremy and Eli: [Lotke-Volterra Equations](./special-projects/LotkeVolterraEquations.nb.pdf)
 * Rania: Bohr and Wheeler's [Liquid Drop Model of Fission](./special-projects/LiquidDropModelOfFission.nb.pdf)
-* Walker and Hexi: An economics or high finance problem
+* Hexi and Walker: The [Black-Scholes](./special-projects/Black-Scholes.nb.pdf) formula
 * Harper and Tahm: Ballistics calculations
 
-Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how the code you are presenting solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and the solution technique. Email your notebook to the class before your presentation. Use notebook chapters, section, and subsections, and other typesetting features to make your presentation organized and professional-looking. It is fine to rely heavily on already-existing resources. The goal is a clear explanation of a problem and its solution, not to have an original solution.
+Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how the code you are presenting solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and the solution technique. Email your notebook to the class before your presentation. Use notebook chapters, section, and subsections, and other typesetting features to make your presentation organized and professional-looking. It is fine to rely heavily on already-existing resources. The goal is a clear explanation of a problem and its solution, not to achieve something original.
 
 ### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
 
@@ -70,10 +70,8 @@ Each special project presentation should include a Mathematica notebook that has
 
 ### Week 13 &mdash; Diffusion of Pollutants in Three Dimensions &mdash; Schrodinger's Equation
 
-#### Plans for upcoming classes are still subject to adjustment, depending on the actual pace of the previous classes.
-
-* Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; [Diffusion in Three Dimensions - Monte Carlo](./worksheets/22-DiffusionInThreeDimensions-MonteCarlo.nb.pdf) &mdash; Presentation: Walker and Hexi's presentation on an economics or high finance problem
-* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Presentation: Harper and Tahm's presentation on ballistics
+* Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; [Diffusion in Three Dimensions - Monte Carlo](./worksheets/22-DiffusionInThreeDimensions-MonteCarlo.nb.pdf) &mdash; Presentation: Hexi and Walker on the [Black-Scholes](./special-projects/Black-Scholes.nb.pdf) formula
+* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Quantum-mechanical particle confined to a box &mdash; Presentation: Harper and Tahm on ballistics
 
 ### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
 
