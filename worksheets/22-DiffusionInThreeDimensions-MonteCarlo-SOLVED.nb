@@ -1,0 +1,1627 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     65191,       1619]
+NotebookOptionsPosition[     62005,       1557]
+NotebookOutlinePosition[     62491,       1576]
+CellTagsIndexPosition[     62448,       1573]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Diffusion in Three Dimensions \[LongDash] Monte Carlo", "Section",
+ CellChangeTimes->{{3.954061981786963*^9, 
+  3.954062009789789*^9}},ExpressionUUID->"b2e1e18c-ce02-4ce2-9992-\
+b98ecf3006dd"],
+
+Cell[TextData[{
+ "This is our twenty-second notebook. It would be straightforward now that \
+you have seen one- and two-dimensional diffusion solved with NDSolve[] to \
+take the same approach in three dimensions. ",
+ StyleBox["So let\[CloseCurlyQuote]s not do that.",
+  FontSlant->"Italic"],
+ "\n\n",
+ StyleBox["Instead we are going to do something completely different: we will \
+use Monte Carlo methods.",
+  FontSlant->"Italic"],
+ " This takes us all the way back to the very first demonstration I did, \
+which was called \[OpenCurlyDoubleQuote]Heads or Tails.\
+\[CloseCurlyDoubleQuote] What better way to simulate random processes, than \
+to let the computer make random steps?\n\nAlso, I did a fair amount of the \
+two-dimensional case below. Your job is going to be to finish that which is \
+not a big deal, but then then upgrade the two-dimensional code to be \
+three-dimensional."
+}], "Text",
+ CellChangeTimes->{{3.9540620268525133`*^9, 3.954062112764989*^9}, {
+  3.954062179101565*^9, 3.954062266928907*^9}, {3.954258101663652*^9, 
+  3.954258102772616*^9}, {3.954266322441236*^9, 3.954266412861526*^9}, {
+  3.95427381889811*^9, 
+  3.954273832190015*^9}},ExpressionUUID->"25bb6008-1092-445f-9e39-\
+d6d1040bd0ab"],
+
+Cell[CellGroupData[{
+
+Cell["A Swarm", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.954062323075589*^9, 
+  3.9540623266450768`*^9}},ExpressionUUID->"ba6c78d8-d93f-4aa1-b4de-\
+6656b5496969"],
+
+Cell["\<\
+We need a list that holds a swarm of particles. The particle properties could \
+get fancy. They could have mass, temperature, and composition. We are just \
+starting out, so we are going to deal with swarms of particles that have no \
+properties. Each particle will only have a position. Let\[CloseCurlyQuote]s \
+make it easy to add a particle to the swarm:\
+\>", "Text",
+ CellChangeTimes->{{3.9540623393336477`*^9, 3.9540623971286573`*^9}, {
+  3.954255499173604*^9, 3.954255521052722*^9}, {3.954255609212263*^9, 
+  3.954255613891939*^9}, {3.95425596321017*^9, 
+  3.954255972840876*^9}},ExpressionUUID->"4a056e57-5d79-4e5d-9746-\
+4c87246d1f67"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"trailLength", "=", "250"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"addToSwarm", "[", 
+   RowBox[{"s_", ",", " ", "position_"}], "]"}], ":=", 
+  RowBox[{"Append", "[", 
+   RowBox[{"s", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{"position", ",", "trailLength"}], "]"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.954062414802788*^9, 3.954062453577976*^9}, {
+   3.954062507462055*^9, 3.9540625383372173`*^9}, {3.954062652769902*^9, 
+   3.954062740854322*^9}, {3.954062788465972*^9, 3.954062897534445*^9}, {
+   3.9542557681739388`*^9, 3.954255858883437*^9}, {3.954256475090253*^9, 
+   3.954256475357007*^9}, {3.9542673470413933`*^9, 3.9542673735623207`*^9}, {
+   3.9542687979820337`*^9, 3.9542687984417048`*^9}, {3.954271821791028*^9, 
+   3.9542718244864683`*^9}, 3.954272200237513*^9, {3.954272324213146*^9, 
+   3.954272324330677*^9}, 3.9542727299756517`*^9, 3.954272880834693*^9, {
+   3.954273575730237*^9, 3.954273576145693*^9}, 3.954334842832644*^9, 
+   3.9543351418435717`*^9, 3.954335546179247*^9, 3.954336665003583*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"b426a2da-7812-4c29-9362-4a5d9bc19ccf"],
+
+Cell["\<\
+As particles diffuse away from the source, they will eventually get \
+sufficiently far that we no longer care about their future movements. If we \
+don\[CloseCurlyQuote]t stop to prune such particles, our computers are going \
+to bog down computing the positions of an ever-enlarging swarm. Let\
+\[CloseCurlyQuote]s make it easy to prune particles from the swarm:\
+\>", "Text",
+ CellChangeTimes->{{3.9540623393336477`*^9, 3.9540623971286573`*^9}, {
+  3.954255499173604*^9, 3.954255521052722*^9}, {3.954255609212263*^9, 
+  3.954255613891939*^9}, {3.9542557470074387`*^9, 3.9542557651718493`*^9}, {
+  3.954255874769109*^9, 
+  3.95425604230368*^9}},ExpressionUUID->"05935b87-7a73-4f11-9f1c-\
+448704a41882"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"retainCondition", "[", "trail_", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"latestPosition", "=", 
+       RowBox[{"trail", "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "1"}], "<=", 
+       RowBox[{"latestPosition", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "<=", "5"}], "&&", 
+      RowBox[{
+       RowBox[{"-", "3"}], "<=", 
+       RowBox[{"latestPosition", "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "<=", "3"}], " ", "&&", 
+      RowBox[{"0", "<=", 
+       RowBox[{"latestPosition", "[", 
+        RowBox[{"[", "3", "]"}], "]"}], "<=", "2"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pruneSwarm", "[", 
+   RowBox[{"s_", ",", " ", "retainCondition_"}], "]"}], ":=", 
+  RowBox[{"Select", "[", 
+   RowBox[{"s", ",", "retainCondition"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.954062414802788*^9, 3.954062453577976*^9}, {
+  3.954062507462055*^9, 3.9540625383372173`*^9}, {3.954062652769902*^9, 
+  3.954062740854322*^9}, {3.954062788465972*^9, 3.954062897534445*^9}, {
+  3.954255689452446*^9, 3.95425571216057*^9}, {3.954256059500588*^9, 
+  3.954256129909994*^9}, {3.954259437019265*^9, 3.954259441565337*^9}, {
+  3.9542595452220583`*^9, 3.954259546690423*^9}, {3.95426744062698*^9, 
+  3.954267510083984*^9}, {3.9542688736287394`*^9, 3.9542688892155724`*^9}, {
+  3.9543365361365347`*^9, 3.954336556683096*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"0bd57761-7e64-421e-aa26-6e0453ba428c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Evolution Step for a Particle", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.954062323075589*^9, 3.9540623266450768`*^9}, {
+  3.954258035137347*^9, 3.954258036872592*^9}, {3.95426565998077*^9, 
+  3.954265662194878*^9}},ExpressionUUID->"58c77816-769e-43cf-8871-\
+d14f788e8658"],
+
+Cell["\<\
+Now we need an evolution step that we will repeatedly apply to each particle:\
+\
+\>", "Text",
+ CellChangeTimes->{{3.9540623393336477`*^9, 3.9540623971286573`*^9}, {
+  3.954255499173604*^9, 3.954255521052722*^9}, {3.954255609212263*^9, 
+  3.954255613891939*^9}, {3.9542557470074387`*^9, 3.9542557651718493`*^9}, {
+  3.954255874769109*^9, 3.95425604230368*^9}, {3.9542561525783043`*^9, 
+  3.95425616952474*^9}, {3.954256200276318*^9, 3.954256200605348*^9}, {
+  3.954256397369169*^9, 3.954256414826252*^9}, {3.954258050901239*^9, 
+  3.954258056464099*^9}},ExpressionUUID->"eba253e6-b750-45ff-a4d2-\
+5b925743d025"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"windComponentX", "=", "0.002"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"windComponentY", "=", "0.00"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"windComponentZ", "=", "0.00"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"steadyWind", "=", 
+    RowBox[{"{", 
+     RowBox[{"windComponentX", ",", "windComponentY", ",", "windComponentZ"}],
+      "}"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"horizontalSigma", "=", "0.005"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"verticalSigma", " ", "=", " ", "0.010"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"meanRise", "=", "0.0005"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"horizontalMixingGaussian", "=", 
+   RowBox[{"NormalDistribution", "[", 
+    RowBox[{"0", ",", "horizontalSigma"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"verticalMixingGaussian", "=", 
+   RowBox[{"NormalDistribution", "[", 
+    RowBox[{"meanRise", ",", "verticalSigma"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"randomMotion", ":=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"RandomVariate", "[", "horizontalMixingGaussian", "]"}], ",", 
+      RowBox[{"RandomVariate", "[", "horizontalMixingGaussian", "]"}], ",", 
+      RowBox[{"RandomVariate", "[", "verticalMixingGaussian", "]"}]}], 
+     "}"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"particleStep", "[", "particleTrail_", "]"}], ":=", 
+  RowBox[{"(", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"previousPosition", "=", 
+     RowBox[{"particleTrail", "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"newParticleTrail", "=", 
+     RowBox[{"Drop", "[", 
+      RowBox[{"particleTrail", ",", 
+       RowBox[{"-", "1"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"newPosition", "=", 
+     RowBox[{"previousPosition", "+", "steadyWind", "+", "randomMotion"}]}], ";",
+     "\[IndentingNewLine]", 
+    RowBox[{"newParticleTrail", "=", 
+     RowBox[{"Prepend", "[", 
+      RowBox[{"newParticleTrail", ",", "newPosition"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", "newParticleTrail"}], "\[IndentingNewLine]", 
+   ")"}]}]}], "Input",
+ CellChangeTimes->{{3.954265750195849*^9, 3.954265818232456*^9}, {
+   3.9542658997020607`*^9, 3.954265900083108*^9}, {3.954265932776349*^9, 
+   3.954265992179986*^9}, {3.9542661052683496`*^9, 3.954266107916522*^9}, {
+   3.954266156404551*^9, 3.954266232674803*^9}, {3.954266417378003*^9, 
+   3.954266424889875*^9}, {3.954267547147017*^9, 3.954267551060623*^9}, {
+   3.954267588461711*^9, 3.954267666685416*^9}, 3.954267911752541*^9, {
+   3.954268001901164*^9, 3.9542680034736433`*^9}, {3.954268125173153*^9, 
+   3.954268127121286*^9}, {3.9542681597959013`*^9, 3.9542682096922398`*^9}, {
+   3.954268251653067*^9, 3.954268258841297*^9}, {3.9542682915377417`*^9, 
+   3.9542683915181437`*^9}, {3.954270114661942*^9, 3.954270151371855*^9}, 
+   3.9542708540676823`*^9, {3.954273377677053*^9, 3.954273377762389*^9}, {
+   3.954273413544982*^9, 3.954273414908078*^9}, {3.954273705962843*^9, 
+   3.954273755401557*^9}, {3.954334713380869*^9, 3.954334721635289*^9}, {
+   3.954334753660585*^9, 3.954334765352853*^9}, {3.954334899819401*^9, 
+   3.9543349506980143`*^9}, {3.95433505482798*^9, 3.95433507595364*^9}, {
+   3.954335641083476*^9, 3.954335741116701*^9}, {3.954335797481319*^9, 
+   3.954335846377419*^9}, {3.954336745903406*^9, 3.954336746050349*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"bce2d27f-2bc5-4f9c-8a93-a28b3baaae45"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"particleStep", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0.0", ",", "0.0", ",", "0.0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1.0", ",", "1.0", ",", "1.0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"2.0", ",", "2.0", ",", "2.0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"3.0", ",", "3.0", ",", "3.0"}], "}"}]}], "}"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.95433470952949*^9, 3.954334709693349*^9}, {
+  3.954334954774067*^9, 3.954334986843515*^9}, {3.954335879799213*^9, 
+  3.954335892834815*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"973e201b-c8bb-4d7f-8fac-d5db8664acea"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.009848775732029257`"}], ",", 
+     RowBox[{"-", "0.0023798903393074528`"}], ",", 
+     RowBox[{"-", "0.0011470198321822344`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.`", ",", "0.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1.`", ",", "1.`", ",", "1.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2.`", ",", "2.`", ",", "2.`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.9543350116167927`*^9, {3.954335064411211*^9, 3.954335078882408*^9}, {
+   3.954335126111206*^9, 3.9543351444456577`*^9}, 3.954335547783862*^9, 
+   3.954335893270563*^9, {3.954336137391077*^9, 3.9543361646180353`*^9}, 
+   3.954336219041428*^9, {3.954336276422995*^9, 3.9543362992792683`*^9}, 
+   3.9543364422169027`*^9, 3.954336629419396*^9, 3.954336666912016*^9, 
+   3.954336748070788*^9, 3.954345579527121*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"de245a2b-85e8-452a-a8f3-c75ba9898c97"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rendering the Swarm", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.954062323075589*^9, 3.9540623266450768`*^9}, {
+  3.954256488527176*^9, 
+  3.954256490955098*^9}},ExpressionUUID->"69584389-4175-491c-af4a-\
+a0156e9fa296"],
+
+Cell["\<\
+Anticipating that we will want to go to three dimensions by the end of this \
+notebook, even though at the moment our swarm is two-dimensional, let\
+\[CloseCurlyQuote]s render it in 3-D so that we don\[CloseCurlyQuote]t have \
+as much rewriting to do later:\
+\>", "Text",
+ CellChangeTimes->{{3.9540623393336477`*^9, 3.9540623971286573`*^9}, {
+  3.954255499173604*^9, 3.954255521052722*^9}, {3.954255609212263*^9, 
+  3.954255613891939*^9}, {3.95425596321017*^9, 3.954255972840876*^9}, {
+  3.954256505596354*^9, 3.954256588906437*^9}, {3.954257296036458*^9, 
+  3.954257297475655*^9}, {3.9542662803011627`*^9, 
+  3.9542662882664423`*^9}},ExpressionUUID->"6a8a5d97-6601-4cb4-906f-\
+0cbd3e3f2655"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"renderSwarm", "[", "s_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"smokestack", "=", 
+       RowBox[{"Cylinder", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "0.5"}], "}"}]}], "}"}], ",", 
+         "0.02"}], "]"}]}], ",", 
+      RowBox[{"points", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"PointSize", "[", "0.001", "]"}], ",", 
+             RowBox[{"Opacity", "[", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"trailLength", "-", "i", "+", "1"}], ")"}], "/", 
+               "trailLength"}], "]"}], ",", 
+             RowBox[{"Point", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", 
+                RowBox[{
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], ",", 
+                RowBox[{
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "[", 
+                 RowBox[{"[", "3", "]"}], "]"}]}], "}"}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "1", ",", "trailLength"}], "}"}]}], "]"}], 
+         "&"}], "/@", "s"}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Graphics3D", "[", 
+     RowBox[{
+      RowBox[{"Flatten", "[", 
+       RowBox[{"{", 
+        RowBox[{"smokestack", ",", "points"}], "}"}], "]"}], ",", 
+      RowBox[{"PlotRange", "->", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1"}], ",", "5"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "2"}], "}"}]}], "}"}]}], ",", 
+      RowBox[{"BoxRatios", "->", 
+       RowBox[{"{", 
+        RowBox[{"6", ",", "6", ",", "2"}], "}"}]}]}], "]"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQLXxUKUq17K3jn7TrYHqSp2gbiOZQWj4ZRAc1n5kF
+or8rPALT8l9FVoLoM8bb14HomitiW0H0Sb1np0D034z2iyBaoeL0QxC94uQV
+ZTUgrSf5FUxrzX+1QQtIq/FP3Qii+4xaFukA6bubfy8H0bY8yzeDaJvrF7eB
+6OXCohq6QNpj5lwdEL2A96ohiObrNzEG0VtO5duBaJOzmx1B9NZLrd4geley
+vw+IXje3PBBE7/zTB6ZrvvyKA9ExhTviQfSv8xnqPkDa0qxKD0SLbLhrDKIl
+vDhNQHRLv40FiN6fqGENonft0XUF0UaZBmAaACSdmCk=
+  "],
+ CellLabel->"In[17]:=",ExpressionUUID->"46d54f85-5754-45a1-bc24-84f8ba767f57"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{
+     "Test", " ", "our", " ", "rendering", " ", "code", " ", "with", " ", "a",
+       " ", "single"}], "-", 
+     RowBox[{"particle", " ", 
+      RowBox[{"swarm", ":"}]}]}], ")"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"renderSwarm", "[", 
+   RowBox[{"{", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", " ", 
+       RowBox[{
+        RowBox[{"0.005", "i"}], ",", 
+        RowBox[{"0.002", "i"}], ",", 
+        RowBox[{"0.5", "+", 
+         RowBox[{"0.005", "i"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "0", ",", 
+        RowBox[{"trailLength", "-", "1"}]}], "}"}]}], "]"}], "}"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.954258214723247*^9, 3.954258256981094*^9}, {
+   3.954267724710512*^9, 3.9542677790061483`*^9}, {3.954269220697234*^9, 
+   3.954269239502426*^9}, {3.954271583209208*^9, 3.95427161716964*^9}, {
+   3.954271843198279*^9, 3.954271917926168*^9}, {3.954272054507687*^9, 
+   3.954272064766344*^9}, 3.954272294236333*^9, {3.954272386915264*^9, 
+   3.95427240649146*^9}, {3.95427270203049*^9, 3.954272703811881*^9}, {
+   3.954336258555537*^9, 3.9543362600031033`*^9}, {3.95433631551728*^9, 
+   3.954336321610571*^9}, 3.954336370152919*^9},
+ CellLabel->"In[18]:=",ExpressionUUID->"28689f53-7441-45aa-8d54-f2fb15c760fa"],
+
+Cell[BoxData[
+ Graphics3DBox[{CylinderBox[{{0, 0, 0}, {0, 0, 0.5}}, 0.02], 
+   {PointSize[0.001], Opacity[1], Point3DBox[{0., 0., 0.5}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[249, 250], 0.996]], Point3DBox[{0.005, 0.002, 0.505}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[124, 125], 0.992]], Point3DBox[{0.01, 0.004, 0.51}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[247, 250], 0.988]], Point3DBox[{0.015, 0.006, 0.515}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[123, 125], 0.984]], Point3DBox[{0.02, 0.008, 0.52}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[49, 50], 0.98]], Point3DBox[{0.025, 0.01, 0.525}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[122, 125], 0.976]], Point3DBox[{0.03, 0.012, 0.53}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[243, 250], 0.972]], Point3DBox[{0.035, 0.014, 0.535}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[121, 125], 0.968]], Point3DBox[{0.04, 0.016, 0.54}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[241, 250], 0.964]], 
+    Point3DBox[{0.045, 0.018000000000000002`, 0.545}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[24, 25], 0.96]], Point3DBox[{0.05, 0.02, 0.55}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[239, 250], 0.956]], Point3DBox[{0.055, 0.022, 0.555}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[119, 125], 0.952]], Point3DBox[{0.06, 0.024, 0.56}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[237, 250], 0.948]], 
+    Point3DBox[{0.065, 0.026000000000000002`, 0.565}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[118, 125], 0.944]], 
+    Point3DBox[{0.07, 0.028, 0.5700000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[47, 50], 0.94]], Point3DBox[{0.075, 0.03, 0.575}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[117, 125], 0.936]], Point3DBox[{0.08, 0.032, 0.58}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[233, 250], 0.932]], Point3DBox[{0.085, 0.034, 0.585}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[116, 125], 0.928]], 
+    Point3DBox[{0.09, 0.036000000000000004`, 0.59}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[231, 250], 0.924]], Point3DBox[{0.095, 0.038, 0.595}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[23, 25], 0.92]], Point3DBox[{0.1, 0.04, 0.6}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[229, 250], 0.916]], Point3DBox[{0.105, 0.042, 0.605}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[114, 125], 0.912]], Point3DBox[{0.11, 0.044, 0.61}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[227, 250], 0.908]], Point3DBox[{0.115, 0.046, 0.615}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[113, 125], 0.904]], Point3DBox[{0.12, 0.048, 0.62}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[9, 10], 0.9]], Point3DBox[{0.125, 0.05, 0.625}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[112, 125], 0.896]], 
+    Point3DBox[{0.13, 0.052000000000000005`, 0.63}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[223, 250], 0.892]], Point3DBox[{0.135, 0.054, 0.635}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[111, 125], 0.888]], Point3DBox[{0.14, 0.056, 0.64}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[221, 250], 0.884]], Point3DBox[{0.145, 0.058, 0.645}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[22, 25], 0.88]], Point3DBox[{0.15, 0.06, 0.65}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[219, 250], 0.876]], Point3DBox[{0.155, 0.062, 0.655}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[109, 125], 0.872]], Point3DBox[{0.16, 0.064, 0.66}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[217, 250], 0.868]], Point3DBox[{0.165, 0.066, 0.665}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[108, 125], 0.864]], Point3DBox[{0.17, 0.068, 0.67}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[43, 50], 0.86]], 
+    Point3DBox[{0.17500000000000002`, 0.07, 0.675}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[107, 125], 0.856]], 
+    Point3DBox[{0.18, 0.07200000000000001, 0.6799999999999999}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[213, 250], 0.852]], Point3DBox[{0.185, 0.074, 0.685}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[106, 125], 0.848]], Point3DBox[{0.19, 0.076, 0.69}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[211, 250], 0.844]], 
+    Point3DBox[{0.195, 0.078, 0.6950000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[21, 25], 0.84]], Point3DBox[{0.2, 0.08, 0.7}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[209, 250], 0.836]], 
+    Point3DBox[{0.20500000000000002`, 0.082, 0.7050000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[104, 125], 0.832]], Point3DBox[{0.21, 0.084, 0.71}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[207, 250], 0.828]], 
+    Point3DBox[{0.215, 0.08600000000000001, 0.715}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[103, 125], 0.824]], Point3DBox[{0.22, 0.088, 0.72}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[41, 50], 0.82]], Point3DBox[{0.225, 0.09, 0.725}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[102, 125], 0.816]], Point3DBox[{0.23, 0.092, 0.73}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[203, 250], 0.812]], 
+    Point3DBox[{0.23500000000000001`, 0.094, 0.735}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[101, 125], 0.808]], Point3DBox[{0.24, 0.096, 0.74}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[201, 250], 0.804]], Point3DBox[{0.245, 0.098, 0.745}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[4, 5], 0.8]], Point3DBox[{0.25, 0.1, 0.75}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[199, 250], 0.796]], 
+    Point3DBox[{0.255, 0.10200000000000001`, 0.755}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[99, 125], 0.792]], 
+    Point3DBox[{0.26, 0.10400000000000001`, 0.76}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[197, 250], 0.788]], Point3DBox[{0.265, 0.106, 0.765}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[98, 125], 0.784]], Point3DBox[{0.27, 0.108, 0.77}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[39, 50], 0.78]], Point3DBox[{0.275, 0.11, 0.775}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[97, 125], 0.776]], Point3DBox[{0.28, 0.112, 0.78}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[193, 250], 0.772]], 
+    Point3DBox[{0.28500000000000003`, 0.114, 0.785}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[96, 125], 0.768]], Point3DBox[{0.29, 0.116, 0.79}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[191, 250], 0.764]], 
+    Point3DBox[{0.295, 0.11800000000000001`, 0.7949999999999999}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[19, 25], 0.76]], Point3DBox[{0.3, 0.12, 0.8}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[189, 250], 0.756]], 
+    Point3DBox[{0.305, 0.122, 0.8049999999999999}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[94, 125], 0.752]], Point3DBox[{0.31, 0.124, 0.81}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[187, 250], 0.748]], Point3DBox[{0.315, 0.126, 0.815}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[93, 125], 0.744]], 
+    Point3DBox[{0.32, 0.128, 0.8200000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[37, 50], 0.74]], Point3DBox[{0.325, 0.13, 0.825}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[92, 125], 0.736]], 
+    Point3DBox[{0.33, 0.132, 0.8300000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[183, 250], 0.732]], Point3DBox[{0.335, 0.134, 0.835}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[91, 125], 0.728]], 
+    Point3DBox[{0.34, 0.136, 0.8400000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[181, 250], 0.724]], 
+    Point3DBox[{0.34500000000000003`, 0.138, 0.845}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[18, 25], 0.72]], 
+    Point3DBox[{0.35000000000000003`, 0.14, 0.8500000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[179, 250], 0.716]], 
+    Point3DBox[{0.355, 0.14200000000000002`, 0.855}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[89, 125], 0.712]], 
+    Point3DBox[{0.36, 0.14400000000000002`, 0.86}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[177, 250], 0.708]], Point3DBox[{0.365, 0.146, 0.865}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[88, 125], 0.704]], Point3DBox[{0.37, 0.148, 0.87}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[7, 10], 0.7]], Point3DBox[{0.375, 0.15, 0.875}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[87, 125], 0.696]], Point3DBox[{0.38, 0.152, 0.88}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[173, 250], 0.692]], Point3DBox[{0.385, 0.154, 0.885}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[86, 125], 0.688]], Point3DBox[{0.39, 0.156, 0.89}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[171, 250], 0.684]], Point3DBox[{0.395, 0.158, 0.895}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[17, 25], 0.68]], Point3DBox[{0.4, 0.16, 0.9}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[169, 250], 0.676]], Point3DBox[{0.405, 0.162, 0.905}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[84, 125], 0.672]], 
+    Point3DBox[{0.41000000000000003`, 0.164, 0.91}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[167, 250], 0.668]], 
+    Point3DBox[{0.41500000000000004`, 0.166, 0.915}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[83, 125], 0.664]], 
+    Point3DBox[{0.42, 0.168, 0.9199999999999999}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[33, 50], 0.66]], Point3DBox[{0.425, 0.17, 0.925}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[82, 125], 0.656]], 
+    Point3DBox[{0.43, 0.17200000000000001`, 0.9299999999999999}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[163, 250], 0.652]], 
+    Point3DBox[{0.435, 0.17400000000000002`, 0.935}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[81, 125], 0.648]], Point3DBox[{0.44, 0.176, 0.94}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[161, 250], 0.644]], 
+    Point3DBox[{0.445, 0.178, 0.9450000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[16, 25], 0.64]], Point3DBox[{0.45, 0.18, 0.95}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[159, 250], 0.636]], 
+    Point3DBox[{0.455, 0.182, 0.9550000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[79, 125], 0.632]], Point3DBox[{0.46, 0.184, 0.96}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[157, 250], 0.628]], 
+    Point3DBox[{0.465, 0.186, 0.9650000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[78, 125], 0.624]], 
+    Point3DBox[{0.47000000000000003`, 0.188, 0.97}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[31, 50], 0.62]], 
+    Point3DBox[{0.47500000000000003`, 0.19, 0.9750000000000001}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[77, 125], 0.616]], Point3DBox[{0.48, 0.192, 0.98}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[153, 250], 0.612]], Point3DBox[{0.485, 0.194, 0.985}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[76, 125], 0.608]], Point3DBox[{0.49, 0.196, 0.99}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[151, 250], 0.604]], Point3DBox[{0.495, 0.198, 0.995}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[3, 5], 0.6]], Point3DBox[{0.5, 0.2, 1.}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[149, 250], 0.596]], Point3DBox[{0.505, 0.202, 1.005}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[74, 125], 0.592]], 
+    Point3DBox[{0.51, 0.20400000000000001`, 1.01}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[147, 250], 0.588]], 
+    Point3DBox[{0.515, 0.20600000000000002`, 1.0150000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[73, 125], 0.584]], 
+    Point3DBox[{0.52, 0.20800000000000002`, 1.02}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[29, 50], 0.58]], Point3DBox[{0.525, 0.21, 1.025}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[72, 125], 0.576]], Point3DBox[{0.53, 0.212, 1.03}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[143, 250], 0.572]], 
+    Point3DBox[{0.535, 0.214, 1.0350000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[71, 125], 0.568]], Point3DBox[{0.54, 0.216, 1.04}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[141, 250], 0.564]], Point3DBox[{0.545, 0.218, 1.045}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[14, 25], 0.56]], Point3DBox[{0.55, 0.22, 1.05}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[139, 250], 0.556]], 
+    Point3DBox[{0.555, 0.222, 1.0550000000000002`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[69, 125], 0.552]], Point3DBox[{0.56, 0.224, 1.06}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[137, 250], 0.548]], 
+    Point3DBox[{0.5650000000000001, 0.226, 1.065}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[68, 125], 0.544]], 
+    Point3DBox[{0.5700000000000001, 0.228, 1.07}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[27, 50], 0.54]], 
+    Point3DBox[{0.5750000000000001, 0.23, 1.0750000000000002`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[67, 125], 0.536]], Point3DBox[{0.58, 0.232, 1.08}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[133, 250], 0.532]], Point3DBox[{0.585, 0.234, 1.085}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[66, 125], 0.528]], 
+    Point3DBox[{0.59, 0.23600000000000002`, 1.0899999999999999`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[131, 250], 0.524]], 
+    Point3DBox[{0.595, 0.23800000000000002`, 1.095}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[13, 25], 0.52]], Point3DBox[{0.6, 0.24, 1.1}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[129, 250], 0.516]], Point3DBox[{0.605, 0.242, 1.105}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[64, 125], 0.512]], 
+    Point3DBox[{0.61, 0.244, 1.1099999999999999`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[127, 250], 0.508]], Point3DBox[{0.615, 0.246, 1.115}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[63, 125], 0.504]], Point3DBox[{0.62, 0.248, 1.12}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[1, 2], 0.5]], Point3DBox[{0.625, 0.25, 1.125}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[62, 125], 0.496]], Point3DBox[{0.63, 0.252, 1.13}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[123, 250], 0.492]], Point3DBox[{0.635, 0.254, 1.135}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[61, 125], 0.488]], 
+    Point3DBox[{0.64, 0.256, 1.1400000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[121, 250], 0.484]], Point3DBox[{0.645, 0.258, 1.145}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[12, 25], 0.48]], Point3DBox[{0.65, 0.26, 1.15}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[119, 250], 0.476]], Point3DBox[{0.655, 0.262, 1.155}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[59, 125], 0.472]], 
+    Point3DBox[{0.66, 0.264, 1.1600000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[117, 250], 0.468]], Point3DBox[{0.665, 0.266, 1.165}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[58, 125], 0.464]], Point3DBox[{0.67, 0.268, 1.17}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[23, 50], 0.46]], Point3DBox[{0.675, 0.27, 1.175}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[57, 125], 0.456]], 
+    Point3DBox[{0.68, 0.272, 1.1800000000000002`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[113, 250], 0.452]], Point3DBox[{0.685, 0.274, 1.185}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[56, 125], 0.448]], 
+    Point3DBox[{0.6900000000000001, 0.276, 1.19}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[111, 250], 0.444]], 
+    Point3DBox[{0.6950000000000001, 0.278, 1.195}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[11, 25], 0.44]], 
+    Point3DBox[{0.7000000000000001, 0.28, 1.2000000000000002`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[109, 250], 0.436]], 
+    Point3DBox[{0.705, 0.28200000000000003`, 1.205}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[54, 125], 0.432]], 
+    Point3DBox[{0.71, 0.28400000000000003`, 1.21}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[107, 250], 0.428]], 
+    Point3DBox[{0.715, 0.28600000000000003`, 1.2149999999999999`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[53, 125], 0.424]], 
+    Point3DBox[{0.72, 0.28800000000000003`, 1.22}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[21, 50], 0.42]], Point3DBox[{0.725, 0.29, 1.225}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[52, 125], 0.416]], Point3DBox[{0.73, 0.292, 1.23}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[103, 250], 0.412]], 
+    Point3DBox[{0.735, 0.294, 1.2349999999999999`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[51, 125], 0.408]], Point3DBox[{0.74, 0.296, 1.24}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[101, 250], 0.404]], Point3DBox[{0.745, 0.298, 1.245}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[2, 5], 0.4]], Point3DBox[{0.75, 0.3, 1.25}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[99, 250], 0.396]], Point3DBox[{0.755, 0.302, 1.255}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[49, 125], 0.392]], Point3DBox[{0.76, 0.304, 1.26}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[97, 250], 0.388]], 
+    Point3DBox[{0.765, 0.306, 1.2650000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[48, 125], 0.384]], Point3DBox[{0.77, 0.308, 1.27}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[19, 50], 0.38]], Point3DBox[{0.775, 0.31, 1.275}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[47, 125], 0.376]], Point3DBox[{0.78, 0.312, 1.28}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[93, 250], 0.372]], 
+    Point3DBox[{0.785, 0.314, 1.2850000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[46, 125], 0.368]], Point3DBox[{0.79, 0.316, 1.29}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[91, 250], 0.364]], Point3DBox[{0.795, 0.318, 1.295}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[9, 25], 0.36]], Point3DBox[{0.8, 0.32, 1.3}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[89, 250], 0.356]], 
+    Point3DBox[{0.805, 0.322, 1.3050000000000002`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[44, 125], 0.352]], Point3DBox[{0.81, 0.324, 1.31}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[87, 250], 0.348]], 
+    Point3DBox[{0.8150000000000001, 0.326, 1.315}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[43, 125], 0.344]], 
+    Point3DBox[{0.8200000000000001, 0.328, 1.32}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[17, 50], 0.34]], 
+    Point3DBox[{0.8250000000000001, 0.33, 1.3250000000000002`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[42, 125], 0.336]], 
+    Point3DBox[{0.8300000000000001, 0.332, 1.33}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[83, 250], 0.332]], Point3DBox[{0.835, 0.334, 1.335}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[41, 125], 0.328]], 
+    Point3DBox[{0.84, 0.336, 1.3399999999999999`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[81, 250], 0.324]], Point3DBox[{0.845, 0.338, 1.345}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[8, 25], 0.32]], Point3DBox[{0.85, 0.34, 1.35}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[79, 250], 0.316]], Point3DBox[{0.855, 0.342, 1.355}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[39, 125], 0.312]], 
+    Point3DBox[{0.86, 0.34400000000000003`, 1.3599999999999999`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[77, 250], 0.308]], 
+    Point3DBox[{0.865, 0.34600000000000003`, 1.365}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[38, 125], 0.304]], 
+    Point3DBox[{0.87, 0.34800000000000003`, 1.37}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[3, 10], 0.3]], 
+    Point3DBox[{0.875, 0.35000000000000003`, 1.375}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[37, 125], 0.296]], Point3DBox[{0.88, 0.352, 1.38}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[73, 250], 0.292]], Point3DBox[{0.885, 0.354, 1.385}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[36, 125], 0.288]], 
+    Point3DBox[{0.89, 0.356, 1.3900000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[71, 250], 0.284]], Point3DBox[{0.895, 0.358, 1.395}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[7, 25], 0.28]], Point3DBox[{0.9, 0.36, 1.4}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[69, 250], 0.276]], Point3DBox[{0.905, 0.362, 1.405}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[34, 125], 0.272]], 
+    Point3DBox[{0.91, 0.364, 1.4100000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[67, 250], 0.268]], Point3DBox[{0.915, 0.366, 1.415}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[33, 125], 0.264]], Point3DBox[{0.92, 0.368, 1.42}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[13, 50], 0.26]], Point3DBox[{0.925, 0.37, 1.425}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[32, 125], 0.256]], 
+    Point3DBox[{0.93, 0.372, 1.4300000000000002`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[63, 250], 0.252]], Point3DBox[{0.935, 0.374, 1.435}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[31, 125], 0.248]], 
+    Point3DBox[{0.9400000000000001, 0.376, 1.44}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[61, 250], 0.244]], 
+    Point3DBox[{0.9450000000000001, 0.378, 1.445}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[6, 25], 0.24]], 
+    Point3DBox[{0.9500000000000001, 0.38, 1.4500000000000002`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[59, 250], 0.236]], 
+    Point3DBox[{0.9550000000000001, 0.382, 1.455}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[29, 125], 0.232]], Point3DBox[{0.96, 0.384, 1.46}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[57, 250], 0.228]], 
+    Point3DBox[{0.965, 0.386, 1.4649999999999999`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[28, 125], 0.224]], Point3DBox[{0.97, 0.388, 1.47}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[11, 50], 0.22]], Point3DBox[{0.975, 0.39, 1.475}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[27, 125], 0.216]], Point3DBox[{0.98, 0.392, 1.48}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[53, 250], 0.212]], 
+    Point3DBox[{0.985, 0.394, 1.4849999999999999`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[26, 125], 0.208]], Point3DBox[{0.99, 0.396, 1.49}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[51, 250], 0.204]], Point3DBox[{0.995, 0.398, 1.495}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[1, 5], 0.2]], Point3DBox[{1., 0.4, 1.5}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[49, 250], 0.196]], 
+    Point3DBox[{1.0050000000000001`, 0.402, 1.5050000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[24, 125], 0.192]], Point3DBox[{1.01, 0.404, 1.51}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[47, 250], 0.188]], 
+    Point3DBox[{1.0150000000000001`, 0.406, 1.5150000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[23, 125], 0.184]], 
+    Point3DBox[{1.02, 0.40800000000000003`, 1.52}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[9, 50], 0.18]], 
+    Point3DBox[{1.025, 0.41000000000000003`, 1.525}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[22, 125], 0.176]], 
+    Point3DBox[{1.03, 0.41200000000000003`, 1.53}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[43, 250], 0.172]], 
+    Point3DBox[{1.035, 0.41400000000000003`, 1.535}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[21, 125], 0.168]], 
+    Point3DBox[{1.04, 0.41600000000000004`, 1.54}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[41, 250], 0.164]], Point3DBox[{1.045, 0.418, 1.545}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[4, 25], 0.16]], Point3DBox[{1.05, 0.42, 1.55}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[39, 250], 0.156]], Point3DBox[{1.055, 0.422, 1.555}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[19, 125], 0.152]], Point3DBox[{1.06, 0.424, 1.56}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[37, 250], 0.148]], Point3DBox[{1.065, 0.426, 1.565}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[18, 125], 0.144]], Point3DBox[{1.07, 0.428, 1.57}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[7, 50], 0.14]], Point3DBox[{1.075, 0.43, 1.575}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[17, 125], 0.136]], Point3DBox[{1.08, 0.432, 1.58}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[33, 250], 0.132]], Point3DBox[{1.085, 0.434, 1.585}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[16, 125], 0.128]], Point3DBox[{1.09, 0.436, 1.59}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[31, 250], 0.124]], Point3DBox[{1.095, 0.438, 1.595}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[3, 25], 0.12]], Point3DBox[{1.1, 0.44, 1.6}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[29, 250], 0.116]], Point3DBox[{1.105, 0.442, 1.605}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[14, 125], 0.112]], Point3DBox[{1.11, 0.444, 1.61}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[27, 250], 0.108]], Point3DBox[{1.115, 0.446, 1.615}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[13, 125], 0.104]], Point3DBox[{1.12, 0.448, 1.62}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[1, 10], 0.1]], Point3DBox[{1.125, 0.45, 1.625}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[12, 125], 0.096]], 
+    Point3DBox[{1.1300000000000001`, 0.452, 1.6300000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[23, 250], 0.092]], Point3DBox[{1.135, 0.454, 1.635}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[11, 125], 0.088]], 
+    Point3DBox[{1.1400000000000001`, 0.456, 1.6400000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[21, 250], 0.084]], Point3DBox[{1.145, 0.458, 1.645}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[2, 25], 0.08]], 
+    Point3DBox[{1.1500000000000001`, 0.46, 1.6500000000000001`}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[19, 250], 0.076]], Point3DBox[{1.155, 0.462, 1.655}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[9, 125], 0.072]], Point3DBox[{1.16, 0.464, 1.66}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[17, 250], 0.068]], Point3DBox[{1.165, 0.466, 1.665}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[8, 125], 0.064]], Point3DBox[{1.17, 0.468, 1.67}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[3, 50], 0.06]], 
+    Point3DBox[{1.175, 0.47000000000000003`, 1.675}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[7, 125], 0.056]], 
+    Point3DBox[{1.18, 0.47200000000000003`, 1.68}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[13, 250], 0.052]], 
+    Point3DBox[{1.185, 0.47400000000000003`, 1.685}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[6, 125], 0.048]], 
+    Point3DBox[{1.19, 0.47600000000000003`, 1.69}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[11, 250], 0.044]], 
+    Point3DBox[{1.195, 0.47800000000000004`, 1.695}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[1, 25], 0.04]], Point3DBox[{1.2, 0.48, 1.7}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[9, 250], 0.036]], Point3DBox[{1.205, 0.482, 1.705}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[4, 125], 0.032]], Point3DBox[{1.21, 0.484, 1.71}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[7, 250], 0.028]], Point3DBox[{1.215, 0.486, 1.715}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[3, 125], 0.024]], Point3DBox[{1.22, 0.488, 1.72}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[1, 50], 0.02]], Point3DBox[{1.225, 0.49, 1.725}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[2, 125], 0.016]], Point3DBox[{1.23, 0.492, 1.73}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[3, 250], 0.012]], Point3DBox[{1.235, 0.494, 1.735}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[1, 125], 0.008]], Point3DBox[{1.24, 0.496, 1.74}]}, 
+   {PointSize[0.001], Opacity[
+     NCache[
+      Rational[1, 250], 0.004]], Point3DBox[{1.245, 0.498, 1.745}]}},
+  BoxRatios->{6, 6, 2},
+  ImageSize->{507.354815174624, 153.6836638521622},
+  ImageSizeRaw->Automatic,
+  PlotRange->{{-1, 5}, {-3, 3}, {0, 2}},
+  ViewPoint->{1.6808784857061563`, -2.936159196732355, -0.06013890366639018},
+  ViewVertical->{0.11266998616188434`, -0.21874582671474005`, 
+   0.9692552488963707}]], "Output",
+ CellChangeTimes->{
+  3.9542720688500338`*^9, {3.954272179189577*^9, 3.9542722018451233`*^9}, {
+   3.9542722958146048`*^9, 3.954272325528508*^9}, {3.954272367416874*^9, 
+   3.954272407741576*^9}, 3.9542726181060953`*^9, 3.954272673064324*^9, {
+   3.954272704178739*^9, 3.954272757016165*^9}, {3.954272869205975*^9, 
+   3.954272909880334*^9}, 3.9542729900993547`*^9, 3.954273023209291*^9, {
+   3.954273085679277*^9, 3.954273108819558*^9}, 3.95427314908307*^9, 
+   3.954273179630774*^9, 3.95427337944744*^9, 3.954273417227848*^9, 
+   3.9542735779403753`*^9, 3.9542736301180277`*^9, 3.954273990124337*^9, {
+   3.954335126124753*^9, 3.954335144488678*^9}, 3.9543355477952757`*^9, {
+   3.954336131364923*^9, 3.954336164633855*^9}, 3.9543362190503807`*^9, {
+   3.954336262393303*^9, 3.9543363224383163`*^9}, 3.954336371553615*^9, 
+   3.9543364422293243`*^9, 3.954336629432123*^9, 3.954336666935795*^9, 
+   3.954336748096846*^9, 3.9543455795453444`*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"37d89348-c551-4edf-b4ea-c2ec8bb4972e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Evolution Step for the Swarm", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.954062323075589*^9, 3.9540623266450768`*^9}, {
+  3.954258035137347*^9, 3.954258036872592*^9}, {3.95426565998077*^9, 
+  3.954265675472384*^9}},ExpressionUUID->"4ee38d7a-08e9-4d7a-8ec2-\
+57df0850c043"],
+
+Cell["\<\
+We need a convenient way to apply the evolution rule to every particle in the \
+swarm, but that is so simple, we hardly even need to define a function to do \
+it:\
+\>", "Text",
+ CellChangeTimes->{{3.9540623393336477`*^9, 3.9540623971286573`*^9}, {
+  3.954255499173604*^9, 3.954255521052722*^9}, {3.954255609212263*^9, 
+  3.954255613891939*^9}, {3.9542557470074387`*^9, 3.9542557651718493`*^9}, {
+  3.954255874769109*^9, 3.95425604230368*^9}, {3.9542561525783043`*^9, 
+  3.95425616952474*^9}, {3.954256200276318*^9, 3.954256200605348*^9}, {
+  3.954256397369169*^9, 3.954256447427911*^9}, {3.954265680166951*^9, 
+  3.954265700991067*^9}},ExpressionUUID->"fa6ae290-9abd-4f4a-8574-\
+e688aa94a8db"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"swarmStep", "[", "s_", "]"}], ":=", 
+  RowBox[{"particleStep", "/@", "s"}]}]], "Input",
+ CellChangeTimes->{
+  3.954256405603835*^9, {3.954258067646277*^9, 3.954258071662615*^9}, {
+   3.954266448608901*^9, 3.9542664726381807`*^9}, {3.954266515074712*^9, 
+   3.954266571190591*^9}, {3.9542666028471413`*^9, 3.954266603460979*^9}, {
+   3.954270690939859*^9, 3.954270701976225*^9}, {3.954270782457073*^9, 
+   3.95427078471943*^9}, {3.9542708931923103`*^9, 3.954270899058321*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"338ae245-5200-4351-bb00-c170a2319327"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Evolving the Swarm", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.954062323075589*^9, 3.9540623266450768`*^9}, {
+  3.954258035137347*^9, 3.954258036872592*^9}, {3.954258082896928*^9, 
+  3.954258085823131*^9}},ExpressionUUID->"0bb19e50-8857-48e0-8455-\
+a1d8e09ffe19"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"totalAnimationTime", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"renderedFramesPerSecondOfAnimation", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"totalFrames", " ", "=", " ", 
+    RowBox[{
+     RowBox[{
+     "totalAnimationTime", " ", "renderedFramesPerSecondOfAnimation"}], "+", 
+     "1"}]}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"stepsPerFrame", "=", "50"}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.954269591435052*^9, 3.954269648606866*^9}, {
+   3.9542697294135313`*^9, 3.954269729878324*^9}, 3.954270501784492*^9, {
+   3.954272176385428*^9, 3.9542721879480267`*^9}, {3.9542730584258966`*^9, 
+   3.954273068219995*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"20f63a58-adcf-4311-b664-b31c50d0ee83"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "We", " ", "want", " ", "a", " ", "function", " ", "that", " ", "nests", " ", 
+     RowBox[{"swarmStep", "[", "]"}], " ", "stepsPerFrame", " ", "times"}], ",",
+     " ", 
+    RowBox[{"then", " ", "prunes", " ", "the", " ", "swarm"}], ","}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "and", " ", "then", " ", "adds", " ", "to", " ", "the", " ", "swarm", " ", 
+    "a", " ", "new", " ", "particle", " ", "at", " ", "the", " ", 
+    RowBox[{"origin", ":"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"compoundSwarmStep", "[", "s_", "]"}], ":=", 
+     RowBox[{"addToSwarm", "[", 
+      RowBox[{
+       RowBox[{"pruneSwarm", "[", 
+        RowBox[{
+         RowBox[{"Nest", "[", 
+          RowBox[{"swarmStep", ",", "s", ",", "stepsPerFrame"}], "]"}], ",", 
+         "retainCondition"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0.0", ",", "0.0", ",", "0.5"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Then", " ", "we", " ", "want", " ", "to", " ", "use", " ", "NestList", " ",
+      "to", " ", "compound", " ", "that", " ", "function", " ", "to", " ", 
+     "make", " ", "an", " ", "evolution", " ", "that", " ", "is", " ", 
+     "totalFrames", " ", 
+     RowBox[{"long", ":"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"evolution", " ", "=", 
+     RowBox[{"NestList", "[", 
+      RowBox[{"compoundSwarmStep", ",", 
+       RowBox[{"{", "}"}], ",", 
+       RowBox[{"totalFrames", "-", "1"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{
+     "Note", " ", "that", " ", "due", " ", "to", " ", "the", " ", "way", " ", 
+      "NestList", " ", "works"}], ",", " ", 
+     RowBox[{
+     "you", " ", "get", " ", "one", " ", "more", " ", "frame", " ", "than", " ",
+       "expected"}], ","}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"so", " ", "we", " ", "asked", " ", "for", " ", "one", " ", 
+     RowBox[{"less", "."}]}], " ", "*)"}]}]}]], "Input",
+ CellChangeTimes->{{3.954258910454608*^9, 3.954259082072159*^9}, {
+   3.954259145425688*^9, 3.954259147971291*^9}, {3.954259309679426*^9, 
+   3.954259310621262*^9}, 3.954259370913872*^9, {3.954259415024815*^9, 
+   3.954259533529808*^9}, {3.95425956381663*^9, 3.954259591889793*^9}, {
+   3.954259666981344*^9, 3.954259750718073*^9}, {3.954259895111876*^9, 
+   3.954259910651376*^9}, {3.954259976941929*^9, 3.954260027385893*^9}, 
+   3.954265526251095*^9, 3.9542655887552633`*^9, {3.9542660459822617`*^9, 
+   3.954266048442196*^9}, {3.954266585293169*^9, 3.954266613121731*^9}, {
+   3.954266953750022*^9, 3.9542669757136507`*^9}, {3.954267065260746*^9, 
+   3.9542671014419394`*^9}, {3.954267135179654*^9, 3.9542671566438932`*^9}, {
+   3.954267223141971*^9, 3.954267224109767*^9}, {3.954267259115692*^9, 
+   3.954267270942916*^9}, {3.954267427075221*^9, 3.954267428165121*^9}, {
+   3.954269291974325*^9, 3.954269332375409*^9}, {3.954269402611219*^9, 
+   3.954269406774102*^9}, 3.954269456056031*^9, {3.9542695043140507`*^9, 
+   3.954269545458736*^9}, {3.954269596804517*^9, 3.954269617996233*^9}, 
+   3.9542696756813297`*^9, 3.954269717910673*^9, {3.9542697552129593`*^9, 
+   3.954269757146111*^9}, 3.954270660576881*^9, 3.954270982922963*^9, {
+   3.954271030447072*^9, 3.954271336445991*^9}, 3.954273657570718*^9, {
+   3.9543364369632473`*^9, 3.954336438210753*^9}, {3.954345563441433*^9, 
+   3.954345563497245*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"b97e5dc1-ccb0-4047-b60b-8da4534e4f48"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Animating the Evolution", "Subsection",
+ CellChangeTimes->{{3.944067829868867*^9, 3.944067861861581*^9}, {
+  3.944068820428216*^9, 3.944068822060533*^9}, {3.944139625524349*^9, 
+  3.94413963984907*^9}, {3.954062323075589*^9, 3.9540623266450768`*^9}, {
+  3.954258035137347*^9, 3.954258036872592*^9}, {3.954258082896928*^9, 
+  3.954258085823131*^9}, {3.954259157541827*^9, 
+  3.954259161454398*^9}},ExpressionUUID->"21895963-96df-48e9-bdf3-\
+1e4ac0467a33"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "This", " ", "thing", " ", "animates", " ", "pretty", " ", "slowly"}], ",",
+     " ", 
+    RowBox[{
+     RowBox[{
+     "but", " ", "we", " ", "can", " ", "help", " ", "some", " ", "by", " ", 
+      "pre"}], "-", 
+     RowBox[{"rendering", " ", "the", " ", 
+      RowBox[{"frames", ":"}]}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"renderedFrames", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"renderSwarm", "[", 
+        RowBox[{"evolution", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", "totalFrames"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Animate", "[", 
+    RowBox[{
+     RowBox[{"renderedFrames", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "totalFrames", ",", "1"}], "}"}], ",", " ", 
+     
+     RowBox[{"DefaultDuration", "->", 
+      RowBox[{"5", "totalAnimationTime"}]}], ",", 
+     RowBox[{"AnimationRunning", "->", "False"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.954258214723247*^9, 3.954258256981094*^9}, {
+  3.954259176518908*^9, 3.954259253888706*^9}, {3.954259284730789*^9, 
+  3.9542593151156397`*^9}, {3.954266497862472*^9, 3.9542665114300537`*^9}, {
+  3.954266641858555*^9, 3.954266642742227*^9}, {3.9542667476119747`*^9, 
+  3.9542667486980133`*^9}, {3.954266847762035*^9, 3.9542669506301126`*^9}, {
+  3.9542672786410847`*^9, 3.9542672821650553`*^9}, {3.954269423981124*^9, 
+  3.954269428899336*^9}, {3.954273038790172*^9, 3.954273043318063*^9}, {
+  3.954273102498179*^9, 3.954273107144359*^9}, {3.954273139474121*^9, 
+  3.9542731435467577`*^9}, {3.954273194402459*^9, 3.954273206143982*^9}, {
+  3.9542732518670797`*^9, 3.954273256440078*^9}, {3.9542736286951847`*^9, 
+  3.954273628780313*^9}, {3.954273872044139*^9, 3.954273896794921*^9}, {
+  3.954273971559716*^9, 3.954273983046032*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"95def6f9-ae7a-40d1-997b-d9ad45742b50"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`i$$ = 33, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`i$$], 1, 101, 1, ControlType -> Animator}}, 
+    Typeset`size$$ = {675., {332.1263122558594, 342.8736877441406}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`i$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> 
+      Part[$CellContext`renderedFrames, $CellContext`i$$], 
+      "Specifications" :> {{$CellContext`i$$, 1, 101, 1, DefaultDuration -> 
+         100, AnimationRunning -> False, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 200.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{760.0625, {402.6888122558594, 413.4361877441406}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.954273150243265*^9, 3.954273183263027*^9, 3.9542732585771723`*^9, 
+   3.9542733824374027`*^9, 3.95427341959858*^9, 3.9542735820899343`*^9, 
+   3.954273634351677*^9, 3.954273993341258*^9, {3.954335127420479*^9, 
+   3.954335150241523*^9}, 3.954335549105875*^9, {3.954336137617365*^9, 
+   3.954336164805502*^9}, 3.954336219186144*^9, {3.954336276563891*^9, 
+   3.9543362994734097`*^9}, 3.954336443997795*^9, 3.954336631099902*^9, 
+   3.954336671325248*^9, 3.954336758512494*^9, 
+   3.9543371481065083`*^9},ExpressionUUID->"f4d7b8fb-f965-41f0-949f-\
+e38bdd080852"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{212, Automatic}, {Automatic, -113}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"14.2 for Mac OS X ARM (64-bit) (December 26, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8f536942-0b3f-411e-b59c-e6b736681f66"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 198, 3, 124, "Section",ExpressionUUID->"b2e1e18c-ce02-4ce2-9992-b98ecf3006dd"],
+Cell[777, 27, 1219, 23, 309, "Text",ExpressionUUID->"25bb6008-1092-445f-9e39-d6d1040bd0ab"],
+Cell[CellGroupData[{
+Cell[2021, 54, 300, 5, 99, "Subsection",ExpressionUUID->"ba6c78d8-d93f-4aa1-b4de-6656b5496969"],
+Cell[2324, 61, 654, 11, 104, "Text",ExpressionUUID->"4a056e57-5d79-4e5d-9746-4c87246d1f67"],
+Cell[2981, 74, 1153, 20, 93, "Input",ExpressionUUID->"b426a2da-7812-4c29-9362-4a5d9bc19ccf"],
+Cell[4137, 96, 713, 12, 104, "Text",ExpressionUUID->"05935b87-7a73-4f11-9f1c-448704a41882"],
+Cell[4853, 110, 1577, 35, 93, "Input",ExpressionUUID->"0bd57761-7e64-421e-aa26-6e0453ba428c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6467, 150, 416, 6, 99, "Subsection",ExpressionUUID->"58c77816-769e-43cf-8871-d14f788e8658"],
+Cell[6886, 158, 620, 11, 63, "Text",ExpressionUUID->"eba253e6-b750-45ff-a4d2-5b925743d025"],
+Cell[7509, 171, 3626, 72, 744, "Input",ExpressionUUID->"bce2d27f-2bc5-4f9c-8a93-a28b3baaae45"],
+Cell[CellGroupData[{
+Cell[11160, 247, 644, 16, 55, "Input",ExpressionUUID->"973e201b-c8bb-4d7f-8fac-d5db8664acea"],
+Cell[11807, 265, 986, 21, 62, "Output",ExpressionUUID->"de245a2b-85e8-452a-a8f3-c75ba9898c97"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12842, 292, 361, 6, 99, "Subsection",ExpressionUUID->"69584389-4175-491c-af4a-a0156e9fa296"],
+Cell[13206, 300, 702, 12, 104, "Text",ExpressionUUID->"6a8a5d97-6601-4cb4-906f-0cbd3e3f2655"],
+Cell[13911, 314, 2839, 76, 169, "Input",ExpressionUUID->"46d54f85-5754-45a1-bc24-84f8ba767f57"],
+Cell[CellGroupData[{
+Cell[16775, 394, 1365, 32, 93, "Input",ExpressionUUID->"28689f53-7441-45aa-8d54-f2fb15c760fa"],
+Cell[18143, 428, 31782, 862, 320, "Output",ExpressionUUID->"37d89348-c551-4edf-b4ea-c2ec8bb4972e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49974, 1296, 415, 6, 99, "Subsection",ExpressionUUID->"4ee38d7a-08e9-4d7a-8ec2-57df0850c043"],
+Cell[50392, 1304, 703, 12, 63, "Text",ExpressionUUID->"fa6ae290-9abd-4f4a-8574-e688aa94a8db"],
+Cell[51098, 1318, 589, 10, 55, "Input",ExpressionUUID->"338ae245-5200-4351-bb00-c170a2319327"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51724, 1333, 406, 6, 99, "Subsection",ExpressionUUID->"0bb19e50-8857-48e0-8455-a1d8e09ffe19"],
+Cell[52133, 1341, 838, 19, 208, "Input",ExpressionUUID->"20f63a58-adcf-4311-b664-b31c50d0ee83"],
+Cell[52974, 1362, 3654, 74, 284, "Input",ExpressionUUID->"b97e5dc1-ccb0-4047-b60b-8da4534e4f48"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56665, 1441, 460, 7, 99, "Subsection",ExpressionUUID->"21895963-96df-48e9-bdf3-1e4ac0467a33"],
+Cell[CellGroupData[{
+Cell[57150, 1452, 2105, 46, 169, "Input",ExpressionUUID->"95def6f9-ae7a-40d1-997b-d9ad45742b50"],
+Cell[59258, 1500, 2707, 52, 848, "Output",ExpressionUUID->"f4d7b8fb-f965-41f0-949f-e38bdd080852"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
