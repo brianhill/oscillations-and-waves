@@ -71,7 +71,7 @@ Each special project presentation should include a Mathematica notebook that has
 ### Week 13 &mdash; Diffusion of Pollutants in Three Dimensions &mdash; Schrodinger's Equation
 
 * Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; [Diffusion in Three Dimensions - Monte Carlo](./worksheets/22-DiffusionInThreeDimensions-MonteCarlo.nb.pdf) &mdash; Presentation: Hexi and Walker on the [Black-Scholes](./special-projects/Black-Scholes.nb.pdf) formula
-* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Work through the [Schrodinger's Equation - One Dimension](./worksheets/23-SchrodingersEquation-OneDimension.nb.pdf) and [Schrodinger's Equation - Interpretation and Time-Dependence Dimension](./worksheets/24-SchrodingersEquation-InterpretationAndTimeDependence.nb.pdf) notebooks &mdash; Presentation: Harper and Tahm on ballistics
+* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Work through the [Schrodinger's Equation - One Dimension](./worksheets/23-SchrodingersEquation-OneDimension.nb.pdf) and [Schrodinger's Equation - Interpretation and Time-Dependence](./worksheets/24-SchrodingersEquation-InterpretationAndTimeDependence.nb.pdf) notebooks &mdash; Presentation: Harper and Tahm on ballistics
 
 ### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
 
