@@ -68,12 +68,12 @@ Each special project presentation should include a Mathematica notebook that has
 
 * Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; [Diffusion in One Dimension](./worksheets/20-DiffusionInOneDimension.nb.pdf) and [Steady State Diffusion in Two Dimensions](./worksheets/21-DiffusionInTwoDimensions-SteadyState.nb.pdf) (some of the same mathematics appears in diffusion as in waves!) &mdash; Presentation: Rania on Bohr and Wheeler's [Liquid Drop Model of Fission](./special-projects/LiquidDropModelOfFission.nb.pdf)
 
-### Week 13 &mdash; Diffusion of Pollutants in Three Dimensions &mdash; Schrodinger's Equation
+### Week 13 &mdash; Diffusion of Pollutants in Three Dimensions &mdash; Schrodinger's Equation in One Dimension
 
 * Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; [Diffusion in Three Dimensions - Monte Carlo](./worksheets/22-DiffusionInThreeDimensions-MonteCarlo.nb.pdf) &mdash; Presentation: Hexi and Walker on the [Black-Scholes](./special-projects/Black-Scholes.nb.pdf) formula
-* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Work through the [Schrodinger's Equation - One Dimension](./worksheets/23-SchrodingersEquation-OneDimension.nb.pdf) and [Schrodinger's Equation - Interpretation and Time-Dependence](./worksheets/24-SchrodingersEquation-InterpretationAndTimeDependence.nb.pdf) notebooks &mdash; Presentation: Harper and Tahm on ballistics
+* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Explore the [Schrodinger Equation - One Dimension](./worksheets/23-SchrodingerEquation-OneDimension.nb.pdf) and [Schrodinger Equation - Interpretation and Time-Dependence](./worksheets/24-SchrodingerEquation-InterpretationAndTimeDependence.nb.pdf) notebooks &mdash; Presentation: Harper and Tahm on ballistics
 
-### Week 14 &mdash; Exam 3 &mdash; Atomic Wave Functions
+### Week 14 &mdash; Exam 3 &mdash; Schrodinger's Equation in Two and Three Dimension
 
 * Tuesday, April 29 &mdash; Exam 3 (Designed to only require about 45 minutes) &mdash; Problems will be like exercises from *EIWL3,* especially those that use your understanding of the core functionality (Map, Apply, virtual functions, *etc.*), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
-* Friday, May 2 &mdash; No Problem Set :) &mdash; In-Class: The s, p, d, and f Orbitals of Hydrogen
+* Friday, May 2 &mdash; No Problem Set :) &mdash; In-Class: Explore the [Schrodinger Equation - Two and Three Dimensions](./worksheets/23-SchrodingerEquation-TwoAndThreeDimensions.nb.pdf) notebook which have a particle confined to a disk and an electron orbiting the Hydrogen nucleus as our two final examples
