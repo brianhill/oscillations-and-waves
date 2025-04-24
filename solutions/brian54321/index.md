@@ -2,11 +2,23 @@
 
 *Listed reverse-chronologically (most recent at top)*
 
-### 2025-04-15 &mdash; PS 18 &mdash; *EIWL3* Sections 40 and 41
+### 2025-04-25 &mdash; PS 21 &mdash; *EIWL3* Sections 47 and 48
 
-* Coming soon to a theater near you
+* [Brian's solution](../brian54321/Brian-PS21.nb.pdf)
 
-### 2025-04-11 &mdash; PS 17 &mdash; *EIWL3* Sections 38 and 39
+### 2025-04-22 &mdash; PS 20 &mdash; *EIWL3* Sections 45 and 46
+
+* [Brian's solution](../brian54321/Brian-PS20.nb.pdf)
+
+### 2025-04-18 &mdash; PS 19 &mdash; *EIWL3* Sections 43 and 44
+
+* [Brian's solution](../brian54321/Brian-PS19.nb.pdf)
+
+### 2025-04-15 &mdash; PS 18 &mdash; *EIWL3* Sections 41 and 42
+
+* [Brian's solution](../brian54321/Brian-PS18.nb.pdf)
+
+### 2025-04-11 &mdash; PS 17 &mdash; *EIWL3* Sections 39 and 40
 
 * [Brian's solution](../brian54321/Brian-PS17.nb.pdf)
 
