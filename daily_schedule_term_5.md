@@ -51,10 +51,10 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 #### Special projects being presented in Weeks 12 and 13
 
-* Jeremy and Eli: [Lotke-Volterra Equations](./special-projects/LotkeVolterraEquations.nb.pdf)
+* Jeremy and Eli: The [Lotke-Volterra Equations](./special-projects/LotkeVolterraEquations.nb.pdf)
 * Rania: Bohr and Wheeler's [Liquid Drop Model of Fission](./special-projects/LiquidDropModelOfFission.nb.pdf)
 * Hexi and Walker: The [Black-Scholes](./special-projects/Black-Scholes.nb.pdf) formula
-* Harper and Tahm: Ballistics calculations
+* Harper and Tahm: [External Rifle Ballistics](./special-projects/ExternalRifleBallistics.nb.pdf)
 
 Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how the code you are presenting solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and the solution technique. Email your notebook to the class before your presentation. Use notebook chapters, section, and subsections, and other typesetting features to make your presentation organized and professional-looking. It is fine to rely heavily on already-existing resources. The goal is a clear explanation of a problem and its solution, not to achieve something original.
 
@@ -71,9 +71,9 @@ Each special project presentation should include a Mathematica notebook that has
 ### Week 13 &mdash; Diffusion of Pollutants in Three Dimensions &mdash; Schrodinger's Equation in One Dimension
 
 * Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; [Diffusion in Three Dimensions - Monte Carlo](./worksheets/22-DiffusionInThreeDimensions-MonteCarlo.nb.pdf) &mdash; Presentation: Hexi and Walker on the [Black-Scholes](./special-projects/Black-Scholes.nb.pdf) formula
-* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; Explore the [Schrodinger Equation - One Dimension](./worksheets/23-SchrodingerEquation-OneDimension.nb.pdf) and [Schrodinger Equation - Interpretation and Time-Dependence](./worksheets/24-SchrodingerEquation-InterpretationAndTimeDependence.nb.pdf) notebooks &mdash; Presentation: Harper and Tahm on ballistics
+* Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; In-Class: Develop *[Schrodinger Equation - Theory](./theory/SchrodingerEquation-Theory.nb.pdf), and then explore the [Schrodinger Equation - One Dimension](./worksheets/23-SchrodingerEquation-OneDimension.nb.pdf) and [Schrodinger Equation - Interpretation and Time-Dependence](./worksheets/24-SchrodingerEquation-InterpretationAndTimeDependence.nb.pdf) notebooks &mdash; Presentation: Harper and Tahm on [External Rifle Ballistics](./special-projects/ExternalRifleBallistics.nb.pdf)
 
 ### Week 14 &mdash; Exam 3 &mdash; Schrodinger's Equation in Two and Three Dimension
 
 * Tuesday, April 29 &mdash; Exam 3 (Designed to only require about 45 minutes) &mdash; Problems will be like exercises from *EIWL3,* especially those that use your understanding of the core functionality (Map, Apply, virtual functions, *etc.*), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
-* Friday, May 2 &mdash; No Problem Set :) &mdash; In-Class: Explore the [Schrodinger Equation - Two and Three Dimensions](./worksheets/23-SchrodingerEquation-TwoAndThreeDimensions.nb.pdf) notebook which have a particle confined to a disk and an electron orbiting the Hydrogen nucleus as our two final examples
+* Friday, May 2 &mdash; No Problem Set :) &mdash; In-Class: Explore the [Schrodinger Equation - Two and Three Dimensions](./worksheets/25-SchrodingerEquation-TwoAndThreeDimensions.nb.pdf) notebook which have a, as its two- and three-dimensional examples, a particle confined to a disk and an electron orbiting the Hydrogen nucleus
