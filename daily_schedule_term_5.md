@@ -61,9 +61,6 @@ Each special project presentation should include a Mathematica notebook that has
 ### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
 
 * Tuesday, April 15 &mdash; Problem Set 18: Do the exercises from *EIWL3* Sections 41 and 42 *(NB: due date extended to Friday along with Problem Set 19 which is also due on Friday)* &mdash; Complete the [Rectangular Drumhead Redux](./worksheets/19-RectangularDrumheadRedux.nb.pdf) notebook &mdash; Presentation: Jeremy and Eli on the [Lotke-Volterra Equations](./special-projects/LotkeVolterraEquations.nb.pdf)
-
-#### Lotke-Volterra Graphs for Two Species
-
 * Friday, April 18 &mdash; Problem Set 19: Do the exercises from *EIWL3* Sections 43 and 44 &mdash; [Diffusion in One Dimension](./worksheets/20-DiffusionInOneDimension.nb.pdf) and [Steady State Diffusion in Two Dimensions](./worksheets/21-DiffusionInTwoDimensions-SteadyState.nb.pdf) (some of the same mathematics appears in diffusion as in waves!) &mdash; Presentation: Rania on Bohr and Wheeler's [Liquid Drop Model of Fission](./special-projects/LiquidDropModelOfFission.nb.pdf)
 
 ### Week 13 &mdash; Diffusion of Pollutants in Three Dimensions &mdash; Schrodinger's Equation in One Dimension
@@ -71,7 +68,9 @@ Each special project presentation should include a Mathematica notebook that has
 * Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; [Diffusion in Three Dimensions - Monte Carlo](./worksheets/22-DiffusionInThreeDimensions-MonteCarlo.nb.pdf) &mdash; Presentation: Hexi and Walker on the [Black-Scholes](./special-projects/Black-Scholes.nb.pdf) formula
 * Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; In-Class: Develop *[Schrodinger Equation - Theory](./theory/SchrodingerEquation-Theory.nb.pdf), and then explore the [Schrodinger Equation - One Dimension](./worksheets/23-SchrodingerEquation-OneDimension.nb.pdf) and [Schrodinger Equation - Interpretation and Time-Dependence](./worksheets/24-SchrodingerEquation-InterpretationAndTimeDependence.nb.pdf) notebooks &mdash; Presentation: Harper and Tahm on [External Rifle Ballistics](./special-projects/ExternalRifleBallistics.nb.pdf)
 
-<img src="./illustrations/ExternalRifleBallistics.png" width="85%">
+<img src="./illustrations/ExternalRifleBallistics.png" width="95%">
+
+#### External Rifle Ballistics Notebook Output
 
 ### Week 14 &mdash; Exam 3 &mdash; Schrodinger's Equation in Two and Three Dimension
 
