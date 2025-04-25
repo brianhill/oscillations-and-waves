@@ -75,5 +75,5 @@ Each special project presentation should include a Mathematica notebook that has
 
 ### Week 14 &mdash; Exam 3 &mdash; Schrodinger's Equation in Two and Three Dimension
 
-* Tuesday, April 29 &mdash; Exam 3 (Designed to only require about 45 minutes) &mdash; Problems will be like exercises from *EIWL3,* especially those that use your understanding of the core functionality (Map, Apply, virtual functions, *etc.*), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
-* Friday, May 2 &mdash; No Problem Set :) &mdash; In-Class: Explore the [Schrodinger Equation - Two and Three Dimensions](./worksheets/25-SchrodingerEquation-TwoAndThreeDimensions.nb.pdf) notebook which have a, as its two- and three-dimensional examples, a particle confined to a disk and an electron orbiting the Hydrogen nucleus
+* Tuesday, April 29 &mdash; Exam 3 (Designed to only require about 45 minutes, one hour max) &mdash; Problems will be like exercises from *EIWL3,* especially those that use your understanding of the core functionality (Map, Apply, virtual functions, *etc.*), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
+* Friday, May 2 &mdash; No Problem Set :) &mdash; In-Class: Explore the [Schrodinger Equation - Two and Three Dimensions](./worksheets/25-SchrodingerEquation-TwoAndThreeDimensions.nb.pdf) notebook which have, as its two- and three-dimensional examples, a particle confined to a disk and an electron orbiting the Hydrogen nucleus
