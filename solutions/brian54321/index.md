@@ -2,6 +2,10 @@
 
 *Listed reverse-chronologically (most recent at top)*
 
+### 2025-04-29 &mdash; Exam 3 &mdash; The Wolfram Language
+
+* [Brian's solution](../brian54321/Brian-Exam3.nb.pdf)
+
 ### 2025-04-25 &mdash; PS 21 &mdash; *EIWL3* Sections 47 and 48
 
 * [Brian's solution](../brian54321/Brian-PS21.nb.pdf)

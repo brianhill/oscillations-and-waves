@@ -2,9 +2,30 @@
 
 *Listed reverse-chronologically (most recent at top)*
 
+### 2025-04-29 &mdash; Exam 3 &mdash; The Wolfram Language
+
+* [Eli's solution](./Eli-Exam3.nb.pdf)
+* [Brian's solution](../brian54321/Brian-Exam3.nb.pdf)
+
+### 2025-04-25 &mdash; PS 21 &mdash; *EIWL3* Sections 47 and 48
+
+* [Eli's solution](./Eli-PS21.nb.pdf)
+* [Brian's solution](../brian54321/Brian-PS21.nb.pdf)
+
+### 2025-04-22 &mdash; PS 20 &mdash; *EIWL3* Sections 45 and 46
+
+* [Eli's solution](./Eli-PS20.nb.pdf)
+* [Brian's solution](../brian54321/Brian-PS20.nb.pdf)
+
+### 2025-04-18 &mdash; PS 19 &mdash; *EIWL3* Sections 43 and 44
+
+* [Eli's solution](./Eli-PS19.nb.pdf)
+* [Brian's solution](../brian54321/Brian-PS19.nb.pdf)
+
 ### 2025-04-15 &mdash; PS 18 &mdash; *EIWL3* Sections 40 and 41
 
-* Coming soon to a theater near you
+* [Eli's solution](./Eli-PS18.nb.pdf)
+* [Brian's solution](../brian54321/Brian-PS18.nb.pdf)
 
 ### 2025-04-11 &mdash; PS 17 &mdash; *EIWL3* Sections 38 and 39
 
