@@ -76,3 +76,8 @@ Each special project presentation should include a Mathematica notebook that has
 
 * Tuesday, April 29 &mdash; *[Exam 3 - The Wolfram Language](./exams/Exam3.nb.pdf)* &mdash; *[Exam 3 - The Wolfram Language -SOLVED](./solutions/brian54321/Brian-Exam3.nb.pdf)* &mdash; The exam problems will be like exercises from *EIWL3,* especially those that use your understanding of the core functionality (Map, Apply, anonymous functions, *etc.*), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
 * Friday, May 2 &mdash; No problem set for last class :) &mdash; In-Class: Explore the [Schrodinger Equation - Two Dimensions](./worksheets/25-SchrodingerEquation-TwoDimensions.nb.pdf) and [Schrodinger Equation - Three Dimensions](./worksheets/26-SchrodingerEquation-ThreeDimensions.nb.pdf) notebooks which have, as their respective examples, a particle confined to a disk and an electron orbiting the Hydrogen nucleus
+
+<img src="./illustrations/IntenseConcentrationOnExam3.png" width="95%">
+
+#### Intense Concentration on Exam 3
+
