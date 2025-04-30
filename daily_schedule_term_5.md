@@ -34,7 +34,6 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 * Friday, April 4 &mdash; *[Exam 2 - Longitudinal (Compression) Waves](./exams/Exam2.nb.pdf)* &mdash; *[Exam 2 Solution](./solutions/brian54321/Brian-Exam2.nb.pdf)* (much of the exam will involve things similar to what you did in the transverse waves notebook) &mdash; Check out the next problem set and do it before the exam (even though it isn't officially due until April 8)
 
 <img src="./illustrations/CompressionWave.png" width="80%">
-
 #### Longitudinal (Compression) Wave
 
 #### We have a little less than one-third of the course left, and we are going to blast into the stratosphere: instead of doing large numbers of particles &mdash; like 72 rods or a grid of 18 by 24=432 masses &mdash; we are going to take the limit that *n&rarr;&infin;* and start specifying problems to Mathematica using the notation of derivatives. You might reasonably ask that if it is too time-consuming for Mathematica to do, say, a thousand particles for ten-thousand time steps, how is Mathematica going to cope with continuous systems which have an infinite number of particles? The answer is that deep under the hood, it breaks continuous systems up into little chunks and little time steps just as we have been chunking up the world with grids and time steps. In other words, Mathematica also turns continuous problems back into problems with a large but finite number of chunks and time steps. However, from now on in this course, Mathematica is going to hide the need to break continuous systems up into little chunks from us. Mathematica draws graphs and creates animations by choosing the chunks and the time steps to be so small that we don't generally perceive them unless we blow up the graphics to a large size. Sometimes, the chunkiness leaks through enough to be obvious, but if that happens and we are not satisfied, we can order Mathematica to use finer chunks and finer time steps. Of course, the processor in your laptop may not appreciate this, but if you are patient with your computer's processor, and also if your computer has enough memory to hold the intermediate results, there is no limit in principle to how accurately computers can do simulations &mdash; the only exceptions being simulations with chaos or singularities, and even in such situations, simulations are often informative and indicative of what happens in the real world. All that said, the limits of computer power are real, and are part of the reason why we do not yet have compelling simulations for things like the formation of the solar system, even using the largest supercomputers available.
@@ -43,20 +42,11 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 
 * Tuesday, April 8 &mdash; Problem Set 16: Make a Wolfram language notebook containing a compilation of fundamental, low-level syntax and functions (such as @@, @@@, /@ ./, Table, Array, Module, etc.) and email it to me before or after Friday's exam &mdash; Everyone's cheat cheets ([Brian's](./cheat-sheets/WolframLanguageCheatSheet-Brian.nb.pdf), [Eli's](./cheat-sheets/WolframLanguageCheatSheet-Eli.nb.pdf), [Harper's](./cheat-sheets/WolframLanguageCheatSheet-Harper.nb.pdf), [Hexi's](./cheat-sheets/WolframLanguageCheatSheet-Hexi.nb.pdf), [Jeremy's](./cheat-sheets/WolframLanguageCheatSheet-Jeremy.nb.pdf), [Rania's](./cheat-sheets/WolframLanguageCheatSheet-Rania.nb.pdf), [Tahm's](./cheat-sheets/WolframLanguageCheatSheet-Tahm.nb.pdf), and [Walker's](./cheat-sheets/WolframLanguageCheatSheet-Walker.nb.pdf) &mdash; In-class: Present the [Harmonic Oscillator Redux](./worksheets/17-HarmonicOscillatorRedux.nb.pdf) notebook (this time letting Mathematica do all the hard work)
 
-<img src="./illustrations/DrivenHarmonicOscillator-JustAboveResonance.png" width="65%">
-
+<img src="./illustrations/DrivenHarmonicOscillator-JustAboveResonance.png" width="70%">
 #### Driven Harmonic Oscillator Just Above Resonance
 
-* Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; In-class: Complete the [Guitar String](./worksheets/18-GuitarString.nb.pdf) notebook (the math is a lot like torsion waves, but the new thing is that again we are going to be letting Mathematica do all the hard work) &mdash; If there is spare time, we will use it to launch into the special projects
-
-#### Special projects being presented in Weeks 12 and 13
-
-* Jeremy and Eli: The [Lotke-Volterra Equations](./special-projects/LotkeVolterraEquations.nb.pdf)
-* Rania: Bohr and Wheeler's [Liquid Drop Model of Fission](./special-projects/LiquidDropModelOfFission.nb.pdf)
-* Hexi and Walker: The [Black-Scholes](./special-projects/Black-Scholes.nb.pdf) formula
-* Harper and Tahm: [External Rifle Ballistics](./special-projects/ExternalRifleBallistics.nb.pdf)
-
-Each special project presentation should include a Mathematica notebook that has a description of what you are solving, is interleaved with explanations of how the code you are presenting solves it, and ideally, has activities for the rest of us to do to help us become familiar with the problem and the solution technique. Email your notebook to the class before your presentation. Use notebook chapters, section, and subsections, and other typesetting features to make your presentation organized and professional-looking. It is fine to rely heavily on already-existing resources. The goal is a clear explanation of a problem and its solution, not to achieve something original.
+* Friday, April 11 &mdash; Problem Set 17: Do the Exercises from *EIWL3* Sections 39 and 40 &mdash; In-class: Complete the [Guitar String](./worksheets/18-GuitarString.nb.pdf) notebook (the math is a lot like torsion waves, but the new thing is that again we are going to be letting Mathematica do all the hard work)
+* Also Friday, April 11 &mdash; Begin [Special Projects](./special-projects/index.md)
 
 ### Week 12 &mdash; Drumheads &mdash; Diffusion of Heat
 
@@ -68,16 +58,11 @@ Each special project presentation should include a Mathematica notebook that has
 * Tuesday, April 22 &mdash; Problem Set 20: Do the exercises from *EIWL3* Sections 45 and 46 &mdash; [Diffusion in Three Dimensions - Monte Carlo](./worksheets/22-DiffusionInThreeDimensions-MonteCarlo.nb.pdf) &mdash; Presentation: Hexi and Walker on the [Black-Scholes](./special-projects/Black-Scholes.nb.pdf) formula
 * Friday, April 25 &mdash; Problem Set 21: Do the exercises from *EIWL3* Sections 47 and 48 &mdash; In-Class: Develop *[Schrodinger Equation - Theory](./theory/SchrodingerEquation-Theory.nb.pdf), and then explore the [Schrodinger Equation - One Dimension](./worksheets/23-SchrodingerEquation-OneDimension.nb.pdf) and [Schrodinger Equation - Interpretation and Time-Dependence](./worksheets/24-SchrodingerEquation-InterpretationAndTimeDependence.nb.pdf) notebooks &mdash; Presentation: Harper and Tahm on [External Rifle Ballistics](./special-projects/ExternalRifleBallistics.nb.pdf)
 
-<img src="./illustrations/ExternalRifleBallistics.png" width="95%">
-
-#### External Rifle Ballistics Notebook Output
-
 ### Week 14 &mdash; Exam 3 &mdash; Schrodinger's Equation in Two and Three Dimension
 
-* Tuesday, April 29 &mdash; *[Exam 3 - The Wolfram Language](./exams/Exam3.nb.pdf)* &mdash; *[Exam 3 - The Wolfram Language -SOLVED](./solutions/brian54321/Brian-Exam3.nb.pdf)* &mdash; The exam problems will be like exercises from *EIWL3,* especially those that use your understanding of the core functionality (Map, Apply, anonymous functions, *etc.*), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
+* Tuesday, April 29 &mdash; The *[Exam 3](./exams/Exam3.nb.pdf)* problems are intended to be like exercises from *EIWL3,* especially those that use your understanding of the core of the Wolfram Language (Map, Apply, anonymous functions, *etc.*), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
 * Friday, May 2 &mdash; No problem set for last class :) &mdash; In-Class: Explore the [Schrodinger Equation - Two Dimensions](./worksheets/25-SchrodingerEquation-TwoDimensions.nb.pdf) and [Schrodinger Equation - Three Dimensions](./worksheets/26-SchrodingerEquation-ThreeDimensions.nb.pdf) notebooks which have, as their respective examples, a particle confined to a disk and an electron orbiting the Hydrogen nucleus
 
 <img src="./illustrations/IntenseConcentrationOnExam3.png" width="95%">
-
 #### Intense Concentration on Exam 3
 
