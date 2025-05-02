@@ -61,7 +61,7 @@ See also [Daily Schedule Term 4](./daily_schedule_term_4.html)
 ### Week 14 &mdash; Exam 3 &mdash; Schrodinger's Equation in Two and Three Dimension
 
 * Tuesday, April 29 &mdash; The *[Exam 3](./exams/Exam3.nb.pdf)* problems are intended to be like exercises from *EIWL3,* especially those that use your understanding of the core of the Wolfram Language (Map, Apply, anonymous functions, *etc.*), rather than your understanding of specialized library functions (like GeoGraphics, WikipediaData, etc.)
-* Friday, May 2 &mdash; No problem set for last class :) &mdash; In-Class: Explore the [Schrodinger Equation - Two Dimensions](./worksheets/25-SchrodingerEquation-TwoDimensions.nb.pdf) and [Schrodinger Equation - Three Dimensions](./worksheets/26-SchrodingerEquation-ThreeDimensions.nb.pdf) notebooks which have, as their respective examples, a particle confined to a disk and an electron orbiting the Hydrogen nucleus
+* Friday, May 2 &mdash; No problem set for last class :) &mdash; In-Class: Explore the [Schrodinger Equation - Two Dimensions](./worksheets/25-SchrodingerEquation-TwoDimensions.nb.pdf) and [Schrodinger Equation - Three Dimensions](./worksheets/26-SchrodingerEquation-ThreeDimensions.nb.pdf) notebooks (the latter has lots of orbital wave function graphics - so be patient with download) &mdash; These notebooks have, as their respective examples, a particle confined to a disk and an electron orbiting the Hydrogen nucleus
 
 <img src="./illustrations/IntenseConcentrationOnExam3.png" width="95%">
 #### Intense Concentration on Exam 3
