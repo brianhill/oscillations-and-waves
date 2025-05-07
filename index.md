@@ -7,7 +7,7 @@
 
 ## Syllabus
 
-* A PDF of the [Syllabus](./OscillationsAndWavesSyllabus.pdf) containing the same information as is on these web pages.
+* A PDF of the [Syllabus](./OscillationsAndWavesSyllabus.pdf) (containing the same information as is on these web pages).
 
 ## Daily Schedules (Kept Retrospectively)
 
