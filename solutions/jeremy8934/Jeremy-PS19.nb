@@ -1,0 +1,140 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5170,        132]
+NotebookOptionsPosition[      3993,        108]
+NotebookOutlinePosition[      4483,        126]
+CellTagsIndexPosition[      4440,        123]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{"\"\<https://www.google.com\>\"", ",", "\"\<Images\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9539237934331083`*^9, 3.953923820522594*^9}, {
+  3.9539240315783863`*^9, 3.9539240602011127`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"579634ea-a866-4d93-9ace-4662fa54be26"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{
+     RowBox[{"Style", "[", 
+      RowBox[{
+       RowBox[{"Disk", "[", "]"}], ",", "#"}], "]"}], ",", 
+     RowBox[{"Background", "\[Rule]", "Gray"}]}], "]"}], "&"}], "/@", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{"DominantColors", "[", 
+    RowBox[{"Import", "[", 
+     RowBox[{"\"\<https://www.google.com\>\"", ",", "\"\<Images\>\""}], "]"}],
+     "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.953923956717119*^9, 3.953924015934033*^9}, {
+  3.953924062725707*^9, 3.953924064799642*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"7a702909-4c41-4b9a-aeb3-d429341e13a9"],
+
+Cell[BoxData[
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"Import", "[", "\"\<https://www.bbc.co.uk\>\"", "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.953924083496222*^9, 3.953924118350246*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"3e6afaae-a69f-4856-b396-eeaec516e26f"],
+
+Cell[BoxData[
+ RowBox[{"ImageCollage", "[", 
+  RowBox[{"Import", "[", 
+   RowBox[{"\"\<https://www.nps.gov\>\"", ",", "\"\<Images\>\""}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.953924136288287*^9, 3.9539242050333147`*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"e03c3967-15cd-40e7-a220-1e370d33fe82"],
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<https://en.wikipedia.org/wiki/Ostrich\>\"", ",", "\"\<Images\>\""}], 
+    "]"}], ",", 
+   RowBox[{
+    RowBox[{"ImageInstanceQ", "[", 
+     RowBox[{"#", ",", "\"\<bird\>\""}], "]"}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.953924211847334*^9, 3.953924286844993*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"65cbcfdd-18ac-4e42-abcd-5be9ecb942f0"],
+
+Cell[BoxData[
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"TextCases", "[", 
+   RowBox[{
+    RowBox[{"Import", "[", "\"\<https://www.nato.int/\>\"", "]"}], ",", 
+    "\"\<Country\>\""}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.953924314122787*^9, 3.953924380531831*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"1a477b8c-a323-427f-b4d8-f5938847029b"],
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"Import", "[", 
+   RowBox[{"\"\<https://en.wikipedia.org\>\"", ",", "\"\<Hyperlinks\>\""}], 
+   "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9539243985480757`*^9, 3.95392445351096*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"1bf2f104-c4c9-410b-b616-645c868fd04b"],
+
+Cell[BoxData[
+ RowBox[{"SendMail", "[", 
+  RowBox[{"\"\<jeremychoy@deepsprings.edu\>\"", ",", 
+   RowBox[{"GeoGraphics", "[", "Here", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.95392447696931*^9, 3.953924476972353*^9}, {
+  3.9539246433608103`*^9, 3.953924650133947*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"bfd1cdbc-f864-49bf-986d-66c3843607dc"],
+
+Cell[BoxData[
+ RowBox[{"SendMail", "[", 
+  RowBox[{"\"\<jeremychoy@deepsprings.edu\>\"", ",", 
+   RowBox[{"MoonPhase", "[", 
+    RowBox[{"Now", ",", "\"\<Icon\>\""}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.95392449215596*^9, 3.953924589233452*^9}, {
+  3.953924651832972*^9, 3.953924655619231*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"d75ab70d-1026-4b08-a148-1e4336c8712c"]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{316, Automatic}, {Automatic, 50}},
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"44451802-9b41-4fda-818a-1a3f6ab9614c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 327, 6, 30, "Input",ExpressionUUID->"579634ea-a866-4d93-9ace-4662fa54be26"],
+Cell[888, 28, 644, 16, 30, "Input",ExpressionUUID->"7a702909-4c41-4b9a-aeb3-d429341e13a9"],
+Cell[1535, 46, 271, 5, 30, "Input",ExpressionUUID->"3e6afaae-a69f-4856-b396-eeaec516e26f"],
+Cell[1809, 53, 311, 6, 30, "Input",ExpressionUUID->"e03c3967-15cd-40e7-a220-1e370d33fe82"],
+Cell[2123, 61, 452, 11, 30, "Input",ExpressionUUID->"65cbcfdd-18ac-4e42-abcd-5be9ecb942f0"],
+Cell[2578, 74, 349, 7, 30, "Input",ExpressionUUID->"1a477b8c-a323-427f-b4d8-f5938847029b"],
+Cell[2930, 83, 314, 6, 30, "Input",ExpressionUUID->"1bf2f104-c4c9-410b-b616-645c868fd04b"],
+Cell[3247, 91, 354, 6, 30, "Input",ExpressionUUID->"bfd1cdbc-f864-49bf-986d-66c3843607dc"],
+Cell[3604, 99, 385, 7, 30, "Input",ExpressionUUID->"d75ab70d-1026-4b08-a148-1e4336c8712c"]
+}
+]
+*)
+
